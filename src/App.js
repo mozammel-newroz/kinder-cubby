@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  unstable_createMuiStrictModeTheme as createMuiTheme,
+  ThemeProvider,
+} from "@material-ui/core/styles";
+import "./App.css";
+import TopBar from "./components/TopBar";
+
+const theme = createMuiTheme({
+  typography: {
+    // fontFamily: ["Fira Sans Condensed", "sans-serif"].join(","),
+    fontFamily: ["Open Sans", "sans-serif"].join(","),
+    color: "#ddd",
+    h4: {
+      fontSize: "1.8rem",
+      fontWeight: 400,
+      margin: "0 0 20px 0",
+    },
+  },
+  palette: {
+    primary: {
+      // main: "#40739e",
+      main: "#EE6741",
+    },
+    secondary: {
+      main: "#ff6b6b",
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      {/* <ResponsiveDrawer /> */}
+      {/* <ResponsiveMenu /> */}
+      <TopBar />
+    </ThemeProvider>
   );
 }
 
