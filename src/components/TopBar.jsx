@@ -25,6 +25,7 @@ import Menubar from "./Menubar";
 import { Box } from "@material-ui/core";
 import Home from "../pages/Home";
 import Pricing from "../pages/Pricing";
+import Footer from "./Footer";
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
-    marginLeft: 60
+    marginLeft: 60,
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
@@ -87,6 +88,9 @@ const useStyles = makeStyles((theme) => ({
   },
   action_button: {
     marginRight: 20,
+  },
+  sub: {
+    marginLeft: 20,
   },
 }));
 function TopBar() {
@@ -118,11 +122,27 @@ function TopBar() {
   const drawer = (
     <div>
       <List>
-        {dummyCategories.map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button>
+          <ListItemText>Product</ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            For Owner & Directors
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>For Teachers</ListItemText>
+        </ListItem>
+
+        <ListItem button>
+          <ListItemText>Features</ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText>Pricing</ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText>Resources</ListItemText>
+        </ListItem>
       </List>
     </div>
   );
@@ -215,6 +235,7 @@ function TopBar() {
               <Home />
             </Route>
           </Switch>
+          <Footer />
         </div>
       </div>
     </Router>
