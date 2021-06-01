@@ -7,13 +7,16 @@ import TopBar from "./components/TopBar";
 
 const theme = createMuiTheme({
   typography: {
+    allVariants: {
+      color: "#464141",
+    },
     // fontFamily: ["Fira Sans Condensed", "sans-serif"].join(","),
     fontFamily: ["Open Sans", "sans-serif"].join(","),
-    color: "#ddd",
     h4: {
-      fontSize: "1.8rem",
-      fontWeight: 400,
+      fontSize: "2rem",
+      fontWeight: 600,
       margin: "0 0 20px 0",
+      textAlign: 'center'
     },
   },
   palette: {
@@ -30,8 +33,6 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      {/* <ResponsiveDrawer /> */}
-      {/* <ResponsiveMenu /> */}
       <TopBar />
     </ThemeProvider>
   );

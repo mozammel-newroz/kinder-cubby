@@ -20,7 +20,7 @@ import Paper from "@material-ui/core/Paper";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import logo from "../assets/images/logo.png";
 
-import "../css/menuBar.css";
+import "../assets/css/menuBar.css";
 import Menubar from "./Menubar";
 import { Box } from "@material-ui/core";
 import Home from "../pages/Home";
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    background: "transparent",
+    background: "#fff",
     height: 60,
     marginTop: 0,
     padding: 0,
@@ -63,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
+    marginLeft: 60
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
@@ -150,14 +151,18 @@ function TopBar() {
                 </div>
                 <Box className={classes.action}>
                   <Button
+                    variant="outlined"
+                    color="primary"
+                    className={`${classes.action_button} button`}
+                  >
+                    Login
+                  </Button>
+                  <Button
                     variant="contained"
                     color="primary"
-                    className={classes.action_button}
+                    className="button"
                   >
-                    Primary
-                  </Button>
-                  <Button variant="outlined" color="primary">
-                    secondary
+                    Try It Free
                   </Button>
                 </Box>
               </div>
