@@ -70,7 +70,7 @@ nav ul {
   margin-top: 1px;
 }
 
-.nav li a:first-child:nth-last-child(2):before {
+/* .nav li a:first-child:nth-last-child(2):before {
   content: "";
   position: absolute;
   height: 0;
@@ -78,7 +78,7 @@ nav ul {
   border: 5px solid transparent;
   top: 50%;
   right: 5px;
-}
+} */
 
 /* submenu positioning*/
 .nav ul li a {
@@ -111,20 +111,32 @@ nav ul {
   background-color: #e3ebfc;
 }
 /* arrow hover styling */
-.nav > li > a:first-child:nth-last-child(2):before {
+/* .nav > li > a:first-child:nth-last-child(2):before {
   border-top-color: #454141;
-}
-.nav > li:hover > a:first-child:nth-last-child(2):before {
+} */
+/* .nav > li:hover > a:first-child:nth-last-child(2):before {
   border: 5px solid transparent;
   border-bottom-color: #ff5c31;
   margin-top: -5px;
-}
-.nav li li > a:first-child:nth-last-child(2):before {
+} */
+/* .nav li li > a:first-child:nth-last-child(2):before {
   border-left-color: #ff5c31;
   margin-top: -5px;
-}
-.nav li li:hover > a:first-child:nth-last-child(2):before {
+} */
+/* .nav li li:hover > a:first-child:nth-last-child(2):before {
   border: 5px solid transparent;
   border-right-color: #ff5c31;
   right: 10px;
+} */
+
+
+.nav li a span {
+  position: absolute;
+  top:13px;
+  right:0px
+}
+.nav li:hover a span {
+  position: absolute;
+  top:9px;
+  transform: rotate(180deg);
 }

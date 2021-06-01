@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/menuBar.css";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const Menubar = () => {
   return (
     <nav>
       <ul class="nav">
         <li>
-          <a href="#">Product</a>
+          <a href="#">
+            Product{" "}
+            <span>
+              <ExpandMoreIcon />
+            </span>
+          </a>
           <ul>
             <li>
               <a href="#">For Owners & Directors</a>
@@ -22,7 +28,10 @@ const Menubar = () => {
         </li>
 
         <li>
-          <a href="#">Features</a>
+          <a href="#">Features{" "}
+            <span>
+              <ExpandMoreIcon />
+            </span></a>
           <ul>
             <li>
               <a href="#">Feature Overviews</a>
@@ -53,7 +62,10 @@ const Menubar = () => {
         </li>
 
         <li>
-          <a href="#">Resources</a>
+          <a href="#">Resources{" "}
+            <span>
+              <ExpandMoreIcon />
+            </span></a>
           <ul>
             <li>
               <a href="#">Documentation</a>
