@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
     color: "red",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("lg")]: {
       display: "none",
     },
   },
@@ -57,8 +57,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginLeft: 30,
-    marginRight: 30,
+    paddingLeft: 30,
+    paddingRight: 30,
   },
   menu: {
     [theme.breakpoints.down("sm")]: {
@@ -138,7 +138,9 @@ function TopBar() {
           <ListItemText>Features</ListItemText>
         </ListItem>
         <ListItem button>
-          <ListItemText>Pricing</ListItemText>
+          <ListItemText>
+          <Link to="/pricing">Pricing</Link>
+          </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText>Resources</ListItemText>
@@ -149,7 +151,7 @@ function TopBar() {
   return (
     <Router>
       <div className={classes.root}>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
             <Container maxWidth="lg">

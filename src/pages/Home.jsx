@@ -18,13 +18,13 @@ import DemoVideo_image from "../assets/images/DemoVideo.png";
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "0px 30px",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: 0,
     },
   },
   wrapper2: {
     padding: "0px 50px",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: 20,
     },
   },
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 50,
     display: "flex",
     alignItems: "center",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: 0,
     },
   },
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   banner_image: {
     flex: 1,
     padding: 30,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       display: "none",
     },
   },
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   banner_headline: {
     fontWeight: 600,
     marginBottom: 80,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       marginBottom: 20,
     },
   },
@@ -64,13 +64,13 @@ const useStyles = makeStyles((theme) => ({
     color: "#0B4295",
     marginLeft: 10,
     padding: "13px 35px  !important",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       marginLeft: 0,
     },
   },
   activity_wrapper: {
     padding: "60px 120px",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: "20px 0px",
     },
   },
@@ -94,13 +94,13 @@ const useStyles = makeStyles((theme) => ({
     background: "#E3EBFC",
     borderRadius: 10,
     padding: "40px 80px",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: 20,
     },
   },
   image: {
     maxWidth: "100%",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       display: "none",
     },
   },
@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 10,
     padding: "60px 70px",
     alignItems: "center",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: 20,
     },
   },
@@ -138,9 +138,9 @@ const Home = () => {
   const classes = useStyles();
   return (
     <>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <Container maxWidth="lg">
-        <Grid container spacing={5} className={classes.wrapper}>
+        <Grid container spacing={3} className={classes.wrapper}>
           <Grid item lg={12}>
             <div className={classes.banner}>
               <div className={classes.banner_image}>
@@ -178,7 +178,7 @@ const Home = () => {
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container spacing={5} className={classes.activity_wrapper}>
+        <Grid container spacing={3} className={classes.activity_wrapper}>
           <Grid item lg={12}>
             <Typography variant="h4">
               No more chasing after kids to <br />
@@ -186,7 +186,7 @@ const Home = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={4} md={12} className={classes.activity_box}>
+          <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage1}
@@ -204,7 +204,7 @@ const Home = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} md={12} className={classes.activity_box}>
+          <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage1}
@@ -222,7 +222,7 @@ const Home = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} md={12} className={classes.activity_box}>
+          <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage1}
@@ -243,7 +243,7 @@ const Home = () => {
       </Container>
       <Container maxWidth="lg">
         <div className={classes.wrapper2}>
-          <Grid container spacing={5} className={classes.activity_wrapper2}>
+          <Grid container spacing={3} className={classes.activity_wrapper2}>
             <Grid item lg={12}>
               <Typography variant="h4">
                 Activities that we are keeping track of
@@ -295,7 +295,7 @@ const Home = () => {
         </div>
       </Container>
       <Container maxWidth="lg">
-        <Grid container spacing={5} className={`${classes.activity_wrapper}`}>
+        <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
               Improve the quality of your program & <br /> give parents the
@@ -323,7 +323,7 @@ const Home = () => {
       </Container>
 
       <Container maxWidth="lg">
-        <Grid container spacing={5} className={classes.wrapper}>
+        <Grid container spacing={3} className={classes.wrapper}>
           <Grid item lg={12}>
             <div className={classes.demo}>
               <Typography variant="h4" className={classes.demo_headline}>
@@ -340,7 +340,7 @@ const Home = () => {
       </Container>
 
       <Container maxWidth="lg">
-        <Grid container spacing={5} className={`${classes.activity_wrapper}`}>
+        <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
               Get better insight & actionable information <br /> with

@@ -19,16 +19,23 @@ import PlayStore from "../assets/images/PlayStore.png";
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "0px 30px",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       padding: 0,
     },
   },
+  wrapper2: {
+    padding: "30px 30px 0px 30px",
+    [theme.breakpoints.down("xs")]: {
+      padding: 0,
+    },
+  },
+  
   footer: {
     display: "flex",
     padding: "60px 0px",
-    // borderTop: '1px solid #ddd',
+    borderTop: "1px solid #ddd",
     borderBottom: "1px solid #ddd",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
     },
   },
@@ -38,8 +45,8 @@ const useStyles = makeStyles((theme) => ({
   },
   footer_item: {
     flex: 1,
-    [theme.breakpoints.down("sm")]: {
-      width: 370,
+    [theme.breakpoints.down("xs")]: {
+      // width: 370,
     },
   },
   banner_button: {
@@ -48,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   footer_title: {
     fontWeight: 600,
     marginBottom: 15,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       marginTop: 25,
     },
   },
@@ -77,6 +84,12 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 4,
     color: "#92B0EB",
   },
+  footer_bottom: {
+    borderTop: '1px solid #ddd',
+    textAlign: 'center',
+    paddingTop: 15,
+    color: '#999'
+  },
 }));
 
 const Footer = () => {
@@ -84,9 +97,9 @@ const Footer = () => {
 
   return (
     <>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <Container maxWidth="lg">
-        <Grid container spacing={5} className={classes.wrapper}>
+        <Grid container spacing={3} className={classes.wrapper}>
           <Grid item lg={12}>
             <div className={classes.break}></div>
             <div className={classes.footer}>
@@ -217,6 +230,10 @@ const Footer = () => {
               </div>
             </div>
           </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Grid container spacing={3} className={classes.wrapper2}>
           <Grid item lg={6}>
             <Typography variant="h6" className={classes.footer_title2}>
               Download Mobile App
@@ -238,6 +255,11 @@ const Footer = () => {
               <InstagramIcon className={classes.icon} />
               <LinkedInIcon className={classes.icon} />
             </div>
+          </Grid>
+          <Grid item lg={12}>
+            <Typography variant="body2" className={classes.footer_bottom}>
+              Copyright ©2021 KinderCubby
+            </Typography>
           </Grid>
         </Grid>
       </Container>
