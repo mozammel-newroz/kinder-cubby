@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   footer_item: {
     flex: 1,
     [theme.breakpoints.down("xs")]: {
-      // width: 370,
+      // width: 320,
     },
   },
   banner_button: {
@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
     borderTop: '1px solid #ddd',
     textAlign: 'center',
     paddingTop: 15,
-    color: '#999'
+    color: '#999',
   },
 }));
 
@@ -100,7 +100,7 @@ const Footer = () => {
       {/* <CssBaseline /> */}
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} xs={12}>
             <div className={classes.break}></div>
             <div className={classes.footer}>
               <div className={classes.footer_item}>
@@ -256,7 +256,7 @@ const Footer = () => {
               <LinkedInIcon className={classes.icon} />
             </div>
           </Grid>
-          <Grid item lg={12}>
+          <Grid item lg={12} xs={12}>
             <Typography variant="body2" className={classes.footer_bottom}>
               Copyright ©2021 KinderCubby
             </Typography>
