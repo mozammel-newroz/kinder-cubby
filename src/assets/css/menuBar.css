@@ -132,11 +132,11 @@ nav ul {
 
 .nav li a span {
   position: absolute;
-  top:13px;
+  top:10px;
   right:0px
 }
 .nav li:hover a span {
   position: absolute;
-  top:9px;
+  top:6px;
   transform: rotate(180deg);
 }

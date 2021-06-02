@@ -11,3 +11,7 @@
   font-weight: 600 !important;
   text-transform: capitalize !important;
 }
+a {
+  color: #464141;
+  text-decoration: none;
+}

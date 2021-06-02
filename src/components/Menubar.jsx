@@ -8,51 +8,53 @@ const Menubar = () => {
     <nav>
       <ul class="nav">
         <li>
-          <a href="#">
+          <Link to="#">
             Product{" "}
             <span>
               <ExpandMoreIcon />
             </span>
-          </a>
+          </Link>
           <ul>
             <li>
-              <a href="#">For Owners & Directors</a>
+              <Link to="/for-owners-and-directors">For Owners & Directors</Link>
             </li>
             <li>
-              <a href="#">For Teachers</a>
+              <Link to="/for-teachers">For Teachers</Link>
             </li>
             <li>
-              <a href="#">For Parents</a>
+              <Link to="/for-parents">For Parents</Link>
             </li>
           </ul>
         </li>
 
         <li>
-          <a href="#">Features{" "}
+          <Link to="#">
+            Features{" "}
             <span>
               <ExpandMoreIcon />
-            </span></a>
+            </span>
+          </Link>
           <ul>
             <li>
-              <a href="#">Feature Overviews</a>
+              <Link to="/feature-overviews">Feature Overviews</Link>
             </li>
             <li>
-              <a href="#">Attendance & check-ins</a>
+              <Link to="/attendance-and-check-ins">Attendance & check-ins</Link>
             </li>
             <li>
-              <a href="#">Activity Tracking</a>
+              <Link to="/activity-tracking">Activity Tracking</Link>
             </li>
             <li>
-              <a href="#">Center Management</a>
+              <Link to="/center-management">Center Management</Link>
             </li>
             <li>
-              <a href="#">Billing</a>
+              <Link to="/billing">Billing</Link>
             </li>
             <li>
-              <a href="#">Managing Learning Path</a>
+              <Link to="/managing-learning-path">Managing Learning Path</Link>
             </li>
             <li>
-              <a href="#">Parents Engagements</a>
+              <Link to="/parents-engagements">Parents Engagements</Link>
             </li>
           </ul>
         </li>
@@ -62,25 +64,27 @@ const Menubar = () => {
         </li>
 
         <li>
-          <a href="#">Resources{" "}
+          <a to="#">
+            Resources{" "}
             <span>
               <ExpandMoreIcon />
-            </span></a>
+            </span>
+          </a>
           <ul>
             <li>
-              <a href="#">Documentation</a>
+              <Link to="/documentation">Documentation</Link>
             </li>
             <li>
-              <a href="#">eBooks</a>
+              <Link to="/e-books">eBooks</Link>
             </li>
             <li>
-              <a href="#">Case Studies</a>
+              <Link to="/case-studies">Case Studies</Link>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="#">Find Nearby Childcare</a>
+              <Link to="/find-nearby-child-care">Find Nearby Childcare</Link>
             </li>
           </ul>
         </li>

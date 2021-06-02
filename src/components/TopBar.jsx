@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -23,9 +23,8 @@ import logo from "../assets/images/logo.png";
 import "../assets/css/menuBar.css";
 import Menubar from "./Menubar";
 import { Box } from "@material-ui/core";
-import Home from "../pages/Home";
-import Pricing from "../pages/Pricing";
 import Footer from "./Footer";
+import AppRouter from "./AppRouter";
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -75,8 +74,10 @@ const useStyles = makeStyles((theme) => ({
     // padding: theme.spacing(3),
   },
   closeMenuButton: {
-    marginRight: "auto",
-    marginLeft: 0,
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    zIndex: 9
   },
   action: {
     flex: 1,
@@ -91,6 +92,9 @@ const useStyles = makeStyles((theme) => ({
   },
   sub: {
     marginLeft: 20,
+    "& a": {
+      fontSize: 14,
+    },
   },
 }));
 function TopBar() {
@@ -122,28 +126,107 @@ function TopBar() {
   const drawer = (
     <div>
       <List>
+      <ListItem button>
+          <ListItemText>
+            <Link to="/">Home</Link>
+          </ListItemText>
+        </ListItem>
+        {/* products  */}
         <ListItem button>
           <ListItemText>Product</ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            For Owner & Directors
+            <Link to="/for-owners-and-directors">For Owners & Directors</Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
-          <ListItemText className={classes.sub}>For Teachers</ListItemText>
+          <ListItemText className={classes.sub}>
+            <Link to="/for-teachers">For Teachers</Link>
+          </ListItemText>
         </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/for-parents">For Parents</Link>
+          </ListItemText>
+        </ListItem>
+
+        {/* features  */}
 
         <ListItem button>
           <ListItemText>Features</ListItemText>
         </ListItem>
         <ListItem button>
-          <ListItemText>
-          <Link to="/pricing">Pricing</Link>
+          <ListItemText className={classes.sub}>
+            <Link to="/feature-overviews">Feature Overviews</Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/attendance-and-check-ins">Attendance & check-ins</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/activity-tracking">Activity Tracking</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/center-management">Center Management</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/billing">Billing</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/managing-learning-path">Managing Learning Path</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/parents-engagements">Parents Engagements</Link>
+          </ListItemText>
+        </ListItem>
+
+        {/* pricing  */}
+        <ListItem button>
+          <ListItemText>
+            <Link to="/pricing">Pricing</Link>
+          </ListItemText>
+        </ListItem>
+
+        {/* resources  */}
+        <ListItem button>
           <ListItemText>Resources</ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/documentation">Documentation</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/e-books">eBooks</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/case-studies">Case Studies</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/blog">Blog</Link>
+          </ListItemText>
+        </ListItem>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+            <Link to="/find-nearby-child-care">Find Nearby Childcare</Link>
+          </ListItemText>
         </ListItem>
       </List>
     </div>
@@ -229,14 +312,7 @@ function TopBar() {
         </nav>
         <div className={classes.content}>
           <div className={classes.toolbar} />
-          <Switch>
-            <Route path="/pricing">
-              <Pricing />
-            </Route>
-            <Route exact path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <AppRouter />
           <Footer />
         </div>
       </div>
