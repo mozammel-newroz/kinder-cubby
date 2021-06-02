@@ -18,7 +18,7 @@ import DemoVideo_image from "../assets/images/DemoVideo.png";
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "0px 30px",
-    width: '100%',
+    width: "100%",
     [theme.breakpoints.down("xs")]: {
       padding: 0,
     },
@@ -58,6 +58,10 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
+  },
+  banner_content_text: {
+    fontSize: 24,
+    marginBottom: 30,
   },
   banner_headline: {
     fontWeight: 600,
@@ -151,7 +155,7 @@ const Home = () => {
     <>
       {/* <CssBaseline /> */}
       <Container maxWidth="lg">
-        <Grid container  className={classes.wrapper}>
+        <Grid container className={classes.wrapper}>
           <Grid item lg={12}>
             <div className={classes.banner}>
               <div className={classes.banner_image}>
@@ -161,7 +165,7 @@ const Home = () => {
                 <Typography variant="h3" className={classes.banner_headline}>
                   Automated
                 </Typography>
-                <Typography style={{ fontSize: 24, marginBottom: 30 }}>
+                <Typography className={classes.banner_content_text}>
                   Sed a magna semper, porta purus eu, ullamcorper ligula. Nam
                   sit amet consectetur
                 </Typography>
@@ -204,7 +208,7 @@ const Home = () => {
               alt=""
             />
 
-            <div className={classes.activity_content}>
+            <div>
               <Typography className={classes.activity_box_headline}>
                 Activity Feed
               </Typography>
@@ -222,7 +226,7 @@ const Home = () => {
               alt=""
             />
 
-            <div className={classes.activity_content}>
+            <div>
               <Typography className={classes.activity_box_headline}>
                 Activity Feed
               </Typography>
@@ -240,7 +244,7 @@ const Home = () => {
               alt=""
             />
 
-            <div className={classes.activity_content}>
+            <div>
               <Typography className={classes.activity_box_headline}>
                 Activity Feed
               </Typography>
@@ -312,7 +316,7 @@ const Home = () => {
               Improve the quality of your program & <br /> give parents the
               information they need
             </Typography>
-            <Typography variant="h6" className={classes.improve}>
+            <Typography variant="h6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
               accusamus vitae? Quibusdam ad a nam nihil ea aperiam quod placeat
               unde ducimus excepturi ratione porro dolore, rem provident.

@@ -19,6 +19,12 @@ const theme = createMuiTheme({
       textAlign: "center",
       lineHeight: 1.5,
     },
+    h6: {
+      textAlign: "center",
+      marginTop: 40,
+      marginBottom: 40,
+      fontSize: "1.25rem",
+    },
   },
   palette: {
     primary: {
