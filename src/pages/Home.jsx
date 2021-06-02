@@ -18,6 +18,7 @@ import DemoVideo_image from "../assets/images/DemoVideo.png";
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "0px 30px",
+    width: '100%',
     [theme.breakpoints.down("xs")]: {
       padding: 0,
     },
@@ -36,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {
       padding: 0,
+      marginTop: 10,
     },
   },
 
@@ -49,6 +51,10 @@ const useStyles = makeStyles((theme) => ({
   banner_content: {
     flex: 1,
     padding: 30,
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      padding: 20,
+    },
   },
   banner_button: {
     padding: "13px 35px  !important",
@@ -111,10 +117,12 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {
       padding: 20,
+      width: "100%",
     },
   },
   demo_image: {
     maxWidth: "100%",
+    [theme.breakpoints.down("xs")]: {},
   },
   demo_headline: {
     marginBottom: 50,
@@ -128,6 +136,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 40,
     marginBottom: 40,
   },
+  improve_image: {
+    maxWidth: "100%",
+  },
   center_button: {
     textAlign: "center",
     marginTop: 40,
@@ -140,7 +151,7 @@ const Home = () => {
     <>
       {/* <CssBaseline /> */}
       <Container maxWidth="lg">
-        <Grid container spacing={3} className={classes.wrapper}>
+        <Grid container  className={classes.wrapper}>
           <Grid item lg={12}>
             <div className={classes.banner}>
               <div className={classes.banner_image}>
@@ -307,7 +318,11 @@ const Home = () => {
               unde ducimus excepturi ratione porro dolore, rem provident.
             </Typography>
             <div className={classes.improve}>
-              <img src={StartNow_image} alt="" />
+              <img
+                src={StartNow_image}
+                className={classes.improve_image}
+                alt=""
+              />
             </div>
             <div className={classes.center_button}>
               <Button
@@ -323,7 +338,7 @@ const Home = () => {
       </Container>
 
       <Container maxWidth="lg">
-        <Grid container spacing={3} className={classes.wrapper}>
+        <Grid container className={classes.wrapper}>
           <Grid item lg={12}>
             <div className={classes.demo}>
               <Typography variant="h4" className={classes.demo_headline}>

@@ -3,9 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+/* body {
   background-color: #ddd;
-}
+} */
 .button {
   padding: 8px 15px !important;
   font-weight: 600 !important;

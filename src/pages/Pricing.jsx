@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {
+      marginTop: 10,
       padding: 0,
     },
   },
@@ -142,9 +143,9 @@ const Home = () => {
   const classes = useStyles();
   return (
     <>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <Container maxWidth="lg">
-        <Grid container spacing={3} className={classes.wrapper}>
+        <Grid container className={classes.wrapper}>
           <Grid item lg={12}>
             <div className={classes.banner}>
               <div className={classes.banner_image}>
