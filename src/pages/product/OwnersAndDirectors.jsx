@@ -11,9 +11,13 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
-import automated from "../../assets/images/automated.png";
-import ParentsVideo from "../../assets/images/ParentsVideo.png";
+import GrowYour from "../../assets/images/GrowYour.png";
+import DirectorDemoVideo from "../../assets/images/DirectorDemoVideo.png";
 import RealTimeUpdates from "../../assets/images/RealTimeUpdates.png";
+import StaffManagement from "../../assets/images/StaffManagement.png";
+import BillingAndInvoicing from "../../assets/images/BillingAndInvoicing.png";
+import DigitalReport from "../../assets/images/DigitalReport.png";
+import ConnectedWorkflow from "../../assets/images/ConnectedWorkflow.png";
 import PurpleCircle from "../../assets/images/PurpleCircle.png";
 import FocusOnChildern from "../../assets/images/FocusOnChildern.png";
 
@@ -185,7 +189,7 @@ const OwnersAndDirectors = () => {
                 </div>
               </div>
               <div className={classes.banner_image}>
-                <img src={automated} alt="" />
+                <img src={GrowYour} alt="" />
               </div>
             </div>
           </Grid>
@@ -196,7 +200,7 @@ const OwnersAndDirectors = () => {
         <Grid container className={classes.wrapper2}>
           <Card className={classes.card}>
             <div className={classes.left}>
-              <img src={ParentsVideo} alt="" />
+              <img src={DirectorDemoVideo} alt="" />
             </div>
             <div className={classes.right}>
               <Typography className={classes.right_text}>
@@ -224,35 +228,35 @@ const OwnersAndDirectors = () => {
               alt=""
             />
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
+              <Typography variant="h5">Real-time updates</Typography>
               <Typography variant="subtitle1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
+              Nulla eleifend pulvinar purus, molestie euismod odio
               </Typography>
             </div>
           </Grid>
           <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
-              src={RealTimeUpdates}
+              src={StaffManagement}
               alt=""
             />
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
+              <Typography variant="h5">Staff Management</Typography>
               <Typography variant="subtitle1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
+              Nulla eleifend pulvinar purus, molestie euismod odio
               </Typography>
             </div>
           </Grid>
           <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
-              src={RealTimeUpdates}
+              src={BillingAndInvoicing}
               alt=""
             />
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
+              <Typography variant="h5">Billing & Invoicing</Typography>
               <Typography variant="subtitle1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
+              Nulla eleifend pulvinar purus, molestie euismod odio
               </Typography>
             </div>
           </Grid>
@@ -261,26 +265,26 @@ const OwnersAndDirectors = () => {
             <Grid item lg={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
-                src={RealTimeUpdates}
+                src={DigitalReport}
                 alt=""
               />
               <div>
-                <Typography variant="h5">Activity Feed</Typography>
+                <Typography variant="h5">Digitised Reports</Typography>
                 <Typography variant="subtitle1">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                Nulla eleifend pulvinar purus, molestie euismod odio
                 </Typography>
               </div>
             </Grid>
             <Grid item lg={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
-                src={RealTimeUpdates}
+                src={ConnectedWorkflow}
                 alt=""
               />
               <div>
-                <Typography variant="h5">Activity Feed</Typography>
+                <Typography variant="h5">Connected workflow</Typography>
                 <Typography variant="subtitle1">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                Nulla eleifend pulvinar purus, molestie euismod odio
                 </Typography>
               </div>
             </Grid>
