@@ -16,6 +16,7 @@ import ParentsVideo from "../../assets/images/ParentsVideo.png";
 import RealTimeUpdates from "../../assets/images/RealTimeUpdates.png";
 import PurpleCircle from "../../assets/images/PurpleCircle.png";
 import FocusOnChildern from "../../assets/images/FocusOnChildern.png";
+import owner_youtube from "../../assets/images/owner_youtube.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -142,13 +143,33 @@ const useStyles = makeStyles((theme) => ({
   margin_bottom_30: {
     marginBottom: 30,
   },
-  image:{
-    maxWidth: '100%'
+  image: {
+    maxWidth: "100%",
   },
-  parent_child : {
-    display: 'flex',
-    justifyContent: 'center'
-  }
+  parent_child: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  tag: {
+    textAlign: "center",
+    background: "#E3EBFC",
+    borderRadius: 13,
+    padding: "40px 20px",
+    margin: 15,
+    "& h3": {
+      fontWeight: 600,
+      marginBottom: 10,
+    },
+  },
+  tag_last: {
+    marginRight: 0,
+  },
+  tag_text: {
+    marginTop: -10,
+  },
+  center: {
+    textAlign: "center",
+  },
 }));
 
 const OwnersAndDirectors = () => {
@@ -292,14 +313,13 @@ const OwnersAndDirectors = () => {
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
-            Automate more, less paperwork <br /> more focus on children
+              Automate more, less paperwork <br /> more focus on children
             </Typography>
           </Grid>
-          <Grid item lg={6} className={classes.parent_child} >
-            <img src={FocusOnChildern}  alt="" className={classes.image} />
+          <Grid item lg={6} className={classes.parent_child}>
+            <img src={FocusOnChildern} alt="" className={classes.image} />
           </Grid>
           <Grid item lg={6}>
-
             <Typography variant="h5" className={classes.align_left}>
               Activity Tracking
             </Typography>
@@ -343,22 +363,78 @@ const OwnersAndDirectors = () => {
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
               ducimus possimus
             </Typography>
-
           </Grid>
         </Grid>
       </Container>
 
       <Container maxWidth="lg">
-        <Grid container  className={`${classes.activity_wrapper}`}>
+        <Grid container spacing={5} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
-            Automate more, less paperwork <br /> more focus on children
+              Impact of KinderCubby on Directors
             </Typography>
-
-            
+            <img src={owner_youtube} alt="" className={classes.image} />
           </Grid>
 
-          
+          <Grid item lg={4}>
+            <div className={classes.tag}>
+              <Typography variant="h3">85%</Typography>
+              <Typography variant="h5">of users</Typography>
+              <Typography variant="body1" className={classes.tag_text}>
+                Would recommend KinderCubby
+              </Typography>
+            </div>
+          </Grid>
+
+          <Grid item lg={4}>
+            <div className={classes.tag}>
+              <Typography variant="h3">85%</Typography>
+              <Typography variant="h5">of users</Typography>
+              <Typography variant="body1" className={classes.tag_text}>
+                Would recommend KinderCubby
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item lg={4}>
+            <div className={`${classes.tag} `}>
+              <Typography variant="h3">85%</Typography>
+              <Typography variant="h5">of users</Typography>
+              <Typography variant="body1" className={classes.tag_text}>
+                Would recommend KinderCubby
+              </Typography>
+            </div>
+          </Grid>
+        </Grid>
+      </Container>
+
+      <Container maxWidth="lg">
+        <Grid container className={`${classes.activity_wrapper}`}>
+          <Grid item lg={12}>
+            <Typography variant="h4">
+              KinderCubby for owners & directors
+            </Typography>
+            <Typography variant="h6">
+              Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+              congue consequat. In posuere, nunc sit amet laoreet blandit, urna
+              sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
+            </Typography>
+            <div className={classes.center}>
+              <Button
+                variant="contained"
+                color="primary"
+                className={`${classes.banner_button} button`}
+              >
+                Try it Free
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                className={`${classes.banner_button} ${classes.margin_left_20} button`}
+              >
+                Explore Pricing
+              </Button>
+            </div>
+          </Grid>
         </Grid>
       </Container>
     </>
