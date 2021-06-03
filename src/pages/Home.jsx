@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  CssBaseline,
-  Container,
-  Grid,
-  Typography,
-  Button,
-} from "@material-ui/core";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { Container, Grid, Typography, Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
 import automated from "../assets/images/automated.png";
@@ -14,6 +8,7 @@ import ChasingActivityImage1 from "../assets/images/ChasingActivityImage1.png";
 import activity_image from "../assets/images/activity.png";
 import StartNow_image from "../assets/images/StartNow.png";
 import DemoVideo_image from "../assets/images/DemoVideo.png";
+import YoutubeIcon from "../assets/images/YoutubeIcon.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -92,11 +87,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "100%",
     padding: "0px 40px 15px 40px",
   },
-  activity_box_headline: {
-    fontSize: 22,
-    fontWeight: 600,
-    marginBottom: 15,
-  },
+
   margin10: {
     marginBottom: 30,
   },
@@ -146,6 +137,18 @@ const useStyles = makeStyles((theme) => ({
   center_button: {
     textAlign: "center",
     marginTop: 40,
+  },
+  youtube: {
+    position: "relative",
+  },
+  YoutubeIcon: {
+    position: "absolute",
+    left: "40%",
+    top: "40%",
+    [theme.breakpoints.down("xs")]: {
+      left: "15%",
+      top: "0%",
+    },
   },
 }));
 
@@ -209,9 +212,7 @@ const Home = () => {
             />
 
             <div>
-              <Typography className={classes.activity_box_headline}>
-                Activity Feed
-              </Typography>
+              <Typography variant="h5">Activity Feed</Typography>
               <Typography variant="body1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptate natus consectetur temporibus
@@ -227,9 +228,7 @@ const Home = () => {
             />
 
             <div>
-              <Typography className={classes.activity_box_headline}>
-                Activity Feed
-              </Typography>
+              <Typography variant="h5">Activity Feed</Typography>
               <Typography variant="body1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptate natus consectetur temporibus
@@ -245,9 +244,7 @@ const Home = () => {
             />
 
             <div>
-              <Typography className={classes.activity_box_headline}>
-                Activity Feed
-              </Typography>
+              <Typography variant="h5">Activity Feed</Typography>
               <Typography variant="body1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptate natus consectetur temporibus
@@ -348,11 +345,16 @@ const Home = () => {
               <Typography variant="h4" className={classes.demo_headline}>
                 KinderCubby activity tracking demo
               </Typography>
-              <img
-                className={classes.demo_image}
-                src={DemoVideo_image}
-                alt=""
-              />
+              <div className={classes.youtube}>
+                <div className={classes.YoutubeIcon}>
+                  <img src={YoutubeIcon} alt="" />
+                </div>
+                <img
+                  className={classes.demo_image}
+                  src={DemoVideo_image}
+                  alt=""
+                />
+              </div>
             </div>
           </Grid>
         </Grid>

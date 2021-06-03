@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  CssBaseline,
-  Container,
-  Grid,
-  Typography,
-  Button,
-} from "@material-ui/core";
+import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -29,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
     },
   },
-  
+
   footer: {
     display: "flex",
     padding: "60px 0px",
@@ -53,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "13px 35px  !important",
   },
   footer_title: {
+    textAlign: "left",
     fontWeight: 600,
     marginBottom: 15,
     [theme.breakpoints.down("xs")]: {
@@ -85,10 +80,10 @@ const useStyles = makeStyles((theme) => ({
     color: "#92B0EB",
   },
   footer_bottom: {
-    borderTop: '1px solid #ddd',
-    textAlign: 'center',
+    borderTop: "1px solid #ddd",
+    textAlign: "center",
     paddingTop: 15,
-    color: '#999',
+    color: "#999",
   },
 }));
 
