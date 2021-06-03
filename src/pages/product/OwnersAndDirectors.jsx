@@ -15,6 +15,7 @@ import automated from "../../assets/images/automated.png";
 import ParentsVideo from "../../assets/images/ParentsVideo.png";
 import RealTimeUpdates from "../../assets/images/RealTimeUpdates.png";
 import PurpleCircle from "../../assets/images/PurpleCircle.png";
+import FocusOnChildern from "../../assets/images/FocusOnChildern.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -108,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
   activity_box: {
     textAlign: "center",
     [theme.breakpoints.down("xs")]: {
-      marginBottom: 30
+      marginBottom: 30,
     },
   },
 
@@ -120,16 +121,34 @@ const useStyles = makeStyles((theme) => ({
     padding: 20,
     marginBottom: 15,
   },
-  activity_second : {
-    padding: '50px 120px 0px 120px',
+  activity_second: {
+    padding: "50px 120px 0px 120px",
     [theme.breakpoints.down("xs")]: {
       padding: 0,
     },
   },
   activity_headline: {
-    padding: 10
+    padding: 10,
+  },
+  activity_wrapper: {
+    padding: "60px 120px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "20px 0px",
+    },
+  },
+  align_left: {
+    textAlign: "left",
+  },
+  margin_bottom_30: {
+    marginBottom: 30,
+  },
+  image:{
+    maxWidth: '100%'
+  },
+  parent_child : {
+    display: 'flex',
+    justifyContent: 'center'
   }
-  
 }));
 
 const OwnersAndDirectors = () => {
@@ -174,7 +193,7 @@ const OwnersAndDirectors = () => {
       </Container>
 
       <Container maxWidth="lg">
-        <Grid container  className={classes.wrapper2}>
+        <Grid container className={classes.wrapper2}>
           <Card className={classes.card}>
             <div className={classes.left}>
               <img src={ParentsVideo} alt="" />
@@ -194,7 +213,7 @@ const OwnersAndDirectors = () => {
             </div>
           </Card>
           <Grid item lg={12}>
-            <Typography variant="h4" className={classes.activity_headline} >
+            <Typography variant="h4" className={classes.activity_headline}>
               Activities that we are keeping track of
             </Typography>
           </Grid>
@@ -238,7 +257,7 @@ const OwnersAndDirectors = () => {
             </div>
           </Grid>
 
-          <Grid container className={classes.activity_second} >
+          <Grid container className={classes.activity_second}>
             <Grid item lg={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
@@ -268,16 +287,80 @@ const OwnersAndDirectors = () => {
           </Grid>
         </Grid>
       </Container>
+
       <Container maxWidth="lg">
-        <Grid container className={classes.wrapper}>
-          <Grid item lg={6}>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, molestias commodi nam modi optio mollitia eius atque recusandae culpa amet incidunt nihil laborum quidem dolores. Ad repellat nulla nisi eius.
+        <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
+          <Grid item lg={12}>
+            <Typography variant="h4">
+            Automate more, less paperwork <br /> more focus on children
+            </Typography>
+          </Grid>
+          <Grid item lg={6} className={classes.parent_child} >
+            <img src={FocusOnChildern}  alt="" className={classes.image} />
           </Grid>
           <Grid item lg={6}>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, molestias commodi nam modi optio mollitia eius atque recusandae culpa amet incidunt nihil laborum quidem dolores. Ad repellat nulla nisi eius.
+
+            <Typography variant="h5" className={classes.align_left}>
+              Activity Tracking
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              className={classes.margin_bottom_30}
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
+              ducimus possimus
+            </Typography>
+
+            <Typography variant="h5" className={classes.align_left}>
+              Activity Tracking
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              className={classes.margin_bottom_30}
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
+              ducimus possimus
+            </Typography>
+
+            <Typography variant="h5" className={classes.align_left}>
+              Activity Tracking
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              className={classes.margin_bottom_30}
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
+              ducimus possimus
+            </Typography>
+
+            <Typography variant="h5" className={classes.align_left}>
+              Activity Tracking
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              className={classes.margin_bottom_30}
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
+              ducimus possimus
+            </Typography>
+
           </Grid>
         </Grid>
-        </Container>
+      </Container>
+
+      <Container maxWidth="lg">
+        <Grid container  className={`${classes.activity_wrapper}`}>
+          <Grid item lg={12}>
+            <Typography variant="h4">
+            Automate more, less paperwork <br /> more focus on children
+            </Typography>
+
+            
+          </Grid>
+
+          
+        </Grid>
+      </Container>
     </>
   );
 };

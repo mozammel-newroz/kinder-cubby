@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
   footer_title2: {
     fontWeight: 700,
     marginBottom: 15,
+    textAlign: "left",
   },
   ul: {
     margin: 0,
