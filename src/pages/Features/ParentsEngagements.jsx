@@ -152,11 +152,17 @@ const useStyles = makeStyles((theme) => ({
     background: "#fff",
     borderRadius: 10,
     overflow: "hidden",
-    height: 330
+    height: 330,
+    [theme.breakpoints.down("xs")]: {
+      height: "100%",
+    },
   },
   parent_cart_top: {
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
   parent_cart_image: {
     position: "relative",
@@ -200,10 +206,18 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 15,
       float: "right",
     },
+    [theme.breakpoints.down("xs")]: {
+      "&::before": {
+        right: -40,
+        top: -10,
+      },
+    },
   },
   parent_cart_title: {
     flex: 1,
-    // padding: 20
+    [theme.breakpoints.down("xs")]: {
+      marginTop: 20,
+    },
   },
   parent_cart_bottom: {
     padding: "40px 20px 20px 20px",
