@@ -189,7 +189,6 @@ const Home = () => {
                     Watch In Action
                   </Button>
                 </div>
-                <div></div>
               </div>
             </div>
           </Grid>
