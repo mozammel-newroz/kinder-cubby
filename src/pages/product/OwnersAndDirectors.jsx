@@ -73,8 +73,7 @@ const useStyles = makeStyles((theme) => ({
   margin_left_20: {
     marginLeft: 20,
     [theme.breakpoints.down("xs")]: {
-      marginLeft: 0,
-      marginTop: 10,
+      marginLeft: 3,
     },
   },
   wrapper2: {
@@ -113,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
   },
   activity_box: {
     textAlign: "center",
+    padding: "15px",
     [theme.breakpoints.down("xs")]: {
       marginBottom: 30,
     },
@@ -239,7 +239,7 @@ const OwnersAndDirectors = () => {
           </Card>
           <Grid item lg={12}>
             <Typography variant="h4" className={classes.activity_headline}>
-              Activities that we are keeping track of
+              Center Management at fingertip
             </Typography>
           </Grid>
           <Grid item lg={4} className={classes.activity_box}>
@@ -251,7 +251,7 @@ const OwnersAndDirectors = () => {
             <div>
               <Typography variant="h5">Real-time updates</Typography>
               <Typography variant="subtitle1">
-              Nulla eleifend pulvinar purus, molestie euismod odio
+                Nulla eleifend pulvinar purus, molestie euismod odio
               </Typography>
             </div>
           </Grid>
@@ -264,7 +264,7 @@ const OwnersAndDirectors = () => {
             <div>
               <Typography variant="h5">Staff Management</Typography>
               <Typography variant="subtitle1">
-              Nulla eleifend pulvinar purus, molestie euismod odio
+                Nulla eleifend pulvinar purus, molestie euismod odio
               </Typography>
             </div>
           </Grid>
@@ -277,7 +277,7 @@ const OwnersAndDirectors = () => {
             <div>
               <Typography variant="h5">Billing & Invoicing</Typography>
               <Typography variant="subtitle1">
-              Nulla eleifend pulvinar purus, molestie euismod odio
+                Nulla eleifend pulvinar purus, molestie euismod odio
               </Typography>
             </div>
           </Grid>
@@ -292,7 +292,7 @@ const OwnersAndDirectors = () => {
               <div>
                 <Typography variant="h5">Digitised Reports</Typography>
                 <Typography variant="subtitle1">
-                Nulla eleifend pulvinar purus, molestie euismod odio
+                  Nulla eleifend pulvinar purus, molestie euismod odio
                 </Typography>
               </div>
             </Grid>
@@ -305,7 +305,7 @@ const OwnersAndDirectors = () => {
               <div>
                 <Typography variant="h5">Connected workflow</Typography>
                 <Typography variant="subtitle1">
-                Nulla eleifend pulvinar purus, molestie euismod odio
+                  Nulla eleifend pulvinar purus, molestie euismod odio
                 </Typography>
               </div>
             </Grid>
@@ -325,54 +325,60 @@ const OwnersAndDirectors = () => {
           </Grid>
           <Grid item lg={6}>
             <Typography variant="h5" className={classes.align_left}>
-              Activity Tracking
+              Contactless check-in
             </Typography>
             <Typography
               variant="subtitle1"
               className={classes.margin_bottom_30}
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
-              ducimus possimus
+              Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac.
+              Ut sit amet erat nec nibh
             </Typography>
 
             <Typography variant="h5" className={classes.align_left}>
-              Activity Tracking
+              Activity tracking
             </Typography>
             <Typography
               variant="subtitle1"
               className={classes.margin_bottom_30}
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
-              ducimus possimus
+              Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac.
+              Ut sit amet erat nec nibh
             </Typography>
 
             <Typography variant="h5" className={classes.align_left}>
-              Activity Tracking
+              Go paperless
             </Typography>
             <Typography
               variant="subtitle1"
               className={classes.margin_bottom_30}
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
-              ducimus possimus
+              Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac.
+              Ut sit amet erat nec nibh
             </Typography>
 
             <Typography variant="h5" className={classes.align_left}>
-              Activity Tracking
+              Centralised Data
             </Typography>
             <Typography
               variant="subtitle1"
               className={classes.margin_bottom_30}
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem hic
-              ducimus possimus
+              Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac.
+              Ut sit amet erat nec nibh
             </Typography>
           </Grid>
         </Grid>
       </Container>
 
       <Container maxWidth="lg">
-        <Grid container spacing={5} className={`${classes.activity_wrapper}`}>
+        <Grid
+          container
+          justify="center"
+          alignItems="center"
+          spacing={5}
+          className={`${classes.activity_wrapper}`}
+        >
           <Grid item lg={12}>
             <Typography variant="h4">
               Impact of KinderCubby on Directors
@@ -392,19 +398,19 @@ const OwnersAndDirectors = () => {
 
           <Grid item lg={4}>
             <div className={classes.tag}>
-              <Typography variant="h3">85%</Typography>
+              <Typography variant="h3">100%</Typography>
               <Typography variant="h5">of users</Typography>
               <Typography variant="body1" className={classes.tag_text}>
-                Would recommend KinderCubby
+                Are satisfied with the experience
               </Typography>
             </div>
           </Grid>
           <Grid item lg={4}>
             <div className={`${classes.tag} `}>
-              <Typography variant="h3">85%</Typography>
+              <Typography variant="h3">10+</Typography>
               <Typography variant="h5">of users</Typography>
               <Typography variant="body1" className={classes.tag_text}>
-                Would recommend KinderCubby
+                Kid moments have been recorded
               </Typography>
             </div>
           </Grid>
