@@ -6,7 +6,9 @@ import Simplify from "../../assets/images/Simplify.png";
 import DistanceLeaning from "../../assets/images/DistanceLeaning.png";
 import ManagingLearningImage from "../../assets/images/ManagingLearning.png";
 import ChooseLession from "../../assets/images/ChooseLession.png";
+import ImproveQuality from "../../assets/images/ImproveQuality.png";
 import DataAndMediaRichReport from "../../assets/images/DataAndMediaRichReport.png";
+import PrintableReport from "../../assets/images/PrintableReport.png";
 import Divider from "@material-ui/core/Divider";
 import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
 const useStyles = makeStyles((theme) => ({
@@ -15,12 +17,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     [theme.breakpoints.down("xs")]: {
       padding: 0,
-    },
-  },
-  wrapper2: {
-    padding: "0px 50px",
-    [theme.breakpoints.down("xs")]: {
-      padding: 20,
     },
   },
   banner: {
@@ -39,8 +35,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 10,
   },
   distance_banner: {
-    // background: "#E3EBFC",
-    // borderRadius: 10,
     padding: "0 50px 50px",
     display: "flex",
     alignItems: "center",
@@ -49,25 +43,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 10,
     },
   },
-  Container_style: {
-    background: "#E3EBFC",
-    padding: "60px",
-    borderRadius: 10,
-  },
 
-  banner_no_background: {
-    borderRadius: 10,
-    padding: 50,
-    display: "flex",
-    alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
-      padding: 0,
-      marginTop: 10,
-    },
-  },
   card: {
     borderRadius: 10,
-    // padding: 50,
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {
@@ -79,18 +57,6 @@ const useStyles = makeStyles((theme) => ({
   card_content: {
     flex: 1,
     padding: "5px 60px",
-  },
-
-  banner_big_border_radious: {
-    background: "#E3EBFC",
-    borderRadius: 20,
-    padding: 50,
-    display: "flex",
-    alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
-      padding: 0,
-      marginTop: 10,
-    },
   },
 
   banner_image: {
@@ -125,12 +91,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "20px 0px",
     },
   },
-  text_style: {
-    fontSize: 16,
-    marginBottom: 30,
-    lineHeight: "28px",
-    textAlign: "center",
-  },
+
   manage_center_text_div: {
     width: "80%",
     margin: "auto",
@@ -146,15 +107,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 40,
   },
   divider: {
-    // Theme Color, or use css color in quote
     background: "#E5EBFD",
     height: "3px",
     width: "50%",
     margin: "30px auto",
-  },
-  list_icon_style: {
-    position: "absolute",
-    padding: "6px",
   },
   tab_text: {
     fontSize: "16px",
@@ -183,9 +139,21 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
 
-activity_image: {
+  activity_image: {
     maxWidth: "100%",
     padding: "0px 40px 15px 40px",
+  },
+  improve: {
+    textAlign: "center",
+    marginTop: 40,
+    marginBottom: 40,
+  },
+  improve_image: {
+    maxWidth: "100%",
+  },
+  button_Style: {
+    textAlign: "center",
+    paddingBottom: "50px",
   },
 }));
 
@@ -253,11 +221,7 @@ const ManagingLearningPath = () => {
                 <Typography variant="h5" style={{ textAlign: "start" }}>
                   Before class
                 </Typography>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-                
-                >
+                <Typography variant="subtitle1" gutterBottom>
                   Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
                   congue consequat. In posuere, nunc sit amet
                 </Typography>
@@ -266,11 +230,7 @@ const ManagingLearningPath = () => {
                 <Typography variant="h5" style={{ textAlign: "start" }}>
                   During class
                 </Typography>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-                  
-                >
+                <Typography variant="subtitle1" gutterBottom>
                   Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
                   congue consequat. In posuere, nunc sit amet
                 </Typography>
@@ -279,11 +239,7 @@ const ManagingLearningPath = () => {
                 <Typography variant="h5" style={{ textAlign: "start" }}>
                   After class
                 </Typography>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
-              
-                >
+                <Typography variant="subtitle1" gutterBottom>
                   Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
                   congue consequat. In posuere, nunc sit amet
                 </Typography>
@@ -308,7 +264,7 @@ const ManagingLearningPath = () => {
         </Grid>
       </Container>
       <Divider className={classes.divider} />
-      <Container maxWidth="lg" >
+      <Container maxWidth="lg">
         <Grid container spacing={5} className={`${classes.activity_wrapper}`}>
           <Grid item xs={12}>
             <Typography variant="h4">Easy to create assessments</Typography>
@@ -325,7 +281,7 @@ const ManagingLearningPath = () => {
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
           <Grid item lg={12} className={classes.distance_div_style}>
-          <Typography variant="h4" style={{ paddingTop: "50px" }}>
+            <Typography variant="h4" style={{ paddingTop: "50px" }}>
               Distance learning in case of emergency
             </Typography>
             <div className={classes.distance_banner}>
@@ -368,7 +324,7 @@ const ManagingLearningPath = () => {
                 </div>
               </div>
             </div>
-            <div style={{textAlign:'center',paddingBottom:'50px'}}>
+            <div className={classes.button_Style}>
               <Button
                 variant="contained"
                 color="primary"
@@ -384,11 +340,9 @@ const ManagingLearningPath = () => {
         <Grid container spacing={3} className={classes.activity_wrapper}>
           <Grid item lg={12}>
             <Typography variant="h4">
-            KinderCubby made reporting easy
+              KinderCubby made reporting easy
             </Typography>
           </Grid>
-
-         
 
           <Grid item lg={6} className={classes.activity_box}>
             <img
@@ -400,8 +354,8 @@ const ManagingLearningPath = () => {
             <div>
               <Typography variant="h5">Data & media rich reports</Typography>
               <Typography variant="subtitle1">
-              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-               Etiam dui ipsum, viverra vel turpis ut
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
@@ -409,16 +363,44 @@ const ManagingLearningPath = () => {
           <Grid item lg={6} className={classes.activity_box}>
             <img
               className={classes.activity_image}
-              src={DataAndMediaRichReport}
+              src={PrintableReport}
               alt=""
             />
 
             <div>
-              <Typography variant="h5">Printable & shareable reports</Typography>
-              <Typography variant="subtitle1">
-              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-               Etiam dui ipsum, viverra vel turpis ut
+              <Typography variant="h5">
+                Printable & shareable reports
               </Typography>
+              <Typography variant="subtitle1">
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
+              </Typography>
+            </div>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
+          <Grid item lg={12}>
+            <Typography variant="h4">
+              Improve quality rating of your organisation with KinderCubby
+            </Typography>
+
+            <div className={classes.improve}>
+              <img
+                src={ImproveQuality}
+                className={classes.improve_image}
+                alt=""
+              />
+            </div>
+            <div className={classes.center_button}>
+              <Button
+                variant="contained"
+                color="primary"
+                className={`${classes.banner_button} button`}
+              >
+                Start Now
+              </Button>
             </div>
           </Grid>
         </Grid>
@@ -428,4 +410,3 @@ const ManagingLearningPath = () => {
 };
 
 export default ManagingLearningPath;
-

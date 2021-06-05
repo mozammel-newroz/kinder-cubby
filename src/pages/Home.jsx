@@ -5,6 +5,8 @@ import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
 import automated from "../assets/images/automated.png";
 import ChasingActivityImage1 from "../assets/images/ChasingActivityImage1.png";
+import ChasingActivityImage2 from "../assets/images/ChasingActivityImage2.png";
+import ChasingActivityImage3 from "../assets/images/ChasingActivityImage3.png";
 import activity_image from "../assets/images/activity.png";
 import StartNow_image from "../assets/images/StartNow.png";
 import DemoVideo_image from "../assets/images/DemoVideo.png";
@@ -212,9 +214,9 @@ const Home = () => {
 
             <div>
               <Typography variant="h5">Activity Feed</Typography>
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+              <Typography variant="subtitle1">
+              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
+               Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
@@ -222,15 +224,15 @@ const Home = () => {
           <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
-              src={ChasingActivityImage1}
+              src={ChasingActivityImage2}
               alt=""
             />
 
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+              <Typography variant="h5">Photos & Videos</Typography>
+              <Typography variant="subtitle1">
+              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
+               Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
@@ -238,15 +240,15 @@ const Home = () => {
           <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
-              src={ChasingActivityImage1}
+              src={ChasingActivityImage3}
               alt=""
             />
 
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+              <Typography variant="h5">Activity Reports</Typography>
+              <Typography variant="subtitle1">
+              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
+               Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
@@ -265,40 +267,28 @@ const Home = () => {
                 <img className={classes.image} src={activity_image} alt="" />
               </Grid>
               <Grid item lg={6}>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
+                <Typography variant="subtitle1" className={classes.margin10}>
+                  <strong>Food: </strong>
+                  semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui ipsum, viverra
                 </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
+                <Typography variant="subtitle1" className={classes.margin10}>
+                  <strong>Nap Time: </strong> 
+                  magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
                 </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
+                <Typography variant="subtitle1" className={classes.margin10}>
+                  <strong>Reading: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
+                <Typography variant="subtitle1" className={classes.margin10}>
+                  <strong>Playing: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
+                <Typography variant="subtitle1" className={classes.margin10}>
+                  <strong>Incident: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
+                <Typography variant="subtitle1" className={classes.margin10}>
+                  <strong>Kid's health: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
+                <Typography variant="subtitle1" className={classes.margin10}>
+                  <strong>Kid's activity: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
               </Grid>
             </div>
