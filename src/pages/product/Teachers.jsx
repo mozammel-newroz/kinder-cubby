@@ -166,6 +166,10 @@ const useStyles = makeStyles((theme) => ({
   center: {
     textAlign: "center",
   },
+  manage_center_image_div: {
+    width: "90%",
+    margin: "auto",
+  },
 }));
 
 const Teachers = () => {
@@ -280,11 +284,13 @@ const Teachers = () => {
             </Typography>
           </Grid>
           <Grid item lg={6} className={classes.parent_child}>
+          <div className={classes.manage_center_image_div}>
             <img
               src={LessPaperWorkFocusOnKids}
               alt=""
               className={classes.image}
             />
+            </div>
           </Grid>
           <Grid item lg={6}>
             <Typography variant="h5" className={classes.align_left}>

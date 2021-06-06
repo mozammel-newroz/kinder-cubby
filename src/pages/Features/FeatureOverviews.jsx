@@ -7,8 +7,29 @@ import CenterManagementImage from "../../assets/images/CenterManagement.png";
 
 import Success from "../../assets/images/Success@2x.png";
 import BlackRightArrow from "../../assets/images/BlackRightArrow.png";
-import RedCircle from "../../assets/images/RedCircle.png";
+import PurpleCircle from "../../assets/images/PurpleCircle.png";
+import TomatoCircle from "../../assets/images/TomatoCircle.png";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import Box from "@material-ui/core/Box";
 const useStyles = makeStyles((theme) => ({
+  item5: {
+    order: 5,
+    [theme.breakpoints.down("xs")]: {
+      order: 6,
+    },
+  },
+  item6: {
+    order: 6,
+    [theme.breakpoints.down("xs")]: {
+      order: 7,
+    },
+  },
+  item7: {
+    order: 7,
+    [theme.breakpoints.down("xs")]: {
+      order: 5,
+    },
+  },
   wrapper: {
     padding: "0px 30px",
     [theme.breakpoints.down("sm")]: {
@@ -55,7 +76,15 @@ const useStyles = makeStyles((theme) => ({
       padding: "20px 0px",
     },
   },
-  main: {
+  activity_wrapper2: {
+    padding: "60px 30px",
+    background: "#E3EBFC",
+    borderRadius: "10px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "20px 0px",
+    },
+  },
+  background_style: {
     background: "#E3EBFC",
     borderRadius: "10px",
     padding: "60px",
@@ -131,18 +160,32 @@ const useStyles = makeStyles((theme) => ({
   },
   activity_image: {
     maxWidth: "100%",
-    background: `url(${RedCircle})`,
+    background: `url(${PurpleCircle})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     padding: 10,
     // marginBottom: 10,
   },
-  tab_grid_padding:{
-    paddingTop:'50px !Important',
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: '12px',
+  tab_grid_padding: {
+    paddingTop: "50px !Important",
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: "12px !Important",
     },
-  }
+  },
+  center: {
+    textAlign: "center",
+  },
+  margin_left_20: {
+    marginLeft: 20,
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: 3,
+    },
+  },
+  icon_style: {
+    position: "relative",
+    top: "7px",
+    left: "4px",
+  },
 }));
 
 const FeatureOverviews = () => {
@@ -151,7 +194,7 @@ const FeatureOverviews = () => {
     <div>
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
-          <Grid item lg={12} className={classes.main}>
+          <Grid item lg={12} className={classes.background_style}>
             <Typography variant="h4">
               Features for modern
               <br /> childcare management
@@ -175,7 +218,21 @@ const FeatureOverviews = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container maxWidth="lg">
+      <Container
+        maxWidth="lg"
+        style={{
+          border: "2px solid black",
+          background: `url(${PurpleCircle})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPositionX:'500px'
+          // backgroundPosition:'200px 100px'
+          // left:'50%'
+          // background-position:50% 50%;
+
+          
+        }}
+      >
         <Grid
           container
           spacing={3}
@@ -183,14 +240,18 @@ const FeatureOverviews = () => {
           alignItems="center"
           className={classes.activity_wrapper}
         >
-          <Grid item lg={12}>
+          <Grid item lg={12} className={classes.item1}>
             <Typography variant="h4">
               Let the system monitor activities
               <br /> Focus on what really matters
             </Typography>
           </Grid>
 
-          <Grid item lg={6}  className={classes.activity_box}>
+          <Grid
+            item
+            lg={6}
+            className={`${classes.activity_box} ${classes.item2}`}
+          >
             <Typography variant="h5" style={{ textAlign: "start" }}>
               Attendance & check-in
             </Typography>
@@ -203,13 +264,13 @@ const FeatureOverviews = () => {
               style={{ textAlign: "start" }}
             >
               Learn More{" "}
-              <span style={{ position: "relative", top: "7px", left: "15px" }}>
-                <img src={BlackRightArrow} alt="" />
+              <span className={classes.icon_style}>
+                <ArrowForwardIcon />
               </span>
             </Typography>
           </Grid>
 
-          <Grid item lg={3}>
+          <Grid item lg={3} className={classes.item3}>
             <Paper className={classes.paper}>
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
@@ -234,7 +295,7 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={3}>
+          <Grid item lg={3} className={classes.item4}>
             <Paper className={classes.paper}>
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
@@ -248,7 +309,7 @@ const FeatureOverviews = () => {
             </Paper>
           </Grid>
 
-          <Grid item lg={3} id='smallPosition2nd'>
+          <Grid item lg={3} id="smallPosition2nd" className={classes.item5}>
             <Paper className={classes.paper}>
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
@@ -273,9 +334,11 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={3}>
-            <br />
-            <br />
+          <Grid
+            item
+            lg={3}
+            className={`${classes.tab_grid_padding} ${classes.item6}`}
+          >
             <Paper className={classes.paper}>
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
@@ -300,9 +363,13 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={6} className={classes.activity_box}>
+          <Grid
+            item
+            lg={6}
+            className={`${classes.activity_box} ${classes.item7}`}
+          >
             <Typography variant="h5" style={{ textAlign: "start" }}>
-            Activity Tracking
+              Activity Tracking
             </Typography>
             <Typography variant="subtitle1" style={{ textAlign: "start" }}>
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
@@ -313,8 +380,8 @@ const FeatureOverviews = () => {
               style={{ textAlign: "start" }}
             >
               Learn More{" "}
-              <span style={{ position: "relative", top: "7px", left: "15px" }}>
-                <img src={BlackRightArrow} alt="" />
+              <span className={classes.icon_style}>
+                <ArrowForwardIcon />
               </span>
             </Typography>
           </Grid>
@@ -328,15 +395,20 @@ const FeatureOverviews = () => {
           alignItems="center"
           className={classes.activity_wrapper}
         >
-          <Grid item lg={12}>
+          <Grid item lg={12} className={classes.item1}>
             <Typography variant="h4">
-            Managing your centre has never been this easy<br/> Go digital, achieve excellence
+              Managing your centre has never been this easy
+              <br /> Go digital, achieve excellence
             </Typography>
           </Grid>
 
-          <Grid item lg={6} className={classes.activity_box}>
+          <Grid
+            item
+            lg={6}
+            className={`${classes.activity_box} ${classes.item2}`}
+          >
             <Typography variant="h5" style={{ textAlign: "start" }}>
-            Centre Management
+              Centre Management
             </Typography>
             <Typography variant="subtitle1" style={{ textAlign: "start" }}>
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
@@ -347,19 +419,18 @@ const FeatureOverviews = () => {
               style={{ textAlign: "start" }}
             >
               Learn More{" "}
-              <span style={{ position: "relative", top: "7px", left: "15px" }}>
-                <img src={BlackRightArrow} alt="" />
+              <span className={classes.icon_style}>
+                <ArrowForwardIcon />
               </span>
             </Typography>
           </Grid>
 
-          <Grid item lg={3}>
-            
+          <Grid item lg={3} className={classes.item3}>
             <Paper className={classes.paper}>
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
                 <Typography className={classes.tab_headline}>
-                Data management
+                  Data management
                 </Typography>
                 <Typography className={classes.tab_text}>
                   Nulla eleifend pulvinar purus, molestie eu
@@ -367,38 +438,12 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={3}>
+          <Grid item lg={3} className={classes.item4}>
             <Paper className={classes.paper}>
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
                 <Typography className={classes.tab_headline}>
-                Staff Management
-                </Typography>
-                <Typography className={classes.tab_text}>
-                  Nulla eleifend pulvinar purus, molestie eu
-                </Typography>
-              </div>
-            </Paper>
-            <br/>
-            <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
-              <div>
-                <Typography className={classes.tab_headline}>
-                Administrative reports
-                </Typography>
-                <Typography className={classes.tab_text}>
-                  Nulla eleifend pulvinar purus, molestie eu
-                </Typography>
-              </div>
-            </Paper>
-          </Grid>
-
-          <Grid item lg={3}>
-            <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
-              <div>
-                <Typography className={classes.tab_headline}>
-                Automated Invoice
+                  Staff Management
                 </Typography>
                 <Typography className={classes.tab_text}>
                   Nulla eleifend pulvinar purus, molestie eu
@@ -410,7 +455,7 @@ const FeatureOverviews = () => {
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
                 <Typography className={classes.tab_headline}>
-                Revenue summary
+                  Administrative reports
                 </Typography>
                 <Typography className={classes.tab_text}>
                   Nulla eleifend pulvinar purus, molestie eu
@@ -418,13 +463,13 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={3} className={classes.tab_grid_padding}>
-           
+
+          <Grid item lg={3} className={classes.item5}>
             <Paper className={classes.paper}>
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
                 <Typography className={classes.tab_headline}>
-                Online Payment
+                  Automated Invoice
                 </Typography>
                 <Typography className={classes.tab_text}>
                   Nulla eleifend pulvinar purus, molestie eu
@@ -436,7 +481,7 @@ const FeatureOverviews = () => {
               <img className={classes.activity_image} src={Success} alt="" />
               <div>
                 <Typography className={classes.tab_headline}>
-                Child ledgers
+                  Revenue summary
                 </Typography>
                 <Typography className={classes.tab_text}>
                   Nulla eleifend pulvinar purus, molestie eu
@@ -444,9 +489,42 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={6} className={classes.activity_box}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.tab_grid_padding} ${classes.item6}`}
+          >
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  Online Payment
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+            <br />
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  Child ledgers
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid
+            item
+            lg={6}
+            className={`${classes.activity_box} ${classes.item7}`}
+          >
             <Typography variant="h5" style={{ textAlign: "start" }}>
-            Activity Tracking
+              Billing
             </Typography>
             <Typography variant="subtitle1" style={{ textAlign: "start" }}>
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
@@ -457,10 +535,211 @@ const FeatureOverviews = () => {
               style={{ textAlign: "start" }}
             >
               Learn More{" "}
-              <span style={{ position: "relative", top: "7px", left: "15px" }}>
-                <img src={BlackRightArrow} alt="" />
+              <span className={classes.icon_style}>
+                <ArrowForwardIcon />
               </span>
             </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Grid
+          container
+          spacing={3}
+          justify="center"
+          alignItems="center"
+          className={classes.activity_wrapper}
+        >
+          <Grid item lg={12} className={classes.item1}>
+            <Typography variant="h4">
+              Share with parents what matters to them.
+              <br /> Satisfied parents, organization growth
+            </Typography>
+          </Grid>
+
+          <Grid
+            item
+            lg={6}
+            className={`${classes.activity_box} ${classes.item2}`}
+          >
+            <Typography variant="h5" style={{ textAlign: "start" }}>
+              Managing learning path
+            </Typography>
+            <Typography variant="subtitle1" style={{ textAlign: "start" }}>
+              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+              amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
+            </Typography>
+            <Typography
+              className={classes.tab_headline2}
+              style={{ textAlign: "start" }}
+            >
+              Learn More{" "}
+              <span className={classes.icon_style}>
+                <ArrowForwardIcon />
+              </span>
+            </Typography>
+          </Grid>
+
+          <Grid item lg={3} className={classes.item3}>
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  assessment
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+            <br />
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  Lesson Planing
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.tab_grid_padding} ${classes.item4}`}
+          >
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  Distance Learning
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+            <br />
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  Digital Report
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+          </Grid>
+
+          <Grid item lg={3} className={classes.item5}>
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  Dedicated App
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+            <br />
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  Monitor Child’s Growth
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.tab_grid_padding} ${classes.item6}`}
+          >
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  INSTANT Messaging
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+            <br />
+            <Paper className={classes.paper}>
+              <img className={classes.activity_image} src={Success} alt="" />
+              <div>
+                <Typography className={classes.tab_headline}>
+                  Sharing every moment
+                </Typography>
+                <Typography className={classes.tab_text}>
+                  Nulla eleifend pulvinar purus, molestie eu
+                </Typography>
+              </div>
+            </Paper>
+          </Grid>
+          <Grid
+            item
+            lg={6}
+            className={`${classes.activity_box} ${classes.item7}`}
+          >
+            <Typography variant="h5" style={{ textAlign: "start" }}>
+              Parents engagement
+            </Typography>
+            <Typography variant="subtitle1" style={{ textAlign: "start" }}>
+              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+              amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
+            </Typography>
+            <Typography
+              className={classes.tab_headline2}
+              style={{ textAlign: "start" }}
+            >
+              Learn More{" "}
+              <span className={classes.icon_style}>
+                <ArrowForwardIcon />
+              </span>
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Grid container className={`${classes.wrapper}`}>
+          <Grid item lg={12} className={classes.background_style}>
+            <Typography variant="h4">
+              KinderCubby offers modern solution for modern childcare
+            </Typography>
+            <Typography variant="h6">
+              Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+              congue consequat. In posuere, nunc sit amet laoreet blandit, urna
+              sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
+            </Typography>
+            <div className={classes.center}>
+              <Button
+                variant="contained"
+                color="primary"
+                className={`${classes.banner_button} button`}
+              >
+                Try it Free
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                className={`${classes.banner_button} ${classes.margin_left_20} button`}
+              >
+                Explore Pricing
+              </Button>
+            </div>
           </Grid>
         </Grid>
       </Container>
