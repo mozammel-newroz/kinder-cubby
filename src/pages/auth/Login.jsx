@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     padding: "10px !important",
-    marginTop: -10
+    marginTop: -10,
   },
   logoIcon: {
     textAlign: "center",
@@ -49,14 +49,14 @@ const useStyles = makeStyles((theme) => ({
   link: {
     margin: "30px 0px 15px 30px",
     textAlign: "center",
-    "& a": {
-      color: "#0B4295",
-    },
   },
   center: {
     textAlign: "center",
     display: "block",
     color: "#999",
+  },
+  link_text: {
+    color: "#0B4295",
   },
 }));
 
@@ -107,11 +107,16 @@ const Login = () => {
           </Button>
           <div className={classes.link}>
             <Link to="/change-password">
-              <Typography variant="body2">Forgot Password?</Typography>
+              <Typography variant="body2" className={classes.link_text}>
+                Forgot Password?
+              </Typography>
             </Link>
           </div>
           <Typography variant="body" className={classes.center}>
-            Don’t have an account? <Link to="/sign-up-option">Sign up </Link>
+            Don’t have an account?{" "}
+            <Link to="/sign-up-option" className={classes.link_text}>
+              Sign up{" "}
+            </Link>
           </Typography>
         </div>
       </div>

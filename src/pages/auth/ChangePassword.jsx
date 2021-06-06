@@ -49,9 +49,7 @@ const useStyles = makeStyles((theme) => ({
   link: {
     margin: "30px 0px 15px 30px",
     textAlign: "center",
-    "& a": {
-      color: "#0B4295",
-    },
+    
   },
   center: {
     textAlign: "center",
@@ -59,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
     color: "#999",
     marginTop: 30,
   },
+  link_text: {
+    color: "#0B4295",
+  },
+  
 }));
 
 const ChangePassword = () => {
@@ -96,7 +98,7 @@ const ChangePassword = () => {
           </Button>
 
           <Typography variant="body" className={classes.center}>
-            Don’t have an account? <Link to="/sign-up-option">Sign up </Link>
+            Don’t have an account? <Link to="/sign-up-option" className={classes.link_text}>Sign up </Link>
           </Typography>
         </div>
       </div>
