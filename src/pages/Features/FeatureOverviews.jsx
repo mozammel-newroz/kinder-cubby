@@ -9,7 +9,31 @@ import Success from "../../assets/images/Success@2x.png";
 import BlackRightArrow from "../../assets/images/BlackRightArrow.png";
 import PurpleCircle from "../../assets/images/PurpleCircle.png";
 import TomatoCircle from "../../assets/images/TomatoCircle.png";
+import TomatoHalfCircle from "../../assets/images/TomatoHalfCircle.png";
+import IconActivity from "../../assets/images/IconActivity.png";
+import IconActivityReports from "../../assets/images/IconActivityReports.png";
+import IconAdministrativeReport from "../../assets/images/IconAdministrativeReport.png";
+import IconAssessment from "../../assets/images/IconAssessment.png";
+import IconAttendence from "../../assets/images/IconAttendence.png";
+import IconAutomatedInvoice from "../../assets/images/IconAutomatedInvoice.png";
+import IconChildLedgers from "../../assets/images/IconChildLedgers.png";
+import IconDataManagement from "../../assets/images/IconDataManagement.png";
+import IconDedicatedApp from "../../assets/images/IconDedicatedApp.png";
+import IconDigitalReport from "../../assets/images/IconDigitalReport.png";
+import IconDistanceLearning from "../../assets/images/IconDistanceLearning.png";
+import IconIncidentReports from "../../assets/images/IconIncidentReports.png";
+import IconLessonPlaning from "../../assets/images/IconLessonPlaning.png";
+import IconMonitorChildsGrowth from "../../assets/images/IconMonitorChildsGrowth.png";
+import IconOnlinePayment from "../../assets/images/IconOnlinePayment.png";
+import IconPhotoAndVideos from "../../assets/images/IconPhotoAndVideos.png";
+import IconPickUp from "../../assets/images/IconPickUp.png";
+import IconRevenueSummary from "../../assets/images/IconRevenueSummary.png";
+import IconShareEveryMoment from "../../assets/images/IconShareEveryMoment.png";
+import IconInstantMessaging from "../../assets/images/IconInstantMessaging.png";
+import IconStaffManagement from "../../assets/images/IconStaffManagement.png";
+
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+
 import Box from "@material-ui/core/Box";
 const useStyles = makeStyles((theme) => ({
   item5: {
@@ -30,6 +54,27 @@ const useStyles = makeStyles((theme) => ({
       order: 5,
     },
   },
+  paper1: {
+    // backgroundColor: "red",
+    order: 1,
+    [theme.breakpoints.down("xs")]: {
+      order: 3,
+    },
+  },
+  paper2: {
+    order: 2,
+    [theme.breakpoints.down("xs")]: {
+      order: 2,
+    },
+  },
+  paper3: {
+    // backgroundColor: "blue",
+    order: 3,
+    [theme.breakpoints.down("xs")]: {
+      order: 1,
+    },
+  },
+
   wrapper: {
     padding: "0px 30px",
     [theme.breakpoints.down("sm")]: {
@@ -158,13 +203,62 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "start",
     marginTop: "30px",
   },
-  activity_image: {
-    maxWidth: "100%",
-    background: `url(${PurpleCircle})`,
+  activity_image_blue: {
+    // maxWidth: "100%",
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    height: "70px",
+    width: "70px",    
+    padding: "15px",
+    margin: "20px auto",
+    backgroundColor: "#8F9FCC",
+    borderRadius: "50%",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    padding: 10,
-    // marginBottom: 10,
+  },
+  icon_div:{
+backgroundColor:'yellow',
+width:'70%'
+  },
+  activity_image_green: {
+    backgroundColor: "#A2D399",
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    height: "70px",
+    width: "70px",    
+    padding: "15px",
+    margin: "20px auto",
+    borderRadius: "50%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  },
+  activity_image_red: {
+    backgroundColor: "#EF8787",
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    height: "70px",
+    width: "70px",    
+    padding: "15px",
+    margin: "20px auto",
+    borderRadius: "50%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  },
+  activity_image_orange: {
+    backgroundColor: "#EAA17F",
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
+    height: "70px",
+    width: "70px",    
+    padding: "15px",
+    margin: "20px auto",
+    borderRadius: "50%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
   },
   tab_grid_padding: {
     paddingTop: "50px !Important",
@@ -220,22 +314,20 @@ const FeatureOverviews = () => {
       </Container>
       <Container
         maxWidth="lg"
-        style={{
-          border: "2px solid black",
-          background: `url(${PurpleCircle})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPositionX:'500px'
-          // backgroundPosition:'200px 100px'
-          // left:'50%'
-          // background-position:50% 50%;
-
-          
-        }}
+        // style={{
+        //   border: "2px solid black",
+        //   background: `url(${PurpleCircle})`,
+        //   backgroundSize: "cover",
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundPositionX: "500px",
+        //   // backgroundPosition:'200px 100px'
+        //   // left:'50%'
+        //   // background-position:50% 50%;
+        // }}
       >
         <Grid
           container
-          spacing={3}
+          spacing={5}
           justify="center"
           alignItems="center"
           className={classes.activity_wrapper}
@@ -272,7 +364,11 @@ const FeatureOverviews = () => {
 
           <Grid item lg={3} className={classes.item3}>
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+              <img
+                className={classes.activity_image_green}
+                src={Success}
+                alt=""
+              />
               <div>
                 <Typography className={classes.tab_headline}>
                   Contactless check-in
@@ -284,7 +380,10 @@ const FeatureOverviews = () => {
             </Paper>
             <br />
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+              <div className={classes.activity_image_red}>
+                <img src={IconAttendence} alt="" width='100%'/>
+              </div>
+
               <div>
                 <Typography className={classes.tab_headline}>
                   Attendace Report
@@ -297,7 +396,10 @@ const FeatureOverviews = () => {
           </Grid>
           <Grid item lg={3} className={classes.item4}>
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+              <div className={classes.activity_image_blue}>
+                <img src={IconPickUp} alt="" width='100%'/>
+              </div>
+
               <div>
                 <Typography className={classes.tab_headline}>
                   Pickup Management
@@ -310,8 +412,11 @@ const FeatureOverviews = () => {
           </Grid>
 
           <Grid item lg={3} id="smallPosition2nd" className={classes.item5}>
-            <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <Paper className={`${classes.paper} ${classes.paper1}`}>
+            <div className={classes.activity_image_blue}>
+                <img src={IconActivity} alt="" width='100%'/>
+              </div>
+
               <div>
                 <Typography className={classes.tab_headline}>
                   Activity Feed
@@ -322,8 +427,10 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
             <br />
-            <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <Paper className={`${classes.paper} ${classes.paper3}`}>
+            <div className={classes.activity_image_red}>
+                <img src={IconIncidentReports} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Incident Reports
@@ -339,8 +446,10 @@ const FeatureOverviews = () => {
             lg={3}
             className={`${classes.tab_grid_padding} ${classes.item6}`}
           >
-            <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <Paper className={`${classes.paper} ${classes.paper2}`}>
+            <div className={classes.activity_image_orange}>
+                <img src={IconPhotoAndVideos} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Photos & videos
@@ -351,8 +460,13 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
             <br />
-            <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <Paper
+              className={classes.paper}
+              className={`${classes.paper} ${classes.paper4}`}
+            >
+              <div className={classes.activity_image_green}>
+                <img src={IconActivityReports} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Activity Reports
@@ -390,7 +504,7 @@ const FeatureOverviews = () => {
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={3}
+          spacing={5}
           justify="center"
           alignItems="center"
           className={classes.activity_wrapper}
@@ -427,7 +541,9 @@ const FeatureOverviews = () => {
 
           <Grid item lg={3} className={classes.item3}>
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_green}>
+                <img src={IconDataManagement} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Data management
@@ -440,7 +556,9 @@ const FeatureOverviews = () => {
           </Grid>
           <Grid item lg={3} className={classes.item4}>
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_orange}>
+                <img src={IconStaffManagement} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Staff Management
@@ -452,7 +570,9 @@ const FeatureOverviews = () => {
             </Paper>
             <br />
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_red}>
+                <img src={IconAdministrativeReport} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Administrative reports
@@ -466,7 +586,9 @@ const FeatureOverviews = () => {
 
           <Grid item lg={3} className={classes.item5}>
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_green}>
+                <img src={IconAutomatedInvoice} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Automated Invoice
@@ -478,7 +600,9 @@ const FeatureOverviews = () => {
             </Paper>
             <br />
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_red}>
+                <img src={IconRevenueSummary} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Revenue summary
@@ -495,7 +619,9 @@ const FeatureOverviews = () => {
             className={`${classes.tab_grid_padding} ${classes.item6}`}
           >
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_orange}>
+                <img src={IconOnlinePayment} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Online Payment
@@ -507,7 +633,9 @@ const FeatureOverviews = () => {
             </Paper>
             <br />
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_blue}>
+                <img src={IconChildLedgers} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Child ledgers
@@ -545,7 +673,7 @@ const FeatureOverviews = () => {
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={3}
+          spacing={5}
           justify="center"
           alignItems="center"
           className={classes.activity_wrapper}
@@ -582,10 +710,12 @@ const FeatureOverviews = () => {
 
           <Grid item lg={3} className={classes.item3}>
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_orange}>
+                <img src={IconAssessment} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
-                  assessment
+                  Assessment
                 </Typography>
                 <Typography className={classes.tab_text}>
                   Nulla eleifend pulvinar purus, molestie eu
@@ -594,7 +724,9 @@ const FeatureOverviews = () => {
             </Paper>
             <br />
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_green}>
+                <img src={IconLessonPlaning} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Lesson Planing
@@ -611,7 +743,9 @@ const FeatureOverviews = () => {
             className={`${classes.tab_grid_padding} ${classes.item4}`}
           >
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_blue}>
+                <img src={IconDistanceLearning} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Distance Learning
@@ -623,7 +757,9 @@ const FeatureOverviews = () => {
             </Paper>
             <br />
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_red}>
+                <img src={IconDigitalReport} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Digital Report
@@ -637,7 +773,9 @@ const FeatureOverviews = () => {
 
           <Grid item lg={3} className={classes.item5}>
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_blue}>
+                <img src={IconDedicatedApp} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Dedicated App
@@ -649,7 +787,9 @@ const FeatureOverviews = () => {
             </Paper>
             <br />
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_red}>
+                <img src={IconMonitorChildsGrowth} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Monitor Child’s Growth
@@ -666,10 +806,12 @@ const FeatureOverviews = () => {
             className={`${classes.tab_grid_padding} ${classes.item6}`}
           >
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_orange}>
+                <img src={IconInstantMessaging} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
-                  INSTANT Messaging
+                  Instant Messaging
                 </Typography>
                 <Typography className={classes.tab_text}>
                   Nulla eleifend pulvinar purus, molestie eu
@@ -678,7 +820,9 @@ const FeatureOverviews = () => {
             </Paper>
             <br />
             <Paper className={classes.paper}>
-              <img className={classes.activity_image} src={Success} alt="" />
+            <div className={classes.activity_image_green}>
+                <img src={IconShareEveryMoment} alt="" width='100%'/>
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Sharing every moment
