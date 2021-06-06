@@ -1,5 +1,9 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+import ChangePassword from "../pages/auth/ChangePassword";
+import Login from "../pages/auth/Login";
+import SignUp from "../pages/auth/SignUp";
+import SignUpOption from "../pages/auth/SignUpOption";
 import ActivityTracking from "../pages/Features/ActivityTracking";
 import AttendanceAndCheckins from "../pages/Features/AttendanceAndCheckins";
 import Billing from "../pages/Features/Billing";
@@ -28,6 +32,20 @@ const AppRouter = () => {
 
       <Route path="/pricing">
         <Pricing />
+      </Route>
+
+      {/* auth  */}
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path="/sign-up">
+        <SignUp />
+      </Route>
+      <Route path="/sign-up-option">
+        <SignUpOption />
+      </Route>
+      <Route path="/change-password">
+        <ChangePassword />
       </Route>
 
       {/* features  */}

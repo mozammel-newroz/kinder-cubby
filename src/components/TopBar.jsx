@@ -74,10 +74,10 @@ const useStyles = makeStyles((theme) => ({
     // padding: theme.spacing(3),
   },
   closeMenuButton: {
-    position: 'absolute',
+    position: "absolute",
     right: 0,
     top: 0,
-    zIndex: 9
+    zIndex: 9,
   },
   action: {
     flex: 1,
@@ -98,6 +98,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 function TopBar() {
+  const classes = useStyles();
+  const theme = useTheme();
   const [anchorEl, set_anchorEl] = useState(null);
   const [open, set_open] = useState(false);
 
@@ -117,8 +119,7 @@ function TopBar() {
     "Kuniyoshi",
     "Yoshitoshi",
   ];
-  const classes = useStyles();
-  const theme = useTheme();
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
   function handleDrawerToggle() {
     setMobileOpen(!mobileOpen);
@@ -126,7 +127,7 @@ function TopBar() {
   const drawer = (
     <div>
       <List>
-      <ListItem button>
+        <ListItem button>
           <ListItemText>
             <Link to="/">Home</Link>
           </ListItemText>
@@ -260,7 +261,7 @@ function TopBar() {
                     color="primary"
                     className={`${classes.action_button} button`}
                   >
-                    Login
+                    <Link to="/login">Login</Link>
                   </Button>
                   <Button
                     variant="contained"
@@ -314,6 +315,7 @@ function TopBar() {
           <div className={classes.toolbar} />
           <AppRouter />
           <Footer />
+          {/* {location.pathname} */}
         </div>
       </div>
     </Router>

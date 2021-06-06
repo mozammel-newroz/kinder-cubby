@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
@@ -86,181 +87,209 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 15,
     color: "#999",
   },
+  footer_bottom2: {
+    borderTop: "1px solid #ddd",
+    textAlign: "center",
+    paddingTop: 15,
+    paddingBottom: 15,
+    color: "#999",
+  },
 }));
 
 const Footer = () => {
   const classes = useStyles();
+  const location = useLocation();
 
-  return (
-    <>
-      {/* <CssBaseline /> */}
-      <Container maxWidth="lg">
-        <Grid container spacing={3} className={classes.wrapper}>
-          <Grid item lg={12} xs={12}>
-            <div className={classes.break}></div>
-            <div className={classes.footer}>
-              <div className={classes.footer_item}>
-                <img width="90%" src={logo} alt="" />
-                <Typography variant="h6" className={classes.footer_title}>
-                  Contact Sales
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={`${classes.banner_button} button`}
-                >
-                  Request Call
-                </Button>
-              </div>
+  if (
+    location.pathname !== "/login" &&
+    location.pathname !== "/change-password" &&
+    location.pathname !== "/sign-up"
+  ) {
+    return (
+      <>
+        {/* <CssBaseline /> */}
+        <Container maxWidth="lg">
+          <Grid container spacing={3} className={classes.wrapper}>
+            <Grid item lg={12} xs={12}>
+              <div className={classes.break}></div>
+              <div className={classes.footer}>
+                <div className={classes.footer_item}>
+                  <img width="90%" src={logo} alt="" />
+                  <Typography variant="h6" className={classes.footer_title}>
+                    Contact Sales
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={`${classes.banner_button} button`}
+                  >
+                    Request Call
+                  </Button>
+                </div>
 
-              <div className={classes.footer_item}>
-                <Typography variant="h6" className={classes.footer_title}>
-                  Solution
-                </Typography>
-                <ul className={classes.ul}>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Owner & Directors
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      For Teachers
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      For Parents
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Find Nearby Child Cares
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                <div className={classes.footer_item}>
+                  <Typography variant="h6" className={classes.footer_title}>
+                    Solution
+                  </Typography>
+                  <ul className={classes.ul}>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Owner & Directors
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        For Teachers
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        For Parents
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Find Nearby Child Cares
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-              <div className={classes.footer_item}>
-                <Typography variant="h6" className={classes.footer_title}>
-                  Childcare Software
-                </Typography>
-                <ul className={classes.ul}>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Download
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Customer Stories
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Features
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                <div className={classes.footer_item}>
+                  <Typography variant="h6" className={classes.footer_title}>
+                    Childcare Software
+                  </Typography>
+                  <ul className={classes.ul}>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Download
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Customer Stories
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Features
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-              <div className={classes.footer_item}>
-                <Typography variant="h6" className={classes.footer_title}>
-                  Company
-                </Typography>
-                <ul className={classes.ul}>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      About Us
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Blog
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Press
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Careers
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                <div className={classes.footer_item}>
+                  <Typography variant="h6" className={classes.footer_title}>
+                    Company
+                  </Typography>
+                  <ul className={classes.ul}>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        About Us
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Blog
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Press
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Careers
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-              <div className={classes.footer_item}>
-                <Typography variant="h6" className={classes.footer_title}>
-                  Support
-                </Typography>
-                <ul className={classes.ul}>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Contact Us
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Support Center
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Documentation
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li className={classes.li}>
-                    <a className={classes.a} href="#">
-                      Sitemap
-                    </a>
-                  </li>
-                </ul>
+                <div className={classes.footer_item}>
+                  <Typography variant="h6" className={classes.footer_title}>
+                    Support
+                  </Typography>
+                  <ul className={classes.ul}>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Contact Us
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Support Center
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Documentation
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li className={classes.li}>
+                      <a className={classes.a} href="#">
+                        Sitemap
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-      <Container maxWidth="lg">
-        <Grid container spacing={3} className={classes.wrapper2}>
-          <Grid item lg={6}>
-            <Typography variant="h6" className={classes.footer_title2}>
-              Download Mobile App
-            </Typography>
-            <a href="#">
-              <img src={PlayStore} alt="" className={classes.PlayStore} />
-            </a>
-            <a href="#">
-              <img src={PlayStore} alt="" className={classes.PlayStore} />
-            </a>
+        </Container>
+        <Container maxWidth="lg">
+          <Grid container spacing={3} className={classes.wrapper2}>
+            <Grid item lg={6}>
+              <Typography variant="h6" className={classes.footer_title2}>
+                Download Mobile App
+              </Typography>
+              <a href="#">
+                <img src={PlayStore} alt="" className={classes.PlayStore} />
+              </a>
+              <a href="#">
+                <img src={PlayStore} alt="" className={classes.PlayStore} />
+              </a>
+            </Grid>
+            <Grid item lg={6}>
+              <Typography variant="h6" className={classes.footer_title2}>
+                Follow Us
+              </Typography>
+              <div className={classes.social}>
+                <FacebookIcon className={classes.icon} />
+                <TwitterIcon className={classes.icon} />
+                <InstagramIcon className={classes.icon} />
+                <LinkedInIcon className={classes.icon} />
+              </div>
+            </Grid>
+            <Grid item lg={12} xs={12}>
+              <Typography variant="body2" className={classes.footer_bottom}>
+                Copyright ©2021 KinderCubby
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item lg={6}>
-            <Typography variant="h6" className={classes.footer_title2}>
-              Follow Us
-            </Typography>
-            <div className={classes.social}>
-              <FacebookIcon className={classes.icon} />
-              <TwitterIcon className={classes.icon} />
-              <InstagramIcon className={classes.icon} />
-              <LinkedInIcon className={classes.icon} />
-            </div>
+        </Container>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Container maxWidth="lg">
+          <Grid container className={classes.wrapper2}>
+            <Grid item lg={12} xs={12}>
+              <Typography variant="body2" className={classes.footer_bottom2}>
+                Copyright ©2021 KinderCubby
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item lg={12} xs={12}>
-            <Typography variant="body2" className={classes.footer_bottom}>
-              Copyright ©2021 KinderCubby
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
-    </>
-  );
+        </Container>
+      </>
+    );
+  }
 };
 
 export default Footer;
