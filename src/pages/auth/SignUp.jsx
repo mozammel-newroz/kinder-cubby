@@ -5,7 +5,7 @@ import KinderCubbyLogoIcon from "../../assets/images/KinderCubbyLogoIcon.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "calc(100vh - 200px)",
+    minHeight: "calc(100vh - 200px)",
     display: "flex",
     justifyContent: "center",
     // alignItems: "center",
@@ -49,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
   link: {
     margin: "30px 0px 0px 30px",
     textAlign: "center",
-   
   },
   center: {
     textAlign: "center",
@@ -135,7 +134,9 @@ const SignUp = () => {
           </Button>
           <div className={classes.link}>
             <Link to="/login">
-              <Typography variant="body2"  className={classes.link_text}>Already have an account</Typography>
+              <Typography variant="body2" className={classes.link_text}>
+                Already have an account
+              </Typography>
             </Link>
           </div>
         </div>

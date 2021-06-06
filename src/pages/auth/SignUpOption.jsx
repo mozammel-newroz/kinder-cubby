@@ -5,7 +5,7 @@ import KinderCubbyLogoIcon from "../../assets/images/KinderCubbyLogoIcon.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "calc(100vh - 200px)",
+    minHeight: "calc(100vh - 200px)",
     display: "flex",
     justifyContent: "center",
     // alignItems: "center",
