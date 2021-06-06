@@ -7,6 +7,7 @@ import CenterManagementImage from "../../assets/images/CenterManagement.png";
 
 import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
 import ManagingChildcare from "../../assets/images/ManagingChildcare.png";
+import SliderImage from "../../components/SliderImage";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -327,6 +328,9 @@ const CenterManagement = () => {
           </Grid>
         </Grid>
       </Container>
+      
+      <SliderImage />
+
       <Container maxWidth="lg">
         <Grid container className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>

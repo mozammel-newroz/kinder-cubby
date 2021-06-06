@@ -6,7 +6,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 const Menubar = () => {
   return (
     <nav>
-      <ul class="nav">
+      <ul className="nav">
         <li>
           <Link to="#">
             Product{" "}
