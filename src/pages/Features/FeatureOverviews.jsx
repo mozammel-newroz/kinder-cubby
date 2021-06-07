@@ -34,6 +34,8 @@ import IconStaffManagement from "../../assets/images/IconStaffManagement.png";
 
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
+import SliderImage from "../../components/SliderImage";
+
 import Box from "@material-ui/core/Box";
 const useStyles = makeStyles((theme) => ({
   item5: {
@@ -56,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper1: {
     // backgroundColor: "red",
+ 
     order: 1,
     [theme.breakpoints.down("xs")]: {
       order: 3,
@@ -121,6 +124,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "20px 0px",
     },
   },
+
   activity_wrapper2: {
     padding: "60px 30px",
     background: "#E3EBFC",
@@ -141,6 +145,7 @@ const useStyles = makeStyles((theme) => ({
 
   paper: {
     padding: theme.spacing(1),
+    marginBottom: "20px",
     textAlign: "center",
   },
   image_paper: {
@@ -169,7 +174,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "15px",
     color: "#454141",
     marginBottom: "15px",
-    padding: "0 30px",
   },
 
   list_Div: {
@@ -204,12 +208,12 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "30px",
   },
   activity_image_blue: {
-    // maxWidth: "100%",
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+    
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     height: "70px",
-    width: "70px",    
+    width: "70px",
     padding: "15px",
     margin: "20px auto",
     backgroundColor: "#8F9FCC",
@@ -217,17 +221,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
   },
-  icon_div:{
-backgroundColor:'yellow',
-width:'70%'
+  icon_div: {
+    backgroundColor: "yellow",
+    width: "70%",
   },
   activity_image_green: {
     backgroundColor: "#A2D399",
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     height: "70px",
-    width: "70px",    
+    width: "70px",
     padding: "15px",
     margin: "20px auto",
     borderRadius: "50%",
@@ -236,11 +240,11 @@ width:'70%'
   },
   activity_image_red: {
     backgroundColor: "#EF8787",
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     height: "70px",
-    width: "70px",    
+    width: "70px",
     padding: "15px",
     margin: "20px auto",
     borderRadius: "50%",
@@ -249,11 +253,11 @@ width:'70%'
   },
   activity_image_orange: {
     backgroundColor: "#EAA17F",
-    display:'flex',
-    justifyContent:'center',
-    alignItems:'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     height: "70px",
-    width: "70px",    
+    width: "70px",
     padding: "15px",
     margin: "20px auto",
     borderRadius: "50%",
@@ -261,7 +265,7 @@ width:'70%'
     backgroundPosition: "center",
   },
   tab_grid_padding: {
-    paddingTop: "50px !Important",
+    paddingTop: "80px !Important",
     [theme.breakpoints.down("xs")]: {
       paddingTop: "12px !Important",
     },
@@ -273,6 +277,19 @@ width:'70%'
     marginLeft: 20,
     [theme.breakpoints.down("xs")]: {
       marginLeft: 3,
+    },
+  },
+  paper_distance: {
+    marginBottom: "20px",
+  },
+  grid_padding_bottom_xs: {
+    [theme.breakpoints.down("xs")]: {
+      paddingBottom: "0px !Important",
+    },
+  },
+  grid_padding_top_xs: {
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: "0px !Important",
     },
   },
   icon_style: {
@@ -327,7 +344,7 @@ const FeatureOverviews = () => {
       >
         <Grid
           container
-          spacing={5}
+          spacing={6}
           justify="center"
           alignItems="center"
           className={classes.activity_wrapper}
@@ -362,7 +379,11 @@ const FeatureOverviews = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={3} className={classes.item3}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.item3} ${classes.grid_padding_bottom_xs}`}
+          >
             <Paper className={classes.paper}>
               <img
                 className={classes.activity_image_green}
@@ -378,10 +399,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={classes.paper}>
               <div className={classes.activity_image_red}>
-                <img src={IconAttendence} alt="" width='100%'/>
+                <img src={IconAttendence} alt="" width="100%" />
               </div>
 
               <div>
@@ -394,10 +415,14 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={3} className={classes.item4}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.item4} ${classes.grid_padding_top_xs}`}
+          >
             <Paper className={classes.paper}>
               <div className={classes.activity_image_blue}>
-                <img src={IconPickUp} alt="" width='100%'/>
+                <img src={IconPickUp} alt="" width="100%" />
               </div>
 
               <div>
@@ -411,10 +436,10 @@ const FeatureOverviews = () => {
             </Paper>
           </Grid>
 
-          <Grid item lg={3} id="smallPosition2nd" className={classes.item5}>
+          <Grid item lg={3} className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}>
             <Paper className={`${classes.paper} ${classes.paper1}`}>
-            <div className={classes.activity_image_blue}>
-                <img src={IconActivity} alt="" width='100%'/>
+              <div className={classes.activity_image_blue}>
+                <img src={IconActivity} alt="" width="100%" />
               </div>
 
               <div>
@@ -426,10 +451,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={`${classes.paper} ${classes.paper3}`}>
-            <div className={classes.activity_image_red}>
-                <img src={IconIncidentReports} alt="" width='100%'/>
+              <div className={classes.activity_image_red}>
+                <img src={IconIncidentReports} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -444,11 +469,11 @@ const FeatureOverviews = () => {
           <Grid
             item
             lg={3}
-            className={`${classes.tab_grid_padding} ${classes.item6}`}
+            className={`${classes.tab_grid_padding} ${classes.item6} ${classes.grid_padding_top_xs}`}
           >
             <Paper className={`${classes.paper} ${classes.paper2}`}>
-            <div className={classes.activity_image_orange}>
-                <img src={IconPhotoAndVideos} alt="" width='100%'/>
+              <div className={classes.activity_image_orange}>
+                <img src={IconPhotoAndVideos} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -459,13 +484,13 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper
               className={classes.paper}
               className={`${classes.paper} ${classes.paper4}`}
             >
               <div className={classes.activity_image_green}>
-                <img src={IconActivityReports} alt="" width='100%'/>
+                <img src={IconActivityReports} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -504,7 +529,7 @@ const FeatureOverviews = () => {
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={5}
+          spacing={6}
           justify="center"
           alignItems="center"
           className={classes.activity_wrapper}
@@ -539,10 +564,10 @@ const FeatureOverviews = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={3} className={classes.item3}>
+          <Grid item lg={3} className={`${classes.item3} ${classes.grid_padding_bottom_xs}`}>
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_green}>
-                <img src={IconDataManagement} alt="" width='100%'/>
+              <div className={classes.activity_image_green}>
+                <img src={IconDataManagement} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -554,10 +579,10 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={3} className={classes.item4}>
+          <Grid item lg={3} className={`${classes.item4} ${classes.grid_padding_top_xs}`}>
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_orange}>
-                <img src={IconStaffManagement} alt="" width='100%'/>
+              <div className={classes.activity_image_orange}>
+                <img src={IconStaffManagement} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -568,10 +593,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_red}>
-                <img src={IconAdministrativeReport} alt="" width='100%'/>
+              <div className={classes.activity_image_red}>
+                <img src={IconAdministrativeReport} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -584,10 +609,10 @@ const FeatureOverviews = () => {
             </Paper>
           </Grid>
 
-          <Grid item lg={3} className={classes.item5}>
+          <Grid item lg={3} className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}>
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_green}>
-                <img src={IconAutomatedInvoice} alt="" width='100%'/>
+              <div className={classes.activity_image_green}>
+                <img src={IconAutomatedInvoice} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -598,10 +623,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_red}>
-                <img src={IconRevenueSummary} alt="" width='100%'/>
+              <div className={classes.activity_image_red}>
+                <img src={IconRevenueSummary} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -616,11 +641,11 @@ const FeatureOverviews = () => {
           <Grid
             item
             lg={3}
-            className={`${classes.tab_grid_padding} ${classes.item6}`}
+            className={`${classes.tab_grid_padding} ${classes.item6} ${classes.grid_padding_top_xs}`}
           >
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_orange}>
-                <img src={IconOnlinePayment} alt="" width='100%'/>
+              <div className={classes.activity_image_orange}>
+                <img src={IconOnlinePayment} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -631,10 +656,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_blue}>
-                <img src={IconChildLedgers} alt="" width='100%'/>
+              <div className={classes.activity_image_blue}>
+                <img src={IconChildLedgers} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -673,7 +698,7 @@ const FeatureOverviews = () => {
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={5}
+          spacing={6}
           justify="center"
           alignItems="center"
           className={classes.activity_wrapper}
@@ -708,10 +733,10 @@ const FeatureOverviews = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={3} className={classes.item3}>
+          <Grid item lg={3} className={`${classes.item3} ${classes.grid_padding_bottom_xs}`}>
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_orange}>
-                <img src={IconAssessment} alt="" width='100%'/>
+              <div className={classes.activity_image_orange}>
+                <img src={IconAssessment} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -722,10 +747,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_green}>
-                <img src={IconLessonPlaning} alt="" width='100%'/>
+              <div className={classes.activity_image_green}>
+                <img src={IconLessonPlaning} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -740,11 +765,11 @@ const FeatureOverviews = () => {
           <Grid
             item
             lg={3}
-            className={`${classes.tab_grid_padding} ${classes.item4}`}
+            className={`${classes.tab_grid_padding} ${classes.item4} ${classes.grid_padding_top_xs}`}
           >
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_blue}>
-                <img src={IconDistanceLearning} alt="" width='100%'/>
+              <div className={classes.activity_image_blue}>
+                <img src={IconDistanceLearning} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -755,10 +780,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_red}>
-                <img src={IconDigitalReport} alt="" width='100%'/>
+              <div className={classes.activity_image_red}>
+                <img src={IconDigitalReport} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -771,10 +796,10 @@ const FeatureOverviews = () => {
             </Paper>
           </Grid>
 
-          <Grid item lg={3} className={classes.item5}>
+          <Grid item lg={3} className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}>
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_blue}>
-                <img src={IconDedicatedApp} alt="" width='100%'/>
+              <div className={classes.activity_image_blue}>
+                <img src={IconDedicatedApp} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -785,10 +810,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_red}>
-                <img src={IconMonitorChildsGrowth} alt="" width='100%'/>
+              <div className={classes.activity_image_red}>
+                <img src={IconMonitorChildsGrowth} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -803,11 +828,11 @@ const FeatureOverviews = () => {
           <Grid
             item
             lg={3}
-            className={`${classes.tab_grid_padding} ${classes.item6}`}
+            className={`${classes.tab_grid_padding} ${classes.item6} ${classes.grid_padding_top_xs}`}
           >
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_orange}>
-                <img src={IconInstantMessaging} alt="" width='100%'/>
+              <div className={classes.activity_image_orange}>
+                <img src={IconInstantMessaging} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -818,10 +843,10 @@ const FeatureOverviews = () => {
                 </Typography>
               </div>
             </Paper>
-            <br />
+
             <Paper className={classes.paper}>
-            <div className={classes.activity_image_green}>
-                <img src={IconShareEveryMoment} alt="" width='100%'/>
+              <div className={classes.activity_image_green}>
+                <img src={IconShareEveryMoment} alt="" width="100%" />
               </div>
               <div>
                 <Typography className={classes.tab_headline}>
@@ -857,6 +882,12 @@ const FeatureOverviews = () => {
           </Grid>
         </Grid>
       </Container>
+      <SliderImage />
+      {/* <Container maxWidth="lg">
+        <Grid container className={`${classes.wrapper}`}>
+        <SliderImage />
+          </Grid> 
+        </Container> */}
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12} className={classes.background_style}>

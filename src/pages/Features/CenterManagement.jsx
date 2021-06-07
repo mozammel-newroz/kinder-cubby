@@ -328,7 +328,7 @@ const CenterManagement = () => {
           </Grid>
         </Grid>
       </Container>
-      
+
       <SliderImage />
 
       <Container maxWidth="lg">
