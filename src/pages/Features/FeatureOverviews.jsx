@@ -3,13 +3,7 @@ import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
-import CenterManagementImage from "../../assets/images/CenterManagement.png";
-
 import Success from "../../assets/images/Success@2x.png";
-import BlackRightArrow from "../../assets/images/BlackRightArrow.png";
-import PurpleCircle from "../../assets/images/PurpleCircle.png";
-import TomatoCircle from "../../assets/images/TomatoCircle.png";
-import TomatoHalfCircle from "../../assets/images/TomatoHalfCircle.png";
 import IconActivity from "../../assets/images/IconActivity.png";
 import IconActivityReports from "../../assets/images/IconActivityReports.png";
 import IconAdministrativeReport from "../../assets/images/IconAdministrativeReport.png";
@@ -36,7 +30,6 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import SliderImage from "../../components/SliderImage";
 
-import Box from "@material-ui/core/Box";
 const useStyles = makeStyles((theme) => ({
   item5: {
     order: 5,
@@ -56,27 +49,6 @@ const useStyles = makeStyles((theme) => ({
       order: 5,
     },
   },
-  paper1: {
-    // backgroundColor: "red",
- 
-    order: 1,
-    [theme.breakpoints.down("xs")]: {
-      order: 3,
-    },
-  },
-  paper2: {
-    order: 2,
-    [theme.breakpoints.down("xs")]: {
-      order: 2,
-    },
-  },
-  paper3: {
-    // backgroundColor: "blue",
-    order: 3,
-    [theme.breakpoints.down("xs")]: {
-      order: 1,
-    },
-  },
 
   wrapper: {
     padding: "0px 30px",
@@ -84,38 +56,9 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
     },
   },
-  banner: {
-    background: "#E3EBFC",
-    borderRadius: 10,
-    padding: 50,
-    display: "flex",
-    alignItems: "center",
-    [theme.breakpoints.down("sm")]: {
-      padding: 0,
-    },
-  },
-  banner_image: {
-    flex: 1,
-    padding: 30,
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
 
-  banner_content: {
-    flex: 1,
-    padding: 30,
-  },
   banner_button: {
     padding: "13px 35px  !important",
-  },
-  banner_headline: {
-    fontWeight: 600,
-    fontSize: "2.9rem",
-    marginBottom: 80,
-    [theme.breakpoints.down("sm")]: {
-      marginBottom: 20,
-    },
   },
 
   activity_wrapper: {
@@ -125,18 +68,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  activity_wrapper2: {
-    padding: "60px 30px",
-    background: "#E3EBFC",
-    borderRadius: "10px",
-    [theme.breakpoints.down("sm")]: {
-      padding: "20px 0px",
-    },
-  },
   background_style: {
     background: "#E3EBFC",
     borderRadius: "10px",
     padding: "60px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "60px 30px",
+    },
   },
 
   activity_box: {
@@ -148,15 +86,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "20px",
     textAlign: "center",
   },
-  image_paper: {
-    textAlign: "center",
-    padding: "50px 100px",
-  },
-  tab_left_line: {
-    borderLeft: "6px solid #DF6D38",
-    paddingLeft: "15px",
-    borderRadius: "3px",
-  },
+
   tab_headline: {
     fontWeight: 600,
     fontSize: "14px",
@@ -176,39 +106,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "15px",
   },
 
-  list_Div: {
-    borderRadius: 10,
-    padding: "2px",
-    display: "flex",
-    alignItems: "center",
-
-    [theme.breakpoints.down("xs")]: {
-      padding: 0,
-      marginTop: 10,
-    },
-  },
-  list_icon: {
-    padding: "3px 35px 0 0",
-  },
-
   center_button: {
     textAlign: "center",
     marginTop: 40,
   },
-  manage_center_image_div: {
-    width: "60%",
-    margin: "auto",
-  },
-  banner_content_text: {
-    fontSize: 24,
-    marginBottom: 30,
-  },
-  list_container: {
-    textAlign: "start",
-    marginTop: "30px",
-  },
+
   activity_image_blue: {
-    
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -220,10 +123,6 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "50%",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-  },
-  icon_div: {
-    backgroundColor: "yellow",
-    width: "70%",
   },
   activity_image_green: {
     backgroundColor: "#A2D399",
@@ -279,9 +178,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 3,
     },
   },
-  paper_distance: {
-    marginBottom: "20px",
-  },
+
   grid_padding_bottom_xs: {
     [theme.breakpoints.down("xs")]: {
       paddingBottom: "0px !Important",
@@ -329,19 +226,7 @@ const FeatureOverviews = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container
-        maxWidth="lg"
-        // style={{
-        //   border: "2px solid black",
-        //   background: `url(${PurpleCircle})`,
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundPositionX: "500px",
-        //   // backgroundPosition:'200px 100px'
-        //   // left:'50%'
-        //   // background-position:50% 50%;
-        // }}
-      >
+      <Container maxWidth="lg">
         <Grid
           container
           spacing={6}
@@ -436,8 +321,12 @@ const FeatureOverviews = () => {
             </Paper>
           </Grid>
 
-          <Grid item lg={3} className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}>
-            <Paper className={`${classes.paper} ${classes.paper1}`}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}
+          >
+            <Paper className={`${classes.paper}`}>
               <div className={classes.activity_image_blue}>
                 <img src={IconActivity} alt="" width="100%" />
               </div>
@@ -452,7 +341,7 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
 
-            <Paper className={`${classes.paper} ${classes.paper3}`}>
+            <Paper className={`${classes.paper}`}>
               <div className={classes.activity_image_red}>
                 <img src={IconIncidentReports} alt="" width="100%" />
               </div>
@@ -471,7 +360,7 @@ const FeatureOverviews = () => {
             lg={3}
             className={`${classes.tab_grid_padding} ${classes.item6} ${classes.grid_padding_top_xs}`}
           >
-            <Paper className={`${classes.paper} ${classes.paper2}`}>
+            <Paper className={`${classes.paper}`}>
               <div className={classes.activity_image_orange}>
                 <img src={IconPhotoAndVideos} alt="" width="100%" />
               </div>
@@ -564,7 +453,11 @@ const FeatureOverviews = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={3} className={`${classes.item3} ${classes.grid_padding_bottom_xs}`}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.item3} ${classes.grid_padding_bottom_xs}`}
+          >
             <Paper className={classes.paper}>
               <div className={classes.activity_image_green}>
                 <img src={IconDataManagement} alt="" width="100%" />
@@ -579,7 +472,11 @@ const FeatureOverviews = () => {
               </div>
             </Paper>
           </Grid>
-          <Grid item lg={3} className={`${classes.item4} ${classes.grid_padding_top_xs}`}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.item4} ${classes.grid_padding_top_xs}`}
+          >
             <Paper className={classes.paper}>
               <div className={classes.activity_image_orange}>
                 <img src={IconStaffManagement} alt="" width="100%" />
@@ -609,7 +506,11 @@ const FeatureOverviews = () => {
             </Paper>
           </Grid>
 
-          <Grid item lg={3} className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}
+          >
             <Paper className={classes.paper}>
               <div className={classes.activity_image_green}>
                 <img src={IconAutomatedInvoice} alt="" width="100%" />
@@ -733,7 +634,11 @@ const FeatureOverviews = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={3} className={`${classes.item3} ${classes.grid_padding_bottom_xs}`}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.item3} ${classes.grid_padding_bottom_xs}`}
+          >
             <Paper className={classes.paper}>
               <div className={classes.activity_image_orange}>
                 <img src={IconAssessment} alt="" width="100%" />
@@ -796,7 +701,11 @@ const FeatureOverviews = () => {
             </Paper>
           </Grid>
 
-          <Grid item lg={3} className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}>
+          <Grid
+            item
+            lg={3}
+            className={`${classes.item5} ${classes.grid_padding_bottom_xs}`}
+          >
             <Paper className={classes.paper}>
               <div className={classes.activity_image_blue}>
                 <img src={IconDedicatedApp} alt="" width="100%" />
@@ -883,11 +792,7 @@ const FeatureOverviews = () => {
         </Grid>
       </Container>
       <SliderImage />
-      {/* <Container maxWidth="lg">
-        <Grid container className={`${classes.wrapper}`}>
-        <SliderImage />
-          </Grid> 
-        </Container> */}
+      
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12} className={classes.background_style}>

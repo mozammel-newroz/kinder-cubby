@@ -3,12 +3,21 @@ import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
-import automated from "../../assets/images/automated.png";
-import ChasingActivityImage1 from "../../assets/images/ChasingActivityImage1.png";
+import Attendance from "../../assets/images/Attendance.png";
+import FaceAndEmotion from "../../assets/images/FaceAndEmotion.png";
+import AttendanceReport from "../../assets/images/AttendanceReport.png";
+import SafeGuardian from "../../assets/images/SafeGuardian.png";
 import activity_image from "../../assets/images/activity.png";
 import StartNow_image from "../../assets/images/StartNow.png";
 import DemoVideo_image from "../../assets/images/DemoVideo.png";
 import YoutubeIcon from "../../assets/images/YoutubeIcon.png";
+import Goodbye from "../../assets/images/Goodbye.png";
+import YoutubeDemoPage18 from "../../assets/images/YoutubeDemoPage18.png";
+import FriendsAndFamily from "../../assets/images/FriendsAndFamily.png";
+import OwnerAndDirectors from "../../assets/images/OwnerAndDirectors.png";
+import Parents from "../../assets/images/Parents.png";
+import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
+import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -88,9 +97,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px 40px 15px 40px",
   },
 
-  margin10: {
-    marginBottom: 30,
-  },
   activity_wrapper2: {
     background: "#E3EBFC",
     borderRadius: 10,
@@ -101,9 +107,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     maxWidth: "100%",
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
-    },
+    
   },
   demo: {
     background: "#E3EBFC",
@@ -115,40 +119,71 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
     },
   },
-  demo_image: {
-    maxWidth: "100%",
-    [theme.breakpoints.down("xs")]: {},
-  },
+ 
   demo_headline: {
     marginBottom: 50,
   },
-  activity2: {
-    display: "flex",
-    alignItems: "center",
-  },
-  improve: {
-    textAlign: "center",
-    marginTop: 40,
-    marginBottom: 40,
-  },
-  improve_image: {
-    maxWidth: "100%",
-  },
+
+ 
   center_button: {
     textAlign: "center",
     marginTop: 40,
   },
-  youtube: {
-    position: "relative",
+  manage_center_image_div: {
+    width: "60%",
+    margin: "auto",
   },
-  YoutubeIcon: {
-    position: "absolute",
-    left: "40%",
-    top: "40%",
+ 
+  
+
+
+
+  list_Div: {
+    borderRadius: 10,
+    padding: "2px",
+    display: "flex",
+    alignItems: "center",
+
     [theme.breakpoints.down("xs")]: {
-      left: "15%",
-      top: "0%",
+      padding: 0,
+      marginTop: 10,
     },
+  },
+  list_icon: {
+    backgroundColor: "#DF6D38",
+    width: "7px",
+    height: "7px",
+    borderRadius: "50%",
+    // padding: "3px 20px 0 0",
+  },
+  tab_text: {
+    fontSize: "12px",
+    lineHeight: "25px",
+    color: "#454141",
+    paddingLeft: 10,
+  },
+  title: {
+    display: "flex",
+    marginBottom: 10,
+  },
+  name: {
+    fontWeight: 600,
+    paddingRight: 15,
+    borderRight: "3px solid #E5EBFD",
+  },
+  degisnation: {
+    paddingLeft: 15,
+  },
+ 
+  
+  card: {
+    backgroundColor: "white",
+    borderRadius: "10px",
+    boxShadow:
+      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+  },
+  card_padding: {
+    padding: "20px !Important",
   },
 }));
 
@@ -161,7 +196,6 @@ const AttendanceAndCheckins = () => {
         <Grid container className={classes.wrapper}>
           <Grid item lg={12}>
             <div className={classes.banner}>
-              
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
                   Attendance with
@@ -189,7 +223,7 @@ const AttendanceAndCheckins = () => {
                 </div>
               </div>
               <div className={classes.banner_image}>
-                <img src={automated} alt="" />
+                <img src={Attendance} alt="" />
               </div>
             </div>
           </Grid>
@@ -199,23 +233,23 @@ const AttendanceAndCheckins = () => {
         <Grid container spacing={3} className={classes.activity_wrapper}>
           <Grid item lg={12}>
             <Typography variant="h4">
-              No more chasing after kids to <br />
-              record their activity
+              Manage your childcare attendance <br />
+              with face & emotion detection
             </Typography>
           </Grid>
 
           <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
-              src={ChasingActivityImage1}
+              src={FaceAndEmotion}
               alt=""
             />
 
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+              <Typography variant="h5">Face & Emotion detection</Typography>
+              <Typography variant="subtitle1">
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut,
               </Typography>
             </div>
           </Grid>
@@ -223,31 +257,27 @@ const AttendanceAndCheckins = () => {
           <Grid item lg={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
-              src={ChasingActivityImage1}
+              src={AttendanceReport}
               alt=""
             />
 
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+              <Typography variant="h5">Attendance Report</Typography>
+              <Typography variant="subtitle1">
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut,
               </Typography>
             </div>
           </Grid>
 
           <Grid item lg={4} className={classes.activity_box}>
-            <img
-              className={classes.activity_image}
-              src={ChasingActivityImage1}
-              alt=""
-            />
+            <img className={classes.activity_image} src={SafeGuardian} alt="" />
 
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+              <Typography variant="h5">Safe guardian management</Typography>
+              <Typography variant="subtitle1">
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut,
               </Typography>
             </div>
           </Grid>
@@ -255,54 +285,249 @@ const AttendanceAndCheckins = () => {
       </Container>
       <Container maxWidth="lg">
         <div className={classes.wrapper2}>
-          <Grid container spacing={3} className={classes.activity_wrapper2}>
+          <Grid
+            container
+            spacing={8}
+            justify="center"
+            alignItems="center"
+            className={classes.activity_wrapper2}
+          >
             <Grid item lg={12}>
               <Typography variant="h4">
-                Activities that we are keeping track of
+                Instant reporting to every users
               </Typography>
             </Grid>
-            <div className={classes.activity2}>
-              <Grid item lg={6}>
-                <img className={classes.image} src={activity_image} alt="" />
+            <Grid item xs={12} lg={6}>
+              <Grid container spacing={2} className={classes.card}>
+                <Grid
+                  item
+                  xs={5}
+                  style={{ paddingTop: "0px", paddingLeft: "0" }}
+                >
+                  <img src={OwnerAndDirectors} alt="" width="100%" />
+                </Grid>
+                <Grid item xs={7} className={classes.card_padding}>
+                  <Typography variant="h5" style={{ textAlign: "start" }}>
+                    Owners & Directors
+                  </Typography>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        Real time update on attendance
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        See ratio of children per teacher
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        Receive warning if under or overstaffed
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        Reduce centre expenses.
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={12} className={classes.card_padding}>
+                  <Typography variant="body2">
+                    “Duis vestibulum elit vel neque pharetra vulputate. Quisque
+                    scelerisque nisi urna. Duis rutrum non risus in imperdiet.
+                    Proin molestie accumsan nulla sit amet mattis. Ut vel
+                    tristique neque. Praesent purus eros, aliquet sit amet”
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} className={classes.card_padding}>
+                  <div className={classes.title}>
+                    <span className={classes.name}>
+                      <Typography>
+                        <strong>Alina Smith</strong>
+                      </Typography>
+                    </span>
+                    <span className={classes.degisnation}>
+                      <Typography>Director</Typography>
+                    </span>
+                  </div>
+                </Grid>
               </Grid>
-              <Grid item lg={6}>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
-                </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
-                </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
-                </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
-                </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
-                </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
-                </Typography>
-                <Typography variant="body1" className={classes.margin10}>
-                  <strong>Food: </strong> Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. Cumque, a? Voluptatibus ut ea
-                  dolor perspiciatis voluptas quas
-                </Typography>
+              <br />
+              <br />
+              <br />
+              <Grid
+                container
+                spacing={2}
+                className={classes.card}
+              >
+                <Grid
+                  item
+                  xs={5}
+                  style={{ paddingTop: "0px", paddingLeft: "0" }}
+                >
+                  <img src={OwnerAndDirectors} alt="" width="100%" />
+                </Grid>
+                <Grid item xs={7} className={classes.card_padding}>
+                  <Typography variant="h5" style={{ textAlign: "start" }}>
+                    Teachers
+                  </Typography>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        No need to check-in kids
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>Less paper work</div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        Safe children’s drop off & pickup
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        Complete focus on children
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={12} className={classes.card_padding}>
+                  <Typography variant="body2">
+                    “Duis vestibulum elit vel neque pharetra vulputate. Quisque
+                    scelerisque nisi urna. Duis rutrum non risus in imperdiet.
+                    Proin molestie accumsan nulla sit amet mattis. Ut vel
+                    tristique neque. Praesent purus eros, aliquet sit amet”
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} className={classes.card_padding}>
+                  <div className={classes.title}>
+                    <span className={classes.name}>
+                      <Typography>
+                        <strong>Ana Brown</strong>
+                      </Typography>
+                    </span>
+                    <span className={classes.degisnation}>
+                      <Typography>Teacher</Typography>
+                    </span>
+                  </div>
+                </Grid>
               </Grid>
-            </div>
+            </Grid>
+            <Grid item xs={12} lg={6}>
+              <Grid
+                container
+                spacing={2}
+                className={classes.card}
+              >
+                <Grid item xs={7} className={classes.card_padding}>
+                  <Typography variant="h5" style={{ textAlign: "start" }}>
+                    Parents
+                  </Typography>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        Real time update on attendance
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        See ratio of children per teacher
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        Receive warning if under or overstaffed
+                      </div>
+                    </div>
+                  </div>
+                  <div className={classes.list_Div}>
+                    <div className={classes.list_icon}></div>
+                    <div>
+                      <div className={classes.tab_text}>
+                        Reduce centre expenses.
+                      </div>
+                    </div>
+                  </div>
+                </Grid>
+                <Grid
+                  item
+                  xs={5}
+                  style={{ paddingTop: "0px", paddingLeft: "0" }}
+                >
+                  <img src={Parents} alt="" width="100%" />
+                </Grid>
+                <Grid item xs={12} className={classes.card_padding}>
+                  <Typography variant="body2">
+                    “Duis vestibulum elit vel neque pharetra vulputate. Quisque
+                    scelerisque nisi urna. Duis rutrum non risus in imperdiet.
+                    Proin molestie accumsan nulla sit amet mattis. Ut vel
+                    tristique neque. Praesent purus eros, aliquet sit amet”
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} className={classes.card_padding}>
+                  <div className={classes.title}>
+                    <span className={classes.name}>
+                      <Typography>
+                        <strong>Maria william</strong>
+                      </Typography>
+                    </span>
+                    <span className={classes.degisnation}>
+                      <Typography>Parent</Typography>
+                    </span>
+                  </div>
+                </Grid>
+                <Grid item xs={12} className={classes.card_padding}>
+                  <Typography variant="body2">
+                    “Duis vestibulum elit vel neque pharetra vulputate. Quisque
+                    scelerisque nisi urna. Duis rutrum non risus in imperdiet.
+                    Proin molestie accumsan nulla sit amet mattis. Ut vel
+                    tristique neque. Praesent purus eros, aliquet sit amet”
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} className={classes.card_padding}>
+                  <div className={classes.title}>
+                    <span className={classes.name}>
+                      <Typography>
+                        <strong>Jacob William</strong>
+                      </Typography>
+                    </span>
+                    <span className={classes.degisnation}>
+                      <Typography>Parent</Typography>
+                    </span>
+                  </div>
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
         </div>
       </Container>
@@ -310,20 +535,15 @@ const AttendanceAndCheckins = () => {
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
-              Improve the quality of your program & <br /> give parents the
-              information they need
+              Say goodbye to check in sheets and signatures
             </Typography>
             <Typography variant="h6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-              accusamus vitae? Quibusdam ad a nam nihil ea aperiam quod placeat
-              unde ducimus excepturi ratione porro dolore, rem provident.
+              Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+              congue consequat. In posuere, nunc sit amet laoreet blandit, urna
+              sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
-            <div className={classes.improve}>
-              <img
-                src={StartNow_image}
-                className={classes.improve_image}
-                alt=""
-              />
+            <div className={classes.manage_center_image_div}>
+              <img src={Goodbye} width="100%" alt="" />
             </div>
             <div className={classes.center_button}>
               <Button
@@ -345,15 +565,8 @@ const AttendanceAndCheckins = () => {
               <Typography variant="h4" className={classes.demo_headline}>
                 KinderCubby activity tracking demo
               </Typography>
-              <div className={classes.youtube}>
-                <div className={classes.YoutubeIcon}>
-                  <img src={YoutubeIcon} alt="" />
-                </div>
-                <img
-                  className={classes.demo_image}
-                  src={DemoVideo_image}
-                  alt=""
-                />
+              <div className={classes.activity_box}>
+                <img src={YoutubeDemoPage18} alt="" className={classes.image} />
               </div>
             </div>
           </Grid>
@@ -364,8 +577,7 @@ const AttendanceAndCheckins = () => {
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
-              Get better insight & actionable information <br /> with
-              KinderCubby
+              Impressed? There’s a 30 days free trial
             </Typography>
             <div className={classes.center_button}>
               <Button

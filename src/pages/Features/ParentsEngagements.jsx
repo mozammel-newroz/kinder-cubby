@@ -11,6 +11,9 @@ import DemoVideo_image from "../../assets/images/DemoVideo.png";
 import YoutubeIcon from "../../assets/images/YoutubeIcon.png";
 import FriendsAndFamily from "../../assets/images/FriendsAndFamily.png";
 import SafeData from "../../assets/images/SafeData.png";
+import InstantMessaging from "../../assets/images/InstantMessaging.png";
+import ShareMoments from "../../assets/images/ShareMoments.png";
+import ChildsGrowth from "../../assets/images/Child'sGrowth.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -222,6 +225,10 @@ const useStyles = makeStyles((theme) => ({
   parent_cart_bottom: {
     padding: "40px 20px 20px 20px",
   },
+  card_image: {
+    width: "100%",
+    height: "170px",
+  },
 }));
 
 const ParentEngagements = () => {
@@ -261,56 +268,64 @@ const ParentEngagements = () => {
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.activity_wrapper}>
           <Grid item lg={12}>
-            <Typography variant="h4">
-              No more chasing after kids to <br />
-              record their activity
+            <Typography variant="h4">Make parents feel connected</Typography>
+            <Typography variant="h6">
+              Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+              congue consequat. In posuere, nunc sit amet laoreet blandit, urna
+              sapien imperdiet lectus, et molestie
             </Typography>
           </Grid>
 
           <Grid item lg={4} className={classes.activity_box}>
-            <img
-              className={classes.activity_image}
-              src={ChasingActivityImage1}
-              alt=""
-            />
+            <div className={classes.card_image}>
+              <img
+                className={classes.activity_image}
+                src={InstantMessaging}
+                alt=""
+              />
+            </div>
 
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
+              <Typography variant="h5">Instant Messaging</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
 
           <Grid item lg={4} className={classes.activity_box}>
-            <img
-              className={classes.activity_image}
-              src={ChasingActivityImage1}
-              alt=""
-            />
+            <div className={classes.card_image}>
+              <img
+                className={classes.activity_image}
+                src={ShareMoments}
+                alt=""
+              />
+            </div>
 
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
+              <Typography variant="h5">Share moments</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
 
           <Grid item lg={4} className={classes.activity_box}>
-            <img
-              className={classes.activity_image}
-              src={ChasingActivityImage1}
-              alt=""
-            />
+            <div className={classes.card_image}>
+              <img
+                className={classes.activity_image}
+                src={ChildsGrowth}
+                alt=""
+              />
+            </div>
 
             <div>
-              <Typography variant="h5">Activity Feed</Typography>
+              <Typography variant="h5">Child’s growth</Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate natus consectetur temporibus
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
@@ -321,11 +336,12 @@ const ParentEngagements = () => {
           <Grid container spacing={3} className={classes.activity_wrapper2}>
             <Grid item lg={12}>
               <Typography variant="h4">
-                Activities that we are keeping track of
+                Share kids moment with friends and family
               </Typography>
               <Typography variant="h6" className={classes.padding_0}>
                 No need to switch to different app for sharing. KinderCubby
-                allows family and friends to be onboard.
+                allows family and
+                <br /> friends to be onboard.
               </Typography>
             </Grid>
 
@@ -381,8 +397,8 @@ const ParentEngagements = () => {
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
-              Improve the quality of your program & <br /> give parents the
-              information they need
+              Save time with our
+              <br /> Automated event broadcasting
             </Typography>
             <Typography variant="h6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
@@ -396,6 +412,37 @@ const ParentEngagements = () => {
                 alt=""
               />
             </div>
+          </Grid>
+          <Grid item lg={4} className={classes.activity_box}>
+            <div>
+              <Typography variant="h5">Message templates</Typography>
+              <Typography variant="body1">
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
+              </Typography>
+            </div>
+          </Grid>
+
+          <Grid item lg={4} className={classes.activity_box}>
+            <div>
+              <Typography variant="h5">Send to mass contacts</Typography>
+              <Typography variant="body1">
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
+              </Typography>
+            </div>
+          </Grid>
+
+          <Grid item lg={4} className={classes.activity_box}>
+            <div>
+              <Typography variant="h5">Schedule for later</Typography>
+              <Typography variant="body1">
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item lg={12}>
             <div className={classes.center_button}>
               <Button
                 variant="contained"
@@ -403,48 +450,6 @@ const ParentEngagements = () => {
                 className={`${classes.banner_button} button`}
               >
                 Start Now
-              </Button>
-            </div>
-          </Grid>
-        </Grid>
-      </Container>
-
-      <Container maxWidth="lg">
-        <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
-            <div className={classes.demo}>
-              <Typography variant="h4" className={classes.demo_headline}>
-                KinderCubby activity tracking demo
-              </Typography>
-              <div className={classes.youtube}>
-                <div className={classes.YoutubeIcon}>
-                  <img src={YoutubeIcon} alt="" />
-                </div>
-                <img
-                  className={classes.demo_image}
-                  src={DemoVideo_image}
-                  alt=""
-                />
-              </div>
-            </div>
-          </Grid>
-        </Grid>
-      </Container>
-
-      <Container maxWidth="lg">
-        <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
-            <Typography variant="h4">
-              Get better insight & actionable information <br /> with
-              KinderCubby
-            </Typography>
-            <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Yes! Let’s try it.
               </Button>
             </div>
           </Grid>
