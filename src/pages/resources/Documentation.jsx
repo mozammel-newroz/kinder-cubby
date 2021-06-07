@@ -144,9 +144,15 @@ const useStyle = makeStyles((theme) => ({
   footer: {
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: 'column'
+    },
   },
   footer_item: {
     margin: "0px 15px",
+    [theme.breakpoints.down("xs")]: {
+      margin: "15px 15px",
+    },
   },
   link: {
     color: "#EE6741",
