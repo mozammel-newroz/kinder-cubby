@@ -22,14 +22,23 @@ const useStyle = makeStyles((theme) => ({
   root: {
     display: "flex",
     padding: 20,
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column-reverse",
+    },
   },
   text: {
     flex: 3,
     padding: "50px 50px 20px 50px",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "10px",
+    },
   },
   image: {
     flex: 1,
     padding: "50px 50px 20px 50px",
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: "10px",
+    },
   },
   left: {
     textAlign: "left",
@@ -65,85 +74,85 @@ const SliderImage = () => {
     <div>
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
-          <Grid item lg={12}>
-            <Carousel
-              autoplay={true}
-              cellAlign="center"
-              renderCenterLeftControls={({ previousSlide }) => (
-                <IconButton
-                  onClick={previousSlide}
-                  className={classes.button}
-                  color="primary"
-                >
-                  <ArrowBackIosRoundedIcon />
-                </IconButton>
-              )}
-              renderCenterRightControls={({ nextSlide }) => (
-                <IconButton
-                  onClick={nextSlide}
-                  className={classes.button}
-                  color="primary"
-                >
-                  <ArrowForwardIosRoundedIcon />
-                </IconButton>
-              )}
-            >
-              <div className={classes.root}>
-                <div className={classes.text}>
-                  <Typography className={classes.left}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Incidunt dignissimos ea distinctio possimus aliquid, ad
-                    labore, quia quaerat numquam fugiat temporibus ut obcaecati
-                    doloribus officia odio voluptates ipsa quas dolore?
-                  </Typography>
-                  <div className={classes.title}>
-                    <ul>
-                      <li className={classes.first_li}>
-                        <Typography className={classes.li_text}>
-                          <strong>Sara Lee</strong>
-                        </Typography>
-                      </li>
-                      <li>
-                        <Typography className={classes.li_text}>
-                          Director
-                        </Typography>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={classes.image}>
-                  <img src={FatualModel} />
+          {/* <Grid item lg={12}> */}
+          <Carousel
+            autoplay={true}
+            cellAlign="center"
+            renderCenterLeftControls={({ previousSlide }) => (
+              <IconButton
+                onClick={previousSlide}
+                className={classes.button}
+                color="primary"
+              >
+                <ArrowBackIosRoundedIcon />
+              </IconButton>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <IconButton
+                onClick={nextSlide}
+                className={classes.button}
+                color="primary"
+              >
+                <ArrowForwardIosRoundedIcon />
+              </IconButton>
+            )}
+          >
+            <div className={classes.root}>
+              <div className={classes.text}>
+                <Typography className={classes.left}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt dignissimos ea distinctio possimus aliquid, ad
+                  labore, quia quaerat numquam fugiat temporibus ut obcaecati
+                  doloribus officia odio voluptates ipsa quas dolore?
+                </Typography>
+                <div className={classes.title}>
+                  <ul>
+                    <li className={classes.first_li}>
+                      <Typography className={classes.li_text}>
+                        <strong>Sara Lee</strong>
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography className={classes.li_text}>
+                        Director
+                      </Typography>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className={classes.root}>
-                <div className={classes.text}>
-                  <Typography className={classes.left}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Incidunt dignissimos ea distinctio possimus aliquid, ad
-                    labore, quia quaerat numquam fugiat temporibus ut obcaecati
-                    doloribus officia odio voluptates ipsa quas dolore?
-                  </Typography>
-                  <div className={classes.title}>
-                    <ul>
-                      <li className={classes.first_li}>
-                        <Typography className={classes.li_text}>
-                          <strong>Sara Lee</strong>
-                        </Typography>
-                      </li>
-                      <li>
-                        <Typography className={classes.li_text}>
-                          Director
-                        </Typography>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className={classes.image}>
-                  <img src={FatualModel} />
+              <div className={classes.image}>
+                <img src={FatualModel} />
+              </div>
+            </div>
+            <div className={classes.root}>
+              <div className={classes.text}>
+                <Typography className={classes.left}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt dignissimos ea distinctio possimus aliquid, ad
+                  labore, quia quaerat numquam fugiat temporibus ut obcaecati
+                  doloribus officia odio voluptates ipsa quas dolore?
+                </Typography>
+                <div className={classes.title}>
+                  <ul>
+                    <li className={classes.first_li}>
+                      <Typography className={classes.li_text}>
+                        <strong>Sara Lee</strong>
+                      </Typography>
+                    </li>
+                    <li>
+                      <Typography className={classes.li_text}>
+                        Director
+                      </Typography>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </Carousel>
-          </Grid>
+              <div className={classes.image}>
+                <img src={FatualModel} />
+              </div>
+            </div>
+          </Carousel>
+          {/* </Grid> */}
         </Grid>
       </Container>
     </div>
