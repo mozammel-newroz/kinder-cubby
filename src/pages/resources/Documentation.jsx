@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "nuka-carousel";
+import { Link } from "react-router-dom";
 import {
   makeStyles,
   IconButton,
@@ -18,6 +18,7 @@ import Model1 from "../../assets/images/Model1.png";
 import Model2 from "../../assets/images/Model2.png";
 import LikeIcon from "../../assets/images/LikeIcon.png";
 import DislikeIcon from "../../assets/images/DislikeIcon.png";
+import logo_small from "../../assets/images/logo.png";
 
 const useStyle = makeStyles((theme) => ({
   wrapper: {
@@ -27,6 +28,9 @@ const useStyle = makeStyles((theme) => ({
     backgroundSize: "contain, cover",
     backgroundPosition: "right",
     height: 300,
+    marginTop: "-63px",
+    position: "relative",
+    zIndex: 9999,
   },
   find_banner: {
     padding: "60px 150px",
@@ -134,10 +138,26 @@ const useStyle = makeStyles((theme) => ({
   icon_button: {
     marginRight: 15,
   },
+  wrapper_footer: {
+    padding: "15px 150px",
+  },
+  footer: {
+    display: "flex",
+    alignItems: "center",
+  },
+  footer_item: {
+    margin: "0px 15px",
+  },
+  link: {
+    color: "#EE6741",
+    textTransform: "capitalize",
+    margin: "0px 10px",
+  },
 }));
 
 const Documentation = () => {
   const classes = useStyle();
+
   return (
     <div>
       <Container maxWidth="lg">
@@ -285,8 +305,37 @@ const Documentation = () => {
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper_footer}`}>
           <Grid item lg={12}>
-            <div className={classes.bottom_inner}>
-                
+            <div className={classes.footer}>
+              <div className={classes.footer_item}>
+                <Link to="/">
+                  <img src={logo_small} width="140px" alt="" />
+                </Link>
+              </div>
+              <div className={classes.footer_item}>
+                <Typography variant="body2">©2021 KinderCubby</Typography>
+              </div>
+              <div className={classes.footer_item}>
+                <Button color="primary">
+                  <Link to="#" className={classes.link}>
+                    Contact Sale
+                  </Link>
+                </Button>
+                <Button color="primary">
+                  <Link to="#" className={classes.link}>
+                    Contact Sale
+                  </Link>
+                </Button>
+                <Button color="primary">
+                  <Link to="#" className={classes.link}>
+                    Contact Sale
+                  </Link>
+                </Button>
+                <Button color="primary">
+                  <Link to="#" className={classes.link}>
+                    Contact Sale
+                  </Link>
+                </Button>
+              </div>
             </div>
           </Grid>
         </Grid>

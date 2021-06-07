@@ -104,7 +104,8 @@ const Footer = () => {
     location.pathname !== "/login" &&
     location.pathname !== "/change-password" &&
     location.pathname !== "/sign-up" &&
-    location.pathname !== "/sign-up-option"
+    location.pathname !== "/sign-up-option" &&
+    location.pathname !== "/documentation"
   ) {
     return (
       <>
@@ -276,7 +277,11 @@ const Footer = () => {
         </Container>
       </>
     );
-  } else {
+  } else if (location.pathname === "/documentation"){
+    return ''
+  }
+  
+  else {
     return (
       <>
         <Container maxWidth="lg">
