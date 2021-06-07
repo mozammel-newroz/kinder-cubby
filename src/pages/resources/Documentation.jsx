@@ -7,6 +7,7 @@ import {
   Container,
   Grid,
   TextField,
+  Button,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 
@@ -15,6 +16,8 @@ import logo from "../../assets/images/KinderCubbyLogo@2x.png";
 import Rocket from "../../assets/images/Rocket.png";
 import Model1 from "../../assets/images/Model1.png";
 import Model2 from "../../assets/images/Model2.png";
+import LikeIcon from "../../assets/images/LikeIcon.png";
+import DislikeIcon from "../../assets/images/DislikeIcon.png";
 
 const useStyle = makeStyles((theme) => ({
   wrapper: {
@@ -29,6 +32,22 @@ const useStyle = makeStyles((theme) => ({
     padding: "60px 150px",
     [theme.breakpoints.down("xs")]: {
       padding: 20,
+    },
+  },
+  wrapper_bottom: {
+    backgroundColor: "#E1EBFB",
+    justifyContent: "center",
+  },
+  bottom_inner: {
+    display: "flex",
+    justifyContent: "space-around",
+    padding: "40px 150px",
+    [theme.breakpoints.down("xs")]: {
+      padding: 10,
+
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
     },
   },
   title: {
@@ -57,20 +76,23 @@ const useStyle = makeStyles((theme) => ({
   },
   topics: {
     margin: "45px 180px",
-    width: '100%',
+    width: "100%",
     [theme.breakpoints.down("xs")]: {
-      width: 'auto',
+      width: "auto",
       margin: 20,
     },
   },
   box: {
     display: "flex",
     alignItems: "center",
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start",
     boxShadow: "1px 1px 5px 3px #eee",
     marginBottom: 20,
     borderRadius: 7,
     width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
   left: {
     padding: 40,
@@ -86,6 +108,11 @@ const useStyle = makeStyles((theme) => ({
   bottom_wrapper: {
     display: "flex",
   },
+  mobile_margin: {
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 20,
+    },
+  },
   bottom: {
     marginTop: 10,
   },
@@ -100,6 +127,12 @@ const useStyle = makeStyles((theme) => ({
       float: "left",
       marginRight: -4,
     },
+  },
+  button_wrapper: {
+    marginTop: 10,
+  },
+  icon_button: {
+    marginRight: 15,
   },
 }));
 
@@ -206,6 +239,54 @@ const Documentation = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Grid container className={`${classes.wrapper_bottom}`}>
+          <Grid item lg={12}>
+            <div className={classes.bottom_inner}>
+              <div className={classes.mobile_margin}>
+                <Typography variant="h6" className={classes.h6}>
+                  Was it Helpful?
+                </Typography>
+                <div className={classes.button_wrapper}>
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    className={`${classes.icon_button} button`}
+                  >
+                    <img src={LikeIcon} alt="" />
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    className="button"
+                  >
+                    <img src={DislikeIcon} alt="" />
+                  </Button>
+                </div>
+              </div>
+              <div className="">
+                <Typography variant="h6" className={classes.h6}>
+                  Still need help?
+                </Typography>
+                <div className={classes.button_wrapper}>
+                  <Button variant="outlined" color="primary" className="button">
+                    Contact Support
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Grid container className={`${classes.wrapper_footer}`}>
+          <Grid item lg={12}>
+            <div className={classes.bottom_inner}>
+                
             </div>
           </Grid>
         </Grid>
