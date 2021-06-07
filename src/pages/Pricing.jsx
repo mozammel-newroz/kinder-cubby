@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper1: {
     padding: "60px 30px",
     [theme.breakpoints.down("xs")]: {
-      padding: 10,
+      padding: 20,
     },
   },
   wrapper2: {
@@ -34,14 +34,11 @@ const useStyles = makeStyles((theme) => ({
     background: "#E3EBFC",
     borderRadius: 15,
     [theme.breakpoints.down("xs")]: {
-      padding: 10,
+      padding: 20,
     },
   },
   wrapper: {
     padding: "0px 30px",
-    [theme.breakpoints.down("xs")]: {
-      padding: 0,
-    },
   },
   table: {
     width: "99.99%",
@@ -140,9 +137,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#0B4295",
   },
   bottom_button: {
-    textAlign: 'center',
-    marginTop: 30
-  }
+    textAlign: "center",
+    marginTop: 30,
+  },
 }));
 
 const Home = () => {
@@ -344,7 +341,11 @@ const Home = () => {
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container className={classes.wrapper1}>
+        <Grid
+          container
+          className={classes.wrapper1}
+          style={{ justifyContent: "center" }}
+        >
           <Grid item lg={12} className={classes.center}>
             <Button variant="outlined" color="primary" className="button">
               Learn More About Features
