@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Grid,
-  Typography,
-  Button,
-  Card,
-} from "@material-ui/core";
+import { Container, Grid, Typography, Button, Card } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
@@ -22,6 +16,7 @@ import ChildPreciousMoment from "../../assets/images/ChildPreciousMoment.png";
 import owner_youtube from "../../assets/images/owner_youtube.png";
 import Active from "../../assets/images/Active.png";
 import InviteFamilyAndFriends from "../../assets/images/InviteFamilyAndFriends.png";
+import DoubleBlueColorCircle from "../../assets/images/DoubleBlueColorCircle.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -168,6 +163,31 @@ const useStyles = makeStyles((theme) => ({
   center: {
     textAlign: "center",
   },
+  // title_bg: {
+  //   "&::before": {
+  //     content: "''",
+  //     background: "red",
+  //     height: 140,
+  //     width: 140,
+  //     background: `url(${DoubleBlueColorCircle})`,
+  //     backgroundRepeat: "no-repeat",
+  //     backgroundPosition: "left",
+  //     position: "absolute",
+  //     zIndex: 9999,
+  //   },
+  // },
+  title_bg: {
+    background: `url(${DoubleBlueColorCircle})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "30% 50%",
+    backgroundSize: "9%",
+  },
+  title_bg2: {
+    background: `url(${DoubleBlueColorCircle})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "70% 50%",
+    backgroundSize: "7%",
+  },
 }));
 
 const Parents = () => {
@@ -309,7 +329,7 @@ const Parents = () => {
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
-            <Typography variant="h4">
+            <Typography variant="h4" className={classes.title_bg}>
               Never miss you child’s
               <br /> Precious moments
             </Typography>
@@ -374,7 +394,9 @@ const Parents = () => {
           className={`${classes.activity_wrapper}`}
         >
           <Grid item lg={12}>
-            <Typography variant="h4">Going a little extra miles</Typography>
+            <Typography variant="h4" className={classes.title_bg2}>
+              Going a little extra miles
+            </Typography>
           </Grid>
           <Grid item lg={6} className={classes.parent_child}>
             <img src={Active} alt="" className={classes.image} />

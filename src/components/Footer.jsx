@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
@@ -121,13 +121,15 @@ const Footer = () => {
                   <Typography variant="h6" className={classes.footer_title}>
                     Contact Sales
                   </Typography>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Request Call
-                  </Button>
+                  <Link to="/request-call">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Request Call
+                    </Button>
+                  </Link>
                 </div>
 
                 <div className={classes.footer_item}>
@@ -187,9 +189,9 @@ const Footer = () => {
                   </Typography>
                   <ul className={classes.ul}>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
+                      <Link to="/about-us" className={classes.a}>
                         About Us
-                      </a>
+                      </Link>
                     </li>
                     <li className={classes.li}>
                       <a className={classes.a} href="#">
@@ -215,14 +217,14 @@ const Footer = () => {
                   </Typography>
                   <ul className={classes.ul}>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
+                      <Link to="/contact-us" className={classes.a}>
                         Contact Us
-                      </a>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
+                      <Link to="/support-center" className={classes.a}>
                         Support Center
-                      </a>
+                      </Link>
                     </li>
                     <li className={classes.li}>
                       <a className={classes.a} href="#">
@@ -278,11 +280,9 @@ const Footer = () => {
         </Container>
       </>
     );
-  } else if (location.pathname === "/documentation"){
-    return ''
-  }
-  
-  else {
+  } else if (location.pathname === "/documentation") {
+    return "";
+  } else {
     return (
       <>
         <Container maxWidth="lg">

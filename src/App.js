@@ -15,7 +15,7 @@ const theme = createMuiTheme({
     h4: {
       fontSize: "2rem",
       fontWeight: 600,
-      margin: "0 0 20px 0",
+      padding: "0 0 20px 0",
       textAlign: "center",
       lineHeight: 1.5,
     },

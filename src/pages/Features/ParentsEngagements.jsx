@@ -229,6 +229,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "170px",
   },
+  h5: {
+    paddingLeft: 40,
+    textAlign: "left",
+  },
 }));
 
 const ParentEngagements = () => {
@@ -351,7 +355,7 @@ const ParentEngagements = () => {
                   <div className={classes.parent_cart_image}>
                     <img src={FriendsAndFamily} alt="" />
                   </div>
-                  <div className={classes.parent_cart_title} >
+                  <div className={classes.parent_cart_title}>
                     <Typography variant="h5">
                       let parent invite <br /> friend & family
                     </Typography>
@@ -371,9 +375,10 @@ const ParentEngagements = () => {
             <Grid item lg={6}>
               <div className={classes.parent_cart}>
                 <div className={classes.parent_cart_top}>
-                  <div className={classes.parent_cart_title } >
-                    <Typography variant="h5" style={{textAlign:'start'}}>
-                      Your data is safe. <br/>Parents can control what to share.
+                  <div className={classes.parent_cart_title}>
+                    <Typography variant="h5" className={classes.h5}>
+                      Your data is safe. <br />
+                      Parents can control what to share.
                     </Typography>
                   </div>
                   <div className={classes.parent_cart_image2}>
