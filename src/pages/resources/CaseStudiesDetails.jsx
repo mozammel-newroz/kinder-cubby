@@ -8,8 +8,15 @@ import ChildCareCenter2 from "../../assets/images/ChildCareCenter2.png";
 import ChildCareCenter1 from "../../assets/images/ChildCareCenter1.png";
 import ChildCareCenter3 from "../../assets/images/ChildCareCenter3.png";
 import { Link } from "react-router-dom";
+import Breadcrumbs from "@material-ui/core/Breadcrumbs";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+
+function handleClick(event) {
+  event.preventDefault();
+  console.info("You clicked a breadcrumb.");
+}
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -102,8 +109,23 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.5rem",
     fontWeight: "500px",
   },
+  breadcrumbs_title_style: {
+    fontSize: "1.2rem",
+    color: "#707070",
+
+  },
+  breadcrumbs_last_title_style: {
+    fontSize: "1.2rem",
+    color: "#8F9FCC",
+  },
   margin_bottom10: {
     marginBottom: 10,
+  },
+  margin_bottom20: {
+    marginBottom: 20,
+  },
+  margin_bottom30: {
+    marginBottom: 30,
   },
   address_font_color: {
     color: "#707070",
@@ -172,12 +194,17 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px auto 40px auto",
   },
   margin_top: {
-    marginTop: '45px',
-    marginBottom:'60px'
+    marginTop: "45px",
+    marginBottom: "60px",
   },
-  h4:{
-    marginBottom:'45px'
-  }
+  h4: {
+    marginBottom: "45px",
+  },
+  card_style: {
+    [theme.breakpoints.down("sm")]: {
+      padding: "12px 30px !important",
+    },
+  },
 }));
 
 const CaseStudiesDetails = () => {
@@ -202,6 +229,24 @@ const CaseStudiesDetails = () => {
           <div className={classes.flex_style}>
             <div className={classes.flex_div1_style}>
               <div className={classes.margin_bottom10}>
+                <div className={classes.margin_bottom30}>
+                  <Breadcrumbs
+                    separator={<NavigateNextIcon />}
+                    aria-label="breadcrumb"
+                  >
+                    <Link color="inherit" to="#" onClick={handleClick}>
+                      <Typography className={classes.breadcrumbs_title_style}>
+                        Customer’s Stories
+                      </Typography>
+                    </Link>
+
+                    <Link color="inherit" to="#" onClick={handleClick}>
+                      <Typography className={`${classes.breadcrumbs_last_title_style}`}>
+                        Star Kids
+                      </Typography>
+                    </Link>
+                  </Breadcrumbs>
+                </div>
                 <Typography className={classes.title_style}>
                   The Problem
                 </Typography>
@@ -242,7 +287,7 @@ const CaseStudiesDetails = () => {
               </div>
             </div>
             <div className={classes.flex_div2_style}>
-              <div className={classes.margin_bottom10}>
+              <div className={classes.margin_bottom20}>
                 <Typography className={classes.address_font_color}>
                   Product License
                 </Typography>
@@ -250,7 +295,15 @@ const CaseStudiesDetails = () => {
                   Standard
                 </Typography>
               </div>
-              <div className={classes.margin_bottom10}>
+              <div className={classes.margin_bottom20}>
+                <Typography className={classes.address_font_color}>
+                  Organization type
+                </Typography>
+                <Typography variant="subtitle2" gutterBottom>
+                  Childcare
+                </Typography>
+              </div>
+              <div className={classes.margin_bottom20}>
                 <Typography className={classes.address_font_color}>
                   Location
                 </Typography>
@@ -258,7 +311,7 @@ const CaseStudiesDetails = () => {
                   Los Angels
                 </Typography>
               </div>
-              <div className={classes.margin_bottom10}>
+              <div className={classes.margin_bottom20}>
                 <Typography className={classes.address_font_color}>
                   Member since
                 </Typography>
@@ -366,13 +419,15 @@ const CaseStudiesDetails = () => {
         <div className={classes.wrapper}>
           <div className={classes.banner3}>
             <Typography variant="h4" className={classes.h4}>
-              Step up your game!<br/> Implement KinderCubby at your organisation
+              Step up your game!
+              <br /> Implement KinderCubby at your organisation
             </Typography>
             <Grid container justify="center" alignItems="center" spacing={3}>
-              <Grid item xs={12} lg={4}>
+              <Grid item xs={12} lg={4} className={classes.card_style}>
                 <Paper className={classes.paper}>
-                  <div className={classes.box_title}>Free</div>
-                  <div className={classes.box_price}>$0</div>
+                  <Typography className={classes.box_title}>Free</Typography>
+
+                  <Typography className={classes.box_price}>$0</Typography>
                   <div className={classes.box_text}>
                     <Typography variant="body2">
                       Always free for 10 students
@@ -392,10 +447,13 @@ const CaseStudiesDetails = () => {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={12} lg={4}>
+              <Grid item xs={12} lg={4} className={classes.card_style}>
                 <Paper className={classes.paper}>
-                  <div className={classes.box_title}>Standard</div>
-                  <div className={classes.box_price}>$50</div>
+                  <Typography className={classes.box_title}>
+                    Standard
+                  </Typography>
+
+                  <Typography className={classes.box_price}>$50</Typography>
                   <div className={classes.box_text}>
                     <Typography variant="body2">
                       Less than 60 students
@@ -415,10 +473,10 @@ const CaseStudiesDetails = () => {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={12} lg={4}>
+              <Grid item xs={12} lg={4} className={classes.card_style}>
                 <Paper className={classes.paper}>
-                  <div className={classes.box_title}>Premium</div>
-                  <div className={classes.box_price}>$120</div>
+                  <Typography className={classes.box_title}>Premium</Typography>
+                  <Typography className={classes.box_price}>$120</Typography>
                   <div className={classes.box_text}>
                     <Typography variant="body2">Unlimited Students</Typography>
                     <Typography variant="body2">Unlimited staffs</Typography>
@@ -437,21 +495,19 @@ const CaseStudiesDetails = () => {
                 </Paper>
               </Grid>
               <div className={`${classes.auto_margin}`}>
-                <Link>
-                <Typography className={classes.tab_headline2}>
-                  Learn More{" "}
-                  <span className={classes.icon_style}>
-                    <ArrowForwardIcon />
-                  </span>
-                </Typography>
+                <Link to="#">
+                  <Typography className={classes.tab_headline2}>
+                    Learn More{" "}
+                    <span className={classes.icon_style}>
+                      <ArrowForwardIcon />
+                    </span>
+                  </Typography>
                 </Link>
-                
               </div>
             </Grid>
           </div>
         </div>
       </Container>
-      
     </>
   );
 };
