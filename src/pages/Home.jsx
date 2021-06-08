@@ -1,156 +1,126 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
-import automated from "../assets/images/automated.png";
-import ChasingActivityImage1 from "../assets/images/ChasingActivityImage1.png";
-import ChasingActivityImage2 from "../assets/images/ChasingActivityImage2.png";
-import ChasingActivityImage3 from "../assets/images/ChasingActivityImage3.png";
-import activity_image from "../assets/images/activity.png";
-import StartNow_image from "../assets/images/StartNow.png";
-import DemoVideo_image from "../assets/images/DemoVideo.png";
-import YoutubeIcon from "../assets/images/YoutubeIcon.png";
+import SchoolImage from "../assets/images/SchoolImage.png";
+import DemoVideoP1 from "../assets/images/DemoVideoP1.png";
+import EverythingInOnePlace from "../assets/images/EverythingInOnePlace.png";
+import SuccessfulGreenIcon2x from "../assets/images/SuccessfulGreenIcon@2x.png";
+
+import SliderImage from "../components/SliderImage";
+import SliderImage2 from "../components/SliderImage2";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    padding: "0px 30px",
+    padding: "40px 30px",
     width: "100%",
     [theme.breakpoints.down("xs")]: {
-      padding: 0,
+      padding: 10,
     },
   },
   wrapper2: {
-    padding: "0px 50px",
+    padding: "0px 100px",
+    [theme.breakpoints.down("xs")]: {
+      padding: 10,
+    },
+  },
+  wrapper3: {
+    marginTop: 80,
+    marginBottom: 30,
+    padding: "40px 100px 60px 100px",
+    background: "#E3EBFC",
     [theme.breakpoints.down("xs")]: {
       padding: 20,
     },
   },
-  banner: {
-    background: "#E3EBFC",
-    borderRadius: 10,
-    padding: 50,
+  wrapper4: {
+    padding: "45px 150px 60px 150px",
+    [theme.breakpoints.down("xs")]: {
+      padding: 20,
+    },
+  },
+  box: {
+    boxShadow: "1px 1px 3px 2px #ddd",
+    borderRadius: 7,
+    padding: "20px 50px",
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {
-      padding: 0,
-      marginTop: 10,
-    },
-  },
-
-  banner_image: {
-    flex: 1,
-    padding: 30,
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
-    },
-  },
-  banner_content: {
-    flex: 1,
-    padding: 30,
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
       padding: 20,
     },
+  },
+  center: {
+    textAlign: "center",
   },
   banner_button: {
     padding: "13px 35px  !important",
   },
-  banner_content_text: {
-    fontSize: 24,
-    marginBottom: 30,
+  margin_left_20: {
+    marginLeft: 20,
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: 3,
+    },
   },
-  banner_headline: {
+  title: {
+    fontSize: "2.5rem",
     fontWeight: 600,
-    marginBottom: 80,
-    [theme.breakpoints.down("xs")]: {
-      marginBottom: 20,
-    },
-  },
-  play: {
-    color: "#0B4295",
-    marginLeft: 10,
-    padding: "13px 35px  !important",
-    [theme.breakpoints.down("xs")]: {
-      marginLeft: 0,
-    },
-  },
-  activity_wrapper: {
-    padding: "60px 120px",
-    [theme.breakpoints.down("xs")]: {
-      padding: "20px 0px",
-    },
-  },
-
-  activity_box: {
     textAlign: "center",
   },
-  activity_image: {
-    maxWidth: "100%",
-    padding: "0px 40px 15px 40px",
+  h5: {
+    padding: "10px 10px 25px 10px",
+    width: "70%",
+    margin: "auto",
+    fontWeight: 400,
   },
-
-  margin10: {
-    marginBottom: 30,
-  },
-  activity_wrapper2: {
-    background: "#E3EBFC",
-    borderRadius: 10,
-    padding: "40px 80px",
-    [theme.breakpoints.down("xs")]: {
-      padding: 20,
-    },
+  title2: {
+    fontSize: "1.6rem",
+    fontWeight: 600,
+    marginBottom: 10,
   },
   image: {
     maxWidth: "100%",
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
-    },
   },
-  demo: {
-    background: "#E3EBFC",
-    borderRadius: 10,
-    padding: "60px 70px",
-    alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
-      padding: 20,
-      width: "100%",
-    },
+  h6: {
+    margin: "20px 0px",
+    textAlign: "left",
   },
-  demo_image: {
-    maxWidth: "100%",
-    [theme.breakpoints.down("xs")]: {},
+  demo_top: {
+    margin: "0px 0px",
   },
-  demo_headline: {
-    marginBottom: 50,
+  margin30: {
+    margin: "60px 0px",
   },
-  activity2: {
+  h4: {
+    textAlign: "left",
+    paddingBottom: 0,
+  },
+  subtitle1: {},
+  flex_center: {
     display: "flex",
     alignItems: "center",
+    padding: '30px 60px',
   },
-  improve: {
+  image_center: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  box2: {
     textAlign: "center",
-    marginTop: 40,
-    marginBottom: 40,
+    boxShadow: "1px 1px 3px 1px #ddd",
+    borderRadius: 12,
+    padding: 20,
+    margin: 3,
   },
-  improve_image: {
-    maxWidth: "100%",
+  box2_icon: {
+    margin: 12,
+    width: "50px",
   },
-  center_button: {
-    textAlign: "center",
-    marginTop: 40,
-  },
-  youtube: {
-    position: "relative",
-  },
-  YoutubeIcon: {
-    position: "absolute",
-    left: "40%",
-    top: "40%",
-    [theme.breakpoints.down("xs")]: {
-      left: "15%",
-      top: "0%",
-    },
+  link: {
+    textDecoration: "underline",
+    fontWeight: 600,
+    margin: 20,
+    color: "#EE6741",
   },
 }));
 
@@ -162,212 +132,233 @@ const Home = () => {
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
           <Grid item lg={12}>
-            <div className={classes.banner}>
-              <div className={classes.banner_image}>
-                <img src={automated} alt="" />
-              </div>
-              <div className={classes.banner_content}>
-                <Typography variant="h3" className={classes.banner_headline}>
-                  Automated
-                </Typography>
-                <Typography className={classes.banner_content_text}>
-                  Sed a magna semper, porta purus eu, ullamcorper ligula. Nam
-                  sit amet consectetur
-                </Typography>
-                <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Try it Free
-                  </Button>
-                  <Button
-                    // variant="contained"
-                    color="secondary"
-                    className={`${classes.play} button`}
-                    startIcon={<PlayCircleOutlineIcon />}
-                  >
-                    Watch In Action
-                  </Button>
-                </div>
-              </div>
+            <Typography className={classes.title}>
+              Easiest & holistic solution
+              <br />
+              for your childcare
+            </Typography>
+            <Typography variant="h5" className={classes.h5}>
+              Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+              congue consequat. In posuere, nunc sit amet laoreet blandit, urna
+              sapien imperdiet
+            </Typography>
+            <div className={classes.center}>
+              <Button
+                variant="contained"
+                color="primary"
+                className={`${classes.banner_button} button`}
+              >
+                Try it Free
+              </Button>
+              <Button
+                variant="outlined"
+                color="primary"
+                className={`${classes.banner_button} ${classes.margin_left_20} button`}
+              >
+                Explore Pricing
+              </Button>
             </div>
           </Grid>
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container spacing={3} className={classes.activity_wrapper}>
-          <Grid item lg={12}>
-            <Typography variant="h4">
-              No more chasing after kids to <br />
-              record their activity
+        <Grid container className={classes.wrapper2}>
+          <Grid lg={12}>
+            <Grid container spacing={3} className={classes.box}>
+              <Grid item lg={6}>
+                <Typography className={classes.title2}>
+                  Join childcare system <br />
+                  used by 1000+ organaisation
+                </Typography>
+                <Typography variant="subtitle1">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
+                  eaque vitae consectetur laboriosam
+                </Typography>
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  style={{ marginTop: 15 }}
+                  className={`${classes.banner_button} button`}
+                >
+                  Contact Sales
+                </Button>
+              </Grid>
+              <Grid item lg={6}>
+                <img src={SchoolImage} alt="" className={classes.image} />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Grid container spacing={3} className={classes.wrapper3}>
+          <Grid lg={12}>
+            <Typography className={classes.title} style={{ textAlign: "left" }}>
+              Why KinderCubby?
             </Typography>
           </Grid>
-
-          <Grid item lg={4} className={classes.activity_box}>
-            <img
-              className={classes.activity_image}
-              src={ChasingActivityImage1}
-              alt=""
-            />
-
-            <div>
-              <Typography variant="h5">Activity Feed</Typography>
-              <Typography variant="subtitle1">
-              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-               Etiam dui ipsum, viverra vel turpis ut
-              </Typography>
-            </div>
+          <Grid lg={8}>
+            <Grid container spacing={3}>
+              <Grid item lg={6}>
+                <Typography variant="h6" className={classes.h6}>
+                  Effortless Attendance
+                </Typography>
+                <Typography>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  illum autem officia dignissimos nostrum et
+                </Typography>
+              </Grid>
+              <Grid item lg={6}>
+                <Typography variant="h6" className={classes.h6}>
+                  Effortless Attendance
+                </Typography>
+                <Typography>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  illum autem officia dignissimos nostrum et
+                </Typography>
+              </Grid>
+              <Grid item lg={6}>
+                <Typography variant="h6" className={classes.h6}>
+                  Effortless Attendance
+                </Typography>
+                <Typography>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  illum autem officia dignissimos nostrum et
+                </Typography>
+              </Grid>
+              <Grid item lg={6}>
+                <Typography variant="h6" className={classes.h6}>
+                  Effortless Attendance
+                </Typography>
+                <Typography>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+                  illum autem officia dignissimos nostrum et
+                </Typography>
+              </Grid>
+            </Grid>
           </Grid>
-
-          <Grid item lg={4} className={classes.activity_box}>
-            <img
-              className={classes.activity_image}
-              src={ChasingActivityImage2}
-              alt=""
-            />
-
-            <div>
-              <Typography variant="h5">Photos & Videos</Typography>
-              <Typography variant="subtitle1">
-              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-               Etiam dui ipsum, viverra vel turpis ut
-              </Typography>
-            </div>
-          </Grid>
-
-          <Grid item lg={4} className={classes.activity_box}>
-            <img
-              className={classes.activity_image}
-              src={ChasingActivityImage3}
-              alt=""
-            />
-
-            <div>
-              <Typography variant="h5">Activity Reports</Typography>
-              <Typography variant="subtitle1">
-              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-               Etiam dui ipsum, viverra vel turpis ut
-              </Typography>
+          <Grid lg={4}>
+            <Typography variant="h6" className={classes.demo_top}>
+              SEE IN ACTION
+            </Typography>
+            <img src={DemoVideoP1} className={classes.image} alt="" />
+            <div className={classes.center}>
+              <Button
+                variant="contained"
+                color="primary"
+                className={`${classes.banner_button} button`}
+              >
+                Watch The Demo
+              </Button>
             </div>
           </Grid>
         </Grid>
       </Container>
+
       <Container maxWidth="lg">
-        <div className={classes.wrapper2}>
-          <Grid container spacing={3} className={classes.activity_wrapper2}>
-            <Grid item lg={12}>
-              <Typography variant="h4">
-                Activities that we are keeping track of
+        <Grid container className={classes.wrapper4}>
+          <Grid lg={12}>
+            <Typography className={classes.title}>
+              Lorem ipsum dolor sit amet <br /> consectetur adipisicing
+            </Typography>
+          </Grid>
+          <Grid container spacing={3} className={classes.flex_center}>
+            <Grid lg={6} className={classes.margin30}>
+              <Typography variant="h4" className={classes.h4}>
+                Everything in one place
+              </Typography>
+              <Typography variant="h6" className={classes.h6}>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
+                expedita laboriosam quam consectetur
               </Typography>
             </Grid>
-            <div className={classes.activity2}>
-              <Grid item lg={6}>
-                <img className={classes.image} src={activity_image} alt="" />
-              </Grid>
-              <Grid item lg={6}>
-                <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Food: </strong>
-                  semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui ipsum, viverra
-                </Typography>
-                <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Nap Time: </strong> 
-                  magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-                </Typography>
-                <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Reading: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
-                </Typography>
-                <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Playing: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
-                </Typography>
-                <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Incident: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
-                </Typography>
-                <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Kid's health: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
-                </Typography>
-                <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Kid's activity: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
-                </Typography>
-              </Grid>
-            </div>
-          </Grid>
-        </div>
-      </Container>
-      <Container maxWidth="lg">
-        <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
-            <Typography variant="h4">
-              Improve the quality of your program & <br /> give parents the
-              information they need
-            </Typography>
-            <Typography variant="h6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-              accusamus vitae? Quibusdam ad a nam nihil ea aperiam quod placeat
-              unde ducimus excepturi ratione porro dolore, rem provident.
-            </Typography>
-            <div className={classes.improve}>
+            <Grid lg={6} className={classes.image_center}>
               <img
-                src={StartNow_image}
-                className={classes.improve_image}
+                src={EverythingInOnePlace}
+                className={classes.image}
                 alt=""
               />
-            </div>
-            <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Start Now
-              </Button>
-            </div>
+            </Grid>
           </Grid>
-        </Grid>
-      </Container>
-
-      <Container maxWidth="lg">
-        <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
-            <div className={classes.demo}>
-              <Typography variant="h4" className={classes.demo_headline}>
-                KinderCubby activity tracking demo
-              </Typography>
-              <div className={classes.youtube}>
-                <div className={classes.YoutubeIcon}>
-                  <img src={YoutubeIcon} alt="" />
-                </div>
+          <Grid container spacing={3}>
+            <Grid item lg={4}>
+              <div className={classes.box2}>
                 <img
-                  className={classes.demo_image}
-                  src={DemoVideo_image}
+                  src={SuccessfulGreenIcon2x}
                   alt=""
+                  className={classes.box2_icon}
                 />
+                <Typography variant="h5">Activity Tracking</Typography>
+                <Typography variant="subtitle1" className={classes.subtitle1}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                </Typography>
+                <Link to="#">
+                  <Typography variant="body2" className={classes.link}>
+                    Learn More
+                  </Typography>
+                </Link>
               </div>
-            </div>
+            </Grid>
+            <Grid item lg={4}>
+              <div className={classes.box2}>
+                <img
+                  src={SuccessfulGreenIcon2x}
+                  alt=""
+                  className={classes.box2_icon}
+                />
+                <Typography variant="h5">Activity Tracking</Typography>
+                <Typography variant="subtitle1" className={classes.subtitle1}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                </Typography>
+                <Link to="#">
+                  <Typography variant="body2" className={classes.link}>
+                    Learn More
+                  </Typography>
+                </Link>
+              </div>
+            </Grid>
+            <Grid item lg={4}>
+              <div className={classes.box2}>
+                <img
+                  src={SuccessfulGreenIcon2x}
+                  alt=""
+                  className={classes.box2_icon}
+                />
+                <Typography variant="h5">Activity Tracking</Typography>
+                <Typography variant="subtitle1" className={classes.subtitle1}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                </Typography>
+                <Link to="#">
+                  <Typography variant="body2" className={classes.link}>
+                    Learn More
+                  </Typography>
+                </Link>
+              </div>
+            </Grid>
           </Grid>
         </Grid>
       </Container>
-
       <Container maxWidth="lg">
-        <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
-            <Typography variant="h4">
-              Get better insight & actionable information <br /> with
-              KinderCubby
+        <Grid container spacing={3} className={classes.wrapper3}>
+          <Grid lg={12}>
+            <Typography  className={classes.title} >
+              Manage the function 
             </Typography>
-            <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Yes! Let’s try it.
-              </Button>
-            </div>
+            <Typography variant="h5" className={classes.h5}>
+              Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+              congue consequat. In posuere, nunc sit amet laoreet blandit, urna
+              sapien imperdiet
+            </Typography>
+            <SliderImage2 />
           </Grid>
+          
+          
         </Grid>
       </Container>
+      <div className={classes.slider}>
+        <Typography className={classes.title}>Factual Impact</Typography>
+        <SliderImage />
+      </div>
     </>
   );
 };

@@ -10,7 +10,7 @@ import {
 import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
 
-import FatualModel from "../assets/images/FatualModel.png";
+import FatualModel from "../assets/images/OnlinePaymentP1.png";
 
 const useStyle = makeStyles((theme) => ({
   wrapper: {
@@ -35,10 +35,14 @@ const useStyle = makeStyles((theme) => ({
   },
   image: {
     flex: 1,
-    padding: "50px 50px 20px 50px",
+    padding: 10,
     [theme.breakpoints.down("sm")]: {
-      paddingLeft: "10px",
+      // paddingLeft: "10px",
     },
+  },
+  img: {
+    background: "#fff",
+    padding: 30,
   },
   left: {
     textAlign: "left",
@@ -78,6 +82,11 @@ const SliderImage = () => {
           <Carousel
             // autoplay={true}
             cellAlign="center"
+            slidesToShow={1}
+            slidesToScroll={1}
+            cellSpacing={10}
+            animation="zoom"
+            slideOffset={350}
             renderCenterLeftControls={({ previousSlide }) => (
               <IconButton
                 onClick={previousSlide}
@@ -98,57 +107,18 @@ const SliderImage = () => {
             )}
           >
             <div className={classes.root}>
-              <div className={classes.text}>
-                <Typography className={classes.left}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt dignissimos ea distinctio possimus aliquid, ad
-                  labore, quia quaerat numquam fugiat temporibus ut obcaecati
-                  doloribus officia odio voluptates ipsa quas dolore?
-                </Typography>
-                <div className={classes.title}>
-                  <ul>
-                    <li className={classes.first_li}>
-                      <Typography className={classes.li_text}>
-                        <strong>Sara Lee</strong>
-                      </Typography>
-                    </li>
-                    <li>
-                      <Typography className={classes.li_text}>
-                        Director
-                      </Typography>
-                    </li>
-                  </ul>
-                </div>
-              </div>
               <div className={classes.image}>
-                <img src={FatualModel} />
+                <img src={FatualModel} className={classes.img} />
               </div>
             </div>
             <div className={classes.root}>
-              <div className={classes.text}>
-                <Typography className={classes.left}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt dignissimos ea distinctio possimus aliquid, ad
-                  labore, quia quaerat numquam fugiat temporibus ut obcaecati
-                  doloribus officia odio voluptates ipsa quas dolore?
-                </Typography>
-                <div className={classes.title}>
-                  <ul>
-                    <li className={classes.first_li}>
-                      <Typography className={classes.li_text}>
-                        <strong>Sara Lee</strong>
-                      </Typography>
-                    </li>
-                    <li>
-                      <Typography className={classes.li_text}>
-                        Director
-                      </Typography>
-                    </li>
-                  </ul>
-                </div>
-              </div>
               <div className={classes.image}>
-                <img src={FatualModel} />
+                <img src={FatualModel} className={classes.img} />
+              </div>
+            </div>
+            <div className={classes.root}>
+              <div className={classes.image}>
+                <img src={FatualModel} className={classes.img} />
               </div>
             </div>
           </Carousel>

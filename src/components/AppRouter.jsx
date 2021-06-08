@@ -1,10 +1,14 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+import AboutUs from "../pages/AboutUs";
+import SupportCenter from "../pages/SupportCenter";
 import ChangePassword from "../pages/auth/ChangePassword";
 import Login from "../pages/auth/Login";
+import RequestCall from "../pages/auth/RequestCall";
 import SignUp from "../pages/auth/SignUp";
 import SignUpOption from "../pages/auth/SignUpOption";
 import TryItFree from "../pages/auth/TryItFree";
+import ContactUs from "../pages/ContactUs";
 import ActivityTracking from "../pages/Features/ActivityTracking";
 import AttendanceAndCheckins from "../pages/Features/AttendanceAndCheckins";
 import Billing from "../pages/Features/Billing";
@@ -36,6 +40,18 @@ const AppRouter = () => {
         <Pricing />
       </Route>
 
+      <Route path="/about-us">
+        <AboutUs />
+      </Route>
+
+      <Route path="/contact-us">
+        <ContactUs />
+      </Route>
+
+      <Route path="/support-center">
+        <SupportCenter />
+      </Route>
+
       {/* auth  */}
       <Route path="/login">
         <Login />
@@ -51,6 +67,9 @@ const AppRouter = () => {
       </Route>
       <Route path="/try-it-free">
         <TryItFree />
+      </Route>
+      <Route path="/request-call">
+        <RequestCall />
       </Route>
 
       {/* features  */}
