@@ -1,45 +1,18 @@
 import React from "react";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import IconButton from "@material-ui/core/IconButton";
-import Input from "@material-ui/core/Input";
-import FilledInput from "@material-ui/core/FilledInput";
-import OutlinedInput from "@material-ui/core/OutlinedInput";
-import InputLabel from "@material-ui/core/InputLabel";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
-import Visibility from "@material-ui/icons/Visibility";
-import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import Paper from "@material-ui/core/Paper";
 import SearchIcon from "../../assets/images/SearchIcon.png";
 import Phone from "../../assets/images/Phone.png";
 import map from "../../assets/images/map.png";
-import PhoneIcon from "@material-ui/icons/Phone";
+
 import Pagination from "@material-ui/lab/Pagination";
-// import './MyNav.css'
 
 const useStyles = makeStyles((theme) => ({
-  item5: {
-    order: 5,
-    [theme.breakpoints.down("xs")]: {
-      order: 6,
-    },
-  },
-  item6: {
-    order: 6,
-    [theme.breakpoints.down("xs")]: {
-      order: 7,
-    },
-  },
-  item7: {
-    order: 7,
-    [theme.breakpoints.down("xs")]: {
-      order: 5,
-    },
-  },
+
+
 
   wrapper: {
     padding: "0px 30px",
@@ -55,13 +28,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "13px 35px  !important",
   },
 
-  activity_wrapper: {
-    background: "#E3EBFC",
-    padding: "60px 120px",
-    [theme.breakpoints.down("sm")]: {
-      padding: "20px 0px",
-    },
-  },
 
   background_style3: {
     background: "#E3EBFC",
@@ -87,9 +53,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  activity_box: {
-    textAlign: "center",
-  },
 
   paper: {
     padding: theme.spacing(2),
@@ -97,38 +60,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "start",
   },
 
-  tab_headline: {
-    fontWeight: 600,
-    fontSize: "14px",
-    color: "#454141",
-    marginBottom: "15px",
-  },
-  tab_headline2: {
-    fontWeight: 600,
-    fontSize: "18px",
-    color: "#454141",
-    marginBottom: "15px",
-  },
-  tab_text: {
-    fontSize: "12px",
-    lineHeight: "15px",
-    color: "#454141",
-    marginBottom: "15px",
-  },
+ 
 
   center_search_input: {
     textAlign: "center",
     margin: "auto",
-    // marginTop: 40,
     width: "70%",
   },
 
-  tab_grid_padding: {
-    paddingTop: "80px !Important",
-    [theme.breakpoints.down("xs")]: {
-      paddingTop: "12px !Important",
-    },
-  },
   center: {
     textAlign: "center",
   },
@@ -139,21 +78,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  grid_padding_bottom_xs: {
-    [theme.breakpoints.down("xs")]: {
-      paddingBottom: "0px !Important",
-    },
-  },
-  grid_padding_top_xs: {
-    [theme.breakpoints.down("xs")]: {
-      paddingTop: "0px !Important",
-    },
-  },
-  icon_style: {
-    position: "relative",
-    top: "7px",
-    left: "4px",
-  },
 
   mynab: {
     display: "flex",
@@ -184,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   active: {
-    color: "#21409A !Important",
+    color: "#21409A !important ",
     borderBottom: "2px solid #21409A",
   },
 
