@@ -4,6 +4,7 @@ import ChangePassword from "../pages/auth/ChangePassword";
 import Login from "../pages/auth/Login";
 import SignUp from "../pages/auth/SignUp";
 import SignUpOption from "../pages/auth/SignUpOption";
+import TryItFree from "../pages/auth/TryItFree";
 import ActivityTracking from "../pages/Features/ActivityTracking";
 import AttendanceAndCheckins from "../pages/Features/AttendanceAndCheckins";
 import Billing from "../pages/Features/Billing";
@@ -19,6 +20,7 @@ import Parents from "../pages/product/Parents";
 import Teachers from "../pages/product/Teachers";
 import Blog from "../pages/resources/Blog";
 import CaseStudies from "../pages/resources/CaseStudies";
+import CaseStudiesDetails from "../pages/resources/CaseStudiesDetails";
 import Documentation from "../pages/resources/Documentation";
 import Ebooks from "../pages/resources/Ebooks";
 import FindNearbyChildCares from "../pages/resources/FindNearbyChildCares";
@@ -46,6 +48,9 @@ const AppRouter = () => {
       </Route>
       <Route path="/change-password">
         <ChangePassword />
+      </Route>
+      <Route path="/try-it-free">
+        <TryItFree />
       </Route>
 
       {/* features  */}
@@ -104,6 +109,10 @@ const AppRouter = () => {
 
       <Route path="/case-studies">
         <CaseStudies />
+      </Route>
+
+      <Route path="/case-studies-details">
+        <CaseStudiesDetails />
       </Route>
 
       <Route path="/documentation">

@@ -263,13 +263,15 @@ function TopBar() {
                   >
                     <Link to="/login">Login</Link>
                   </Button>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className="button"
-                  >
-                    Try It Free
-                  </Button>
+                  <Link to="/try-it-free">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className="button"
+                    >
+                      Try It Free
+                    </Button>
+                  </Link>
                 </Box>
               </div>
             </Container>
