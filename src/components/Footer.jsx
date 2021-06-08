@@ -105,7 +105,8 @@ const Footer = () => {
     location.pathname !== "/change-password" &&
     location.pathname !== "/sign-up" &&
     location.pathname !== "/sign-up-option" &&
-    location.pathname !== "/documentation"
+    location.pathname !== "/documentation" &&
+    location.pathname !== "/try-it-free"
   ) {
     return (
       <>
