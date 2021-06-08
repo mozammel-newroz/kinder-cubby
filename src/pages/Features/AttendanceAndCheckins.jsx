@@ -303,6 +303,7 @@ const AttendanceAndCheckins = () => {
                   item
                   xs={5}
                   style={{ paddingTop: "0px", paddingLeft: "0" }}
+                  
                 >
                   <img src={OwnerAndDirectors} alt="" width="100%" />
                 </Grid>
