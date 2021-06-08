@@ -89,7 +89,7 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="#" className={classes.next_button}>
+                <Link to="/case-studies-details" className={classes.next_button}>
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -110,7 +110,7 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="#" className={classes.next_button}>
+                <Link to="/case-studies-details" className={classes.next_button}>
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -131,7 +131,7 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="#" className={classes.next_button}>
+                <Link to="/case-studies-details" className={classes.next_button}>
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -152,7 +152,7 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="#" className={classes.next_button}>
+                <Link to="/case-studies-details" className={classes.next_button}>
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -173,7 +173,7 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="#" className={classes.next_button}>
+                <Link to="/case-studies-details" className={classes.next_button}>
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -194,7 +194,7 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="#" className={classes.next_button}>
+                <Link to="/case-studies-details" className={classes.next_button}>
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>

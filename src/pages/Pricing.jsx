@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  CssBaseline,
-  Container,
-  Grid,
-  Typography,
-  Button,
-} from "@material-ui/core";
+import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
@@ -21,6 +15,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import Pricing from "../assets/images/Pricing.png";
+import SuccessfulGreenIcon from "../assets/images/SuccessfulGreenIcon.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper1: {
@@ -151,9 +146,10 @@ const Home = () => {
           <Grid item lg={12}>
             <Typography variant="h4">Simple & Transparent Pricing</Typography>
             <Typography variant="h6" className={classes.h6}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-              blanditiis suscipit facere adipisci vel culpa reiciendis,
-              voluptatum provident dolore numquam.
+              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+              amet
+              <br /> consectetur sapien. Etiam dui ipsum, viverra vel turpis ut,
+              dignissim elementum
             </Typography>
           </Grid>
         </Grid>
@@ -193,14 +189,14 @@ const Home = () => {
                     </TableCell>
                     <TableCell align="center" className={classes.no_border}>
                       <div className={classes.box_big}>
-                        <div className={classes.box_title_big}>Free</div>
-                        <div className={classes.box_price}>$0</div>
+                        <div className={classes.box_title_big}>Standard</div>
+                        <div className={classes.box_price}>$50</div>
                         <div className={classes.box_text}>
                           <Typography variant="body2">
-                            Always free for 10 students
+                            Less than 60 students
                           </Typography>
                           <Typography variant="body2">
-                            1 Staff member
+                            8 Staff members
                           </Typography>
                         </div>
                         <div className={classes.box_button}>
@@ -216,14 +212,14 @@ const Home = () => {
                     </TableCell>
                     <TableCell align="center" className={classes.no_border}>
                       <div className={classes.box}>
-                        <div className={classes.box_title}>Free</div>
-                        <div className={classes.box_price}>$0</div>
+                        <div className={classes.box_title}>premium</div>
+                        <div className={classes.box_price}>$120</div>
                         <div className={classes.box_text}>
                           <Typography variant="body2">
-                            Always free for 10 students
+                            Unlimited Students
                           </Typography>
                           <Typography variant="body2">
-                            1 Staff member
+                            Unlimited Staff
                           </Typography>
                         </div>
                         <div className={classes.box_button}>
@@ -271,19 +267,70 @@ const Home = () => {
 
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                      Number of Students
+                      Number of Staffs
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
-                      10
+                      1
                     </TableCell>
                     <TableCell
                       align="center"
                       className={classes.table_cell_big}
                     >
-                      60
+                      8
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       Unlimited
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                      Contactless check-in
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                      Contactless check-in
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                      Contactless check-in
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                   </TableRow>
                 </TableBody>
@@ -294,44 +341,341 @@ const Home = () => {
                       colSpan="5"
                       className={classes.table_head2}
                     >
-                      Activity tracking
+                      Attendance & check-in
                     </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                      Number of Students
+                      Contactless check-in
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
-                      10
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                     <TableCell
                       align="center"
                       className={classes.table_cell_big}
                     >
-                      60
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
-                      Unlimited
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                   </TableRow>
-
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                      Number of Students
+                      Automatic attendance report
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
-                      10
+                      -
                     </TableCell>
                     <TableCell
                       align="center"
                       className={classes.table_cell_big}
                     >
-                      60
+                      -
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
-                      Unlimited
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                      Safe pickup feature
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                      Digital report
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      -
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                      Hourly Payment
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      -
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+                <TableHead>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      colSpan="5"
+                      className={classes.table_head2}
+                    >
+         Activity tracking
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Activity feed
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Photos
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Videos
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                   -
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Incident report
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                       <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Activity report
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      -
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+                <TableHead>
+                  <TableRow>
+                    <TableCell
+                      align="center"
+                      colSpan="5"
+                      className={classes.table_head2}
+                    >
+                   Center Management
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    System access control
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Contact less staff check-in
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Staff management
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      -
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Scheduling
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Health checks
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      -
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Enrollment management
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                    <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Daily reports
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                    <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>
+                    Performance assessment
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                    <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                   </TableRow>
                 </TableBody>
@@ -362,31 +706,79 @@ const Home = () => {
             <Accordion className={classes.accordion}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={classes.question}>
-                  Accordion 1
+                Will I be charged after the trial ends?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
+                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
+                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
+                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
                 </Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion className={classes.accordion}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={classes.question}>
-                  Accordion 2
+                Why should I choose KinderCubby over others?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                  eget.
+                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
+                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
+                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
+                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
                 </Typography>
               </AccordionDetails>
             </Accordion>
+            <Accordion className={classes.accordion}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography className={classes.question}>
+                Will I be charged after the trial ends?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography className={classes.answer}>
+                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
+                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
+                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
+                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion className={classes.accordion}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography className={classes.question}>
+                Will I be charged after the trial ends?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography className={classes.answer}>
+                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
+                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
+                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
+                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion className={classes.accordion}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography className={classes.question}>
+                Will I be charged after the trial ends?
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography className={classes.answer}>
+                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
+                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
+                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
+                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            
             <Typography className={classes.question_title_bottom}>
               Still have more questions?
             </Typography>
@@ -404,9 +796,9 @@ const Home = () => {
           <Grid item lg={12}>
             <Typography variant="h4">Ready to take the next step</Typography>
             <Typography variant="h6" className={classes.h6}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-              blanditiis suscipit facere adipisci vel culpa reiciendis,
-              voluptatum provident dolore numquam.
+            Duis rhoncus dui venenatis consequat porttitor. 
+            Etiam aliquet congue consequat. In posuere, nunc sit amet laoreet blandit, 
+            urna sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.bottom_button}>
               <Button variant="contained" color="primary" className="button">

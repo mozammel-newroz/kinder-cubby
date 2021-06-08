@@ -7,26 +7,21 @@ import Paper from "@material-ui/core/Paper";
 import SearchIcon from "../../assets/images/SearchIcon.png";
 import Phone from "../../assets/images/Phone.png";
 import map from "../../assets/images/map.png";
+import { Link } from "react-router-dom";
 
 import Pagination from "@material-ui/lab/Pagination";
 
 const useStyles = makeStyles((theme) => ({
-
-
-
   wrapper: {
     padding: "0px 30px",
     [theme.breakpoints.down("sm")]: {
       padding: 0,
     },
   },
- 
- 
 
   banner_button: {
     padding: "13px 35px  !important",
   },
-
 
   background_style3: {
     background: "#E3EBFC",
@@ -52,14 +47,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-
   paper: {
     padding: theme.spacing(2),
     marginBottom: "20px",
     textAlign: "start",
   },
-
- 
 
   center_search_input: {
     textAlign: "center",
@@ -79,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 3,
     },
   },
-
 
   mynab: {
     display: "flex",
@@ -148,12 +139,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 25,
     backgroundColor: "#fff",
   },
-  margin_top:{
-    marginTop:30,
+  margin_top: {
+    marginTop: 30,
     [theme.breakpoints.down("xs")]: {
-      marginTop:0
+      marginTop: 0,
     },
-  }
+  },
 }));
 
 const FindNearbyChildCares = () => {
@@ -199,14 +190,14 @@ const FindNearbyChildCares = () => {
             {/* <div style={{ border: "1px solid red"}}> */}
 
             <ul className={classes.mynab}>
-              <li >
-                <a className={classes.active}>All</a>
+              <li>
+                <Link to='#' className={classes.active}>All</Link>
               </li>
               <li>
-                <a >Search Result</a>
+                <Link to='#'>Search Result</Link>
               </li>
               <li>
-                <a>Invite Your School</a>
+                <Link to='#'>Invite Your School</Link>
               </li>
             </ul>
           </div>

@@ -2,11 +2,6 @@ import React from "react";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
-
-import CenterManagementImage from "../../assets/images/CenterManagement.png";
-
-import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
-import ManagingChildcare from "../../assets/images/ManagingChildcare.png";
 import StarKidsLogo from "../../assets/images/StarKidsLogo.png";
 import StarKidsImage from "../../assets/images/StarKidsImage.png";
 import ChildCareCenter2 from "../../assets/images/ChildCareCenter2.png";
@@ -91,15 +86,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "13px 23px  !important",
   },
 
-
   paper: {
     textAlign: "start",
   },
-  
-
-
-  
- 
 
   center_button: {
     textAlign: "center",
@@ -183,7 +172,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px auto 40px auto",
   },
   margin_top: {
-    marginTop: '30px',
+    marginTop: '45px',
+    marginBottom:'60px'
   },
   h4:{
     marginBottom:'45px'
@@ -376,7 +366,7 @@ const CaseStudiesDetails = () => {
         <div className={classes.wrapper}>
           <div className={classes.banner3}>
             <Typography variant="h4" className={classes.h4}>
-              Step up your game! Implement KinderCubby at your organisation
+              Step up your game!<br/> Implement KinderCubby at your organisation
             </Typography>
             <Grid container justify="center" alignItems="center" spacing={3}>
               <Grid item xs={12} lg={4}>
