@@ -9,6 +9,12 @@ import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
 import ManagingChildcare from "../../assets/images/ManagingChildcare.png";
 import StarKidsLogo from "../../assets/images/StarKidsLogo.png";
 import StarKidsImage from "../../assets/images/StarKidsImage.png";
+import ChildCareCenter2 from "../../assets/images/ChildCareCenter2.png";
+import ChildCareCenter1 from "../../assets/images/ChildCareCenter1.png";
+import ChildCareCenter3 from "../../assets/images/ChildCareCenter3.png";
+import { Link } from "react-router-dom";
+
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -17,13 +23,35 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
     },
   },
+  wrapper2: {
+    padding: "30px 90px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "0px 30px",
+    },
+  },
   banner: {
     background: "#E3EBFC",
     borderRadius: 10,
-    // padding: 50,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+  },
+  banner2: {
+    background: "#E3EBFC",
+    borderRadius: 10,
+    padding: 20,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  banner3: {
+    background: "#E3EBFC",
+    borderRadius: 10,
+    padding: "60px 160px 10px 160px",
+    justifyContent: "center",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      padding: "60px 5px 10px 5px",
+    },
   },
 
   banner_image: {
@@ -42,95 +70,40 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     [theme.breakpoints.down("sm")]: {
-      padding: "0 60px",
+      display: "block",
     },
   },
   flex_div1_style: {
     flex: 7,
-    // paddingRigth:20
   },
   flex_div2_style: {
     flex: 3,
     padding: 20,
+    [theme.breakpoints.down("sm")]: {
+      padding: 0,
+    },
   },
 
-  banner_content: {
-    flex: 1,
-    padding: 30,
-  },
   banner_button: {
     padding: "13px 35px  !important",
   },
-  banner_headline: {
-    fontWeight: 600,
-    fontSize: "2.9rem",
-    marginBottom: 80,
-    [theme.breakpoints.down("sm")]: {
-      marginBottom: 20,
-    },
+  banner_button2: {
+    padding: "13px 23px  !important",
   },
 
-  activity_wrapper: {
-    padding: "60px 120px",
-    [theme.breakpoints.down("sm")]: {
-      padding: "20px 0px",
-    },
-  },
-
-  activity_box: {
-    textAlign: "center",
-  },
 
   paper: {
-    padding: theme.spacing(2),
     textAlign: "start",
   },
-  image_paper: {
-    textAlign: "center",
-    padding: "50px 100px",
-  },
-  tab_left_line: {
-    borderLeft: "6px solid #DF6D38",
-    paddingLeft: "15px",
-    borderRadius: "3px",
-  },
-  tab_headline: {
-    fontWeight: 600,
-    fontSize: "14px",
-    color: "#454141",
-  },
-  tab_text: {
-    fontSize: "12px",
-    lineHeight: "25px",
-    color: "#454141",
-  },
+  
 
-  list_Div: {
-    borderRadius: 10,
-    padding: "2px",
-    display: "flex",
-    alignItems: "center",
 
-    [theme.breakpoints.down("xs")]: {
-      padding: 0,
-      marginTop: 10,
-    },
-  },
-  list_icon: {
-    padding: "3px 35px 0 0",
-  },
+  
+ 
 
   center_button: {
     textAlign: "center",
-    marginTop: 40,
-  },
-  manage_center_image_div: {
-    width: "60%",
-    margin: "auto",
-  },
-  banner_content_text: {
-    fontSize: 24,
-    marginBottom: 30,
+    marginBottom: 10,
   },
   list_container: {
     textAlign: "start",
@@ -143,6 +116,78 @@ const useStyles = makeStyles((theme) => ({
   margin_bottom10: {
     marginBottom: 10,
   },
+  address_font_color: {
+    color: "#707070",
+    fontSize: "12px",
+  },
+  tab_title: {
+    color: "#707070",
+    fontSize: "18px",
+    marginBottom: 15,
+  },
+
+  card: {
+    background: "#fff",
+    padding: 23,
+    borderRadius: 15,
+    boxShadow: "1px 1px 3px 1px #ddd",
+  },
+  next_button: {
+    display: "flex",
+    justifyContent: "space-between",
+    paddingTop: 12,
+    borderTop: "1px solid #eee",
+    color: "#EE6741",
+  },
+  card_image: {
+    maxWidth: "100%",
+  },
+  card_title: {
+    textAlign: "left",
+    marginBottom: 15,
+    fontSize: "1.2rem",
+  },
+  box_title: {
+    fontSize: "1.3rem",
+    fontWeight: 600,
+    borderBottom: "2px solid #ddd",
+    padding: 7,
+    textAlign: "center",
+  },
+  box_price: {
+    fontSize: "2.5rem",
+    fontWeight: 600,
+    padding: 25,
+    textAlign: "center",
+  },
+  box_text: {
+    textAlign: "center",
+    paddingBottom: 25,
+  },
+  padding_bottom25: {
+    paddingBottom: 25,
+  },
+  tab_headline2: {
+    fontWeight: 600,
+    fontSize: "18px",
+    color: "#F26522",
+    marginBottom: "15px",
+    textAlign: "center",
+  },
+  icon_style: {
+    position: "relative",
+    top: "7px",
+    left: "4px",
+  },
+  auto_margin: {
+    margin: "20px auto 40px auto",
+  },
+  margin_top: {
+    marginTop: '30px',
+  },
+  h4:{
+    marginBottom:'45px'
+  }
 }));
 
 const CaseStudiesDetails = () => {
@@ -153,7 +198,7 @@ const CaseStudiesDetails = () => {
         <div className={classes.wrapper}>
           <div className={classes.banner}>
             <div className={classes.banner_image}>
-              <img width="100%" src={StarKidsImage} alt="" />
+              <img src={StarKidsImage} alt="" width="100%" />
             </div>
             <div className={classes.banner_image2}>
               <img width="60%" src={StarKidsLogo} alt="" />
@@ -207,17 +252,213 @@ const CaseStudiesDetails = () => {
               </div>
             </div>
             <div className={classes.flex_div2_style}>
-              <Typography variant="body2" gutterBottom>
-                caption text
-              </Typography>
-              <Typography variant="subtitle2" gutterBottom>
-                subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Quos blanditiis tenetur
-              </Typography>
+              <div className={classes.margin_bottom10}>
+                <Typography className={classes.address_font_color}>
+                  Product License
+                </Typography>
+                <Typography variant="subtitle2" gutterBottom>
+                  Standard
+                </Typography>
+              </div>
+              <div className={classes.margin_bottom10}>
+                <Typography className={classes.address_font_color}>
+                  Location
+                </Typography>
+                <Typography variant="subtitle2" gutterBottom>
+                  Los Angels
+                </Typography>
+              </div>
+              <div className={classes.margin_bottom10}>
+                <Typography className={classes.address_font_color}>
+                  Member since
+                </Typography>
+                <Typography variant="subtitle2" gutterBottom>
+                  2021
+                </Typography>
+              </div>
+              <div className={classes.banner2}>
+                <Typography variant="h5">
+                  Make a difference at your organisation too
+                </Typography>
+                <div className={classes.center_button}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={`${classes.banner_button} button`}
+                  >
+                    Try it Free
+                  </Button>
+                </div>
+                <div className={classes.center_button}>
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    className={`${classes.banner_button2} ${classes.margin_left_20} button`}
+                  >
+                    Contact Sales
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </Container>
+      <Container maxWidth="lg">
+        <div className={classes.wrapper2}>
+          <Typography className={classes.tab_title}>
+            More Customer’s Stories
+          </Typography>
+          <Grid container spacing={3}>
+            <Grid item lg={4}>
+              <div className={classes.card}>
+                <img
+                  src={ChildCareCenter1}
+                  alt=""
+                  className={classes.card_image}
+                />
+
+                <Typography variant="h5" className={classes.card_title}>
+                  Network Bendale Acres Child Care Centre
+                </Typography>
+
+                <div>
+                  <Link to="#" className={classes.next_button}>
+                    <Typography color="primary">Read More</Typography>
+                    <ArrowForwardIcon />
+                  </Link>
+                </div>
+              </div>
+            </Grid>
+            <Grid item lg={4}>
+              <div className={classes.card}>
+                <img
+                  src={ChildCareCenter2}
+                  alt=""
+                  className={classes.card_image}
+                />
+
+                <Typography variant="h5" className={classes.card_title}>
+                  Network Bendale Acres Child Care Centre
+                </Typography>
+
+                <div>
+                  <Link to="#" className={classes.next_button}>
+                    <Typography color="primary">Read More</Typography>
+                    <ArrowForwardIcon />
+                  </Link>
+                </div>
+              </div>
+            </Grid>
+            <Grid item lg={4}>
+              <div className={classes.card}>
+                <img
+                  src={ChildCareCenter3}
+                  alt=""
+                  className={classes.card_image}
+                />
+
+                <Typography variant="h5" className={classes.card_title}>
+                  Network Bendale Acres Child Care Centre
+                </Typography>
+
+                <div>
+                  <Link to="#" className={classes.next_button}>
+                    <Typography color="primary">Read More</Typography>
+                    <ArrowForwardIcon />
+                  </Link>
+                </div>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
+      </Container>
+      <Container maxWidth="lg" className={classes.margin_top}>
+        <div className={classes.wrapper}>
+          <div className={classes.banner3}>
+            <Typography variant="h4" className={classes.h4}>
+              Step up your game! Implement KinderCubby at your organisation
+            </Typography>
+            <Grid container justify="center" alignItems="center" spacing={3}>
+              <Grid item xs={12} lg={4}>
+                <Paper className={classes.paper}>
+                  <div className={classes.box_title}>Free</div>
+                  <div className={classes.box_price}>$0</div>
+                  <div className={classes.box_text}>
+                    <Typography variant="body2">
+                      Always free for 10 students
+                    </Typography>
+                    <Typography variant="body2">1 Staff member</Typography>
+                  </div>
+                  <div
+                    className={`${classes.center_button} ${classes.padding_bottom25}`}
+                  >
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      className="button"
+                    >
+                      Get Started
+                    </Button>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} lg={4}>
+                <Paper className={classes.paper}>
+                  <div className={classes.box_title}>Standard</div>
+                  <div className={classes.box_price}>$50</div>
+                  <div className={classes.box_text}>
+                    <Typography variant="body2">
+                      Less than 60 students
+                    </Typography>
+                    <Typography variant="body2">8 Staff members</Typography>
+                  </div>
+                  <div
+                    className={`${classes.center_button} ${classes.padding_bottom25}`}
+                  >
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className="button"
+                    >
+                      Start Trail
+                    </Button>
+                  </div>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} lg={4}>
+                <Paper className={classes.paper}>
+                  <div className={classes.box_title}>Premium</div>
+                  <div className={classes.box_price}>$120</div>
+                  <div className={classes.box_text}>
+                    <Typography variant="body2">Unlimited Students</Typography>
+                    <Typography variant="body2">Unlimited staffs</Typography>
+                  </div>
+                  <div
+                    className={`${classes.center_button} ${classes.padding_bottom25}`}
+                  >
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      className="button"
+                    >
+                      Contact Sales
+                    </Button>
+                  </div>
+                </Paper>
+              </Grid>
+              <div className={`${classes.auto_margin}`}>
+                <Typography className={classes.tab_headline2}>
+                  Learn More{" "}
+                  <span className={classes.icon_style}>
+                    <ArrowForwardIcon />
+                  </span>
+                </Typography>
+              </div>
+            </Grid>
+          </div>
+        </div>
+      </Container>
+      
     </>
   );
 };

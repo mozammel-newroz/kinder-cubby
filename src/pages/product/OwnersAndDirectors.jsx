@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper2: {
     marginTop: 120,
-    padding: 120,
+    padding: '120px 120px 60px 120px',
     width: "100%",
     background: "#E3EBFC",
     position: "relative",

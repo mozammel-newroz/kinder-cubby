@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper2: {
     marginTop: 120,
-    padding: 120,
+    padding: "120px 120px 60px 120px",
     width: "100%",
     background: "#E3EBFC",
     position: "relative",
@@ -130,10 +130,28 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
   },
   activity_wrapper: {
-    padding: "60px 120px",
+    padding: "60px 120px 0px 120px",
     [theme.breakpoints.down("xs")]: {
       padding: "20px 0px",
     },
+  },
+  activity_wrapper2: {
+    padding: "40px 120px 0px 120px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "20px 0px",
+    },
+  },
+  activity_wrapper3: {
+    padding: "100px 120px 100px 120px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "20px 0px",
+    },
+  },
+  h4: {
+    marginBottom: "40px",
+  },
+  h6: {
+    marginTop:0
   },
   align_left: {
     textAlign: "left",
@@ -284,12 +302,12 @@ const Teachers = () => {
             </Typography>
           </Grid>
           <Grid item lg={6} className={classes.parent_child}>
-          <div className={classes.manage_center_image_div}>
-            <img
-              src={LessPaperWorkFocusOnKids}
-              alt=""
-              className={classes.image}
-            />
+            <div className={classes.manage_center_image_div}>
+              <img
+                src={LessPaperWorkFocusOnKids}
+                alt=""
+                className={classes.image}
+              />
             </div>
           </Grid>
           <Grid item lg={6}>
@@ -346,10 +364,10 @@ const Teachers = () => {
           justify="center"
           alignItems="center"
           spacing={5}
-          className={`${classes.activity_wrapper}`}
+          className={`${classes.activity_wrapper2}`}
         >
           <Grid item lg={12}>
-            <Typography variant="h4">
+            <Typography variant="h4" className={classes.h4}>
               Impact of KinderCubby on teachers
             </Typography>
             <img src={owner_youtube} alt="" className={classes.image} />
@@ -387,10 +405,10 @@ const Teachers = () => {
       </Container>
 
       <Container maxWidth="lg">
-        <Grid container className={`${classes.activity_wrapper}`}>
+        <Grid container className={`${classes.activity_wrapper3}`}>
           <Grid item lg={12}>
             <Typography variant="h4">Invite your school</Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" className={classes.h6}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
               congue consequat. In posuere, nunc sit amet laoreet blandit, urna
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
