@@ -21,6 +21,11 @@ import DislikeIcon from "../../assets/images/DislikeIcon.png";
 import logo_small from "../../assets/images/logo.png";
 
 const useStyle = makeStyles((theme) => ({
+  root: {
+    background: "#fff",
+    position: "relative",
+    zIndex: 99999,
+  },
   wrapper: {
     backgroundColor: "#E1EBFB",
     backgroundImage: `url(${NeedHelp})`,
@@ -145,7 +150,7 @@ const useStyle = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.down("xs")]: {
-      flexDirection: 'column'
+      flexDirection: "column",
     },
   },
   footer_item: {
@@ -166,7 +171,7 @@ const Documentation = () => {
 
   return (
     <div>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className={classes.root}>
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12}>
             <div className={classes.find_banner}>
@@ -189,7 +194,7 @@ const Documentation = () => {
         </Grid>
       </Container>
       <Container>
-        <Grid container>
+        <Grid container maxWidth="lg" className={classes.root} >
           <Grid item>
             <div className={classes.topics}>
               <div className={classes.box}>
@@ -265,11 +270,85 @@ const Documentation = () => {
                   </div>
                 </div>
               </div>
+
+              <div className={classes.box}>
+                <div className={classes.left}>
+                  <img src={Rocket} alt="" />
+                </div>
+                <div className={classes.right}>
+                  <Typography variant="h6" className={classes.h6}>
+                    Getting Started
+                  </Typography>
+                  <Typography variant="subtitle1">
+                    Onboarding guides, payment, subscription /
+                  </Typography>
+                  <div className={classes.bottom_wrapper}>
+                    <div className={classes.user_li}>
+                      <ul>
+                        <li>
+                          <img src={Model1} alt="" />
+                        </li>
+                        <li>
+                          <img src={Model2} alt="" />
+                        </li>
+                        <li>
+                          <img src={Model1} alt="" />
+                        </li>
+                        <li>
+                          <img src={Model2} alt="" />
+                        </li>
+                      </ul>
+                    </div>
+                    <Typography variant="body2" className={classes.bottom}>
+                      8 articles in this collection
+                      <br />
+                      Written by Anna, Allies, Natasha & 2 others
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+
+              <div className={classes.box}>
+                <div className={classes.left}>
+                  <img src={Rocket} alt="" />
+                </div>
+                <div className={classes.right}>
+                  <Typography variant="h6" className={classes.h6}>
+                    Getting Started
+                  </Typography>
+                  <Typography variant="subtitle1">
+                    Onboarding guides, payment, subscription /
+                  </Typography>
+                  <div className={classes.bottom_wrapper}>
+                    <div className={classes.user_li}>
+                      <ul>
+                        <li>
+                          <img src={Model1} alt="" />
+                        </li>
+                        <li>
+                          <img src={Model2} alt="" />
+                        </li>
+                        <li>
+                          <img src={Model1} alt="" />
+                        </li>
+                        <li>
+                          <img src={Model2} alt="" />
+                        </li>
+                      </ul>
+                    </div>
+                    <Typography variant="body2" className={classes.bottom}>
+                      8 articles in this collection
+                      <br />
+                      Written by Anna, Allies, Natasha & 2 others
+                    </Typography>
+                  </div>
+                </div>
+              </div>
             </div>
           </Grid>
         </Grid>
       </Container>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg"  className={classes.root}>
         <Grid container className={`${classes.wrapper_bottom}`}>
           <Grid item lg={12}>
             <div className={classes.bottom_inner}>
