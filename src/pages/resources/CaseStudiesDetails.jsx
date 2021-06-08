@@ -447,12 +447,15 @@ const CaseStudiesDetails = () => {
                 </Paper>
               </Grid>
               <div className={`${classes.auto_margin}`}>
+                <Link>
                 <Typography className={classes.tab_headline2}>
                   Learn More{" "}
                   <span className={classes.icon_style}>
                     <ArrowForwardIcon />
                   </span>
                 </Typography>
+                </Link>
+                
               </div>
             </Grid>
           </div>

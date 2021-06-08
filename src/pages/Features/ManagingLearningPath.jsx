@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   },
   card_content: {
     flex: 1,
-    padding: "5px 60px",
+    padding: "5px 20px",
   },
 
   banner_image: {
@@ -87,6 +87,12 @@ const useStyles = makeStyles((theme) => ({
   },
   activity_wrapper: {
     padding: "60px 120px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "20px 0px",
+    },
+  },
+  activity_wrapper2: {
+    padding: "15px 120px 60px 120px",
     [theme.breakpoints.down("xs")]: {
       padding: "20px 0px",
     },
@@ -155,6 +161,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     paddingBottom: "50px",
   },
+  h4: {
+    marginBottom: 0,
+    
+  },
+  h6: {
+    margin:0
+  },
 }));
 
 const ManagingLearningPath = () => {
@@ -199,13 +212,13 @@ const ManagingLearningPath = () => {
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container spacing={5} className={`${classes.activity_wrapper}`}>
+        <Grid container justify='center' alignItems='center' spacing={5} className={`${classes.activity_wrapper}`}>
           <Grid item xs={12}>
             <Typography variant="h4">
               Choose Lesson Plans or make your own
             </Typography>
             <div className={classes.manage_center_text_div}>
-              <Typography variant="h6">
+              <Typography variant="h6" className={classes.h6}>
                 Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
                 congue consequat. In posuere, nunc sit amet laoreet blandit,
                 urna sapien imperdiet lectus, et molestie
@@ -380,10 +393,10 @@ const ManagingLearningPath = () => {
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
+        <Grid container spacing={3} className={`${classes.activity_wrapper2}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
-              Improve quality rating of your organisation with KinderCubby
+              Improve quality rating of your organisation<br/> with KinderCubby
             </Typography>
 
             <div className={classes.improve}>

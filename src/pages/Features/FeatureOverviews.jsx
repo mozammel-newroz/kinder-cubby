@@ -25,7 +25,7 @@ import IconRevenueSummary from "../../assets/images/IconRevenueSummary.png";
 import IconShareEveryMoment from "../../assets/images/IconShareEveryMoment.png";
 import IconInstantMessaging from "../../assets/images/IconInstantMessaging.png";
 import IconStaffManagement from "../../assets/images/IconStaffManagement.png";
-
+import { Link } from "react-router-dom";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import SliderImage from "../../components/SliderImage";
@@ -56,6 +56,12 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
     },
   },
+  wrapper2: {
+    padding: "60px 30px 0 30px",
+    [theme.breakpoints.down("sm")]: {
+      padding: 0,
+    },
+  },
 
   banner_button: {
     padding: "13px 35px  !important",
@@ -65,6 +71,18 @@ const useStyles = makeStyles((theme) => ({
     padding: "60px 120px",
     [theme.breakpoints.down("sm")]: {
       padding: "20px 0px",
+    },
+  },
+  activity_wrapper2: {
+    padding: "30px 120px 0 120px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "20px 0px 0 0",
+    },
+  },
+  activity_wrapper3: {
+    padding: "60px 120px 0 120px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "30px 0px 0 0",
     },
   },
 
@@ -194,6 +212,20 @@ const useStyles = makeStyles((theme) => ({
     top: "7px",
     left: "4px",
   },
+  tab_headline3: {
+    fontWeight: 600,
+    fontSize: "18px",
+    color: "#F26522",
+    marginBottom: "25px",
+    textAlign: "center",
+  },
+  h4:{
+    marginBottom:0
+  },
+ 
+  auto_margin: {
+    margin: "20px auto 40px auto",
+  },
 }));
 
 const FeatureOverviews = () => {
@@ -229,10 +261,10 @@ const FeatureOverviews = () => {
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={6}
+          spacing={3}
           justify="center"
           alignItems="center"
-          className={classes.activity_wrapper}
+          className={classes.activity_wrapper3}
         >
           <Grid item lg={12} className={classes.item1}>
             <Typography variant="h4">
@@ -418,10 +450,10 @@ const FeatureOverviews = () => {
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={6}
+          spacing={3}
           justify="center"
           alignItems="center"
-          className={classes.activity_wrapper}
+          className={classes.activity_wrapper2}
         >
           <Grid item lg={12} className={classes.item1}>
             <Typography variant="h4">
@@ -599,10 +631,10 @@ const FeatureOverviews = () => {
       <Container maxWidth="lg">
         <Grid
           container
-          spacing={6}
+          spacing={3}
           justify="center"
           alignItems="center"
-          className={classes.activity_wrapper}
+          className={classes.activity_wrapper2}
         >
           <Grid item lg={12} className={classes.item1}>
             <Typography variant="h4">
@@ -791,8 +823,28 @@ const FeatureOverviews = () => {
           </Grid>
         </Grid>
       </Container>
-      <SliderImage />
-      
+      <Container maxWidth="lg">
+        <Grid container className={`${classes.wrapper2}`}>
+          <Grid item lg={12}>
+            <Typography variant="h4" className={classes.h4}>Customer Stores</Typography>
+          </Grid>
+          <Grid item lg={12}>
+          <SliderImage />
+          </Grid>
+          <div className={`${classes.auto_margin}`}>
+                <Link to='#'>
+                <Typography className={classes.tab_headline3}>
+                  More Customer Storis{" "}
+                  <span className={classes.icon_style}>
+                    <ArrowForwardIcon />
+                  </span>
+                </Typography>
+                </Link>
+                
+              </div>
+        </Grid>
+        
+      </Container>
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12} className={classes.background_style}>

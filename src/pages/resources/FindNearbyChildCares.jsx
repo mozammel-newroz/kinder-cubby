@@ -20,9 +20,8 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
     },
   },
-  margin_top: {
-    marginTop: "30px",
-  },
+ 
+ 
 
   banner_button: {
     padding: "13px 35px  !important",
@@ -47,9 +46,9 @@ const useStyles = makeStyles((theme) => ({
   },
   background_style2: {
     borderRadius: "10px",
-    padding: "60px",
+    padding: "30px 60px",
     [theme.breakpoints.down("sm")]: {
-      padding: "60px 30px",
+      padding: "30px 30px",
     },
   },
 
@@ -66,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     margin: "auto",
     width: "70%",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+    },
   },
 
   center: {
@@ -146,6 +148,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 25,
     backgroundColor: "#fff",
   },
+  margin_top:{
+    marginTop:30,
+    [theme.breakpoints.down("xs")]: {
+      marginTop:0
+    },
+  }
 }));
 
 const FindNearbyChildCares = () => {
@@ -205,7 +213,7 @@ const FindNearbyChildCares = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" className={classes.margin_top}>
+      <Container maxWidth="lg">
         <div className={`${classes.wrapper}`}>
           <Grid
             container
@@ -498,7 +506,7 @@ const FindNearbyChildCares = () => {
           </Grid>
         </div>
       </Container>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className={classes.margin_top}>
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12} className={`${classes.background_style}`}>
             <Typography variant="h4">

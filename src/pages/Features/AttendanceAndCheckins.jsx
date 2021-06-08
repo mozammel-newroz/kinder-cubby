@@ -88,6 +88,12 @@ const useStyles = makeStyles((theme) => ({
       padding: "20px 0px",
     },
   },
+  activity_wrapper3: {
+    padding: "60px 120px 90px 120px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "20px 0px 40px 0",
+    },
+  },
 
   activity_box: {
     textAlign: "center",
@@ -185,6 +191,20 @@ const useStyles = makeStyles((theme) => ({
   card_padding: {
     padding: "20px !Important",
   },
+  padding_margin0:{
+    paddingTop: "0px",
+    paddingLeft: "0"
+  },
+  h4_mobile_style:{
+    [theme.breakpoints.down("xs")]: {
+   marginBottom:0
+    },
+  },
+  h6_mobile_style:{
+    [theme.breakpoints.down("xs")]: {
+   marginTop:20
+    },
+  }
 }));
 
 const AttendanceAndCheckins = () => {
@@ -230,7 +250,7 @@ const AttendanceAndCheckins = () => {
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container spacing={3} className={classes.activity_wrapper}>
+        <Grid container spacing={3} className={classes.activity_wrapper3}>
           <Grid item lg={12}>
             <Typography variant="h4">
               Manage your childcare attendance <br />
@@ -287,7 +307,7 @@ const AttendanceAndCheckins = () => {
         <div className={classes.wrapper2}>
           <Grid
             container
-            spacing={8}
+            spacing={6}
             justify="center"
             alignItems="center"
             className={classes.activity_wrapper2}
@@ -302,8 +322,8 @@ const AttendanceAndCheckins = () => {
                 <Grid
                   item
                   xs={5}
-                  style={{ paddingTop: "0px", paddingLeft: "0" }}
-                  
+               
+                  className={classes.padding_margin0}               
                 >
                   <img src={OwnerAndDirectors} alt="" width="100%" />
                 </Grid>
@@ -376,7 +396,7 @@ const AttendanceAndCheckins = () => {
                 <Grid
                   item
                   xs={5}
-                  style={{ paddingTop: "0px", paddingLeft: "0" }}
+                  className={classes.padding_margin0}               
                 >
                   <img src={OwnerAndDirectors} alt="" width="100%" />
                 </Grid>
@@ -483,7 +503,7 @@ const AttendanceAndCheckins = () => {
                 <Grid
                   item
                   xs={5}
-                  style={{ paddingTop: "0px", paddingLeft: "0" }}
+                  className={classes.padding_margin0}               
                 >
                   <img src={Parents} alt="" width="100%" />
                 </Grid>
@@ -535,10 +555,10 @@ const AttendanceAndCheckins = () => {
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12}>
-            <Typography variant="h4">
+            <Typography variant="h4" className={classes.h4_mobile_style}>
               Say goodbye to check in sheets and signatures
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" className={classes.h6_mobile_style}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
               congue consequat. In posuere, nunc sit amet laoreet blandit, urna
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec

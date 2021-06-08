@@ -68,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
   image_paper: {
     textAlign: "center",
     padding: "50px 100px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "30px 50px",
+    },
   },
   tab_left_line: {
     borderLeft: "6px solid #DF6D38",
@@ -115,6 +118,21 @@ const useStyles = makeStyles((theme) => ({
   list_container: {
     textAlign: "start",
     marginTop: "30px",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "15px",
+    },
+  },
+  h4_mobile_style: {
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 0,
+    },
+  },
+
+  image_width: {
+    width: "70%",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+    },
   },
 }));
 
@@ -160,7 +178,7 @@ const CenterManagement = () => {
           className={classes.activity_wrapper}
         >
           <Grid item xs={12}>
-            <Typography variant="h4">
+            <Typography variant="h4" className={classes.h4_mobile_style}>
               Now it’s possible to stay
               <br /> on top of everything
             </Typography>
@@ -212,10 +230,11 @@ const CenterManagement = () => {
           <Grid item xs={12} lg={9}>
             <Paper className={classes.image_paper}>
               <img
-                width="70%%"
+                className={classes.image_width}
                 src={CenterManagementImage}
                 alt="Center Management"
               />
+
               <br />
 
               <Grid container className={classes.list_container}>
@@ -336,9 +355,7 @@ const CenterManagement = () => {
           <Grid item lg={12}>
             <Typography variant="h4">
               Managing childcare centre has never been
-              <br /> this{" "}
-              <span style={{ textDecoration: "line-through" }}>easy</span>{" "}
-              easier
+              <br /> this <strike>easy</strike> easier
             </Typography>
             <Typography variant="h6">
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
