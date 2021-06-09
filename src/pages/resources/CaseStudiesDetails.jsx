@@ -165,6 +165,13 @@ const useStyles = makeStyles((theme) => ({
     padding: 7,
     textAlign: "center",
   },
+  box_title2: {
+    fontSize: "1.3rem",
+    fontWeight: 600,
+    borderBottom: "2px solid #DF6D38",
+    padding: 7,
+    textAlign: "center",
+  },
   box_price: {
     fontSize: "2.5rem",
     fontWeight: 600,
@@ -449,7 +456,7 @@ const CaseStudiesDetails = () => {
               </Grid>
               <Grid item xs={12} lg={4} className={classes.card_style}>
                 <Paper className={classes.paper}>
-                  <Typography className={classes.box_title}>
+                  <Typography className={classes.box_title2}>
                     Standard
                   </Typography>
 
