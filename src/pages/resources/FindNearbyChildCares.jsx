@@ -200,14 +200,17 @@ const FindNearbyChildCares = () => {
             <ul className={classes.mynab}>
               <li>
                 <Link to="#" className={classes.active}>
-                  All
+                <Typography>
+                All
+                </Typography>
+           
                 </Link>
               </li>
               <li>
-                <Link to="#">Search Result</Link>
+                <Link to="#">   <Typography>Search Result</Typography></Link>
               </li>
               <li>
-                <Link to="#">Invite Your School</Link>
+                <Link to="#"><Typography>Invite Your School</Typography></Link>
               </li>
             </ul>
           </div>

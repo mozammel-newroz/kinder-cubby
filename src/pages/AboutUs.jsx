@@ -1,11 +1,7 @@
 import React from "react";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
-import SearchIcon from "../assets/images/SearchIcon.png";
-import Phone from "../assets/images/Phone.png";
 import Growth1 from "../assets/images/Growth1.png";
 import Growth2 from "../assets/images/Growth2.png";
 import Growth3 from "../assets/images/Growth3.png";
@@ -14,9 +10,11 @@ import Growth5 from "../assets/images/Growth5.png";
 import Growth6 from "../assets/images/Growth6.png";
 import Growth7 from "../assets/images/Growth7.png";
 import Clients from "../assets/images/Clients.png";
+import InnovativeSolution from "../assets/images/InnovativeSolution.png";
+import AI from "../assets/images/AI.png";
+import Diversity from "../assets/images/Diversity.png";
+import Responding from "../assets/images/Responding.png";
 import { Link } from "react-router-dom";
-
-import Pagination from "@material-ui/lab/Pagination";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,26 +29,16 @@ const useStyles = makeStyles((theme) => ({
     padding: "13px 35px  !important",
   },
 
-  background_style3: {
-    borderRadius: "10px 10px 0 0",
-    padding: "60px",
-    [theme.breakpoints.down("sm")]: {
-      padding: "60px 30px",
-    },
-  },
   background_style: {
-    background: "#E3EBFC",
-    borderRadius: "10px",
     padding: "60px",
     [theme.breakpoints.down("sm")]: {
-      padding: "60px 30px",
+      padding: "30px 30px",
     },
   },
   background_style2: {
-    borderRadius: "10px",
-    padding: "30px 60px",
+    padding: "60px",
     [theme.breakpoints.down("sm")]: {
-      padding: "30px 30px",
+      padding: "60px 30px",
     },
   },
 
@@ -59,15 +47,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "20px",
     textAlign: "start",
     boxShadow: "0 1px 5px 0 rgb(0 0 0 / 20%), 0 0px 0px 0 rgb(0 0 0 / 19%)",
-  },
-
-  center_search_input: {
-    textAlign: "center",
-    margin: "auto",
-    width: "70%",
-    [theme.breakpoints.down("xs")]: {
-      width: "100%",
-    },
   },
 
   center: {
@@ -84,78 +63,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  mynab: {
-    display: "flex",
-    justifyContent: "center",
-
-    listStyleType: "none",
-    margin: 0,
-    padding: 0,
-    overflow: "hidden",
-    backgroundColor: "#F7F9FE",
-    borderRadius: "0 0 10px 10px",
-    "& li": {
-      float: "left",
-      margin: "5px",
-      "& a": {
-        display: "block",
-        color: "#707070",
-        textAlign: "center",
-        padding: "14px 16px",
-        textDecoration: "none",
-      },
-
-      "& a:hover": {
-        color: "#21409A",
-        // padding: "13px 16px",
-        borderBottom: "2px solid #21409A",
-      },
-    },
-  },
-  active: {
-    color: "#21409A !important ",
-    borderBottom: "2px solid #21409A",
-  },
-
-  card_image: {
-    width: "100%",
-    borderRadius: "10px",
-  },
-  margin_top_10: {
-    marginTop: 10,
-  },
-  phone_style: {
-    position: "relative",
-    top: "-3px",
-    left: "10px",
-  },
-  flex_style: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
-      display: "block",
-      textAlign: "center",
-      "& div": {
-        marginBottom: "10px",
-      },
-    },
-  },
-  page_no_style: {
-    border: "1px solid #707070",
-    color: "#707070",
-    padding: 5,
-    borderRadius: 10,
-  },
-  inputField: {
-    borderRadius: 25,
-    backgroundColor: "#fff",
-  },
   margin_top: {
     marginTop: 60,
-    // [theme.breakpoints.down("xs")]: {
-    //   marginTop: 0,
-    // },
   },
   h6: {
     marginTop: "0px !important",
@@ -203,9 +112,9 @@ const useStyles = makeStyles((theme) => ({
   banner: {
     background: "#E3EBFC",
     borderRadius: 10,
-    // padding: 50,
+
     display: "flex",
-    // alignItems: "center",
+
     [theme.breakpoints.down("sm")]: {
       padding: 0,
     },
@@ -214,19 +123,21 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     padding: 30,
   },
-  banner_content_text: {
-    fontSize: 24,
-    marginBottom: 30,
-  },
   banner_image: {
     flex: 1,
-    // padding: 30,
+
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
   },
   text_start: {
     textAlign: "start",
+  },
+  margin_boby_text: {
+    marginTop: "58px",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "0px",
+    },
   },
 }));
 
@@ -236,7 +147,7 @@ const AboutUs = () => {
     <>
       <Container maxWidth="lg">
         <div className={`${classes.wrapper}`}>
-          <div className={classes.background_style3}>
+          <div className={classes.background_style}>
             <Grid container>
               <Grid item lg={12}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -439,13 +350,12 @@ const AboutUs = () => {
                   congue In posuere, nunc sit amet laoreet blandit,
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Aenean non accumsan ante.
-                  {/* Duis et risus accumsan sem tempus
+                  Aenean non accumsan ante. Duis et risus accumsan sem tempus
                   porta nec sit amet est. Sedut euismod. Suspendisse potenti.
                   Aliquam fringilla orci tincidunt, ullamcorper erat in,
                   malesuada metus. Vivamus luctus maximus vestibulum. ornare.
                   Aenean leo diam, feugiat sed nulla sed, consequat venenatis
-                  est. */}
+                  est.
                 </Typography>
                 <Link to="#">
                   <Typography className={classes.tab_headline2}>
@@ -464,12 +374,93 @@ const AboutUs = () => {
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+        <div className={classes.wrapper}>
+          <div className={classes.background_style2}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} lg={8}>
+                <Typography variant="h4" className={classes.text_start}>
+                  Changing the way childcare
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.margin_boby_text}
+                >
+                  Aenean non accumsan ante. Duis et risus accumsan sem tempus
+                  porta nec sit amet est. Sedut euismod. Suspendisse potenti.
+                  Aliquam fringilla orci tincidunt, ullamcorper
+                </Typography>
+              </Grid>
+              <Grid item xs={12} lg={4}>
+                <Paper className={classes.paper}>
+                  <img src={InnovativeSolution} alt="" />
 
-            asdfasd
-          </Grid>
-        </Grid>
+                  <Typography variant="subtitle2" gutterBottom>
+                    Innovative solution for progressing world
+                  </Typography>
+                  <Link to="#">
+                    <Typography className={classes.tab_headline2}>
+                      Learn More{" "}
+                      <span className={classes.icon_style}>
+                        <ArrowForwardIcon />
+                      </span>
+                    </Typography>
+                  </Link>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} lg={4}>
+                <Paper className={classes.paper}>
+                  <img src={AI} alt="" />
+
+                  <Typography variant="subtitle2" gutterBottom>
+                    AI to extend productivity of child care centre
+                  </Typography>
+                  <Link to="#">
+                    <Typography className={classes.tab_headline2}>
+                      Learn More{" "}
+                      <span className={classes.icon_style}>
+                        <ArrowForwardIcon />
+                      </span>
+                    </Typography>
+                  </Link>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} lg={4}>
+                <Paper className={classes.paper}>
+                  <img src={Diversity} alt="" />
+
+                  <Typography variant="subtitle2" gutterBottom>
+                    Responding to covid-19 with contactless check-in
+                  </Typography>
+                  <Link to="#">
+                    <Typography className={classes.tab_headline2}>
+                      Learn More{" "}
+                      <span className={classes.icon_style}>
+                        <ArrowForwardIcon />
+                      </span>
+                    </Typography>
+                  </Link>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} lg={4}>
+                <Paper className={classes.paper}>
+                  <img src={Responding} alt="" />
+
+                  <Typography variant="subtitle2" gutterBottom>
+                    From diversity & Inclusion to belonging contactless check-in
+                  </Typography>
+                  <Link to="#">
+                    <Typography className={classes.tab_headline2}>
+                      Learn More{" "}
+                      <span className={classes.icon_style}>
+                        <ArrowForwardIcon />
+                      </span>
+                    </Typography>
+                  </Link>
+                </Paper>
+              </Grid>
+            </Grid>
+          </div>
+        </div>
       </Container>
     </>
   );
