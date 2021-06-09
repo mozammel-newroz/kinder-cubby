@@ -21,3 +21,7 @@ a {
 /* .slide-current {
  border: 5px solid red;
 } */
+
+img {
+  max-width: 100%;
+}

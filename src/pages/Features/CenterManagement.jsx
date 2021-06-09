@@ -142,7 +142,7 @@ const CenterManagement = () => {
     <>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12} >
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -184,7 +184,7 @@ const CenterManagement = () => {
             </Typography>
           </Grid>
 
-          <Grid item xs={12} lg={3} className={classes.activity_box}>
+          <Grid item xs={12} lg={3}  md={3} className={classes.activity_box}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <Paper className={classes.paper}>
@@ -227,7 +227,7 @@ const CenterManagement = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} lg={9}>
+          <Grid item xs={12} lg={9}  md={9}>
             <Paper className={classes.image_paper}>
               <img
                 className={classes.image_width}
@@ -316,7 +316,7 @@ const CenterManagement = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_image}>
                 <img width="100%" src={CenterManagementImage} alt="" />
@@ -352,7 +352,7 @@ const CenterManagement = () => {
 
       <Container maxWidth="lg">
         <Grid container className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4">
               Managing childcare centre has never been
               <br /> this <strike>easy</strike> easier

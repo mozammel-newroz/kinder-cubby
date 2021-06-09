@@ -242,7 +242,7 @@ const ParentEngagements = () => {
       {/* <CssBaseline /> */}
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -271,7 +271,7 @@ const ParentEngagements = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.activity_wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12} >
             <Typography variant="h4">Make parents feel connected</Typography>
             <Typography variant="h6">
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
@@ -280,7 +280,7 @@ const ParentEngagements = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <div className={classes.card_image}>
               <img
                 className={classes.activity_image}
@@ -298,7 +298,7 @@ const ParentEngagements = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <div className={classes.card_image}>
               <img
                 className={classes.activity_image}
@@ -316,7 +316,7 @@ const ParentEngagements = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <div className={classes.card_image}>
               <img
                 className={classes.activity_image}
@@ -338,7 +338,7 @@ const ParentEngagements = () => {
       <Container maxWidth="lg">
         <div className={classes.wrapper2}>
           <Grid container spacing={3} className={classes.activity_wrapper2}>
-            <Grid item lg={12}>
+            <Grid item lg={12}  md={12}>
               <Typography variant="h4">
                 Share kids moment with friends and family
               </Typography>
@@ -349,7 +349,7 @@ const ParentEngagements = () => {
               </Typography>
             </Grid>
 
-            <Grid item lg={6}>
+            <Grid item lg={6} md={6}>
               <div className={classes.parent_cart}>
                 <div className={classes.parent_cart_top}>
                   <div className={classes.parent_cart_image}>
@@ -372,7 +372,7 @@ const ParentEngagements = () => {
               </div>
             </Grid>
 
-            <Grid item lg={6}>
+            <Grid item lg={6}  md={6}>
               <div className={classes.parent_cart}>
                 <div className={classes.parent_cart_top}>
                   <div className={classes.parent_cart_title}>
@@ -400,7 +400,7 @@ const ParentEngagements = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4">
               Save time with our
               <br /> Automated event broadcasting
@@ -418,7 +418,7 @@ const ParentEngagements = () => {
               />
             </div>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <div>
               <Typography variant="h5">Message templates</Typography>
               <Typography variant="body1">
@@ -428,7 +428,7 @@ const ParentEngagements = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <div>
               <Typography variant="h5">Send to mass contacts</Typography>
               <Typography variant="body1">
@@ -438,7 +438,7 @@ const ParentEngagements = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <div>
               <Typography variant="h5">Schedule for later</Typography>
               <Typography variant="body1">
@@ -447,7 +447,7 @@ const ParentEngagements = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12} sm={12} >
             <div className={classes.center_button}>
               <Button
                 variant="contained"

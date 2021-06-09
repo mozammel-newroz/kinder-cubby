@@ -56,6 +56,9 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: 10,
+    },
   },
 
   banner_content_text: {
@@ -71,8 +74,9 @@ const useStyles = makeStyles((theme) => ({
   },
   margin_left_20: {
     marginLeft: 20,
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       marginLeft: 3,
+      marginBottom: 10,
     },
   },
   wrapper2: {
@@ -83,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     [theme.breakpoints.down("xs")]: {
       padding: 0,
+      marginTop: 10,
     },
   },
   card: {
@@ -196,7 +201,7 @@ const Teachers = () => {
     <>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12} >
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -251,12 +256,12 @@ const Teachers = () => {
               </Button>
             </div>
           </Card>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4" className={classes.activity_headline}>
               Managing data made easy
             </Typography>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={RealTimeUpdates}
@@ -269,7 +274,7 @@ const Teachers = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={NoMoreChasingKids}
@@ -282,7 +287,7 @@ const Teachers = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img className={classes.activity_image} src={Messaging} alt="" />
             <div>
               <Typography variant="h5">Messaging</Typography>
@@ -296,12 +301,12 @@ const Teachers = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4">
               Automate more, less paperwork <br /> more focus on children
             </Typography>
           </Grid>
-          <Grid item lg={6} className={classes.parent_child}>
+          <Grid item lg={6}  md={6} className={classes.parent_child}>
             <div className={classes.manage_center_image_div}>
               <img
                 src={LessPaperWorkFocusOnKids}
@@ -310,7 +315,7 @@ const Teachers = () => {
               />
             </div>
           </Grid>
-          <Grid item lg={6}>
+          <Grid item lg={6}  md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Automate attendance sheet
             </Typography>
@@ -366,14 +371,14 @@ const Teachers = () => {
           spacing={5}
           className={`${classes.activity_wrapper2}`}
         >
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4" className={classes.h4}>
               Impact of KinderCubby on teachers
             </Typography>
             <img src={owner_youtube} alt="" className={classes.image} />
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">85%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -383,7 +388,7 @@ const Teachers = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">100%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -392,7 +397,7 @@ const Teachers = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4}>
             <div className={`${classes.tag} `}>
               <Typography variant="h3">10+</Typography>
               <Typography variant="h5">of users</Typography>
@@ -406,7 +411,7 @@ const Teachers = () => {
 
       <Container maxWidth="lg">
         <Grid container className={`${classes.activity_wrapper3}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4">Invite your school</Typography>
             <Typography variant="h6" className={classes.h6}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet

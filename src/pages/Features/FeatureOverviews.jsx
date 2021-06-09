@@ -65,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
 
   banner_button: {
     padding: "13px 35px  !important",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: 10,
+    },
   },
 
   activity_wrapper: {
@@ -219,12 +222,18 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "25px",
     textAlign: "center",
   },
-  h4:{
-    marginBottom:0
+  h4: {
+    marginBottom: 0,
   },
- 
+
   auto_margin: {
     margin: "20px auto 40px auto",
+  },
+  slider_text1: {
+    padding: "50px 10px  0px 10px",
+  },
+  slider_text2: {
+    padding: "0px 10px  50px 10px",
   },
 }));
 
@@ -823,28 +832,25 @@ const FeatureOverviews = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container maxWidth="lg">
-        <Grid container className={`${classes.wrapper2}`}>
-          <Grid item lg={12}>
-            <Typography variant="h4" className={classes.h4}>Customer Stores</Typography>
-          </Grid>
-          <Grid item lg={12}>
-          <SliderImage />
-          </Grid>
-          <div className={`${classes.auto_margin}`}>
-                <Link to='#'>
-                <Typography className={classes.tab_headline3}>
-                  More Customer Storis{" "}
-                  <span className={classes.icon_style}>
-                    <ArrowForwardIcon />
-                  </span>
-                </Typography>
-                </Link>
-                
-              </div>
-        </Grid>
-        
-      </Container>
+
+      <Typography
+        variant="h4"
+        className={`${classes.h4} ${classes.slider_text1}`}
+      >
+        Customer Stores
+      </Typography>
+
+      <SliderImage />
+
+      <Link to="#">
+        <Typography className={`${classes.tab_headline3} ${classes.slider_text2}`}>
+          More Customer Storis{" "}
+          <span className={classes.icon_style}>
+            <ArrowForwardIcon />
+          </span>
+        </Typography>
+      </Link>
+
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12} className={classes.background_style}>
