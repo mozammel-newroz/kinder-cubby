@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import SchoolImage from "../assets/images/SchoolImage.png";
 import DemoVideoP1 from "../assets/images/DemoVideoP1.png";
@@ -70,6 +70,9 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 10,
+    },
   },
   margin_left_20: {
     marginLeft: 20,
@@ -147,10 +150,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     margin: "10px 10px 10px 0px",
   },
-  link2_icon:{
-    position: 'relative',
-    top: 7
-
+  link2_icon: {
+    position: "relative",
+    top: 7,
   },
   flex_center2: {
     display: "flex",
@@ -503,7 +505,7 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
               </Typography>
               <Link to="#">
-              <Typography variant="body2" className={classes.link2}>
+                <Typography variant="body2" className={classes.link2}>
                   Learn More <ArrowForwardIcon className={classes.link2_icon} />
                 </Typography>
               </Link>
@@ -519,7 +521,7 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
               </Typography>
               <Link to="#">
-              <Typography variant="body2" className={classes.link2}>
+                <Typography variant="body2" className={classes.link2}>
                   Learn More <ArrowForwardIcon className={classes.link2_icon} />
                 </Typography>
               </Link>

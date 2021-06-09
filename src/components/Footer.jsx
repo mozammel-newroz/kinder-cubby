@@ -10,6 +10,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 import logo from "../assets/images/logo.png";
 import PlayStore from "../assets/images/PlayStore.png";
+import app_store from "../assets/images/app_store.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -106,7 +107,8 @@ const Footer = () => {
     location.pathname !== "/sign-up" &&
     location.pathname !== "/sign-up-option" &&
     location.pathname !== "/documentation" &&
-    location.pathname !== "/try-it-free"
+    location.pathname !== "/try-it-free" &&
+    location.pathname !== "/request-call" 
   ) {
     return (
       <>
@@ -257,7 +259,7 @@ const Footer = () => {
                 <img src={PlayStore} alt="" className={classes.PlayStore} />
               </a>
               <a href="#">
-                <img src={PlayStore} alt="" className={classes.PlayStore} />
+                <img src={app_store} alt="" className={classes.PlayStore} />
               </a>
             </Grid>
             <Grid item lg={6}>
