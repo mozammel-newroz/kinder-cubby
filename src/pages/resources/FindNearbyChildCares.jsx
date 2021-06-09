@@ -145,6 +145,20 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 0,
     },
   },
+  h6: {
+    marginTop: "0px !important",
+  },
+  banner_headline: {
+    fontWeight: 600,
+    textAlign: "center",
+    marginBottom: 20,
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 20,
+    },
+  },
+  width100: {
+    width: "100%",
+  },
 }));
 
 const FindNearbyChildCares = () => {
@@ -154,8 +168,10 @@ const FindNearbyChildCares = () => {
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12} className={classes.background_style3}>
-            <Typography variant="h4">Find Nearby childcares</Typography>
-            <Typography variant="h6">
+            <Typography variant="h3" className={classes.banner_headline}>
+              Find Nearby childcares
+            </Typography>
+            <Typography variant="h6" className={classes.h6}>
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
               amet consectetur sapien.
               <br /> Etiam dui ipsum, viverra vel turpis ut, dignissim elementum
@@ -180,24 +196,18 @@ const FindNearbyChildCares = () => {
             </div>
             {/* </div> */}
           </Grid>
-          <div
-            style={{
-              // border: "1px solid blue",
-              width: "100%",
-              margin: "auto",
-            }}
-          >
-            {/* <div style={{ border: "1px solid red"}}> */}
-
+          <div className={classes.width100}>
             <ul className={classes.mynab}>
               <li>
-                <Link to='#' className={classes.active}>All</Link>
+                <Link to="#" className={classes.active}>
+                  All
+                </Link>
               </li>
               <li>
-                <Link to='#'>Search Result</Link>
+                <Link to="#">Search Result</Link>
               </li>
               <li>
-                <Link to='#'>Invite Your School</Link>
+                <Link to="#">Invite Your School</Link>
               </li>
             </ul>
           </div>
@@ -503,7 +513,7 @@ const FindNearbyChildCares = () => {
             <Typography variant="h4">
               KinderCubby for easy childcare management
             </Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" className={classes.h6}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
               congue consequat. In posuere, nunc sit amet laoreet blandit, urna
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
