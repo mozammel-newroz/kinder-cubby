@@ -194,11 +194,11 @@ const useStyles = makeStyles((theme) => ({
   },
   line_design: {
     padding: "15px 0",
-    marginBottom:15,
+    marginBottom: 15,
     borderTop: "2px solid #E5EBFD",
   },
-  margin15:{
-    margin:'15px 0',
+  margin15: {
+    margin: "15px 0",
   },
   banner: {
     background: "#E3EBFC",
@@ -435,12 +435,11 @@ const AboutUs = () => {
                   We love our clients
                 </Typography>
                 <Typography variant="body1" gutterBottom>
-                  Duis rhoncus dui
-                   venenatis consequat porttitor. Etiam aliquet
+                  Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
                   congue In posuere, nunc sit amet laoreet blandit,
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Aenean non accumsan ante. 
+                  Aenean non accumsan ante.
                   {/* Duis et risus accumsan sem tempus
                   porta nec sit amet est. Sedut euismod. Suspendisse potenti.
                   Aliquam fringilla orci tincidunt, ullamcorper erat in,
@@ -461,6 +460,14 @@ const AboutUs = () => {
                 <img width="100%" src={Clients} alt="" />
               </div>
             </div>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="lg">
+        <Grid container className={classes.wrapper}>
+          <Grid item lg={12}>
+
+            asdfasd
           </Grid>
         </Grid>
       </Container>
