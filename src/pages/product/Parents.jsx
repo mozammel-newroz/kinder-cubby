@@ -53,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: 10,
+    },
   },
 
   banner_content_text: {
@@ -68,8 +71,9 @@ const useStyles = makeStyles((theme) => ({
   },
   margin_left_20: {
     marginLeft: 20,
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       marginLeft: 3,
+      marginBottom: 10,
     },
   },
   wrapper2: {
@@ -80,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     [theme.breakpoints.down("xs")]: {
       padding: 0,
+      marginTop: 10,
     },
   },
   card: {
@@ -119,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
     background: `url(${RedCircle})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    padding: 20,
+    padding: 25,
     marginBottom: 15,
   },
 
@@ -226,7 +231,7 @@ const Parents = () => {
     <>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -281,12 +286,12 @@ const Parents = () => {
               </Button>
             </div>
           </Card>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4" className={classes.activity_headline}>
               Innovation for worried parents
             </Typography>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={RealTimeUpdates}
@@ -299,7 +304,7 @@ const Parents = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={MemoryArchive}
@@ -312,7 +317,7 @@ const Parents = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={InstantMessagingP5}
@@ -326,7 +331,7 @@ const Parents = () => {
             </div>
           </Grid>
           <Grid container className={classes.activity_second}>
-            <Grid item lg={6} className={classes.activity_box}>
+            <Grid item lg={6}  md={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
                 src={ImmunisationRecord}
@@ -339,7 +344,7 @@ const Parents = () => {
                 </Typography>
               </div>
             </Grid>
-            <Grid item lg={6} className={classes.activity_box}>
+            <Grid item lg={6}  md={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
                 src={SharingWithFamily}
@@ -358,16 +363,16 @@ const Parents = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper2}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4" className={classes.title_bg}>
               Never miss you child’s
               <br /> Precious moments
             </Typography>
           </Grid>
-          <Grid item lg={6} className={classes.parent_child}>
+          <Grid item lg={6}  md={6} className={classes.parent_child}>
             <img src={ChildPreciousMoment} alt="" className={classes.image} />
           </Grid>
-          <Grid item lg={6}>
+          <Grid item lg={6}  md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Attendance update
             </Typography>
@@ -423,15 +428,15 @@ const Parents = () => {
           spacing={3}
           className={`${classes.activity_wrapper5}`}
         >
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12} >
             <Typography variant="h4" className={classes.title_bg2}>
               Going a little extra miles
             </Typography>
           </Grid>
-          <Grid item lg={6} className={classes.parent_child}>
+          <Grid item lg={6}  md={6} className={classes.parent_child}>
             <img src={Active} alt="" className={classes.image} />
           </Grid>
-          <Grid item lg={6}>
+          <Grid item lg={6}  md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Pickup authorisation
             </Typography>
@@ -443,7 +448,7 @@ const Parents = () => {
               Ut sit amet erat nec nibh
             </Typography>
           </Grid>
-          <Grid item lg={6}>
+          <Grid item lg={6}  md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Onboarding the whole crew
             </Typography>
@@ -455,7 +460,7 @@ const Parents = () => {
               Ut sit amet erat nec nibh
             </Typography>
           </Grid>
-          <Grid item lg={6} className={classes.parent_child}>
+          <Grid item lg={6}  md={6} className={classes.parent_child}>
             <img
               src={InviteFamilyAndFriends}
               alt=""
@@ -473,16 +478,15 @@ const Parents = () => {
           spacing={5}
           className={`${classes.activity_wrapper3}`}
         >
-          <Grid item lg={12}>
-    
-              <Typography variant="h4" className={classes.h4}>
+          <Grid item lg={12}  md={12}>
+            <Typography variant="h4" className={classes.h4}>
               Impact of KinderCubby on parents
-              </Typography>
-        
+            </Typography>
+
             <img src={owner_youtube} alt="" className={classes.image} />
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">85%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -492,7 +496,7 @@ const Parents = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">100%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -501,7 +505,7 @@ const Parents = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4}>
             <div className={`${classes.tag} `}>
               <Typography variant="h3">10+</Typography>
               <Typography variant="h5">of users</Typography>
@@ -515,7 +519,7 @@ const Parents = () => {
 
       <Container maxWidth="lg">
         <Grid container className={`${classes.activity_wrapper4}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">Invite your school</Typography>
             <Typography variant="h6" className={classes.h6}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet

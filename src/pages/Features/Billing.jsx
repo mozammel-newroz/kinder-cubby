@@ -75,6 +75,9 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: 10,
+    },
   },
   banner_headline: {
     fontWeight: 600,
@@ -105,6 +108,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginTop: 40,
   },
+
+ 
   
 }));
 const Billing = () => {
@@ -113,7 +118,7 @@ const Billing = () => {
     <>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12} >
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -131,14 +136,7 @@ const Billing = () => {
                   >
                     Try it Free
                   </Button>
-                  <Button
-                    // variant="contained"
-                    color="secondary"
-                    className={`${classes.play} button`}
-                    startIcon={<PlayCircleOutlineIcon />}
-                  >
-                    Watch In Action
-                  </Button>
+                  
                 </div>
               </div>
               <div className={classes.banner_image}>
@@ -151,7 +149,7 @@ const Billing = () => {
 
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <div className={classes.banner_no_background}>
               <div className={classes.banner_content}>
                 <Typography variant="h4" style={{ textAlign: "start" }}>
@@ -173,7 +171,7 @@ const Billing = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <div className={classes.banner_big_border_radious}>
               <div className={classes.banner_image}>
                 <img src={OnlinePayment} alt="" />
@@ -195,7 +193,7 @@ const Billing = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <div className={classes.banner_no_background}>
               <div className={classes.banner_content}>
                 <Typography variant="h4" style={{ textAlign: "start" }}>
@@ -217,7 +215,7 @@ const Billing = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <div className={classes.banner_big_border_radious}>
               <div className={classes.banner_image}>
                 <img src={SiplifiedAccounting} alt="" />
@@ -239,13 +237,13 @@ const Billing = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} justify="center" alignItems="center" className={classes.activity_wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4">
               Getting started is as easy as 1-2-3
             </Typography>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={AutomateTuitionPlan}
@@ -263,7 +261,7 @@ const Billing = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={SendOnlineInvoice}
@@ -281,7 +279,7 @@ const Billing = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={CollectPayment}
@@ -298,7 +296,7 @@ const Billing = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <div className={classes.center_button}>
               <Button
                 variant="contained"

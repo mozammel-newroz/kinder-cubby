@@ -30,7 +30,7 @@ const useStyle = makeStyles((theme) => ({
     marginTop: "-63px",
     position: "relative",
     zIndex: 9999,
-    justifyContent: 'center'
+    justifyContent: "center",
   },
 
   logo_wrapper: {
@@ -98,11 +98,8 @@ const TryItFree = () => {
   return (
     <div>
       <Container maxWidth="lg" className={classes.root}>
-        <Grid
-          container
-          className={`${classes.wrapper}`}
-        >
-          <Grid item lg={12} className={classes.logo_wrapper}>
+        <Grid container className={`${classes.wrapper}`}>
+          <Grid item lg={12} sm={12} className={classes.logo_wrapper}>
             <img src={logo} alt="" />
           </Grid>
           <Grid item lg={5} md={5}>
@@ -139,7 +136,7 @@ const TryItFree = () => {
                 Free upto 10 students, 1 stuff
               </Typography>
               <Grid container spacing={3}>
-                <Grid item lg={6}>
+                <Grid item lg={6} md={6} sm={12}>
                   <TextField
                     fullWidth
                     label="First Name"
@@ -153,7 +150,7 @@ const TryItFree = () => {
                     }}
                   />
                 </Grid>
-                <Grid item lg={6}>
+                <Grid item lg={6} md={6} sm={12}>
                   <TextField
                     fullWidth
                     label="Last Name"
@@ -167,7 +164,7 @@ const TryItFree = () => {
                     }}
                   />
                 </Grid>
-                <Grid item lg={6}>
+                <Grid item lg={6} md={6} sm={12}>
                   <TextField
                     fullWidth
                     label="Organization Name"
@@ -181,7 +178,7 @@ const TryItFree = () => {
                     }}
                   />
                 </Grid>
-                <Grid item lg={6}>
+                <Grid item lg={6} md={6} sm={12}>
                   <TextField
                     fullWidth
                     label="Phone Number"
@@ -195,7 +192,7 @@ const TryItFree = () => {
                     }}
                   />
                 </Grid>
-                <Grid item lg={12}>
+                <Grid item lg={12} md={12} sm={12}>
                   <TextField
                     fullWidth
                     label="Organization Email"
@@ -209,7 +206,7 @@ const TryItFree = () => {
                     }}
                   />
                 </Grid>
-                <Grid item lg={12}>
+                <Grid item lg={12} md={12} sm={12}>
                   <TextField
                     fullWidth
                     label="Number of Students enrolled"
@@ -223,7 +220,7 @@ const TryItFree = () => {
                     }}
                   />
                 </Grid>
-                <Grid item lg={12}>
+                <Grid item lg={12} sm={12} sm={12}>
                   <Button
                     fullWidth
                     variant="contained"

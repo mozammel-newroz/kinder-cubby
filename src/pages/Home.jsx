@@ -9,7 +9,12 @@ import DemoVideoP1 from "../assets/images/DemoVideoP1.png";
 import EverythingInOnePlace from "../assets/images/EverythingInOnePlace.png";
 import ExcelParents1 from "../assets/images/ExcelParents1.png";
 import DoubleBlueColorCircle from "../assets/images/DoubleBlueColorCircle.png";
+import User1 from "../assets/images/User1.png";
 import User2 from "../assets/images/User2.png";
+import User3 from "../assets/images/User3.png";
+import ParentsEngagement from "../assets/images/ParentsEngagement.png";
+import CenterManagementP1 from "../assets/images/CenterManagementP1.png";
+import ExcelParents2 from "../assets/images/ExcelParents2.png";
 
 import SuccessfulGreenIcon2x from "../assets/images/SuccessfulGreenIcon@2x.png";
 
@@ -79,6 +84,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       marginLeft: 3,
     },
+  },
+  big_title: {
+    fontSize: "2.5rem",
+    fontWeight: 700,
+    textAlign: "center",
   },
   title: {
     fontSize: "2.5rem",
@@ -225,7 +235,7 @@ const Home = () => {
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
           <Grid item lg={12} md={12}>
-            <Typography className={classes.title}>
+            <Typography className={classes.big_title}>
               Easiest & holistic solution
               <br />
               for your childcare
@@ -303,7 +313,7 @@ const Home = () => {
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                  Effortless Attendance
+                Save time with Activity tracking
                 </Typography>
                 <Typography>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
@@ -312,7 +322,7 @@ const Home = () => {
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                  Effortless Attendance
+                Digital report go paperless
                 </Typography>
                 <Typography>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
@@ -321,7 +331,7 @@ const Home = () => {
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                  Effortless Attendance
+                Boost Organisation growth
                 </Typography>
                 <Typography>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
@@ -352,7 +362,7 @@ const Home = () => {
         <Grid container className={classes.wrapper4}>
           <Grid lg={12} md={12}>
             <Typography className={classes.title}>
-              Lorem ipsum dolor sit amet <br /> consectetur adipisicing
+            Progressive childcare solution <br /> for growing world
             </Typography>
           </Grid>
           <Grid container spacing={3} className={classes.flex_center}>
@@ -395,11 +405,11 @@ const Home = () => {
             <Grid item lg={4} md={4}>
               <div className={classes.box2}>
                 <img
-                  src={SuccessfulGreenIcon2x}
+                  src={ParentsEngagement}
                   alt=""
                   className={classes.box2_icon}
                 />
-                <Typography variant="h5">Activity Tracking</Typography>
+                <Typography variant="h5">Parent engagement</Typography>
                 <Typography variant="subtitle1" className={classes.subtitle1}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </Typography>
@@ -413,11 +423,12 @@ const Home = () => {
             <Grid item lg={4} md={4}>
               <div className={classes.box2}>
                 <img
-                  src={SuccessfulGreenIcon2x}
+                  src={CenterManagementP1}
                   alt=""
                   className={classes.box2_icon}
+                  style={{ background: '#8BA0C9', height: '50px', width: '50px', borderRadius: 50, padding:10  }}
                 />
-                <Typography variant="h5">Activity Tracking</Typography>
+                <Typography variant="h5">Center Management</Typography>
                 <Typography variant="subtitle1" className={classes.subtitle1}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </Typography>
@@ -435,7 +446,7 @@ const Home = () => {
         <Grid container spacing={3} className={classes.wrapper3}>
           <Grid lg={12} md={12}>
             <Typography className={classes.title}>
-              Manage the function
+            Manage the function you already do <br /> but much more seamlessly
             </Typography>
             <Typography variant="h5" className={classes.h5}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
@@ -453,7 +464,7 @@ const Home = () => {
             <Typography
               className={`${classes.title} ${classes.padding_bottom} ${classes.title_bg}`}
             >
-              Lorem ipsum dolor sit amet
+             Excel Parents expectation
             </Typography>
           </Grid>
           <Grid container spacing={3} className={classes.flex_center2}>
@@ -471,7 +482,7 @@ const Home = () => {
           </Grid>
           <Grid container spacing={3} className={classes.flex_center2}>
             <Grid lg={6} md={6} className={classes.image_center}>
-              <img src={ExcelParents1} className={classes.image} alt="" />
+              <img src={ExcelParents2} className={classes.image} alt="" />
             </Grid>
             <Grid lg={6} md={6}>
               <Typography variant="h6" className={classes.h6}>
@@ -492,14 +503,14 @@ const Home = () => {
             <Typography
               className={`${classes.title} ${classes.padding_bottom}`}
             >
-              Lorem ipsum dolor sit amet
+              KinderCubby Users
             </Typography>
           </Grid>
           <Grid item lg={4} md={4}>
             <div className={classes.box3}>
-              <img src={User2} alt="" className={classes.box3_icon} />
+              <img src={User1} alt="" className={classes.box3_icon} style={{ background: '#fff', borderRadius: 50 }}  />
               <Typography variant="h5" className={classes.left}>
-                Activity Tracking
+              Daycare Owners & Directors
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -515,7 +526,7 @@ const Home = () => {
             <div className={classes.box3}>
               <img src={User2} alt="" className={classes.box3_icon} />
               <Typography variant="h5" className={classes.left}>
-                Activity Tracking
+              Teachers
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -529,9 +540,9 @@ const Home = () => {
           </Grid>
           <Grid item lg={4} md={4}>
             <div className={classes.box3}>
-              <img src={User2} alt="" className={classes.box3_icon} />
+              <img src={User3} alt="" className={classes.box3_icon} />
               <Typography variant="h5" className={classes.left}>
-                Activity Tracking
+              Parents
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -558,7 +569,7 @@ const Home = () => {
           <Grid lg={12} md={12}>
             <div className={classes.wrapper5_inner}>
               <Typography className={`${classes.title}`}>
-                KinderCubby made it easy
+              KinderCubby made it easy. Why wait?
               </Typography>
               <Typography
                 variant="h6"
@@ -579,7 +590,7 @@ const Home = () => {
                 </Button>
                 <Button
                   variant="outlined"
-                  color="primary"
+                  color="secondary"
                   className={`${classes.banner_button} ${classes.margin_left_20} button`}
                 >
                   Explore Pricing

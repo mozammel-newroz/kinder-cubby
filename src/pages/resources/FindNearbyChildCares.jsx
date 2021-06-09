@@ -167,7 +167,7 @@ const FindNearbyChildCares = () => {
     <>
       <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
-          <Grid item lg={12} className={classes.background_style3}>
+          <Grid item lg={12} sm={12} className={classes.background_style3}>
             <Typography variant="h3" className={classes.banner_headline}>
               Find Nearby childcares
             </Typography>
@@ -223,7 +223,7 @@ const FindNearbyChildCares = () => {
             className={classes.background_style2}
             spacing={2}
           >
-            <Grid item lg={4}>
+            <Grid item lg={4}  sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -253,7 +253,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -283,7 +283,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -313,7 +313,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -343,7 +343,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -373,7 +373,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -403,7 +403,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -433,7 +433,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -463,7 +463,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} sm={4} >
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -494,7 +494,7 @@ const FindNearbyChildCares = () => {
               </Paper>
             </Grid>
 
-            <Grid item lg={12} className={classes.flex_style}>
+            <Grid item lg={12} sm={12}  className={classes.flex_style}>
               <div>
                 <Pagination count={10} shape="rounded" />
               </div>
@@ -509,7 +509,7 @@ const FindNearbyChildCares = () => {
       </Container>
       <Container maxWidth="lg" className={classes.margin_top}>
         <Grid container className={`${classes.wrapper}`}>
-          <Grid item lg={12} className={`${classes.background_style}`}>
+          <Grid item lg={12} sm={12}  className={`${classes.background_style}`}>
             <Typography variant="h4">
               KinderCubby for easy childcare management
             </Typography>

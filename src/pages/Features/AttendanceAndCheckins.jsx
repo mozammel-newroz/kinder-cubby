@@ -7,17 +7,10 @@ import Attendance from "../../assets/images/Attendance.png";
 import FaceAndEmotion from "../../assets/images/FaceAndEmotion.png";
 import AttendanceReport from "../../assets/images/AttendanceReport.png";
 import SafeGuardian from "../../assets/images/SafeGuardian.png";
-import activity_image from "../../assets/images/activity.png";
-import StartNow_image from "../../assets/images/StartNow.png";
-import DemoVideo_image from "../../assets/images/DemoVideo.png";
-import YoutubeIcon from "../../assets/images/YoutubeIcon.png";
 import Goodbye from "../../assets/images/Goodbye.png";
 import YoutubeDemoPage18 from "../../assets/images/YoutubeDemoPage18.png";
-import FriendsAndFamily from "../../assets/images/FriendsAndFamily.png";
 import OwnerAndDirectors from "../../assets/images/OwnerAndDirectors.png";
 import Parents from "../../assets/images/Parents.png";
-import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
-import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -62,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: 10,
+    },
   },
   banner_content_text: {
     fontSize: 24,
@@ -78,8 +74,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#0B4295",
     marginLeft: 10,
     padding: "13px 35px  !important",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("md")]: {
       marginLeft: 0,
+    },
+    [theme.breakpoints.down("sm")]: {
+      border: "1px solid #FD5E47",
     },
   },
   activity_wrapper: {
@@ -113,7 +112,6 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     maxWidth: "100%",
-    
   },
   demo: {
     background: "#E3EBFC",
@@ -125,12 +123,11 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
     },
   },
- 
+
   demo_headline: {
     marginBottom: 50,
   },
 
- 
   center_button: {
     textAlign: "center",
     marginTop: 40,
@@ -139,10 +136,6 @@ const useStyles = makeStyles((theme) => ({
     width: "60%",
     margin: "auto",
   },
- 
-  
-
-
 
   list_Div: {
     borderRadius: 10,
@@ -180,8 +173,7 @@ const useStyles = makeStyles((theme) => ({
   degisnation: {
     paddingLeft: 15,
   },
- 
-  
+
   card: {
     backgroundColor: "white",
     borderRadius: "10px",
@@ -191,20 +183,20 @@ const useStyles = makeStyles((theme) => ({
   card_padding: {
     padding: "20px !Important",
   },
-  padding_margin0:{
+  padding_margin0: {
     paddingTop: "0px",
-    paddingLeft: "0"
+    paddingLeft: "0",
   },
-  h4_mobile_style:{
+  h4_mobile_style: {
     [theme.breakpoints.down("xs")]: {
-   marginBottom:0
+      marginBottom: 0,
     },
   },
-  h6_mobile_style:{
+  h6_mobile_style: {
     [theme.breakpoints.down("xs")]: {
-   marginTop:20
+      marginTop: 20,
     },
-  }
+  },
 }));
 
 const AttendanceAndCheckins = () => {
@@ -214,7 +206,7 @@ const AttendanceAndCheckins = () => {
       {/* <CssBaseline /> */}
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -251,14 +243,14 @@ const AttendanceAndCheckins = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.activity_wrapper3}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               Manage your childcare attendance <br />
               with face & emotion detection
             </Typography>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={FaceAndEmotion}
@@ -274,7 +266,7 @@ const AttendanceAndCheckins = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={AttendanceReport}
@@ -290,7 +282,7 @@ const AttendanceAndCheckins = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img className={classes.activity_image} src={SafeGuardian} alt="" />
 
             <div>
@@ -312,19 +304,14 @@ const AttendanceAndCheckins = () => {
             alignItems="center"
             className={classes.activity_wrapper2}
           >
-            <Grid item lg={12}>
+            <Grid item lg={12} md={12}>
               <Typography variant="h4">
                 Instant reporting to every users
               </Typography>
             </Grid>
-            <Grid item xs={12} lg={6}>
+            <Grid item xs={12} lg={6} md={6}>
               <Grid container spacing={2} className={classes.card}>
-                <Grid
-                  item
-                  xs={5}
-               
-                  className={classes.padding_margin0}               
-                >
+                <Grid item xs={5} className={classes.padding_margin0}>
                   <img src={OwnerAndDirectors} alt="" width="100%" />
                 </Grid>
                 <Grid item xs={7} className={classes.card_padding}>
@@ -388,16 +375,8 @@ const AttendanceAndCheckins = () => {
               <br />
               <br />
               <br />
-              <Grid
-                container
-                spacing={2}
-                className={classes.card}
-              >
-                <Grid
-                  item
-                  xs={5}
-                  className={classes.padding_margin0}               
-                >
+              <Grid container spacing={2} className={classes.card}>
+                <Grid item xs={5} className={classes.padding_margin0}>
                   <img src={OwnerAndDirectors} alt="" width="100%" />
                 </Grid>
                 <Grid item xs={7} className={classes.card_padding}>
@@ -457,12 +436,8 @@ const AttendanceAndCheckins = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} lg={6}>
-              <Grid
-                container
-                spacing={2}
-                className={classes.card}
-              >
+            <Grid item xs={12} lg={6} md={6}>
+              <Grid container spacing={2} className={classes.card}>
                 <Grid item xs={7} className={classes.card_padding}>
                   <Typography variant="h5" style={{ textAlign: "start" }}>
                     Parents
@@ -500,11 +475,7 @@ const AttendanceAndCheckins = () => {
                     </div>
                   </div>
                 </Grid>
-                <Grid
-                  item
-                  xs={5}
-                  className={classes.padding_margin0}               
-                >
+                <Grid item xs={5} className={classes.padding_margin0}>
                   <img src={Parents} alt="" width="100%" />
                 </Grid>
                 <Grid item xs={12} className={classes.card_padding}>
@@ -554,7 +525,7 @@ const AttendanceAndCheckins = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4" className={classes.h4_mobile_style}>
               Say goodbye to check in sheets and signatures
             </Typography>
@@ -581,7 +552,7 @@ const AttendanceAndCheckins = () => {
 
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.demo}>
               <Typography variant="h4" className={classes.demo_headline}>
                 KinderCubby activity tracking demo
@@ -596,7 +567,7 @@ const AttendanceAndCheckins = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               Impressed? There’s a 30 days free trial
             </Typography>

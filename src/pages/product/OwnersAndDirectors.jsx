@@ -57,8 +57,8 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
-    [theme.breakpoints.down("xs")]: {
-      marginBottom: 10
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: 10,
     },
   },
 
@@ -75,8 +75,9 @@ const useStyles = makeStyles((theme) => ({
   },
   margin_left_20: {
     marginLeft: 20,
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       marginLeft: 3,
+      marginBottom: 10,
     },
   },
   wrapper2: {
@@ -87,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
     position: "relative",
     [theme.breakpoints.down("xs")]: {
       padding: 0,
+      marginTop: 10,
     },
   },
   card: {
@@ -185,7 +187,7 @@ const OwnersAndDirectors = () => {
     <>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -240,12 +242,15 @@ const OwnersAndDirectors = () => {
               </Button>
             </div>
           </Card>
-          <Grid item lg={12}>
-            <Typography variant="h4" className={classes.activity_headline}>
+          <Grid item lg={12} md={12}>
+            <Typography
+              variant="h4"
+              className={`${classes.activity_headline} ${classes.center}`}
+            >
               Center Management at fingertip
             </Typography>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={RealTimeUpdates}
@@ -258,7 +263,7 @@ const OwnersAndDirectors = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={StaffManagement}
@@ -271,7 +276,7 @@ const OwnersAndDirectors = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={BillingAndInvoicing}
@@ -286,7 +291,7 @@ const OwnersAndDirectors = () => {
           </Grid>
 
           <Grid container className={classes.activity_second}>
-            <Grid item lg={6} className={classes.activity_box}>
+            <Grid item lg={6} md={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
                 src={DigitalReport}
@@ -299,7 +304,7 @@ const OwnersAndDirectors = () => {
                 </Typography>
               </div>
             </Grid>
-            <Grid item lg={6} className={classes.activity_box}>
+            <Grid item lg={6} md={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
                 src={ConnectedWorkflow}
@@ -318,15 +323,15 @@ const OwnersAndDirectors = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               Automate more, less paperwork <br /> more focus on children
             </Typography>
           </Grid>
-          <Grid item lg={6} className={classes.parent_child}>
+          <Grid item lg={6} md={6} className={classes.parent_child}>
             <img src={FocusOnChildern} alt="" className={classes.image} />
           </Grid>
-          <Grid item lg={6}>
+          <Grid item lg={6} md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Contactless check-in
             </Typography>
@@ -382,14 +387,14 @@ const OwnersAndDirectors = () => {
           spacing={5}
           className={`${classes.activity_wrapper}`}
         >
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               Impact of KinderCubby on Directors
             </Typography>
             <img src={owner_youtube} alt="" className={classes.image} />
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4} md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">85%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -399,7 +404,7 @@ const OwnersAndDirectors = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4} md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">100%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -408,7 +413,7 @@ const OwnersAndDirectors = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}>
+          <Grid item lg={4} md={4}>
             <div className={`${classes.tag} `}>
               <Typography variant="h3">10+</Typography>
               <Typography variant="h5">of users</Typography>
@@ -422,7 +427,7 @@ const OwnersAndDirectors = () => {
 
       <Container maxWidth="lg">
         <Grid container className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               KinderCubby for owners & directors
             </Typography>

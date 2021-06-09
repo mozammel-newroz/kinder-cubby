@@ -163,10 +163,9 @@ const useStyles = makeStyles((theme) => ({
   },
   h4: {
     marginBottom: 0,
-    
   },
   h6: {
-    margin:0
+    margin: 0,
   },
 }));
 
@@ -194,14 +193,6 @@ const ManagingLearningPath = () => {
                   >
                     Try it Free
                   </Button>
-                  <Button
-                    // variant="contained"
-                    color="secondary"
-                    className={`${classes.play} button`}
-                    startIcon={<PlayCircleOutlineIcon />}
-                  >
-                    Watch In Action
-                  </Button>
                 </div>
               </div>
               <div className={classes.banner_image}>
@@ -212,7 +203,13 @@ const ManagingLearningPath = () => {
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container justify='center' alignItems='center' spacing={5} className={`${classes.activity_wrapper}`}>
+        <Grid
+          container
+          justify="center"
+          alignItems="center"
+          spacing={5}
+          className={`${classes.activity_wrapper}`}
+        >
           <Grid item xs={12}>
             <Typography variant="h4">
               Choose Lesson Plans or make your own
@@ -396,7 +393,8 @@ const ManagingLearningPath = () => {
         <Grid container spacing={3} className={`${classes.activity_wrapper2}`}>
           <Grid item lg={12}>
             <Typography variant="h4">
-              Improve quality rating of your organisation<br/> with KinderCubby
+              Improve quality rating of your organisation
+              <br /> with KinderCubby
             </Typography>
 
             <div className={classes.improve}>

@@ -65,7 +65,7 @@ const CaseStudies = () => {
     <>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12}  >
             <Typography className={classes.title}>
               Customer’s Stories
             </Typography>
@@ -76,7 +76,7 @@ const CaseStudies = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4} md={4} sm={4} >
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -97,7 +97,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4} sm={4} >
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -118,7 +118,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4} sm={4} >
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -139,7 +139,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4}  md={4} sm={4} >
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -160,7 +160,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4} md={4} sm={4} >
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -181,7 +181,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}>
+          <Grid item lg={4} md={4} sm={4} >
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}

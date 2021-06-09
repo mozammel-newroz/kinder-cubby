@@ -73,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     [theme.breakpoints.down("sm")]: {
       display: "block",
+      padding: "30px 20px",
     },
   },
   flex_div1_style: {
@@ -112,7 +113,6 @@ const useStyles = makeStyles((theme) => ({
   breadcrumbs_title_style: {
     fontSize: "1.2rem",
     color: "#707070",
-
   },
   breadcrumbs_last_title_style: {
     fontSize: "1.2rem",
@@ -248,7 +248,9 @@ const CaseStudiesDetails = () => {
                     </Link>
 
                     <Link color="inherit" to="#" onClick={handleClick}>
-                      <Typography className={`${classes.breadcrumbs_last_title_style}`}>
+                      <Typography
+                        className={`${classes.breadcrumbs_last_title_style}`}
+                      >
                         Star Kids
                       </Typography>
                     </Link>
@@ -359,7 +361,7 @@ const CaseStudiesDetails = () => {
             More Customer’s Stories
           </Typography>
           <Grid container spacing={3}>
-            <Grid item lg={4}>
+            <Grid item lg={4} md={4} sm={4}>
               <div className={classes.card}>
                 <img
                   src={ChildCareCenter1}
@@ -379,7 +381,7 @@ const CaseStudiesDetails = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} md={4}  sm={4}>
               <div className={classes.card}>
                 <img
                   src={ChildCareCenter2}
@@ -399,7 +401,7 @@ const CaseStudiesDetails = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item lg={4}>
+            <Grid item lg={4} md={4}  sm={4}>
               <div className={classes.card}>
                 <img
                   src={ChildCareCenter3}
@@ -430,7 +432,7 @@ const CaseStudiesDetails = () => {
               <br /> Implement KinderCubby at your organisation
             </Typography>
             <Grid container justify="center" alignItems="center" spacing={3}>
-              <Grid item xs={12} lg={4} className={classes.card_style}>
+              <Grid item xs={12} lg={4} md={4}  sm={4} className={classes.card_style}>
                 <Paper className={classes.paper}>
                   <Typography className={classes.box_title}>Free</Typography>
 
@@ -454,7 +456,7 @@ const CaseStudiesDetails = () => {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={12} lg={4} className={classes.card_style}>
+              <Grid item xs={12} lg={4} md={4}  sm={4} className={classes.card_style}>
                 <Paper className={classes.paper}>
                   <Typography className={classes.box_title2}>
                     Standard
@@ -480,7 +482,7 @@ const CaseStudiesDetails = () => {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={12} lg={4} className={classes.card_style}>
+              <Grid item xs={12} lg={4} md={4}  sm={4} className={classes.card_style}>
                 <Paper className={classes.paper}>
                   <Typography className={classes.box_title}>Premium</Typography>
                   <Typography className={classes.box_price}>$120</Typography>

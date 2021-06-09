@@ -55,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: 10,
+    },
   },
   banner_content_text: {
     fontSize: 24,
@@ -71,8 +74,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#0B4295",
     marginLeft: 10,
     padding: "13px 35px  !important",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("md")]: {
       marginLeft: 0,
+    },
+    [theme.breakpoints.down("sm")]: {
+      border: "1px solid #FD5E47",
     },
   },
   activity_wrapper: {
@@ -103,8 +109,11 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     maxWidth: "100%",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       display: "none",
+    },
+    [theme.breakpoints.down("md")]: {
+      padding: 30
     },
   },
   demo: {
@@ -161,7 +170,7 @@ const ActivityTracking = () => {
       {/* <CssBaseline /> */}
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12} md={12} >
             <div className={classes.banner}>
               <div className={classes.banner_image}>
                 <img src={automated} alt="" />
@@ -198,14 +207,14 @@ const ActivityTracking = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.activity_wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4">
               No more chasing after kids to <br />
               record their activity
             </Typography>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage1}
@@ -215,13 +224,13 @@ const ActivityTracking = () => {
             <div>
               <Typography variant="h5">Activity Feed</Typography>
               <Typography variant="subtitle1">
-              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-               Etiam dui ipsum, viverra vel turpis ut
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage2}
@@ -231,13 +240,13 @@ const ActivityTracking = () => {
             <div>
               <Typography variant="h5">Photos & Videos</Typography>
               <Typography variant="subtitle1">
-              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-               Etiam dui ipsum, viverra vel turpis ut
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
 
-          <Grid item lg={4} className={classes.activity_box}>
+          <Grid item lg={4}  md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage3}
@@ -247,8 +256,8 @@ const ActivityTracking = () => {
             <div>
               <Typography variant="h5">Activity Reports</Typography>
               <Typography variant="subtitle1">
-              Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
-               Etiam dui ipsum, viverra vel turpis ut
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
               </Typography>
             </div>
           </Grid>
@@ -257,38 +266,46 @@ const ActivityTracking = () => {
       <Container maxWidth="lg">
         <div className={classes.wrapper2}>
           <Grid container spacing={3} className={classes.activity_wrapper2}>
-            <Grid item lg={12}>
+            <Grid item lg={12}  md={12}>
               <Typography variant="h4">
                 Activities that we are keeping track of
               </Typography>
             </Grid>
             <div className={classes.activity2}>
-              <Grid item lg={6}>
+              <Grid item lg={6}  md={6}>
                 <img className={classes.image} src={activity_image} alt="" />
               </Grid>
-              <Grid item lg={6}>
+              <Grid item lg={6}  md={6}>
                 <Typography variant="subtitle1" className={classes.margin10}>
                   <strong>Food: </strong>
-                  semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui ipsum, viverra
+                  semper, porta purus eu, ullamcorper ligula. Nam sit amet
+                  consectetur sapien. Etiam dui ipsum, viverra
                 </Typography>
                 <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Nap Time: </strong> 
-                  magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien.
+                  <strong>Nap Time: </strong>
+                  magna semper, porta purus eu, ullamcorper ligula. Nam sit amet
+                  consectetur sapien.
                 </Typography>
                 <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Reading: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
+                  <strong>Reading: </strong> magna semper, porta purus eu,
+                  ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
                 <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Playing: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
+                  <strong>Playing: </strong> magna semper, porta purus eu,
+                  ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
                 <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Incident: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
+                  <strong>Incident: </strong> magna semper, porta purus eu,
+                  ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
                 <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Kid's health: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
+                  <strong>Kid's health: </strong> magna semper, porta purus eu,
+                  ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
                 </Typography>
                 <Typography variant="subtitle1" className={classes.margin10}>
-                  <strong>Kid's activity: </strong> magna semper, porta purus eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam dui
+                  <strong>Kid's activity: </strong> magna semper, porta purus
+                  eu, ullamcorper ligula. Nam sit amet consectetur sapien. Etiam
+                  dui
                 </Typography>
               </Grid>
             </div>
@@ -297,7 +314,7 @@ const ActivityTracking = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4">
               Improve the quality of your program & <br /> give parents the
               information they need
@@ -329,7 +346,7 @@ const ActivityTracking = () => {
 
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <div className={classes.demo}>
               <Typography variant="h4" className={classes.demo_headline}>
                 KinderCubby activity tracking demo
@@ -351,7 +368,7 @@ const ActivityTracking = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}>
+          <Grid item lg={12}  md={12}>
             <Typography variant="h4">
               Get better insight & actionable information <br /> with
               KinderCubby
