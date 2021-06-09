@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 import SchoolImage from "../assets/images/SchoolImage.png";
 import DemoVideoP1 from "../assets/images/DemoVideoP1.png";
@@ -142,12 +143,21 @@ const useStyles = makeStyles((theme) => ({
     margin: 20,
     color: "#EE6741",
   },
+  link2: {
+    fontWeight: 600,
+    margin: "10px 10px 10px 0px",
+  },
+  link2_icon:{
+    position: 'relative',
+    top: 7
+
+  },
   flex_center2: {
     display: "flex",
     alignItems: "center",
     padding: "20px 60px",
     [theme.breakpoints.down("xs")]: {
-     padding: 20
+      padding: 20,
     },
   },
   padding_bottom: {
@@ -212,7 +222,7 @@ const Home = () => {
       {/* <CssBaseline /> */}
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12} md={12} >
+          <Grid item lg={12} md={12}>
             <Typography className={classes.title}>
               Easiest & holistic solution
               <br />
@@ -244,7 +254,7 @@ const Home = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper2}>
-          <Grid lg={12} md={12} >
+          <Grid lg={12} md={12}>
             <Grid container spacing={3} className={classes.box}>
               <Grid item lg={6} md={6}>
                 <Typography className={classes.title2}>
@@ -344,7 +354,7 @@ const Home = () => {
             </Typography>
           </Grid>
           <Grid container spacing={3} className={classes.flex_center}>
-            <Grid lg={6}  md={6} className={classes.margin30}>
+            <Grid lg={6} md={6} className={classes.margin30}>
               <Typography variant="h4" className={classes.h4}>
                 Everything in one place
               </Typography>
@@ -493,8 +503,8 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
               </Typography>
               <Link to="#">
-                <Typography variant="body2" className={classes.link}>
-                  Learn More
+              <Typography variant="body2" className={classes.link2}>
+                  Learn More <ArrowForwardIcon className={classes.link2_icon} />
                 </Typography>
               </Link>
             </div>
@@ -509,8 +519,8 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
               </Typography>
               <Link to="#">
-                <Typography variant="body2" className={classes.link}>
-                  Learn More
+              <Typography variant="body2" className={classes.link2}>
+                  Learn More <ArrowForwardIcon className={classes.link2_icon} />
                 </Typography>
               </Link>
             </div>
@@ -525,8 +535,8 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
               </Typography>
               <Link to="#">
-                <Typography variant="body2" className={classes.link}>
-                  Learn More
+                <Typography variant="body2" className={classes.link2}>
+                  Learn More <ArrowForwardIcon className={classes.link2_icon} />
                 </Typography>
               </Link>
             </div>
