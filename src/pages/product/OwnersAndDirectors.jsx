@@ -57,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_button: {
     padding: "13px 35px  !important",
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: 10
+    },
   },
 
   banner_content_text: {
@@ -78,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper2: {
     marginTop: 120,
-    padding: '120px 120px 60px 120px',
+    padding: "120px 120px 60px 120px",
     width: "100%",
     background: "#E3EBFC",
     position: "relative",
