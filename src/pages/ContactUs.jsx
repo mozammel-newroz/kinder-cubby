@@ -7,6 +7,7 @@ import logo from "../assets/images/logo.png";
 
 import HiRobot from "../assets/images/HiRobot.png";
 import SearchingRobot from "../assets/images/SearchingRobot.png";
+import Footer2 from "../components/Footer2";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -300,6 +301,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      <Footer2/>
     </>
   );
 };

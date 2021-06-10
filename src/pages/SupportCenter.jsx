@@ -10,6 +10,7 @@ import StaffManagement from "../assets/images/StaffManagement.png";
 import BillingAndInvoicing from "../assets/images/BillingAndInvoicing.png";
 import SearchingRobot from "../assets/images/SearchingRobot.png";
 import Divider from "@material-ui/core/Divider";
+import Footer2 from '../components/Footer2'
 
 const useStyles = makeStyles((theme) => ({
   divider: {
@@ -482,6 +483,7 @@ const SupportCenter = () => {
           </div>
         </div>
       </div>
+      <Footer2/>
     </>
   );
 };

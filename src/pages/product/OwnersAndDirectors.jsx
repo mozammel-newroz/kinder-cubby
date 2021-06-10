@@ -469,6 +469,7 @@ const OwnersAndDirectors = () => {
           </Grid>
         </Grid>
       </Container>
+
     </>
   );
 };
