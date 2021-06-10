@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "13px 35px  !important",
     [theme.breakpoints.down("sm")]: {
       padding: "13px 50px  !important",
-
     },
   },
 
@@ -541,27 +540,11 @@ const FindNearbyChildCares = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
-<<<<<<< HEAD
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button3} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
-=======
               <Link to="/try-it-free">
                 <Button
                   variant="contained"
                   color="primary"
-                  className={`${classes.banner_button} button`}
+                  className={`${classes.banner_button3} button`}
                 >
                   Try it Free
                 </Button>
@@ -575,7 +558,6 @@ const FindNearbyChildCares = () => {
                   Explore Pricing
                 </Button>
               </Link>
->>>>>>> 5663c714de0ceafb0547641778d535b45a6637db
             </div>
           </Grid>
         </Grid>
