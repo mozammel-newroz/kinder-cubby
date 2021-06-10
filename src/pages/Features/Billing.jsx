@@ -1,10 +1,6 @@
-import React from "react";
-import {
-  Container,
-  Grid,
-  Typography,
-  Button,
-} from "@material-ui/core";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import Simplify from "../../assets/images/Simplify.png";
@@ -108,17 +104,19 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginTop: 40,
   },
-
- 
-  
 }));
 const Billing = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12} md={12} >
+          <Grid item lg={12} md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -129,14 +127,15 @@ const Billing = () => {
                   sit amet consectetur
                 </Typography>
                 <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Try it Free
-                  </Button>
-                  
+                  <Link to="/try-it-free">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Try it Free
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className={classes.banner_image}>
@@ -149,7 +148,7 @@ const Billing = () => {
 
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.banner_no_background}>
               <div className={classes.banner_content}>
                 <Typography variant="h4" style={{ textAlign: "start" }}>
@@ -171,7 +170,7 @@ const Billing = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.banner_big_border_radious}>
               <div className={classes.banner_image}>
                 <img src={OnlinePayment} alt="" />
@@ -193,7 +192,7 @@ const Billing = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.banner_no_background}>
               <div className={classes.banner_content}>
                 <Typography variant="h4" style={{ textAlign: "start" }}>
@@ -215,7 +214,7 @@ const Billing = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.banner_big_border_radious}>
               <div className={classes.banner_image}>
                 <img src={SiplifiedAccounting} alt="" />
@@ -236,14 +235,20 @@ const Billing = () => {
         </Grid>
       </Container>
       <Container maxWidth="lg">
-        <Grid container spacing={3} justify="center" alignItems="center" className={classes.activity_wrapper}>
-          <Grid item lg={12}  md={12}>
+        <Grid
+          container
+          spacing={3}
+          justify="center"
+          alignItems="center"
+          className={classes.activity_wrapper}
+        >
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               Getting started is as easy as 1-2-3
             </Typography>
           </Grid>
 
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={AutomateTuitionPlan}
@@ -251,9 +256,7 @@ const Billing = () => {
             />
 
             <div className={classes.activity_content}>
-              <Typography variant="h5">
-                Automate tuition plan
-              </Typography>
+              <Typography variant="h5">Automate tuition plan</Typography>
               <Typography variant="subtitle1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptate natus consectetur temporibus
@@ -261,7 +264,7 @@ const Billing = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={SendOnlineInvoice}
@@ -269,9 +272,7 @@ const Billing = () => {
             />
 
             <div className={classes.activity_content}>
-              <Typography variant="h5">
-                Send online Invoice
-              </Typography>
+              <Typography variant="h5">Send online Invoice</Typography>
               <Typography variant="subtitle1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptate natus consectetur temporibus
@@ -279,7 +280,7 @@ const Billing = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={CollectPayment}
@@ -287,32 +288,30 @@ const Billing = () => {
             />
 
             <div className={classes.activity_content}>
-              <Typography  variant="h5">
-                Collect Payment
-              </Typography>
+              <Typography variant="h5">Collect Payment</Typography>
               <Typography variant="subtitle1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptate natus consectetur temporibus
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Yes! Let’s try it.
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Yes! Let’s try it.
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
       </Container>
-     
     </>
   );
 };
 
 export default Billing;
-

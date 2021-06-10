@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -7,7 +8,6 @@ import StarKidsImage from "../../assets/images/StarKidsImage.png";
 import ChildCareCenter2 from "../../assets/images/ChildCareCenter2.png";
 import ChildCareCenter1 from "../../assets/images/ChildCareCenter1.png";
 import ChildCareCenter3 from "../../assets/images/ChildCareCenter3.png";
-import { Link } from "react-router-dom";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
@@ -216,6 +216,10 @@ const useStyles = makeStyles((theme) => ({
 
 const CaseStudiesDetails = () => {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container maxWidth="lg">
@@ -333,15 +337,18 @@ const CaseStudiesDetails = () => {
                   Make a difference at your organisation too
                 </Typography>
                 <div className={classes.center_button}>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Try it Free
-                  </Button>
+                  <Link to="/try-it-free">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Try it Free
+                    </Button>
+                  </Link>
                 </div>
                 <div className={classes.center_button}>
+                  <Link to='/request-call'>
                   <Button
                     variant="outlined"
                     color="primary"
@@ -349,6 +356,7 @@ const CaseStudiesDetails = () => {
                   >
                     Contact Sales
                   </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -374,14 +382,14 @@ const CaseStudiesDetails = () => {
                 </Typography>
 
                 <div>
-                  <Link to="#" className={classes.next_button}>
+                  <Link to="/case-studies" className={classes.next_button}>
                     <Typography color="primary">Read More</Typography>
                     <ArrowForwardIcon />
                   </Link>
                 </div>
               </div>
             </Grid>
-            <Grid item lg={4} md={4}  sm={4}>
+            <Grid item lg={4} md={4} sm={4}>
               <div className={classes.card}>
                 <img
                   src={ChildCareCenter2}
@@ -394,14 +402,14 @@ const CaseStudiesDetails = () => {
                 </Typography>
 
                 <div>
-                  <Link to="#" className={classes.next_button}>
+                  <Link to="/case-studies" className={classes.next_button}>
                     <Typography color="primary">Read More</Typography>
                     <ArrowForwardIcon />
                   </Link>
                 </div>
               </div>
             </Grid>
-            <Grid item lg={4} md={4}  sm={4}>
+            <Grid item lg={4} md={4} sm={4}>
               <div className={classes.card}>
                 <img
                   src={ChildCareCenter3}
@@ -414,7 +422,7 @@ const CaseStudiesDetails = () => {
                 </Typography>
 
                 <div>
-                  <Link to="#" className={classes.next_button}>
+                  <Link to="/case-studies" className={classes.next_button}>
                     <Typography color="primary">Read More</Typography>
                     <ArrowForwardIcon />
                   </Link>
@@ -432,7 +440,14 @@ const CaseStudiesDetails = () => {
               <br /> Implement KinderCubby at your organisation
             </Typography>
             <Grid container justify="center" alignItems="center" spacing={3}>
-              <Grid item xs={12} lg={4} md={4}  sm={4} className={classes.card_style}>
+              <Grid
+                item
+                xs={12}
+                lg={4}
+                md={4}
+                sm={4}
+                className={classes.card_style}
+              >
                 <Paper className={classes.paper}>
                   <Typography className={classes.box_title}>Free</Typography>
 
@@ -456,7 +471,14 @@ const CaseStudiesDetails = () => {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={12} lg={4} md={4}  sm={4} className={classes.card_style}>
+              <Grid
+                item
+                xs={12}
+                lg={4}
+                md={4}
+                sm={4}
+                className={classes.card_style}
+              >
                 <Paper className={classes.paper}>
                   <Typography className={classes.box_title2}>
                     Standard
@@ -482,7 +504,14 @@ const CaseStudiesDetails = () => {
                   </div>
                 </Paper>
               </Grid>
-              <Grid item xs={12} lg={4} md={4}  sm={4} className={classes.card_style}>
+              <Grid
+                item
+                xs={12}
+                lg={4}
+                md={4}
+                sm={4}
+                className={classes.card_style}
+              >
                 <Paper className={classes.paper}>
                   <Typography className={classes.box_title}>Premium</Typography>
                   <Typography className={classes.box_price}>$120</Typography>
@@ -504,7 +533,7 @@ const CaseStudiesDetails = () => {
                 </Paper>
               </Grid>
               <div className={`${classes.auto_margin}`}>
-                <Link to="#">
+                <Link to="/case-studies">
                   <Typography className={classes.tab_headline2}>
                     Learn More{" "}
                     <span className={classes.icon_style}>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -25,7 +26,6 @@ import IconRevenueSummary from "../../assets/images/IconRevenueSummary.png";
 import IconShareEveryMoment from "../../assets/images/IconShareEveryMoment.png";
 import IconInstantMessaging from "../../assets/images/IconInstantMessaging.png";
 import IconStaffManagement from "../../assets/images/IconStaffManagement.png";
-import { Link } from "react-router-dom";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import SliderImage from "../../components/SliderImage";
@@ -239,6 +239,11 @@ const useStyles = makeStyles((theme) => ({
 
 const FeatureOverviews = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Container maxWidth="lg">
@@ -256,13 +261,15 @@ const FeatureOverviews = () => {
             </Typography>
 
             <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Try It Free
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try It Free
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
@@ -294,15 +301,17 @@ const FeatureOverviews = () => {
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
               amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
             </Typography>
-            <Typography
-              className={classes.tab_headline2}
-              style={{ textAlign: "start" }}
-            >
-              Learn More{" "}
-              <span className={classes.icon_style}>
-                <ArrowForwardIcon />
-              </span>
-            </Typography>
+            <Link to="/attendance-and-check-ins">
+              <Typography
+                className={classes.tab_headline2}
+                style={{ textAlign: "start" }}
+              >
+                Learn More{" "}
+                <span className={classes.icon_style}>
+                  <ArrowForwardIcon />
+                </span>
+              </Typography>
+            </Link>
           </Grid>
 
           <Grid
@@ -444,15 +453,17 @@ const FeatureOverviews = () => {
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
               amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
             </Typography>
-            <Typography
-              className={classes.tab_headline2}
-              style={{ textAlign: "start" }}
-            >
-              Learn More{" "}
-              <span className={classes.icon_style}>
-                <ArrowForwardIcon />
-              </span>
-            </Typography>
+            <Link to="/activity-tracking">
+              <Typography
+                className={classes.tab_headline2}
+                style={{ textAlign: "start" }}
+              >
+                Learn More{" "}
+                <span className={classes.icon_style}>
+                  <ArrowForwardIcon />
+                </span>
+              </Typography>
+            </Link>
           </Grid>
         </Grid>
       </Container>
@@ -483,15 +494,17 @@ const FeatureOverviews = () => {
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
               amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
             </Typography>
-            <Typography
-              className={classes.tab_headline2}
-              style={{ textAlign: "start" }}
-            >
-              Learn More{" "}
-              <span className={classes.icon_style}>
-                <ArrowForwardIcon />
-              </span>
-            </Typography>
+            <Link to="/center-management">
+              <Typography
+                className={classes.tab_headline2}
+                style={{ textAlign: "start" }}
+              >
+                Learn More{" "}
+                <span className={classes.icon_style}>
+                  <ArrowForwardIcon />
+                </span>
+              </Typography>
+            </Link>
           </Grid>
 
           <Grid
@@ -625,15 +638,17 @@ const FeatureOverviews = () => {
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
               amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
             </Typography>
-            <Typography
-              className={classes.tab_headline2}
-              style={{ textAlign: "start" }}
-            >
-              Learn More{" "}
-              <span className={classes.icon_style}>
-                <ArrowForwardIcon />
-              </span>
-            </Typography>
+            <Link to="/billing">
+              <Typography
+                className={classes.tab_headline2}
+                style={{ textAlign: "start" }}
+              >
+                Learn More{" "}
+                <span className={classes.icon_style}>
+                  <ArrowForwardIcon />
+                </span>
+              </Typography>
+            </Link>
           </Grid>
         </Grid>
       </Container>
@@ -664,15 +679,17 @@ const FeatureOverviews = () => {
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
               amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
             </Typography>
-            <Typography
-              className={classes.tab_headline2}
-              style={{ textAlign: "start" }}
-            >
-              Learn More{" "}
-              <span className={classes.icon_style}>
-                <ArrowForwardIcon />
-              </span>
-            </Typography>
+            <Link to="/managing-learning-path">
+              <Typography
+                className={classes.tab_headline2}
+                style={{ textAlign: "start" }}
+              >
+                Learn More{" "}
+                <span className={classes.icon_style}>
+                  <ArrowForwardIcon />
+                </span>
+              </Typography>
+            </Link>
           </Grid>
 
           <Grid
@@ -820,15 +837,17 @@ const FeatureOverviews = () => {
               Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
               amet consectetur sapien. Etiam dui ipsum, viverra vel turpis ut
             </Typography>
-            <Typography
-              className={classes.tab_headline2}
-              style={{ textAlign: "start" }}
-            >
-              Learn More{" "}
-              <span className={classes.icon_style}>
-                <ArrowForwardIcon />
-              </span>
-            </Typography>
+            <Link to="/parents-engagements">
+              <Typography
+                className={classes.tab_headline2}
+                style={{ textAlign: "start" }}
+              >
+                Learn More{" "}
+                <span className={classes.icon_style}>
+                  <ArrowForwardIcon />
+                </span>
+              </Typography>
+            </Link>
           </Grid>
         </Grid>
       </Container>
@@ -842,8 +861,10 @@ const FeatureOverviews = () => {
 
       <SliderImage />
 
-      <Link to="#">
-        <Typography className={`${classes.tab_headline3} ${classes.slider_text2}`}>
+      <Link to="/case-studies">
+        <Typography
+          className={`${classes.tab_headline3} ${classes.slider_text2}`}
+        >
           More Customer Storis{" "}
           <span className={classes.icon_style}>
             <ArrowForwardIcon />
@@ -863,20 +884,24 @@ const FeatureOverviews = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try it Free
+                </Button>
+              </Link>
+              <Link to="pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>

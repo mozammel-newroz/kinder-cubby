@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
@@ -220,6 +221,11 @@ const useStyles = makeStyles((theme) => ({
 
 const AttendanceAndCheckins = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       {/* <CssBaseline /> */}
@@ -236,13 +242,15 @@ const AttendanceAndCheckins = () => {
                   sit amet consectetur
                 </Typography>
                 <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Try it Free
-                  </Button>
+                  <Link to="/try-it-free">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Try it Free
+                    </Button>
+                  </Link>
                   <Button
                     // variant="contained"
                     color="secondary"
@@ -576,13 +584,15 @@ const AttendanceAndCheckins = () => {
               <img src={Goodbye} width="100%" alt="" />
             </div>
             <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Start Now
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Start Now
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
@@ -610,13 +620,15 @@ const AttendanceAndCheckins = () => {
               Impressed? There’s a 30 days free trial
             </Typography>
             <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Yes! Let’s try it.
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Yes! Let’s try it.
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>

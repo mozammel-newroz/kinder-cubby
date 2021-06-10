@@ -1,13 +1,5 @@
-import React from "react";
-import {
-  Container,
-  Grid,
-  Typography,
-  Button,
-  Card,
-  CardContent,
-  CardMedia,
-} from "@material-ui/core";
+import React, { useEffect } from "react";
+import { Container, Grid, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -61,11 +53,16 @@ const useStyles = makeStyles((theme) => ({
 
 const CaseStudies = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.wrapper}>
-          <Grid item lg={12} md={12}  >
+          <Grid item lg={12} md={12}>
             <Typography className={classes.title}>
               Customer’s Stories
             </Typography>
@@ -76,7 +73,7 @@ const CaseStudies = () => {
             </Typography>
           </Grid>
 
-          <Grid item lg={4} md={4} sm={4} >
+          <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -89,7 +86,10 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="/case-studies-details" className={classes.next_button}>
+                <Link
+                  to="/case-studies-details"
+                  className={classes.next_button}
+                >
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -97,7 +97,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4} sm={4} >
+          <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -110,7 +110,10 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="/case-studies-details" className={classes.next_button}>
+                <Link
+                  to="/case-studies-details"
+                  className={classes.next_button}
+                >
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -118,7 +121,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4} sm={4} >
+          <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -131,7 +134,10 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="/case-studies-details" className={classes.next_button}>
+                <Link
+                  to="/case-studies-details"
+                  className={classes.next_button}
+                >
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -139,7 +145,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4} sm={4} >
+          <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -152,7 +158,10 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="/case-studies-details" className={classes.next_button}>
+                <Link
+                  to="/case-studies-details"
+                  className={classes.next_button}
+                >
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -160,7 +169,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} md={4} sm={4} >
+          <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -173,7 +182,10 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="/case-studies-details" className={classes.next_button}>
+                <Link
+                  to="/case-studies-details"
+                  className={classes.next_button}
+                >
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>
@@ -181,7 +193,7 @@ const CaseStudies = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4} md={4} sm={4} >
+          <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
                 src={ChildCareCenter2}
@@ -194,7 +206,10 @@ const CaseStudies = () => {
               </Typography>
 
               <div>
-                <Link to="/case-studies-details" className={classes.next_button}>
+                <Link
+                  to="/case-studies-details"
+                  className={classes.next_button}
+                >
                   <Typography color="primary">Read More</Typography>
                   <ArrowForwardIcon />
                 </Link>

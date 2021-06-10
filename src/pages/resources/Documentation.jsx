@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import {
   makeStyles,
@@ -168,6 +168,10 @@ const useStyle = makeStyles((theme) => ({
 
 const Documentation = () => {
   const classes = useStyle();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -378,9 +382,12 @@ const Documentation = () => {
                   Still need help?
                 </Typography>
                 <div className={classes.button_wrapper}>
+                  <Link to="/support-center">
                   <Button variant="outlined" color="primary" className="button">
                     Contact Support
                   </Button>
+                    
+                  </Link>
                 </div>
               </div>
             </div>

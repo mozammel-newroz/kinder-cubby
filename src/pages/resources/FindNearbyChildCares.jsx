@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -7,7 +8,6 @@ import Paper from "@material-ui/core/Paper";
 import SearchIcon from "../../assets/images/SearchIcon.png";
 import Phone from "../../assets/images/Phone.png";
 import map from "../../assets/images/map.png";
-import { Link } from "react-router-dom";
 
 import Pagination from "@material-ui/lab/Pagination";
 
@@ -72,8 +72,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  
-  
   nav_div: {
     width: "80%",
     borderBottom: "2px solid #E5EBFD",
@@ -91,18 +89,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       alignItems: "flex-end",
     },
- 
   },
   nav_item: {
     padding: "14px 16px",
     margin: "0 10px",
-    textAlign:'center',
+    textAlign: "center",
     borderBottom: "2px solid rgba(0, 0, 0, 0)",
     "&:hover": {
       borderBottom: "2px solid #21409A",
       fontWeight: 600,
-      
-  
     },
   },
   active: {
@@ -168,6 +163,9 @@ const useStyles = makeStyles((theme) => ({
 
 const FindNearbyChildCares = () => {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Container maxWidth="lg">
@@ -201,24 +199,28 @@ const FindNearbyChildCares = () => {
             </div>
           </Grid>
           <div className={classes.width100}>
-            
-
             <div className={classes.nav}>
               <div>
-                <Link to="#">
-                  <Typography className={`${classes.nav_item} ${classes.active}`}>
+                <Link to="/find-nearby-child-care">
+                  <Typography
+                    className={`${classes.nav_item} ${classes.active}`}
+                  >
                     All
                   </Typography>
                 </Link>
               </div>
               <div>
-                <Link to="#" >
-                  <Typography className={classes.nav_item}>Search Result</Typography>
+                <Link to="/find-nearby-child-care-search-result">
+                  <Typography className={classes.nav_item}>
+                    Search Result
+                  </Typography>
                 </Link>
               </div>
               <div>
-                <Link to="#">
-                  <Typography className={classes.nav_item}>Invite Your School</Typography>
+                <Link to="/invite-your-friends">
+                  <Typography className={classes.nav_item}>
+                    Invite Your School
+                  </Typography>
                 </Link>
               </div>
             </div>
@@ -531,20 +533,24 @@ const FindNearbyChildCares = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try it Free
+                </Button>
+              </Link>
+              <Link to="/pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
