@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
   makeStyles,
   IconButton,
@@ -94,6 +94,10 @@ const useStyle = makeStyles((theme) => ({
 
 const TryItFree = () => {
   const classes = useStyle();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

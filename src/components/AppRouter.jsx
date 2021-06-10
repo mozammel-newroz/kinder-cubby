@@ -136,7 +136,7 @@ const AppRouter = () => {
       <Route path="/blog">
         <Blog />
       </Route>
-
+      banner_button
       <Route path="/e-books">
         <Ebooks />
       </Route>

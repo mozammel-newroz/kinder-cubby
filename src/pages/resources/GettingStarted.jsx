@@ -211,7 +211,7 @@ const GettingStarted = () => {
 
             <TextField
               fullWidth
-              placeholder='Search for sevices, topics'
+              placeholder="Search for sevices, topics"
               variant="outlined"
               className={classes.input}
               InputProps={{
@@ -232,7 +232,7 @@ const GettingStarted = () => {
               >
                 <Link color="inherit" to="#" onClick={handleClick}>
                   <Typography className={classes.breadcrumbs_title_style}>
-                 All Topics
+                    All Topics
                   </Typography>
                 </Link>
 
@@ -240,7 +240,7 @@ const GettingStarted = () => {
                   <Typography
                     className={`${classes.breadcrumbs_last_title_style}`}
                   >
-                 Getting Started
+                    Getting Started
                   </Typography>
                 </Link>
               </Breadcrumbs>
@@ -286,105 +286,125 @@ const GettingStarted = () => {
                 Getting Started
               </Typography>
               <div className={classes.card_holder}>
-                <div className={classes.card}>
-                  <Typography variant="body1" className={classes.font_color}>
-                    What is KinderCubby?
-                  </Typography>
-                  <Typography variant="body1">
-                    Quisque suscipit ipsum est, eu venenatis leo ornare eget. Ut
-                    porta facilisis elementum. Sed condimentum sed massa quis
-                    ullamcorper. Donec at scelerisque neque. Pellentesque
-                    sagittis, massa
-                  </Typography>
-                  <div className={classes.bottom_wrapper}>
-                    <div className={classes.user_li}>
-                      <ul>
-                        <li>
-                          <img src={Model1} alt="" />
-                        </li>
-                      </ul>
-                    </div>
-                    <Typography variant="body2" className={`${classes.bottom}`}>
-                      Written by Anna, Allies, Natasha & 2 others
-                      <br /> Last updated 10 May 2021
+                <Link to="/getting-started-details">
+                  <div className={classes.card}>
+                    <Typography variant="body1" className={classes.font_color}>
+                      What is KinderCubby?
                     </Typography>
+                    <Typography variant="body1">
+                      Quisque suscipit ipsum est, eu venenatis leo ornare eget.
+                      Ut porta facilisis elementum. Sed condimentum sed massa
+                      quis ullamcorper. Donec at scelerisque neque. Pellentesque
+                      sagittis, massa
+                    </Typography>
+                    <div className={classes.bottom_wrapper}>
+                      <div className={classes.user_li}>
+                        <ul>
+                          <li>
+                            <img src={Model1} alt="" />
+                          </li>
+                        </ul>
+                      </div>
+                      <Typography
+                        variant="body2"
+                        className={`${classes.bottom}`}
+                      >
+                        Written by Anna, Allies, Natasha & 2 others
+                        <br /> Last updated 10 May 2021
+                      </Typography>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <Divider />
-                <div className={classes.card}>
-                  <Typography variant="body1" className={classes.font_color}>
-                    What is KinderCubby?
-                  </Typography>
-                  <Typography variant="body1">
-                    Quisque suscipit ipsum est, eu venenatis leo ornare eget. Ut
-                    porta facilisis elementum. Sed condimentum sed massa quis
-                    ullamcorper. Donec at scelerisque neque. Pellentesque
-                    sagittis, massa
-                  </Typography>
-                  <div className={classes.bottom_wrapper}>
-                    <div className={classes.user_li}>
-                      <ul>
-                        <li>
-                          <img src={Model1} alt="" />
-                        </li>
-                      </ul>
-                    </div>
-                    <Typography variant="body2" className={classes.bottom}>
-                      Written by Anna, Allies, Natasha & 2 others
-                      <br /> Last updated 10 May 2021
+                <Link to="/getting-started-details">
+                  <div className={classes.card}>
+                    <Typography variant="body1" className={classes.font_color}>
+                      What is KinderCubby?
                     </Typography>
+                    <Typography variant="body1">
+                      Quisque suscipit ipsum est, eu venenatis leo ornare eget.
+                      Ut porta facilisis elementum. Sed condimentum sed massa
+                      quis ullamcorper. Donec at scelerisque neque. Pellentesque
+                      sagittis, massa
+                    </Typography>
+                    <div className={classes.bottom_wrapper}>
+                      <div className={classes.user_li}>
+                        <ul>
+                          <li>
+                            <img src={Model1} alt="" />
+                          </li>
+                        </ul>
+                      </div>
+                      <Typography
+                        variant="body2"
+                        className={`${classes.bottom}`}
+                      >
+                        Written by Anna, Allies, Natasha & 2 others
+                        <br /> Last updated 10 May 2021
+                      </Typography>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <Divider />
-                <div className={classes.card}>
-                  <Typography variant="body1" className={classes.font_color}>
-                    What is KinderCubby?
-                  </Typography>
-                  <Typography variant="body1">
-                    Quisque suscipit ipsum est, eu venenatis leo ornare eget. Ut
-                    porta facilisis elementum. Sed condimentum sed massa quis
-                    ullamcorper. Donec at scelerisque neque. Pellentesque
-                    sagittis, massa
-                  </Typography>
-                  <div className={classes.bottom_wrapper}>
-                    <div className={classes.user_li}>
-                      <ul>
-                        <li>
-                          <img src={Model1} alt="" />
-                        </li>
-                      </ul>
-                    </div>
-                    <Typography variant="body2" className={classes.bottom}>
-                      Written by Anna, Allies, Natasha & 2 others
-                      <br /> Last updated 10 May 2021
+                <Link to="/getting-started-details">
+                  <div className={classes.card}>
+                    <Typography variant="body1" className={classes.font_color}>
+                      What is KinderCubby?
                     </Typography>
+                    <Typography variant="body1">
+                      Quisque suscipit ipsum est, eu venenatis leo ornare eget.
+                      Ut porta facilisis elementum. Sed condimentum sed massa
+                      quis ullamcorper. Donec at scelerisque neque. Pellentesque
+                      sagittis, massa
+                    </Typography>
+                    <div className={classes.bottom_wrapper}>
+                      <div className={classes.user_li}>
+                        <ul>
+                          <li>
+                            <img src={Model1} alt="" />
+                          </li>
+                        </ul>
+                      </div>
+                      <Typography
+                        variant="body2"
+                        className={`${classes.bottom}`}
+                      >
+                        Written by Anna, Allies, Natasha & 2 others
+                        <br /> Last updated 10 May 2021
+                      </Typography>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <Divider />
-                <div className={classes.card}>
-                  <Typography variant="body1" className={classes.font_color}>
-                    What is KinderCubby?
-                  </Typography>
-                  <Typography variant="body1">
-                    Quisque suscipit ipsum est, eu venenatis leo ornare eget. Ut
-                    porta facilisis elementum. Sed condimentum sed massa quis
-                    ullamcorper. Donec at scelerisque neque. Pellentesque
-                    sagittis, massa
-                  </Typography>
-                  <div className={classes.bottom_wrapper}>
-                    <div className={classes.user_li}>
-                      <ul>
-                        <li>
-                          <img src={Model1} alt="" />
-                        </li>
-                      </ul>
-                    </div>
-                    <Typography variant="body2" className={classes.bottom}>
-                      Written by Anna, Allies, Natasha & 2 others
-                      <br /> Last updated 10 May 2021
+                <Link to="/getting-started-details">
+                  <div className={classes.card}>
+                    <Typography variant="body1" className={classes.font_color}>
+                      What is KinderCubby?
                     </Typography>
+                    <Typography variant="body1">
+                      Quisque suscipit ipsum est, eu venenatis leo ornare eget.
+                      Ut porta facilisis elementum. Sed condimentum sed massa
+                      quis ullamcorper. Donec at scelerisque neque. Pellentesque
+                      sagittis, massa
+                    </Typography>
+                    <div className={classes.bottom_wrapper}>
+                      <div className={classes.user_li}>
+                        <ul>
+                          <li>
+                            <img src={Model1} alt="" />
+                          </li>
+                        </ul>
+                      </div>
+                      <Typography
+                        variant="body2"
+                        className={`${classes.bottom}`}
+                      >
+                        Written by Anna, Allies, Natasha & 2 others
+                        <br /> Last updated 10 May 2021
+                      </Typography>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <Divider />
               </div>
             </div>
