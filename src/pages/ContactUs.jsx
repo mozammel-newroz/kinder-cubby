@@ -151,7 +151,7 @@ const ContactUs = () => {
   const classes = useStyles();
   return (
     <>
-    <div className={classes.flex_wrapper}>
+    {/* <div className={classes.flex_wrapper}>
           <div className={classes.inner_wrapper}>
             <div>
               <img src={logo} alt="" />
@@ -171,7 +171,7 @@ const ContactUs = () => {
               Go to KinderCubby
             </Button>
           </div>
-        </div>
+        </div> */}
       <Container maxWidth="lg">
         <div className={classes.wrapper}>
           <div className={classes.banner_wrapper}>
