@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "13px 35px  !important",
     [theme.breakpoints.down("sm")]: {
       padding: "13px 50px  !important",
-
     },
   },
 
@@ -545,7 +544,7 @@ const FindNearbyChildCares = () => {
                 <Button
                   variant="contained"
                   color="primary"
-                  className={`${classes.banner_button} button`}
+                  className={`${classes.banner_button3} button`}
                 >
                   Try it Free
                 </Button>
