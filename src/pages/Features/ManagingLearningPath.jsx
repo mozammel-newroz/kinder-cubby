@@ -179,7 +179,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper_banner: {},
   banner_inner: {
     margin: "0px 30px",
-    backgroundColor: "#ddd",
+    backgroundColor: "#E1EBFB",
     backgroundImage: `url(${ManagingLearning})`,
     backgroundSize: "100% 100%",
     backgroundRepeat: "no-repeat",

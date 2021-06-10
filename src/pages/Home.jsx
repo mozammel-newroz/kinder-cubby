@@ -246,20 +246,24 @@ const Home = () => {
               sapien imperdiet
             </Typography>
             <div className={classes.center}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try it Free
+                </Button>
+              </Link>
+              <Link to="/pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
@@ -277,14 +281,16 @@ const Home = () => {
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
                   eaque vitae consectetur laboriosam
                 </Typography>
-                <Button
-                  variant="outlined"
-                  color="primary"
-                  style={{ marginTop: 15 }}
-                  className={`${classes.banner_button} button`}
-                >
-                  Contact Sales
-                </Button>
+                <Link to="/request-call">
+                  <Button
+                    variant="outlined"
+                    color="primary"
+                    style={{ marginTop: 15 }}
+                    className={`${classes.banner_button} button`}
+                  >
+                    Contact Sales
+                  </Button>
+                </Link>
               </Grid>
               <Grid item lg={6} md={6}>
                 <img src={SchoolImage} alt="" className={classes.image} />
@@ -313,7 +319,7 @@ const Home = () => {
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                Save time with Activity tracking
+                  Save time with Activity tracking
                 </Typography>
                 <Typography>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
@@ -322,7 +328,7 @@ const Home = () => {
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                Digital report go paperless
+                  Digital report go paperless
                 </Typography>
                 <Typography>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
@@ -331,7 +337,7 @@ const Home = () => {
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                Boost Organisation growth
+                  Boost Organisation growth
                 </Typography>
                 <Typography>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
@@ -362,7 +368,7 @@ const Home = () => {
         <Grid container className={classes.wrapper4}>
           <Grid lg={12} md={12}>
             <Typography className={classes.title}>
-            Progressive childcare solution <br /> for growing world
+              Progressive childcare solution <br /> for growing world
             </Typography>
           </Grid>
           <Grid container spacing={3} className={classes.flex_center}>
@@ -395,7 +401,7 @@ const Home = () => {
                 <Typography variant="subtitle1" className={classes.subtitle1}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </Typography>
-                <Link to="#">
+                <Link to="/activity-tracking">
                   <Typography variant="body2" className={classes.link}>
                     Learn More
                   </Typography>
@@ -413,7 +419,7 @@ const Home = () => {
                 <Typography variant="subtitle1" className={classes.subtitle1}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </Typography>
-                <Link to="#">
+                <Link to="/parents-engagements">
                   <Typography variant="body2" className={classes.link}>
                     Learn More
                   </Typography>
@@ -426,13 +432,19 @@ const Home = () => {
                   src={CenterManagementP1}
                   alt=""
                   className={classes.box2_icon}
-                  style={{ background: '#8BA0C9', height: '50px', width: '50px', borderRadius: 50, padding:10  }}
+                  style={{
+                    background: "#8BA0C9",
+                    height: "50px",
+                    width: "50px",
+                    borderRadius: 50,
+                    padding: 10,
+                  }}
                 />
                 <Typography variant="h5">Center Management</Typography>
                 <Typography variant="subtitle1" className={classes.subtitle1}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </Typography>
-                <Link to="#">
+                <Link to="/center-management">
                   <Typography variant="body2" className={classes.link}>
                     Learn More
                   </Typography>
@@ -446,7 +458,7 @@ const Home = () => {
         <Grid container spacing={3} className={classes.wrapper3}>
           <Grid lg={12} md={12}>
             <Typography className={classes.title}>
-            Manage the function you already do <br /> but much more seamlessly
+              Manage the function you already do <br /> but much more seamlessly
             </Typography>
             <Typography variant="h5" className={classes.h5}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
@@ -464,7 +476,7 @@ const Home = () => {
             <Typography
               className={`${classes.title} ${classes.padding_bottom} ${classes.title_bg}`}
             >
-             Excel Parents expectation
+              Excel Parents expectation
             </Typography>
           </Grid>
           <Grid container spacing={3} className={classes.flex_center2}>
@@ -508,14 +520,19 @@ const Home = () => {
           </Grid>
           <Grid item lg={4} md={4}>
             <div className={classes.box3}>
-              <img src={User1} alt="" className={classes.box3_icon} style={{ background: '#fff', borderRadius: 50 }}  />
+              <img
+                src={User1}
+                alt=""
+                className={classes.box3_icon}
+                style={{ background: "#fff", borderRadius: 50 }}
+              />
               <Typography variant="h5" className={classes.left}>
-              Daycare Owners & Directors
+                Daycare Owners & Directors
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
               </Typography>
-              <Link to="#">
+              <Link to="/for-owners-and-directors">
                 <Typography variant="body2" className={classes.link2}>
                   Learn More <ArrowForwardIcon className={classes.link2_icon} />
                 </Typography>
@@ -526,12 +543,12 @@ const Home = () => {
             <div className={classes.box3}>
               <img src={User2} alt="" className={classes.box3_icon} />
               <Typography variant="h5" className={classes.left}>
-              Teachers
+                Teachers
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
               </Typography>
-              <Link to="#">
+              <Link to="/for-teachers">
                 <Typography variant="body2" className={classes.link2}>
                   Learn More <ArrowForwardIcon className={classes.link2_icon} />
                 </Typography>
@@ -542,12 +559,12 @@ const Home = () => {
             <div className={classes.box3}>
               <img src={User3} alt="" className={classes.box3_icon} />
               <Typography variant="h5" className={classes.left}>
-              Parents
+                Parents
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
               </Typography>
-              <Link to="#">
+              <Link to="/for-parents">
                 <Typography variant="body2" className={classes.link2}>
                   Learn More <ArrowForwardIcon className={classes.link2_icon} />
                 </Typography>
@@ -569,7 +586,7 @@ const Home = () => {
           <Grid lg={12} md={12}>
             <div className={classes.wrapper5_inner}>
               <Typography className={`${classes.title}`}>
-              KinderCubby made it easy. Why wait?
+                KinderCubby made it easy. Why wait?
               </Typography>
               <Typography
                 variant="h6"
@@ -581,20 +598,24 @@ const Home = () => {
                 dignissimos! Ab, ipsam.
               </Typography>
               <div className={classes.center}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={`${classes.banner_button} button`}
-                >
-                  Try it Free
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="secondary"
-                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
-                >
-                  Explore Pricing
-                </Button>
+                <Link to="/try-it-free">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={`${classes.banner_button} button`}
+                  >
+                    Try it Free
+                  </Button>
+                </Link>
+                <Link to="/pricing">
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                  >
+                    Explore Pricing
+                  </Button>
+                </Link>
               </div>
             </div>
           </Grid>

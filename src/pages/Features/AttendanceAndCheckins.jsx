@@ -11,6 +11,7 @@ import Goodbye from "../../assets/images/Goodbye.png";
 import YoutubeDemoPage18 from "../../assets/images/YoutubeDemoPage18.png";
 import OwnerAndDirectors from "../../assets/images/OwnerAndDirectors.png";
 import Parents from "../../assets/images/Parents.png";
+import DoubleBlueColorCircle from "../../assets/images/DoubleBlueColorCircle.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -103,7 +104,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   activity_wrapper2: {
-    background: "#E3EBFC",
+    // background: "#E3EBFC",
+    position: "relative",
     borderRadius: 10,
     padding: "40px 80px",
     [theme.breakpoints.down("xs")]: {
@@ -186,7 +188,7 @@ const useStyles = makeStyles((theme) => ({
   padding_margin0: {
     paddingTop: "0px",
     paddingLeft: "0",
-    overflow:" hidden"
+    overflow: " hidden",
   },
   h4_mobile_style: {
     [theme.breakpoints.down("xs")]: {
@@ -197,6 +199,22 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       marginTop: 20,
     },
+  },
+  bg_color: {
+    background: "#E3EBFC",
+    height: "700px",
+    width: "100%",
+    position: "absolute",
+    left: 0,
+    top: 0,
+    zIndex: -9,
+    borderRadius: 15,
+  },
+  title_bg: {
+    background: `url(${DoubleBlueColorCircle})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "10% 50%",
+    backgroundSize: "7%",
   },
 }));
 
@@ -306,13 +324,14 @@ const AttendanceAndCheckins = () => {
             className={classes.activity_wrapper2}
           >
             <Grid item lg={12} md={12}>
+              <div className={classes.bg_color}></div>
               <Typography variant="h4">
                 Instant reporting to every users
               </Typography>
             </Grid>
             <Grid item xs={12} lg={6} md={6}>
               <Grid container spacing={2} className={classes.card}>
-                <Grid item xs={5} className={classes.padding_margin0} >
+                <Grid item xs={5} className={classes.padding_margin0}>
                   <img
                     src={OwnerAndDirectors}
                     alt=""
@@ -383,7 +402,12 @@ const AttendanceAndCheckins = () => {
               <br />
               <Grid container spacing={2} className={classes.card}>
                 <Grid item xs={5} className={classes.padding_margin0}>
-                  <img src={OwnerAndDirectors} alt="" width="100%" style={{ position: "relative", left: -50, top: -20 }} />
+                  <img
+                    src={OwnerAndDirectors}
+                    alt=""
+                    width="100%"
+                    style={{ position: "relative", left: -50, top: -20 }}
+                  />
                 </Grid>
                 <Grid item xs={7} className={classes.card_padding}>
                   <Typography variant="h5" style={{ textAlign: "start" }}>
@@ -482,7 +506,12 @@ const AttendanceAndCheckins = () => {
                   </div>
                 </Grid>
                 <Grid item xs={5} className={classes.padding_margin0}>
-                  <img src={Parents} alt="" width="100%" style={{ position: "relative", right: -50, top: -20 }} />
+                  <img
+                    src={Parents}
+                    alt=""
+                    width="100%"
+                    style={{ position: "relative", right: -50, top: -20 }}
+                  />
                 </Grid>
                 <Grid item xs={12} className={classes.card_padding}>
                   <Typography variant="body2">
@@ -532,7 +561,10 @@ const AttendanceAndCheckins = () => {
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
           <Grid item lg={12} md={12}>
-            <Typography variant="h4" className={classes.h4_mobile_style}>
+            <Typography
+              variant="h4"
+              className={`${classes.h4_mobile_style} ${classes.title_bg} `}
+            >
               Say goodbye to check in sheets and signatures
             </Typography>
             <Typography variant="h6" className={classes.h6_mobile_style}>

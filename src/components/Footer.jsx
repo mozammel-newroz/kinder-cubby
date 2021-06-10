@@ -119,7 +119,9 @@ const Footer = () => {
               <div className={classes.break}></div>
               <div className={classes.footer}>
                 <div className={classes.footer_item}>
-                  <img width="90%" src={logo} alt="" />
+                  <Link to="/">
+                    <img width="90%" src={logo} alt="" />
+                  </Link>
                   <Typography variant="h6" className={classes.footer_title}>
                     Contact Sales
                   </Typography>
@@ -140,24 +142,28 @@ const Footer = () => {
                   </Typography>
                   <ul className={classes.ul}>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Owner & Directors
-                      </a>
+                      <Link
+                        to="/for-owners-and-directors"
+                        className={classes.a}
+                      >
+                        <Typography>Owner & Directors</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        For Teachers
-                      </a>
+                      <Link to="/for-teachers" className={classes.a}>
+                        <Typography>For Teachers</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        For Parents
-                      </a>
+                      <Link to="/for-parents" className={classes.a}>
+                        <Typography>For Parents</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Find Nearby Child Cares
-                      </a>
+                      <a className={classes.a} href="#"></a>
+                      <Link to="/find-nearby-child-care" className={classes.a}>
+                        <Typography>Find Nearby Child Cares</Typography>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -168,19 +174,19 @@ const Footer = () => {
                   </Typography>
                   <ul className={classes.ul}>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Download
-                      </a>
+                      <Link to="/#" className={classes.a}>
+                        <Typography>Download</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Customer Stories
-                      </a>
+                      <Link to="/case-studies" className={classes.a}>
+                        <Typography>Customer Stories</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Features
-                      </a>
+                      <Link to="/feature-overviews" className={classes.a}>
+                        <Typography>Features</Typography>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -192,23 +198,23 @@ const Footer = () => {
                   <ul className={classes.ul}>
                     <li className={classes.li}>
                       <Link to="/about-us" className={classes.a}>
-                        About Us
+                        <Typography>About Us</Typography>
                       </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Blog
-                      </a>
+                      <Link to="/#" className={classes.a}>
+                        <Typography>Blog</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Press
-                      </a>
+                      <Link to="/#" className={classes.a}>
+                        <Typography>Press</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Careers
-                      </a>
+                      <Link to="/#" className={classes.a}>
+                        <Typography>Careers</Typography>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -220,28 +226,28 @@ const Footer = () => {
                   <ul className={classes.ul}>
                     <li className={classes.li}>
                       <Link to="/contact-us" className={classes.a}>
-                        Contact Us
+                        <Typography>Contact Us</Typography>
                       </Link>
                     </li>
                     <li className={classes.li}>
                       <Link to="/support-center" className={classes.a}>
-                        Support Center
+                        <Typography>Support Center</Typography>
                       </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Documentation
-                      </a>
+                      <Link to="/documentation" className={classes.a}>
+                        <Typography>Documentation</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Privacy Policy
-                      </a>
+                      <Link to="/#" className={classes.a}>
+                        <Typography>Privacy Policy</Typography>
+                      </Link>
                     </li>
                     <li className={classes.li}>
-                      <a className={classes.a} href="#">
-                        Sitemap
-                      </a>
+                      <Link to="/#" className={classes.a}>
+                        <Typography>Sitemap</Typography>
+                      </Link>
                     </li>
                   </ul>
                 </div>
