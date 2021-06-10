@@ -3,6 +3,7 @@ import { Container, Grid, Typography, Button } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
+import logo from "../assets/images/logo.png";
 
 import HiRobot from "../assets/images/HiRobot.png";
 import SearchingRobot from "../assets/images/SearchingRobot.png";
@@ -66,12 +67,14 @@ const useStyles = makeStyles((theme) => ({
       padding: "20px 0",
     },
   },
+  banner_content_left: {
+    flex: 1,
+  },
   banner_content: {
-    flex: 7,
-    padding: "30px 50px",
+    flex: 6,
+    padding: "30px",
   },
 
- 
   banner_image: {
     flex: 3,
     [theme.breakpoints.down("sm")]: {
@@ -93,7 +96,6 @@ const useStyles = makeStyles((theme) => ({
   },
   banner_content2: {
     flex: 7,
- 
   },
   text_start: {
     textAlign: "start",
@@ -109,7 +111,37 @@ const useStyles = makeStyles((theme) => ({
 
     marginTop: "60px",
     [theme.breakpoints.down("sm")]: {
-      marginTop: "10px",
+      marginTop: "32px",
+    },
+  },
+  flex_wrapper: {
+    padding: "15px 30px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
+  },
+  inner_wrapper: {
+
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
+  },
+  header_nav_item: {
+    fontSize: 20,
+    fontWeight: 600,
+    padding: "0px 15px 3px 15px",
+  },
+  banner_button2: {
+    padding: "13px 35px  !important",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px 30px  !important",
+      marginTop: 10,
     },
   },
 }));
@@ -118,6 +150,27 @@ const ContactUs = () => {
   const classes = useStyles();
   return (
     <>
+    <div className={classes.flex_wrapper}>
+          <div className={classes.inner_wrapper}>
+            <div>
+              <img src={logo} alt="" />
+            </div>
+            <div>
+              <Typography className={classes.header_nav_item}>
+                Support
+              </Typography>
+            </div>
+          </div>
+          <div>
+            <Button
+              variant="outlined"
+              color="secondary"
+              className={`${classes.banner_button2} button`}
+            >
+              Go to KinderCubby
+            </Button>
+          </div>
+        </div>
       <Container maxWidth="lg">
         <div className={classes.wrapper}>
           <div className={classes.banner_wrapper}>
@@ -226,6 +279,7 @@ const ContactUs = () => {
       <div className={classes.background_style}>
         <div className={classes.background_style2}>
           <div className={classes.banner}>
+            <div className={classes.banner_content_left}></div>
             <div className={classes.banner_content}>
               <Typography variant="h4">
                 Do you want to check our help centre?
