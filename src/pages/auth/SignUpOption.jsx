@@ -80,7 +80,7 @@ const SignUpOption = () => {
             </Button>
           </Link>
 
-          <Link to="/sign-up">
+          <Link to="/sign-up-parent">
             <Button
               fullWidth
               variant="outlined"

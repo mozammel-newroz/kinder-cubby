@@ -137,7 +137,6 @@ const SignUpParent = () => {
           </Grid>
         </Container>
       </div>
-      <Divider className={classes.divider} />
     </>
   );
 };
