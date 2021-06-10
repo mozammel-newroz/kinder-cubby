@@ -22,6 +22,13 @@ const useStyles = makeStyles((theme) => ({
   banner_button: {
     padding: "13px 35px  !important",
   },
+  banner_button3: {
+    padding: "13px 35px  !important",
+    [theme.breakpoints.down("sm")]: {
+      padding: "13px 50px  !important",
+
+    },
+  },
 
   background_style3: {
     background: "#E3EBFC",
@@ -69,11 +76,10 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 20,
     [theme.breakpoints.down("xs")]: {
       marginLeft: 3,
+      marginTop: 10,
     },
   },
 
-  
-  
   nav_div: {
     width: "80%",
     borderBottom: "2px solid #E5EBFD",
@@ -91,18 +97,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       alignItems: "flex-end",
     },
- 
   },
   nav_item: {
     padding: "14px 16px",
     margin: "0 10px",
-    textAlign:'center',
+    textAlign: "center",
     borderBottom: "2px solid rgba(0, 0, 0, 0)",
     "&:hover": {
       borderBottom: "2px solid #21409A",
       fontWeight: 600,
-      
-  
     },
   },
   active: {
@@ -201,24 +204,28 @@ const FindNearbyChildCares = () => {
             </div>
           </Grid>
           <div className={classes.width100}>
-            
-
             <div className={classes.nav}>
               <div>
-                <Link to="#">
-                  <Typography className={`${classes.nav_item} ${classes.active}`}>
+                <Link to="/find-nearby-child-care">
+                  <Typography
+                    className={`${classes.nav_item} ${classes.active}`}
+                  >
                     All
                   </Typography>
                 </Link>
               </div>
               <div>
-                <Link to="#" >
-                  <Typography className={classes.nav_item}>Search Result</Typography>
+                <Link to="/find-nearby-child-care-search-result">
+                  <Typography className={classes.nav_item}>
+                    Search Result
+                  </Typography>
                 </Link>
               </div>
               <div>
-                <Link to="#">
-                  <Typography className={classes.nav_item}>Invite Your School</Typography>
+                <Link to="/invite-your-friends">
+                  <Typography className={classes.nav_item}>
+                    Invite Your School
+                  </Typography>
                 </Link>
               </div>
             </div>
@@ -534,7 +541,7 @@ const FindNearbyChildCares = () => {
               <Button
                 variant="contained"
                 color="primary"
-                className={`${classes.banner_button} button`}
+                className={`${classes.banner_button3} button`}
               >
                 Try it Free
               </Button>
