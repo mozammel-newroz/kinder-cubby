@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import { Container, Grid, Typography, Button, Card } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
@@ -227,6 +229,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Parents = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container maxWidth="lg">
@@ -242,20 +249,24 @@ const Parents = () => {
                   sit amet
                 </Typography>
                 <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Contact Sales
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={`${classes.banner_button} ${classes.margin_left_20} button`}
-                  >
-                    Start free trial
-                  </Button>
+                  <Link to="/request-call">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Contact Sales
+                    </Button>
+                  </Link>
+                  <Link to="/try-it-free">
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                    >
+                      Start free trial
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className={classes.banner_image}>
@@ -286,12 +297,12 @@ const Parents = () => {
               </Button>
             </div>
           </Card>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4" className={classes.activity_headline}>
               Innovation for worried parents
             </Typography>
           </Grid>
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={RealTimeUpdates}
@@ -304,7 +315,7 @@ const Parents = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={MemoryArchive}
@@ -317,7 +328,7 @@ const Parents = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={InstantMessagingP5}
@@ -331,7 +342,7 @@ const Parents = () => {
             </div>
           </Grid>
           <Grid container className={classes.activity_second}>
-            <Grid item lg={6}  md={6} className={classes.activity_box}>
+            <Grid item lg={6} md={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
                 src={ImmunisationRecord}
@@ -344,7 +355,7 @@ const Parents = () => {
                 </Typography>
               </div>
             </Grid>
-            <Grid item lg={6}  md={6} className={classes.activity_box}>
+            <Grid item lg={6} md={6} className={classes.activity_box}>
               <img
                 className={classes.activity_image}
                 src={SharingWithFamily}
@@ -363,16 +374,16 @@ const Parents = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper2}`}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4" className={classes.title_bg}>
               Never miss you child’s
               <br /> Precious moments
             </Typography>
           </Grid>
-          <Grid item lg={6}  md={6} className={classes.parent_child}>
+          <Grid item lg={6} md={6} className={classes.parent_child}>
             <img src={ChildPreciousMoment} alt="" className={classes.image} />
           </Grid>
-          <Grid item lg={6}  md={6}>
+          <Grid item lg={6} md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Attendance update
             </Typography>
@@ -428,15 +439,15 @@ const Parents = () => {
           spacing={3}
           className={`${classes.activity_wrapper5}`}
         >
-          <Grid item lg={12}  md={12} >
+          <Grid item lg={12} md={12}>
             <Typography variant="h4" className={classes.title_bg2}>
               Going a little extra miles
             </Typography>
           </Grid>
-          <Grid item lg={6}  md={6} className={classes.parent_child}>
+          <Grid item lg={6} md={6} className={classes.parent_child}>
             <img src={Active} alt="" className={classes.image} />
           </Grid>
-          <Grid item lg={6}  md={6}>
+          <Grid item lg={6} md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Pickup authorisation
             </Typography>
@@ -448,7 +459,7 @@ const Parents = () => {
               Ut sit amet erat nec nibh
             </Typography>
           </Grid>
-          <Grid item lg={6}  md={6}>
+          <Grid item lg={6} md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Onboarding the whole crew
             </Typography>
@@ -460,7 +471,7 @@ const Parents = () => {
               Ut sit amet erat nec nibh
             </Typography>
           </Grid>
-          <Grid item lg={6}  md={6} className={classes.parent_child}>
+          <Grid item lg={6} md={6} className={classes.parent_child}>
             <img
               src={InviteFamilyAndFriends}
               alt=""
@@ -478,7 +489,7 @@ const Parents = () => {
           spacing={5}
           className={`${classes.activity_wrapper3}`}
         >
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4" className={classes.h4}>
               Impact of KinderCubby on parents
             </Typography>
@@ -486,7 +497,7 @@ const Parents = () => {
             <img src={owner_youtube} alt="" className={classes.image} />
           </Grid>
 
-          <Grid item lg={4}  md={4}>
+          <Grid item lg={4} md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">85%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -496,7 +507,7 @@ const Parents = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4}>
+          <Grid item lg={4} md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">100%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -505,7 +516,7 @@ const Parents = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}  md={4}>
+          <Grid item lg={4} md={4}>
             <div className={`${classes.tag} `}>
               <Typography variant="h3">10+</Typography>
               <Typography variant="h5">of users</Typography>
@@ -527,20 +538,24 @@ const Parents = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try it Free
+                </Button>
+              </Link>
+              <Link to="pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>

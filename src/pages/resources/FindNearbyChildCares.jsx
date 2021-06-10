@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -7,7 +8,6 @@ import Paper from "@material-ui/core/Paper";
 import SearchIcon from "../../assets/images/SearchIcon.png";
 import Phone from "../../assets/images/Phone.png";
 import map from "../../assets/images/map.png";
-import { Link } from "react-router-dom";
 
 import Pagination from "@material-ui/lab/Pagination";
 
@@ -171,6 +171,9 @@ const useStyles = makeStyles((theme) => ({
 
 const FindNearbyChildCares = () => {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Container maxWidth="lg">
@@ -538,6 +541,7 @@ const FindNearbyChildCares = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
+<<<<<<< HEAD
               <Button
                 variant="contained"
                 color="primary"
@@ -552,6 +556,26 @@ const FindNearbyChildCares = () => {
               >
                 Explore Pricing
               </Button>
+=======
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try it Free
+                </Button>
+              </Link>
+              <Link to="/pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>
+              </Link>
+>>>>>>> 5663c714de0ceafb0547641778d535b45a6637db
             </div>
           </Grid>
         </Grid>

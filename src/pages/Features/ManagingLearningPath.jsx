@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -179,7 +180,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper_banner: {},
   banner_inner: {
     margin: "0px 30px",
-    backgroundColor: "#ddd",
+    backgroundColor: "#E1EBFB",
     backgroundImage: `url(${ManagingLearning})`,
     backgroundSize: "100% 100%",
     backgroundRepeat: "no-repeat",
@@ -209,19 +210,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FF5F48",
   },
   time_line: {
-    fontSize: '1.4rem',
-    position: 'relative',
-    top: -10
+    fontSize: "1.4rem",
+    position: "relative",
+    top: -10,
   },
   right: {
-    display: 'flex', 
-    justifyContent: 'flex-end',
-    marginTop: 100
-  }
+    display: "flex",
+    justifyContent: "flex-end",
+    marginTop: 100,
+  },
 }));
 
 const ManagingLearningPath = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container maxWidth="lg">
@@ -240,13 +246,15 @@ const ManagingLearningPath = () => {
                   sit amet consectetur
                 </Typography>
                 <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Try it Free
-                  </Button>
+                  <Link to="/try-it-free">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Try it Free
+                    </Button>
+                  </Link>
                 </div>
               </div>
               {/* <div className={classes.banner_right}></div> */}
@@ -314,13 +322,15 @@ const ManagingLearningPath = () => {
               Plan your lesson In less time, go digital
             </Typography>
             <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Start Now
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Start Now
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
@@ -331,7 +341,7 @@ const ManagingLearningPath = () => {
           <Grid item md={12}>
             <Typography variant="h4">Easy to create assessments</Typography>
             <div className={classes.manage_center_text_div}>
-              <Typography variant="h6" className={classes.h6} >
+              <Typography variant="h6" className={classes.h6}>
                 Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
                 congue consequat. In posuere, nunc sit amet laoreet blandit,
                 urna sapien imperdiet lectus, et molestie
@@ -368,14 +378,13 @@ const ManagingLearningPath = () => {
                 </TimelineSeparator>
                 <TimelineContent>
                   <Typography className={classes.time_line}>
-                  Generate assessment automatically
-                    
+                    Generate assessment automatically
                   </Typography>
                 </TimelineContent>
               </TimelineItem>
             </Timeline>
           </Grid>
-          <Grid item md={2} className={classes.right} >
+          <Grid item md={2} className={classes.right}>
             <img src={CreateAssessmentRight} alt="" />
           </Grid>
         </Grid>
@@ -497,13 +506,15 @@ const ManagingLearningPath = () => {
               />
             </div>
             <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Start Now
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Start Now
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   Grid,
@@ -8,6 +8,7 @@ import {
   CardContent,
   CardMedia,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
@@ -183,6 +184,11 @@ const useStyles = makeStyles((theme) => ({
 
 const OwnersAndDirectors = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container maxWidth="lg">
@@ -198,20 +204,24 @@ const OwnersAndDirectors = () => {
                   sit amet consectetur
                 </Typography>
                 <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Contact Sales
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={`${classes.banner_button} ${classes.margin_left_20} button`}
-                  >
-                    Start free trial
-                  </Button>
+                  <Link to="/request-call">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Contact Sales
+                    </Button>
+                  </Link>
+                  <Link to="/pricing">
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                    >
+                      Start free trial
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className={classes.banner_image}>
@@ -437,20 +447,24 @@ const OwnersAndDirectors = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try it Free
+                </Button>
+              </Link>
+              <Link to="/pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>

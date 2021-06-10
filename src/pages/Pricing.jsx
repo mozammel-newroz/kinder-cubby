@@ -1,6 +1,6 @@
-import React from "react";
-import { Container, Grid, Typography, Button } from "@material-ui/core";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -139,6 +139,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container maxWidth="lg">
@@ -439,14 +444,14 @@ const Home = () => {
                       colSpan="5"
                       className={classes.table_head2}
                     >
-         Activity tracking
+                      Activity tracking
                     </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Activity feed
+                      Activity feed
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       <img src={SuccessfulGreenIcon} alt="" />
@@ -462,8 +467,38 @@ const Home = () => {
                     </TableCell>
                   </TableRow>
                   <TableRow>
+                    <TableCell className={classes.table_cell}>Photos</TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className={classes.table_cell}>Videos</TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      -
+                    </TableCell>
+                    <TableCell
+                      align="center"
+                      className={classes.table_cell_big}
+                    >
+                      -
+                    </TableCell>
+                    <TableCell align="center" className={classes.table_cell}>
+                      <img src={SuccessfulGreenIcon} alt="" />
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Photos
+                      Incident report
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       -
@@ -472,7 +507,7 @@ const Home = () => {
                       align="center"
                       className={classes.table_cell_big}
                     >
-                <img src={SuccessfulGreenIcon} alt="" />
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       <img src={SuccessfulGreenIcon} alt="" />
@@ -480,41 +515,7 @@ const Home = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Videos
-                    </TableCell>
-                    <TableCell align="center" className={classes.table_cell}>
-                      -
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className={classes.table_cell_big}
-                    >
-                   -
-                    </TableCell>
-                    <TableCell align="center" className={classes.table_cell}>
-                      <img src={SuccessfulGreenIcon} alt="" />
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className={classes.table_cell}>
-                    Incident report
-                    </TableCell>
-                    <TableCell align="center" className={classes.table_cell}>
-                      -
-                    </TableCell>
-                    <TableCell
-                      align="center"
-                      className={classes.table_cell_big}
-                    >
-                       <img src={SuccessfulGreenIcon} alt="" />
-                    </TableCell>
-                    <TableCell align="center" className={classes.table_cell}>
-                      <img src={SuccessfulGreenIcon} alt="" />
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className={classes.table_cell}>
-                    Activity report
+                      Activity report
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       -
@@ -537,14 +538,14 @@ const Home = () => {
                       colSpan="5"
                       className={classes.table_head2}
                     >
-                   Center Management
+                      Center Management
                     </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    System access control
+                      System access control
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       <img src={SuccessfulGreenIcon} alt="" />
@@ -561,7 +562,7 @@ const Home = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Contact less staff check-in
+                      Contact less staff check-in
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       <img src={SuccessfulGreenIcon} alt="" />
@@ -578,7 +579,7 @@ const Home = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Staff management
+                      Staff management
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       -
@@ -595,7 +596,7 @@ const Home = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Scheduling
+                      Scheduling
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       -
@@ -612,7 +613,7 @@ const Home = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Health checks
+                      Health checks
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       -
@@ -629,10 +630,10 @@ const Home = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Enrollment management
+                      Enrollment management
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
-                    <img src={SuccessfulGreenIcon} alt="" />
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                     <TableCell
                       align="center"
@@ -646,10 +647,10 @@ const Home = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Daily reports
+                      Daily reports
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
-                    <img src={SuccessfulGreenIcon} alt="" />
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                     <TableCell
                       align="center"
@@ -663,10 +664,10 @@ const Home = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell className={classes.table_cell}>
-                    Performance assessment
+                      Performance assessment
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
-                    <img src={SuccessfulGreenIcon} alt="" />
+                      <img src={SuccessfulGreenIcon} alt="" />
                     </TableCell>
                     <TableCell
                       align="center"
@@ -691,9 +692,11 @@ const Home = () => {
           style={{ justifyContent: "center" }}
         >
           <Grid item lg={12} className={classes.center}>
-            <Button variant="outlined" color="primary" className="button">
-              Learn More About Features
-            </Button>
+            <Link to="/feature-overviews">
+              <Button variant="outlined" color="primary" className="button">
+                Learn More About Features
+              </Button>
+            </Link>
           </Grid>
         </Grid>
       </Container>
@@ -706,79 +709,84 @@ const Home = () => {
             <Accordion className={classes.accordion}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={classes.question}>
-                Will I be charged after the trial ends?
+                  Will I be charged after the trial ends?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
-                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
-                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
-                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
+                  Praesent eu dolor eu orci vehicula euismod. Vivamus sed
+                  sollicitudin libero, vel malesuada velit. Nullam et maximus
+                  lorem. Suspendisse maximus dolor quis consequat volutpat.
+                  Donec vehicula elit eu erat pulvinar, vel congue ex egestas .
+                  Praesent egestas purus dolor, a porta arcu pharetra quis.
                 </Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion className={classes.accordion}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={classes.question}>
-                Why should I choose KinderCubby over others?
+                  Why should I choose KinderCubby over others?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
-                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
-                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
-                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
+                  Praesent eu dolor eu orci vehicula euismod. Vivamus sed
+                  sollicitudin libero, vel malesuada velit. Nullam et maximus
+                  lorem. Suspendisse maximus dolor quis consequat volutpat.
+                  Donec vehicula elit eu erat pulvinar, vel congue ex egestas .
+                  Praesent egestas purus dolor, a porta arcu pharetra quis.
                 </Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion className={classes.accordion}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={classes.question}>
-                Will I be charged after the trial ends?
+                  Will I be charged after the trial ends?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
-                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
-                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
-                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
+                  Praesent eu dolor eu orci vehicula euismod. Vivamus sed
+                  sollicitudin libero, vel malesuada velit. Nullam et maximus
+                  lorem. Suspendisse maximus dolor quis consequat volutpat.
+                  Donec vehicula elit eu erat pulvinar, vel congue ex egestas .
+                  Praesent egestas purus dolor, a porta arcu pharetra quis.
                 </Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion className={classes.accordion}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={classes.question}>
-                Will I be charged after the trial ends?
+                  Will I be charged after the trial ends?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
-                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
-                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
-                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
+                  Praesent eu dolor eu orci vehicula euismod. Vivamus sed
+                  sollicitudin libero, vel malesuada velit. Nullam et maximus
+                  lorem. Suspendisse maximus dolor quis consequat volutpat.
+                  Donec vehicula elit eu erat pulvinar, vel congue ex egestas .
+                  Praesent egestas purus dolor, a porta arcu pharetra quis.
                 </Typography>
               </AccordionDetails>
             </Accordion>
             <Accordion className={classes.accordion}>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography className={classes.question}>
-                Will I be charged after the trial ends?
+                  Will I be charged after the trial ends?
                 </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero,
-                 vel malesuada velit. Nullam et maximus lorem. Suspendisse maximus dolor quis
-                  consequat volutpat. Donec vehicula elit eu erat pulvinar, vel congue ex egestas
-                  . Praesent egestas purus dolor, a porta arcu pharetra quis.
+                  Praesent eu dolor eu orci vehicula euismod. Vivamus sed
+                  sollicitudin libero, vel malesuada velit. Nullam et maximus
+                  lorem. Suspendisse maximus dolor quis consequat volutpat.
+                  Donec vehicula elit eu erat pulvinar, vel congue ex egestas .
+                  Praesent egestas purus dolor, a porta arcu pharetra quis.
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            
+
             <Typography className={classes.question_title_bottom}>
               Still have more questions?
             </Typography>
@@ -796,14 +804,16 @@ const Home = () => {
           <Grid item lg={12}>
             <Typography variant="h4">Ready to take the next step</Typography>
             <Typography variant="h6" className={classes.h6}>
-            Duis rhoncus dui venenatis consequat porttitor. 
-            Etiam aliquet congue consequat. In posuere, nunc sit amet laoreet blandit, 
-            urna sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
+              Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+              congue consequat. In posuere, nunc sit amet laoreet blandit, urna
+              sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.bottom_button}>
-              <Button variant="contained" color="primary" className="button">
-                Try It Free
-              </Button>
+              <Link to="/try-it-free">
+                <Button variant="contained" color="primary" className="button">
+                  Try It Free
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>

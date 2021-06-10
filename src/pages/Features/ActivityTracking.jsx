@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
@@ -113,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
     [theme.breakpoints.down("md")]: {
-      padding: 30
+      padding: 30,
     },
   },
   demo: {
@@ -165,12 +166,17 @@ const useStyles = makeStyles((theme) => ({
 
 const ActivityTracking = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       {/* <CssBaseline /> */}
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12} md={12} >
+          <Grid item lg={12} md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_image}>
                 <img src={automated} alt="" />
@@ -184,13 +190,15 @@ const ActivityTracking = () => {
                   sit amet consectetur
                 </Typography>
                 <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Try it Free
-                  </Button>
+                  <Link to="/try-it-free">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Try it Free
+                    </Button>
+                  </Link>
                   <Button
                     // variant="contained"
                     color="secondary"
@@ -207,14 +215,14 @@ const ActivityTracking = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={classes.activity_wrapper}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               No more chasing after kids to <br />
               record their activity
             </Typography>
           </Grid>
 
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage1}
@@ -230,7 +238,7 @@ const ActivityTracking = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage2}
@@ -246,7 +254,7 @@ const ActivityTracking = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={ChasingActivityImage3}
@@ -266,16 +274,16 @@ const ActivityTracking = () => {
       <Container maxWidth="lg">
         <div className={classes.wrapper2}>
           <Grid container spacing={3} className={classes.activity_wrapper2}>
-            <Grid item lg={12}  md={12}>
+            <Grid item lg={12} md={12}>
               <Typography variant="h4">
                 Activities that we are keeping track of
               </Typography>
             </Grid>
             <div className={classes.activity2}>
-              <Grid item lg={6}  md={6}>
+              <Grid item lg={6} md={6}>
                 <img className={classes.image} src={activity_image} alt="" />
               </Grid>
-              <Grid item lg={6}  md={6}>
+              <Grid item lg={6} md={6}>
                 <Typography variant="subtitle1" className={classes.margin10}>
                   <strong>Food: </strong>
                   semper, porta purus eu, ullamcorper ligula. Nam sit amet
@@ -314,7 +322,7 @@ const ActivityTracking = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               Improve the quality of your program & <br /> give parents the
               information they need
@@ -332,13 +340,15 @@ const ActivityTracking = () => {
               />
             </div>
             <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Start Now
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Start Now
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
@@ -346,7 +356,7 @@ const ActivityTracking = () => {
 
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <div className={classes.demo}>
               <Typography variant="h4" className={classes.demo_headline}>
                 KinderCubby activity tracking demo
@@ -368,19 +378,21 @@ const ActivityTracking = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               Get better insight & actionable information <br /> with
               KinderCubby
             </Typography>
             <div className={classes.center_button}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Yes! Let’s try it.
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Yes! Let’s try it.
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>

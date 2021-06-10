@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {
   Container,
   Grid,
@@ -8,6 +8,7 @@ import {
   CardContent,
   CardMedia,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
@@ -156,7 +157,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "40px",
   },
   h6: {
-    marginTop:0
+    marginTop: 0,
   },
   align_left: {
     textAlign: "left",
@@ -197,11 +198,16 @@ const useStyles = makeStyles((theme) => ({
 
 const Teachers = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <>
       <Container maxWidth="lg">
         <Grid container className={classes.wrapper}>
-          <Grid item lg={12} md={12} >
+          <Grid item lg={12} md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_content}>
                 <Typography variant="h3" className={classes.banner_headline}>
@@ -212,20 +218,24 @@ const Teachers = () => {
                   sit amet
                 </Typography>
                 <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Contact Sales
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    color="primary"
-                    className={`${classes.banner_button} ${classes.margin_left_20} button`}
-                  >
-                    Start free trial
-                  </Button>
+                  <Link to="/request-call">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Contact Sales
+                    </Button>
+                  </Link>
+                  <Link to="/try-it-free">
+                    <Button
+                      variant="outlined"
+                      color="primary"
+                      className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                    >
+                      Start free trial
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className={classes.banner_image}>
@@ -256,12 +266,12 @@ const Teachers = () => {
               </Button>
             </div>
           </Card>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4" className={classes.activity_headline}>
               Managing data made easy
             </Typography>
           </Grid>
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={RealTimeUpdates}
@@ -274,7 +284,7 @@ const Teachers = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img
               className={classes.activity_image}
               src={NoMoreChasingKids}
@@ -287,7 +297,7 @@ const Teachers = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}  md={4} className={classes.activity_box}>
+          <Grid item lg={4} md={4} className={classes.activity_box}>
             <img className={classes.activity_image} src={Messaging} alt="" />
             <div>
               <Typography variant="h5">Messaging</Typography>
@@ -301,12 +311,12 @@ const Teachers = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={3} className={`${classes.activity_wrapper}`}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">
               Automate more, less paperwork <br /> more focus on children
             </Typography>
           </Grid>
-          <Grid item lg={6}  md={6} className={classes.parent_child}>
+          <Grid item lg={6} md={6} className={classes.parent_child}>
             <div className={classes.manage_center_image_div}>
               <img
                 src={LessPaperWorkFocusOnKids}
@@ -315,7 +325,7 @@ const Teachers = () => {
               />
             </div>
           </Grid>
-          <Grid item lg={6}  md={6}>
+          <Grid item lg={6} md={6}>
             <Typography variant="h5" className={classes.align_left}>
               Automate attendance sheet
             </Typography>
@@ -371,14 +381,14 @@ const Teachers = () => {
           spacing={5}
           className={`${classes.activity_wrapper2}`}
         >
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4" className={classes.h4}>
               Impact of KinderCubby on teachers
             </Typography>
             <img src={owner_youtube} alt="" className={classes.image} />
           </Grid>
 
-          <Grid item lg={4}  md={4}>
+          <Grid item lg={4} md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">85%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -388,7 +398,7 @@ const Teachers = () => {
             </div>
           </Grid>
 
-          <Grid item lg={4}  md={4}>
+          <Grid item lg={4} md={4}>
             <div className={classes.tag}>
               <Typography variant="h3">100%</Typography>
               <Typography variant="h5">of users</Typography>
@@ -397,7 +407,7 @@ const Teachers = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item lg={4}  md={4}>
+          <Grid item lg={4} md={4}>
             <div className={`${classes.tag} `}>
               <Typography variant="h3">10+</Typography>
               <Typography variant="h5">of users</Typography>
@@ -411,7 +421,7 @@ const Teachers = () => {
 
       <Container maxWidth="lg">
         <Grid container className={`${classes.activity_wrapper3}`}>
-          <Grid item lg={12}  md={12}>
+          <Grid item lg={12} md={12}>
             <Typography variant="h4">Invite your school</Typography>
             <Typography variant="h6" className={classes.h6}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
@@ -419,20 +429,24 @@ const Teachers = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try it Free
+                </Button>
+              </Link>
+              <Link to="pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
