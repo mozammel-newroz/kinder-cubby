@@ -19,6 +19,8 @@ import owner_youtube from "../../assets/images/owner_youtube.png";
 import Active from "../../assets/images/Active.png";
 import InviteFamilyAndFriends from "../../assets/images/InviteFamilyAndFriends.png";
 import DoubleBlueColorCircle from "../../assets/images/DoubleBlueColorCircle.png";
+import PlayIcon from "../../assets/images/PlayIcon.png";
+
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -99,6 +101,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
+  },
+  left: {
+    backgroundImage: `url(${ParentsVideo})`,
+    backgroundSize: "cover",
+    width: 300,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   right: {
     padding: "20px 25px",
@@ -281,7 +291,7 @@ const Parents = () => {
         <Grid container className={classes.wrapper2}>
           <Card className={classes.card}>
             <div className={classes.left}>
-              <img src={ParentsVideo} alt="" />
+              <img src={PlayIcon} alt="" />
             </div>
             <div className={classes.right}>
               <Typography className={classes.right_text}>
