@@ -72,37 +72,42 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  mynab: {
+  
+  
+  nav_div: {
+    width: "80%",
+    borderBottom: "2px solid #E5EBFD",
+    margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+  nav: {
     display: "flex",
     justifyContent: "center",
-
-    listStyleType: "none",
-    margin: 0,
-    padding: 0,
-    overflow: "hidden",
+    alignItems: "center",
     backgroundColor: "#F7F9FE",
     borderRadius: "0 0 10px 10px",
-    "& li": {
-      float: "left",
-      margin: "5px",
-      "& a": {
-        display: "block",
-        color: "#707070",
-        textAlign: "center",
-        padding: "14px 16px",
-        textDecoration: "none",
-      },
-
-      "& a:hover": {
-        color: "#21409A",
-        // padding: "13px 16px",
-        borderBottom: "2px solid #21409A",
-      },
+    [theme.breakpoints.down("sm")]: {
+      alignItems: "flex-end",
+    },
+ 
+  },
+  nav_item: {
+    padding: "14px 16px",
+    margin: "0 10px",
+    textAlign:'center',
+    borderBottom: "2px solid rgba(0, 0, 0, 0)",
+    "&:hover": {
+      borderBottom: "2px solid #21409A",
+      fontWeight: 600,
+      
+  
     },
   },
   active: {
-    color: "#21409A !important ",
     borderBottom: "2px solid #21409A",
+    fontWeight: 600,
   },
 
   card_image: {
@@ -194,25 +199,29 @@ const FindNearbyChildCares = () => {
                 variant="outlined"
               />
             </div>
-            {/* </div> */}
           </Grid>
           <div className={classes.width100}>
-            <ul className={classes.mynab}>
-              <li>
-                <Link to="#" className={classes.active}>
-                <Typography>
-                All
-                </Typography>
-           
+            
+
+            <div className={classes.nav}>
+              <div>
+                <Link to="#">
+                  <Typography className={`${classes.nav_item} ${classes.active}`}>
+                    All
+                  </Typography>
                 </Link>
-              </li>
-              <li>
-                <Link to="#">   <Typography>Search Result</Typography></Link>
-              </li>
-              <li>
-                <Link to="#"><Typography>Invite Your School</Typography></Link>
-              </li>
-            </ul>
+              </div>
+              <div>
+                <Link to="#" >
+                  <Typography className={classes.nav_item}>Search Result</Typography>
+                </Link>
+              </div>
+              <div>
+                <Link to="#">
+                  <Typography className={classes.nav_item}>Invite Your School</Typography>
+                </Link>
+              </div>
+            </div>
           </div>
         </Grid>
       </Container>
@@ -226,7 +235,7 @@ const FindNearbyChildCares = () => {
             className={classes.background_style2}
             spacing={2}
           >
-            <Grid item lg={4}  sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -256,7 +265,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4} sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -286,7 +295,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4} sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -316,7 +325,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4} sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -346,7 +355,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4} sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -376,7 +385,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4} sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -406,7 +415,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4} sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -436,7 +445,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4} sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -466,7 +475,7 @@ const FindNearbyChildCares = () => {
                 </div>
               </Paper>
             </Grid>
-            <Grid item lg={4} sm={4} >
+            <Grid item lg={4} sm={4}>
               <Paper className={classes.paper}>
                 <Typography
                   variant="h5"
@@ -497,7 +506,7 @@ const FindNearbyChildCares = () => {
               </Paper>
             </Grid>
 
-            <Grid item lg={12} sm={12}  className={classes.flex_style}>
+            <Grid item lg={12} sm={12} className={classes.flex_style}>
               <div>
                 <Pagination count={10} shape="rounded" />
               </div>
@@ -512,7 +521,7 @@ const FindNearbyChildCares = () => {
       </Container>
       <Container maxWidth="lg" className={classes.margin_top}>
         <Grid container className={`${classes.wrapper}`}>
-          <Grid item lg={12} sm={12}  className={`${classes.background_style}`}>
+          <Grid item lg={12} sm={12} className={`${classes.background_style}`}>
             <Typography variant="h4">
               KinderCubby for easy childcare management
             </Typography>

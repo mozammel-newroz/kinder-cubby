@@ -139,12 +139,14 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "0px",
     },
   },
+  
 }));
 
 const AboutUs = () => {
   const classes = useStyles();
   return (
     <>
+    
       <Container maxWidth="lg">
         <div className={`${classes.wrapper}`}>
           <div className={classes.background_style}>
