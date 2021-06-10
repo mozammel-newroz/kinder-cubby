@@ -28,6 +28,13 @@ import CaseStudiesDetails from "../pages/resources/CaseStudiesDetails";
 import Documentation from "../pages/resources/Documentation";
 import Ebooks from "../pages/resources/Ebooks";
 import FindNearbyChildCares from "../pages/resources/FindNearbyChildCares";
+import FindNearbyChildCaresSearchResult from "../pages/resources/FindNearbyChildCaresSearchResult";
+import InviteYourFriends from "../pages/resources/InviteYourFriends";
+import Leadership from "../pages/Leadership";
+import SignUpParent from "../pages/auth/SignUpParent";
+import GettingStarted from "../pages/resources/GettingStarted";
+import GettingStartedDetails from "../pages/resources/GettingStartedDetails";
+import NotFound from "../pages/NotFound";
 
 const AppRouter = () => {
   return (
@@ -52,12 +59,20 @@ const AppRouter = () => {
         <SupportCenter />
       </Route>
 
+      {/* others  */}
+      <Route path="/leadership">
+        <Leadership />
+      </Route>
+
       {/* auth  */}
       <Route path="/login">
         <Login />
       </Route>
       <Route path="/sign-up">
         <SignUp />
+      </Route>
+      <Route path="/sign-up-parent">
+        <SignUpParent />
       </Route>
       <Route path="/sign-up-option">
         <SignUpOption />
@@ -138,8 +153,25 @@ const AppRouter = () => {
         <Documentation />
       </Route>
 
+      <Route path="/getting-started">
+        <GettingStarted />
+      </Route>
+
+      <Route path="/getting-started-details">
+        <GettingStartedDetails />
+      </Route>
+
       <Route path="/find-nearby-child-care">
         <FindNearbyChildCares />
+      </Route>
+      <Route path="/find-nearby-child-care-search-result">
+        <FindNearbyChildCaresSearchResult />
+      </Route>
+      <Route path="/invite-your-friends">
+        <InviteYourFriends />
+      </Route>
+      <Route path="*">
+        <NotFound />
       </Route>
     </Switch>
   );

@@ -25,3 +25,6 @@ a {
 img {
   max-width: 100%;
 }
+.MuiTimelineItem-missingOppositeContent:before {
+  flex: 0 !important;
+}

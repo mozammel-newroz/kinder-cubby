@@ -1,16 +1,25 @@
 import React from "react";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
-import Simplify from "../../assets/images/Simplify.png";
+
+import Timeline from "@material-ui/lab/Timeline";
+import TimelineItem from "@material-ui/lab/TimelineItem";
+import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
+import TimelineConnector from "@material-ui/lab/TimelineConnector";
+import TimelineContent from "@material-ui/lab/TimelineContent";
+import TimelineDot from "@material-ui/lab/TimelineDot";
+import RadioButtonCheckedIcon from "@material-ui/icons/RadioButtonChecked";
+
 import DistanceLeaning from "../../assets/images/DistanceLeaning.png";
-import ManagingLearningImage from "../../assets/images/ManagingLearning.png";
+import ManagingLearning from "../../assets/images/ManagingLearning.png";
 import ChooseLession from "../../assets/images/ChooseLession.png";
 import ImproveQuality from "../../assets/images/ImproveQuality.png";
 import DataAndMediaRichReport from "../../assets/images/DataAndMediaRichReport.png";
 import PrintableReport from "../../assets/images/PrintableReport.png";
 import Divider from "@material-ui/core/Divider";
 import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
+import CreateAssessmentLeft from "../../assets/images/CreateAssessmentLeft.png";
+import CreateAssessmentRight from "../../assets/images/CreateAssessmentRight.png";
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     padding: "0px 30px",
@@ -167,6 +176,48 @@ const useStyles = makeStyles((theme) => ({
   h6: {
     margin: 0,
   },
+  wrapper_banner: {},
+  banner_inner: {
+    margin: "0px 30px",
+    backgroundColor: "#ddd",
+    backgroundImage: `url(${ManagingLearning})`,
+    backgroundSize: "100% 100%",
+    backgroundRepeat: "no-repeat",
+    padding: 70,
+    borderRadius: 15,
+    [theme.breakpoints.down("xs")]: {
+      backgroundImage: "none",
+      margin: "0px 0px",
+      padding: 20,
+    },
+    [theme.breakpoints.down("sm")]: {
+      backgroundImage: "none",
+    },
+  },
+  banner_left: {
+    width: "50%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+  big_title: {
+    fontSize: "2.5rem",
+    fontWeight: 700,
+    textAlign: "left",
+  },
+  primary: {
+    backgroundColor: "#FF5F48",
+  },
+  time_line: {
+    fontSize: '1.4rem',
+    position: 'relative',
+    top: -10
+  },
+  right: {
+    display: 'flex', 
+    justifyContent: 'flex-end',
+    marginTop: 100
+  }
 }));
 
 const ManagingLearningPath = () => {
@@ -174,11 +225,14 @@ const ManagingLearningPath = () => {
   return (
     <>
       <Container maxWidth="lg">
-        <Grid container className={classes.wrapper}>
+        <Grid container className={classes.wrapper_banner}>
           <Grid item lg={12}>
-            <div className={classes.banner}>
-              <div className={classes.banner_content}>
-                <Typography variant="h3" className={classes.banner_headline}>
+            <div className={classes.banner_inner}>
+              <div className={classes.banner_left}>
+                <Typography
+                  variant="h3"
+                  className={`${classes.banner_headline} ${classes.big_title}`}
+                >
                   Managing learning
                 </Typography>
                 <Typography className={classes.banner_content_text}>
@@ -195,9 +249,7 @@ const ManagingLearningPath = () => {
                   </Button>
                 </div>
               </div>
-              <div className={classes.banner_image}>
-                <img src={Simplify} alt="" />
-              </div>
+              {/* <div className={classes.banner_right}></div> */}
             </div>
           </Grid>
         </Grid>
@@ -276,15 +328,55 @@ const ManagingLearningPath = () => {
       <Divider className={classes.divider} />
       <Container maxWidth="lg">
         <Grid container spacing={5} className={`${classes.activity_wrapper}`}>
-          <Grid item xs={12}>
+          <Grid item md={12}>
             <Typography variant="h4">Easy to create assessments</Typography>
             <div className={classes.manage_center_text_div}>
-              <Typography variant="h6">
+              <Typography variant="h6" className={classes.h6} >
                 Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
                 congue consequat. In posuere, nunc sit amet laoreet blandit,
                 urna sapien imperdiet lectus, et molestie
               </Typography>
             </div>
+          </Grid>
+          <Grid item lg={2}>
+            <img src={CreateAssessmentLeft} alt="" />
+          </Grid>
+          <Grid item lg={8}>
+            <Timeline style={{ textAlign: "left", flex: "none" }}>
+              <TimelineItem>
+                <TimelineSeparator>
+                  <RadioButtonCheckedIcon
+                    color="primary"
+                    className={classes.primary_icon}
+                  />
+                  <TimelineConnector className={classes.primary} />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Typography className={classes.time_line}>
+                    Records daily activities
+                  </Typography>
+                </TimelineContent>
+              </TimelineItem>
+              <TimelineItem>
+                <TimelineSeparator>
+                  <RadioButtonCheckedIcon
+                    color="primary"
+                    className={classes.primary_icon}
+                  />
+
+                  <TimelineConnector className={classes.primary} />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Typography className={classes.time_line}>
+                  Generate assessment automatically
+                    
+                  </Typography>
+                </TimelineContent>
+              </TimelineItem>
+            </Timeline>
+          </Grid>
+          <Grid item md={2} className={classes.right} >
+            <img src={CreateAssessmentRight} alt="" />
           </Grid>
         </Grid>
       </Container>

@@ -186,6 +186,7 @@ const useStyles = makeStyles((theme) => ({
   padding_margin0: {
     paddingTop: "0px",
     paddingLeft: "0",
+    overflow:" hidden"
   },
   h4_mobile_style: {
     [theme.breakpoints.down("xs")]: {
@@ -311,8 +312,13 @@ const AttendanceAndCheckins = () => {
             </Grid>
             <Grid item xs={12} lg={6} md={6}>
               <Grid container spacing={2} className={classes.card}>
-                <Grid item xs={5} className={classes.padding_margin0}>
-                  <img src={OwnerAndDirectors} alt="" width="100%" />
+                <Grid item xs={5} className={classes.padding_margin0} >
+                  <img
+                    src={OwnerAndDirectors}
+                    alt=""
+                    width="100%"
+                    style={{ position: "relative", left: -50, top: -20 }}
+                  />
                 </Grid>
                 <Grid item xs={7} className={classes.card_padding}>
                   <Typography variant="h5" style={{ textAlign: "start" }}>
@@ -377,7 +383,7 @@ const AttendanceAndCheckins = () => {
               <br />
               <Grid container spacing={2} className={classes.card}>
                 <Grid item xs={5} className={classes.padding_margin0}>
-                  <img src={OwnerAndDirectors} alt="" width="100%" />
+                  <img src={OwnerAndDirectors} alt="" width="100%" style={{ position: "relative", left: -50, top: -20 }} />
                 </Grid>
                 <Grid item xs={7} className={classes.card_padding}>
                   <Typography variant="h5" style={{ textAlign: "start" }}>
@@ -476,7 +482,7 @@ const AttendanceAndCheckins = () => {
                   </div>
                 </Grid>
                 <Grid item xs={5} className={classes.padding_margin0}>
-                  <img src={Parents} alt="" width="100%" />
+                  <img src={Parents} alt="" width="100%" style={{ position: "relative", right: -50, top: -20 }} />
                 </Grid>
                 <Grid item xs={12} className={classes.card_padding}>
                   <Typography variant="body2">
