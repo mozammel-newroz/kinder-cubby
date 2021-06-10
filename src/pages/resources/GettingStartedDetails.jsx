@@ -184,6 +184,7 @@ const useStyle = makeStyles((theme) => ({
   margin_tom40: {
     marginTop: 40,
   },
+  
 }));
 
 const GettingStartedDetails = () => {

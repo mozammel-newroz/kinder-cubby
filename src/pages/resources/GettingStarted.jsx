@@ -431,7 +431,7 @@ const GettingStarted = () => {
           </Grid>
         </Grid>
       </div>
-      <Footer2/>
+      <Footer2 />
     </>
   );
 };

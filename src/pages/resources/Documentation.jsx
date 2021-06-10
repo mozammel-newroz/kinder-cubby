@@ -19,6 +19,7 @@ import Model2 from "../../assets/images/Model2.png";
 import LikeIcon from "../../assets/images/LikeIcon.png";
 import DislikeIcon from "../../assets/images/DislikeIcon.png";
 import logo_small from "../../assets/images/logo.png";
+import Footer2 from "../../components/Footer2";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -174,7 +175,7 @@ const Documentation = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Container maxWidth="lg" className={classes.root}>
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12}>
@@ -402,45 +403,8 @@ const Documentation = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container maxWidth="lg">
-        <Grid container className={`${classes.wrapper_footer}`}>
-          <Grid item lg={12}>
-            <div className={classes.footer}>
-              <div className={classes.footer_item}>
-                <Link to="/">
-                  <img src={logo_small} width="140px" alt="" />
-                </Link>
-              </div>
-              <div className={classes.footer_item}>
-                <Typography variant="body2">©2021 KinderCubby</Typography>
-              </div>
-              <div className={classes.footer_item}>
-                <Button color="primary">
-                  <Link to="#" className={classes.link}>
-                    Contact Sale
-                  </Link>
-                </Button>
-                <Button color="primary">
-                  <Link to="#" className={classes.link}>
-                    Contact Sale
-                  </Link>
-                </Button>
-                <Button color="primary">
-                  <Link to="#" className={classes.link}>
-                    Contact Sale
-                  </Link>
-                </Button>
-                <Button color="primary">
-                  <Link to="#" className={classes.link}>
-                    Contact Sale
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </Grid>
-        </Grid>
-      </Container>
-    </div>
+      <Footer2/>
+    </>
   );
 };
 
