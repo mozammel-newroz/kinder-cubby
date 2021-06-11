@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -195,6 +195,9 @@ const useStyles = makeStyles((theme) => ({
 
 const SupportCenter = () => {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className={classes.background_style}>
@@ -468,13 +471,14 @@ const SupportCenter = () => {
                 Do you want to check our help centre?
               </Typography>
               <div className={classes.center_maging}>
+              <Link to="/contact-us">
                 <Button
                   variant="contained"
                   color="primary"
                   className={`${classes.banner_button} button`}
                 >
                   Contact us
-                </Button>
+                </Button></Link>
               </div>
             </div>
             <div className={classes.banner_image}>

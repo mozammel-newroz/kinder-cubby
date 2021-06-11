@@ -9,9 +9,9 @@ import SearchIcon from "../../assets/images/SearchIcon.png";
 import { Link } from "react-router-dom";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -28,14 +28,12 @@ const useStyles = makeStyles((theme) => ({
     padding: "13px 35px  !important",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-
     },
   },
   banner_button3: {
     padding: "13px 35px  !important",
     [theme.breakpoints.down("sm")]: {
       padding: "13px 50px  !important",
-
     },
   },
 
@@ -123,11 +121,13 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       borderBottom: "2px solid #21409A",
       fontWeight: 600,
+      color: "#21409A",
     },
   },
   active: {
     borderBottom: "2px solid #21409A",
     fontWeight: 600,
+    color: "#21409A",
   },
 
   card_image: {
@@ -183,6 +183,12 @@ const useStyles = makeStyles((theme) => ({
   },
   width100: {
     width: "100%",
+  },
+  input_font_color: {
+    color: "#707070",
+  },
+  input_font_color2: {
+    "& .MuiFormLabel-root": { color: "#707070 !important" },
   },
 }));
 
@@ -267,12 +273,13 @@ const InviteYourFriends = () => {
                   variant="outlined"
                   fullWidth
                   size="small"
+                  className={classes.input_font_color2}
                 />
               </Grid>
               <Grid item xs={12} lg={6}>
                 <TextField
                   id="directorName"
-                  label="Centre director’s name"
+                  label="Center director’s name"
                   variant="outlined"
                   fullWidth
                   size="small"
@@ -285,6 +292,7 @@ const InviteYourFriends = () => {
                   variant="outlined"
                   fullWidth
                   size="small"
+                  className={classes.input_font_color2}
                 />
               </Grid>
               <Grid item xs={12} lg={6}>
@@ -294,6 +302,7 @@ const InviteYourFriends = () => {
                   variant="outlined"
                   fullWidth
                   size="small"
+                  className={classes.input_font_color2}
                 />
               </Grid>
               <Grid item xs={12} lg={6}>
@@ -303,7 +312,10 @@ const InviteYourFriends = () => {
                   size="small"
                   fullWidth
                 >
-                  <InputLabel id="demo-simple-select-outlined-label">
+                  <InputLabel
+                    className={classes.input_font_color}
+                    id="demo-simple-select-outlined-label"
+                  >
                     Number of students enrolled
                   </InputLabel>
                   <Select
@@ -312,6 +324,7 @@ const InviteYourFriends = () => {
                     value={age}
                     onChange={handleChange}
                     label="Number of students enrolled"
+                    IconComponent={ExpandMoreIcon}
                   >
                     <MenuItem value="">
                       <em>None</em>
@@ -329,13 +342,19 @@ const InviteYourFriends = () => {
                   size="small"
                   fullWidth
                 >
-                  <InputLabel id="labelIdCountry">Country</InputLabel>
+                  <InputLabel
+                    className={classes.input_font_color}
+                    id="labelIdCountry"
+                  >
+                    Country
+                  </InputLabel>
                   <Select
                     labelId="labelIdCountry"
                     id="Country"
                     value={age}
                     onChange={handleChange}
                     label="Country"
+                    IconComponent={ExpandMoreIcon}
                   >
                     <MenuItem value="">
                       <em>None</em>
@@ -353,7 +372,10 @@ const InviteYourFriends = () => {
                   size="small"
                   fullWidth
                 >
-                  <InputLabel id="labelStreetAddress">
+                  <InputLabel
+                    className={classes.input_font_color}
+                    id="labelStreetAddress"
+                  >
                     Street address
                   </InputLabel>
                   <Select
@@ -362,6 +384,7 @@ const InviteYourFriends = () => {
                     value={age}
                     onChange={handleChange}
                     label="Street address"
+                    IconComponent={ExpandMoreIcon}
                   >
                     <MenuItem value="">
                       <em>None</em>
@@ -379,13 +402,19 @@ const InviteYourFriends = () => {
                   size="small"
                   fullWidth
                 >
-                  <InputLabel id="labelIdCity">City</InputLabel>
+                  <InputLabel
+                    className={classes.input_font_color}
+                    id="labelIdCity"
+                  >
+                    City
+                  </InputLabel>
                   <Select
                     labelId="labelIdCity"
                     id="City"
                     value={age}
                     onChange={handleChange}
                     label="City"
+                    IconComponent={ExpandMoreIcon}
                   >
                     <MenuItem value="">
                       <em>None</em>
@@ -403,7 +432,10 @@ const InviteYourFriends = () => {
                   size="small"
                   fullWidth
                 >
-                  <InputLabel id="labelStateOrRegion">
+                  <InputLabel
+                    className={classes.input_font_color}
+                    id="labelStateOrRegion"
+                  >
                     State or region
                   </InputLabel>
                   <Select
@@ -412,6 +444,7 @@ const InviteYourFriends = () => {
                     value={age}
                     onChange={handleChange}
                     label="State or region"
+                    IconComponent={ExpandMoreIcon}
                   >
                     <MenuItem value="">
                       <em>None</em>
@@ -429,11 +462,13 @@ const InviteYourFriends = () => {
                   variant="outlined"
                   fullWidth
                   size="small"
+                  className={classes.input_font_color2}
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  id="zip"
+                  className={classes.input_font_color2}
+                  id="Childcarewebsite"
                   label="Child care website"
                   variant="outlined"
                   fullWidth
@@ -465,20 +500,24 @@ const InviteYourFriends = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button3} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button3} button`}
+                >
+                  Try it Free
+                </Button>{" "}
+              </Link>
+              <Link to="/pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>{" "}
+              </Link>
             </div>
           </Grid>
         </Grid>

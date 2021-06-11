@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {
   Container,
   Grid,
@@ -14,6 +14,8 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import OurPeopleGallery2 from "../assets/images/OurPeopleGallery@2x.png";
 import PatrickRoss from "../assets/images/PatrickRoss.png";
+import WillRivera from "../assets/images/WillRivera.png";
+import CarmenCarpenter from "../assets/images/CarmenCarpenter.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -46,6 +48,51 @@ const useStyles = makeStyles((theme) => ({
   },
   bg_color: {
     background: "#F27E5C",
+    height: "290px",
+    width: "100%",
+    position: "absolute",
+    left: 0,
+    bottom: 0,
+    zIndex: -9,
+    [theme.breakpoints.down("sm")]: {
+      height: "130px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "290px",
+    },
+  },
+  bg_color2: {
+    background: "#21409A",
+    height: "290px",
+    width: "100%",
+    position: "absolute",
+    left: 0,
+    bottom: 0,
+    zIndex: -9,
+    [theme.breakpoints.down("sm")]: {
+      height: "130px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "290px",
+    },
+  },
+  bg_color3: {
+    background: "#EF8787",
+    height: "290px",
+    width: "100%",
+    position: "absolute",
+    left: 0,
+    bottom: 0,
+    zIndex: -9,
+    [theme.breakpoints.down("sm")]: {
+      height: "130px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "290px",
+    },
+  },
+  bg_color4: {
+    background: "#46A834",
     height: "290px",
     width: "100%",
     position: "absolute",
@@ -105,6 +152,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Leadership = () => {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Container maxWidth="lg">
@@ -150,13 +200,27 @@ const Leadership = () => {
           <Grid item lg={4} md={4} sm={4}>
             <div className={classes.box}>
               <div className={classes.box_image}>
-                <div className={classes.bg_color}></div>
-                <img src={PatrickRoss} alt="" />
+                <div className={classes.bg_color2}></div>
+                <img src={WillRivera} alt="" />
               </div>
-              <Typography className={classes.box_name}>Patrick Ross</Typography>
+              <Typography className={classes.box_name}>Will Rivera</Typography>
 
               <Typography className={classes.box_title}>
-                Founder & CEO
+              Chief technology officer
+              </Typography>
+            </div>
+          </Grid>
+
+          <Grid item lg={4} md={4} sm={4}>
+            <div className={classes.box}>
+              <div className={classes.box_image}>
+                <div className={classes.bg_color3}></div>
+                <img src={CarmenCarpenter} alt="" />
+              </div>
+              <Typography className={classes.box_name}>Carmen Carpenter</Typography>
+
+              <Typography className={classes.box_title}>
+              Chief operating officer
               </Typography>
             </div>
           </Grid>
@@ -167,7 +231,7 @@ const Leadership = () => {
                 <div className={classes.bg_color}></div>
                 <img src={PatrickRoss} alt="" />
               </div>
-              <Typography className={classes.box_name}>Patrick Ross</Typography>
+              <Typography className={classes.box_name}>Ronnie Williamson</Typography>
 
               <Typography className={classes.box_title}>
                 Founder & CEO
@@ -178,13 +242,13 @@ const Leadership = () => {
           <Grid item lg={4} md={4} sm={4}>
             <div className={classes.box}>
               <div className={classes.box_image}>
-                <div className={classes.bg_color}></div>
-                <img src={PatrickRoss} alt="" />
+                <div className={classes.bg_color2}></div>
+                <img src={WillRivera} alt="" />
               </div>
-              <Typography className={classes.box_name}>Patrick Ross</Typography>
+              <Typography className={classes.box_name}>Matthew Grand</Typography>
 
               <Typography className={classes.box_title}>
-                Founder & CEO
+              Designation
               </Typography>
             </div>
           </Grid>
@@ -192,27 +256,13 @@ const Leadership = () => {
           <Grid item lg={4} md={4} sm={4}>
             <div className={classes.box}>
               <div className={classes.box_image}>
-                <div className={classes.bg_color}></div>
-                <img src={PatrickRoss} alt="" />
+                <div className={classes.bg_color4}></div>
+                <img src={CarmenCarpenter} alt="" />
               </div>
-              <Typography className={classes.box_name}>Patrick Ross</Typography>
+              <Typography className={classes.box_name}>Doris Hart</Typography>
 
               <Typography className={classes.box_title}>
-                Founder & CEO
-              </Typography>
-            </div>
-          </Grid>
-
-          <Grid item lg={4} md={4} sm={4}>
-            <div className={classes.box}>
-              <div className={classes.box_image}>
-                <div className={classes.bg_color}></div>
-                <img src={PatrickRoss} alt="" />
-              </div>
-              <Typography className={classes.box_name}>Patrick Ross</Typography>
-
-              <Typography className={classes.box_title}>
-                Founder & CEO
+              Designation
               </Typography>
             </div>
           </Grid>

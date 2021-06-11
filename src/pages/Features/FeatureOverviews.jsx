@@ -106,6 +106,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     marginBottom: "20px",
     textAlign: "center",
+    boxShadow: "1px 1px 5px 3px #eee",
   },
 
   tab_headline: {
@@ -865,7 +866,7 @@ const FeatureOverviews = () => {
         <Typography
           className={`${classes.tab_headline3} ${classes.slider_text2}`}
         >
-          More Customer Storis{" "}
+          More Customer Stories{" "}
           <span className={classes.icon_style}>
             <ArrowForwardIcon />
           </span>

@@ -210,19 +210,7 @@ const useStyles = makeStyles((theme) => ({
   center: {
     textAlign: "center",
   },
-  // title_bg: {
-  //   "&::before": {
-  //     content: "''",
-  //     background: "red",
-  //     height: 140,
-  //     width: 140,
-  //     background: `url(${DoubleBlueColorCircle})`,
-  //     backgroundRepeat: "no-repeat",
-  //     backgroundPosition: "left",
-  //     position: "absolute",
-  //     zIndex: 9999,
-  //   },
-  // },
+
   title_bg: {
     background: `url(${DoubleBlueColorCircle})`,
     backgroundRepeat: "no-repeat",
@@ -361,7 +349,7 @@ const Parents = () => {
               <div>
                 <Typography variant="h5">Immunisation record</Typography>
                 <Typography variant="subtitle1">
-                  Nulla eleifend pulvinar purus, molestie euismod odio
+                  Nulla eleifend pulvinar purus, molestie<br/> euismod odio
                 </Typography>
               </div>
             </Grid>
@@ -374,7 +362,7 @@ const Parents = () => {
               <div>
                 <Typography variant="h5">Sharing with family</Typography>
                 <Typography variant="subtitle1">
-                  Nulla eleifend pulvinar purus, molestie euismod odio
+                  Nulla eleifend pulvinar purus, molestie<br/> euismod odio
                 </Typography>
               </div>
             </Grid>

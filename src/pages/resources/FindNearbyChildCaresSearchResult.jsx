@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     padding: "13px 35px  !important",
     [theme.breakpoints.down("sm")]: {
       padding: "13px 50px  !important",
-
     },
   },
 
@@ -74,16 +73,16 @@ const useStyles = makeStyles((theme) => ({
   },
   center_margin: {
     textAlign: "center",
-    margin:'50px 0 100px 0',
+    margin: "50px 0 100px 0",
     [theme.breakpoints.down("xs")]: {
-      margin:'50px 0 80px 0',
+      margin: "50px 0 80px 0",
     },
   },
   margin_left_20: {
     marginLeft: 20,
     [theme.breakpoints.down("xs")]: {
       marginLeft: 3,
-      marginTop:10
+      marginTop: 10,
     },
   },
 
@@ -113,11 +112,13 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       borderBottom: "2px solid #21409A",
       fontWeight: 600,
+      color: "#21409A",
     },
   },
   active: {
     borderBottom: "2px solid #21409A",
     fontWeight: 600,
+    color: "#21409A",
   },
 
   card_image: {
@@ -260,20 +261,24 @@ const FindNearbyChildCaresSearchResult = () => {
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
             </Typography>
             <div className={classes.center}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button3} button`}
-              >
-                Try it Free
-              </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={`${classes.banner_button} ${classes.margin_left_20} button`}
-              >
-                Explore Pricing
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button3} button`}
+                >
+                  Try it Free
+                </Button>{" "}
+              </Link>
+              <Link to="/pricing">
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  className={`${classes.banner_button} ${classes.margin_left_20} button`}
+                >
+                  Explore Pricing
+                </Button>{" "}
+              </Link>
             </div>
           </Grid>
         </Grid>

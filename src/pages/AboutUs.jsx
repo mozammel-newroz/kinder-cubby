@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -144,9 +144,11 @@ const useStyles = makeStyles((theme) => ({
 
 const AboutUs = () => {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-    
       <Container maxWidth="lg">
         <div className={`${classes.wrapper}`}>
           <div className={classes.background_style}>
@@ -252,7 +254,7 @@ const AboutUs = () => {
                       Aenean non accumsan ante. Duis et risus accumsan sem
                       tempus porta nec sit amet est. Sed ut
                     </Typography>
-                    <Link to="#">
+                    <Link to="/leadership">
                       <Typography className={classes.tab_headline2}>
                         Leadership{" "}
                         <span className={classes.icon_style}>

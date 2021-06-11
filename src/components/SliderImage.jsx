@@ -100,10 +100,9 @@ const SliderImage = () => {
             <div className={classes.root}>
               <div className={classes.text}>
                 <Typography className={classes.left}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt dignissimos ea distinctio possimus aliquid, ad
-                  labore, quia quaerat numquam fugiat temporibus ut obcaecati
-                  doloribus officia odio voluptates ipsa quas dolore?
+                Aenean sed lorem est. Sed quis neque ut nibh suscipit
+                  imperdiet ac non augue. Aenean ornare sit amet lectus non
+                  tristique. Nunc ut volutpat
                 </Typography>
                 <div className={classes.title}>
                   <ul>
@@ -114,7 +113,7 @@ const SliderImage = () => {
                     </li>
                     <li>
                       <Typography className={classes.li_text}>
-                        Director
+                      KinderCubby Parent
                       </Typography>
                     </li>
                   </ul>
@@ -127,10 +126,9 @@ const SliderImage = () => {
             <div className={classes.root}>
               <div className={classes.text}>
                 <Typography className={classes.left}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt dignissimos ea distinctio possimus aliquid, ad
-                  labore, quia quaerat numquam fugiat temporibus ut obcaecati
-                  doloribus officia odio voluptates ipsa quas dolore?
+                  Aenean sed lorem est. Sed quis neque ut nibh suscipit
+                  imperdiet ac non augue. Aenean ornare sit amet lectus non
+                  tristique. Nunc ut volutpat
                 </Typography>
                 <div className={classes.title}>
                   <ul>
@@ -141,7 +139,7 @@ const SliderImage = () => {
                     </li>
                     <li>
                       <Typography className={classes.li_text}>
-                        Director
+                        KinderCubby Parent
                       </Typography>
                     </li>
                   </ul>

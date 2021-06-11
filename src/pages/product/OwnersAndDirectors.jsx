@@ -189,6 +189,24 @@ const useStyles = makeStyles((theme) => ({
   center: {
     textAlign: "center",
   },
+  activity_wrapper3: {
+    padding: "20px 120px 0px 120px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "20px 0px",
+    },
+  },
+  h4: {
+    marginBottom: "40px",
+  },
+  activity_wrapper4: {
+    padding: "100px 120px 100px 120px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "20px 0px",
+    },
+  },
+  h6: {
+    marginTop: 0,
+  },
 }));
 
 const OwnersAndDirectors = () => {
@@ -222,7 +240,7 @@ const OwnersAndDirectors = () => {
                       Contact Sales
                     </Button>
                   </Link>
-                  <Link to="/pricing">
+                  <Link to="/try-it-free">
                     <Button
                       variant="outlined"
                       color="primary"
@@ -404,12 +422,13 @@ const OwnersAndDirectors = () => {
           justify="center"
           alignItems="center"
           spacing={5}
-          className={`${classes.activity_wrapper}`}
+          className={`${classes.activity_wrapper3}`}
         >
           <Grid item lg={12} md={12}>
-            <Typography variant="h4">
-              Impact of KinderCubby on Directors
+            <Typography variant="h4" className={classes.h4}>
+              Impact of KinderCubby on parents
             </Typography>
+
             <img src={owner_youtube} alt="" className={classes.image} />
           </Grid>
 
@@ -445,12 +464,10 @@ const OwnersAndDirectors = () => {
       </Container>
 
       <Container maxWidth="lg">
-        <Grid container className={`${classes.activity_wrapper}`}>
+        <Grid container className={`${classes.activity_wrapper4}`}>
           <Grid item lg={12} md={12}>
-            <Typography variant="h4">
-              KinderCubby for owners & directors
-            </Typography>
-            <Typography variant="h6">
+            <Typography variant="h4">Invite your school</Typography>
+            <Typography variant="h6" className={classes.h6}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
               congue consequat. In posuere, nunc sit amet laoreet blandit, urna
               sapien imperdiet lectus, et molestie sem tortor quis dui. Donec
@@ -465,7 +482,7 @@ const OwnersAndDirectors = () => {
                   Try it Free
                 </Button>
               </Link>
-              <Link to="/pricing">
+              <Link to="pricing">
                 <Button
                   variant="outlined"
                   color="primary"

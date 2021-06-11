@@ -79,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: 10,
     },
   },
+
   margin_left_20: {
     marginLeft: 20,
     [theme.breakpoints.down("xs")]: {
@@ -222,6 +223,33 @@ const useStyles = makeStyles((theme) => ({
       padding: 15,
     },
   },
+  icon_style: {
+    position: "relative",
+    top: "7px",
+    left: "4px",
+  },
+  tab_headline3: {
+    fontWeight: 600,
+    fontSize: "18px",
+    color: "#F26522",
+    marginBottom: "40px",
+    marginTop: "15px",
+    textAlign: "center",
+  },
+  tab_headline3_M: {
+    fontWeight: 600,
+    fontSize: "18px",
+    color: "#F26522",
+    marginTop: "15px",
+    textAlign: "center",
+  },
+
+  slider_text2_M: {
+    padding: "0px 10px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "0px 10px 20px 10px",
+    },
+  },
 }));
 
 const Home = () => {
@@ -258,10 +286,10 @@ const Home = () => {
               <Link to="/pricing">
                 <Button
                   variant="outlined"
-                  color="primary"
+                  color="secondary"
                   className={`${classes.banner_button} ${classes.margin_left_20} button`}
                 >
-                  Explore Pricing
+                  Request Demo
                 </Button>
               </Link>
             </div>
@@ -278,8 +306,8 @@ const Home = () => {
                   used by 1000+ organaisation
                 </Typography>
                 <Typography variant="subtitle1">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero
-                  eaque vitae consectetur laboriosam
+                  Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+                  congue consequat. In posuere, nunc sit amet
                 </Typography>
                 <Link to="/request-call">
                   <Button
@@ -310,38 +338,46 @@ const Home = () => {
             <Grid container spacing={3}>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                  Effortless Attendance
+                  Effortless
+                  <br /> Attendance
                 </Typography>
                 <Typography>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                  illum autem officia dignissimos nostrum et
+                  Sed a magna semper, porta purus eu, ullamcorper ligula. Nam
+                  sit amet
+                  <br /> consectetur
                 </Typography>
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                  Save time with Activity tracking
+                  Save time with
+                  <br /> Activity tracking
                 </Typography>
                 <Typography>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                  illum autem officia dignissimos nostrum et
+                  Sed a magna semper, porta purus eu, ullamcorper ligula. Nam
+                  sit amet
+                  <br /> consectetur
                 </Typography>
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                  Digital report go paperless
+                  Digital report go
+                  <br /> paperless
                 </Typography>
                 <Typography>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                  illum autem officia dignissimos nostrum et
+                  Sed a magna semper, porta purus eu, ullamcorper ligula. Nam
+                  sit amet
+                  <br /> consectetur
                 </Typography>
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="h6" className={classes.h6}>
-                  Boost Organisation growth
+                  Boost Organisation
+                  <br /> growth
                 </Typography>
                 <Typography>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                  illum autem officia dignissimos nostrum et
+                  Sed a magna semper, porta purus eu, ullamcorper ligula. Nam
+                  sit amet
+                  <br /> consectetur
                 </Typography>
               </Grid>
             </Grid>
@@ -377,8 +413,9 @@ const Home = () => {
                 Everything in one place
               </Typography>
               <Typography variant="h6" className={classes.h6}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
-                expedita laboriosam quam consectetur
+                Sed a magna semper, porta purus eu, ullamcorper ligula. Nam sit
+                amet
+                <br /> consectetur
               </Typography>
             </Grid>
             <Grid lg={6} md={6} className={classes.image_center}>
@@ -399,7 +436,7 @@ const Home = () => {
                 />
                 <Typography variant="h5">Activity Tracking</Typography>
                 <Typography variant="subtitle1" className={classes.subtitle1}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                  Phasellus dignissim, tellus in pellentesque mollis,
                 </Typography>
                 <Link to="/activity-tracking">
                   <Typography variant="body2" className={classes.link}>
@@ -417,7 +454,7 @@ const Home = () => {
                 />
                 <Typography variant="h5">Parent engagement</Typography>
                 <Typography variant="subtitle1" className={classes.subtitle1}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                  Phasellus dignissim, tellus in pellentesque mollis,
                 </Typography>
                 <Link to="/parents-engagements">
                   <Typography variant="body2" className={classes.link}>
@@ -442,7 +479,7 @@ const Home = () => {
                 />
                 <Typography variant="h5">Center Management</Typography>
                 <Typography variant="subtitle1" className={classes.subtitle1}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                  Phasellus dignissim, tellus in pellentesque mollis,
                 </Typography>
                 <Link to="/center-management">
                   <Typography variant="body2" className={classes.link}>
@@ -466,6 +503,16 @@ const Home = () => {
               sapien imperdiet
             </Typography>
             <SliderImage2 />
+            <Link to="/feature-overviews">
+              <Typography
+                className={`${classes.tab_headline3_M} ${classes.slider_text2_M}`}
+              >
+         See All Features{" "}
+                <span className={classes.icon_style}>
+                  <ArrowForwardIcon />
+                </span>
+              </Typography>
+            </Link>
           </Grid>
         </Grid>
       </Container>
@@ -482,10 +529,9 @@ const Home = () => {
           <Grid container spacing={3} className={classes.flex_center2}>
             <Grid lg={6} md={6}>
               <Typography variant="h6" className={classes.h6}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                adipisci obcaecati earum id eius debitis sed! Maxime corrupti
-                aperiam quibusdam ducimus reprehenderit, minus in modi quam?
-                Fugiat non
+                Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+                congue consequat. In posuere, nunc sit amet laoreet blandit,
+                urna sapien imperdiet lectus, et molestie sem
               </Typography>
             </Grid>
             <Grid lg={6} md={6} className={classes.image_center}>
@@ -498,10 +544,9 @@ const Home = () => {
             </Grid>
             <Grid lg={6} md={6}>
               <Typography variant="h6" className={classes.h6}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                adipisci obcaecati earum id eius debitis sed! Maxime corrupti
-                aperiam quibusdam ducimus reprehenderit, minus in modi quam?
-                Fugiat non
+                Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+                congue consequat. In posuere, nunc sit amet laoreet blandit,
+                urna sapien imperdiet lectus, et molestie sem
               </Typography>
             </Grid>
           </Grid>
@@ -530,7 +575,8 @@ const Home = () => {
                 Daycare Owners & Directors
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                Duis vestibulum elit vel neque pharetra vulputate. Quisque
+                scelerisque nisi urna. Duis rutrum
               </Typography>
               <Link to="/for-owners-and-directors">
                 <Typography variant="body2" className={classes.link2}>
@@ -546,7 +592,8 @@ const Home = () => {
                 Teachers
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                Duis vestibulum elit vel neque pharetra vulputate. Quisque
+                scelerisque nisi urna. Duis rutrum
               </Typography>
               <Link to="/for-teachers">
                 <Typography variant="body2" className={classes.link2}>
@@ -562,7 +609,8 @@ const Home = () => {
                 Parents
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                Duis vestibulum elit vel neque pharetra vulputate. Quisque
+                scelerisque nisi urna. Duis rutrum
               </Typography>
               <Link to="/for-parents">
                 <Typography variant="body2" className={classes.link2}>
@@ -579,6 +627,16 @@ const Home = () => {
           Factual Impact
         </Typography>
         <SliderImage />
+        <Link to="/case-studies">
+          <Typography
+            className={`${classes.tab_headline3} ${classes.slider_text2_M}`}
+          >
+            More Customer Stories{" "}
+            <span className={classes.icon_style}>
+              <ArrowForwardIcon />
+            </span>
+          </Typography>
+        </Link>
       </div>
 
       <Container maxWidth="lg">
@@ -592,10 +650,10 @@ const Home = () => {
                 variant="h6"
                 className={`${classes.h6} ${classes.center}`}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
-                praesentium quos eum quasi eaque placeat a aperiam quod ipsam,
-                nisi voluptas iure, quisquam atque adipisci autem officia
-                dignissimos! Ab, ipsam.
+                Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
+                congue consequat. In posuere, nunc sit amet laoreet blandit,
+                urna sapien imperdiet lectus, et molestie sem tortor quis dui.
+                Donec
               </Typography>
               <div className={classes.center}>
                 <Link to="/try-it-free">

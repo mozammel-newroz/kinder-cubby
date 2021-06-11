@@ -1,9 +1,10 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 import HiRobot from "../assets/images/HiRobot.png";
 import SearchingRobot from "../assets/images/SearchingRobot.png";
@@ -125,7 +126,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   inner_wrapper: {
-
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -149,9 +149,12 @@ const useStyles = makeStyles((theme) => ({
 
 const ContactUs = () => {
   const classes = useStyles();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-    {/* <div className={classes.flex_wrapper}>
+      {/* <div className={classes.flex_wrapper}>
           <div className={classes.inner_wrapper}>
             <div>
               <img src={logo} alt="" />
@@ -286,13 +289,15 @@ const ContactUs = () => {
                 Do you want to check our help centre?
               </Typography>
               <div className={classes.center_maging}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={`${classes.banner_button} button`}
-                >
-                  Try it Free
-                </Button>
+                <Link to="/support-center">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={`${classes.banner_button} button`}
+                  >
+                    Support Center
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className={classes.banner_image}>
@@ -301,7 +306,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <Footer2/>
+      <Footer2 />
     </>
   );
 };

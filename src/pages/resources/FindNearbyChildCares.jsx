@@ -105,11 +105,13 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       borderBottom: "2px solid #21409A",
       fontWeight: 600,
+      color:'#21409A'
     },
   },
   active: {
     borderBottom: "2px solid #21409A",
     fontWeight: 600,
+    color:'#21409A'
   },
 
   card_image: {

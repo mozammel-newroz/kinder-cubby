@@ -430,7 +430,7 @@ const Home = () => {
                       align="center"
                       className={classes.table_cell_big}
                     >
-                      -
+                      Coming Soon
                     </TableCell>
                     <TableCell align="center" className={classes.table_cell}>
                       <img src={SuccessfulGreenIcon} alt="" />
@@ -792,7 +792,7 @@ const Home = () => {
             </Typography>
             <Typography className={classes.center}>
               Contact our{" "}
-              <Link to="/#" className={classes.link}>
+              <Link to="/support-center" className={classes.link}>
                 support
               </Link>{" "}
             </Typography>
