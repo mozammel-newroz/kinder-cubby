@@ -131,7 +131,7 @@ const TryItFree = () => {
                 </Typography>
                 <Typography variant="subtitle1">
                   <CheckIcon className={classes.icon} />
-                  Contactless check-in
+                  Centralised data
                 </Typography>
               </div>
             </div>

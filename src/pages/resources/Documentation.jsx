@@ -180,7 +180,9 @@ const Documentation = () => {
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12}>
             <div className={classes.find_banner}>
+              <Link to='/' >
               <img src={logo} alt="" className={classes.banner_image} />
+              </Link>
               <Typography variant="h4" className={classes.title}>
                 Need Help?
               </Typography>
@@ -403,7 +405,7 @@ const Documentation = () => {
           </Grid>
         </Grid>
       </Container>
-      <Footer2/>
+      <Footer2 />
     </>
   );
 };

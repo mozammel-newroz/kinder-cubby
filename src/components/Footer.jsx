@@ -109,8 +109,8 @@ const Footer = () => {
     location.pathname !== "/documentation" &&
     location.pathname !== "/try-it-free" &&
     location.pathname !== "/request-call" &&
-    location.pathname !== "/sign-up-parent"
-
+    location.pathname !== "/sign-up-parent" &&
+    location.pathname !== "/contact-us"
   ) {
     return (
       <>
@@ -290,7 +290,10 @@ const Footer = () => {
         </Container>
       </>
     );
-  } else if (location.pathname === "/documentation") {
+  } else if (
+    location.pathname === "/documentation" ||
+    location.pathname === "/contact-us"
+  ) {
     return "";
   } else {
     return (

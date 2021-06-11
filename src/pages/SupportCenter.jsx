@@ -273,20 +273,7 @@ const SupportCenter = () => {
           Popular topics
         </Typography>
         <Grid container justify="center" alignItems="center" spacing={5}>
-          <Grid item xs={12} lg={3}>
-            <div className={classes.paper}>
-              <div className={classes.paper_image_div}>
-                {/* <img
-                  src={StaffManagement}
-                  alt=""
-                  className={classes.paper_image}
-                /> */}
-              </div>
-              <div>
-                <Typography variant="subtitle2" gutterBottom></Typography>
-              </div>
-            </div>
-          </Grid>
+          
           <Grid item xs={12} lg={3}>
             <div className={classes.paper}>
               <div className={classes.paper_image_div}>
@@ -322,17 +309,49 @@ const SupportCenter = () => {
           <Grid item xs={12} lg={3}>
             <div className={classes.paper}>
               <div className={classes.paper_image_div}>
-                {/* <img
+                <img
+                  src={BillingAndInvoicing}
+                  alt=""
+                  className={classes.paper_image}
+                />
+              </div>
+              <div>
+                <Typography variant="subtitle2" gutterBottom>
+                  Payment
+                </Typography>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={12} lg={3}>
+            <div className={classes.paper}>
+              <div className={classes.paper_image_div}>
+                <img
                   src={StaffManagement}
                   alt=""
                   className={classes.paper_image}
-                /> */}
+                />
+              </div>
+              <div>
+                <Typography variant="subtitle2" gutterBottom>
+                  Staff Management
+                </Typography>
+              </div>
+            </div>
+          </Grid>
+          {/* <Grid item xs={12} lg={3}>
+            <div className={classes.paper}>
+              <div className={classes.paper_image_div}>
+                <img
+                  src={StaffManagement}
+                  alt=""
+                  className={classes.paper_image}
+                />
               </div>
               <div>
                 <Typography variant="subtitle2" gutterBottom></Typography>
               </div>
             </div>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
       <Divider className={classes.divider} />

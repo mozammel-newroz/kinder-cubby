@@ -139,7 +139,6 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "0px",
     },
   },
-  
 }));
 
 const AboutUs = () => {

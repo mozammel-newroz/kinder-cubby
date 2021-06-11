@@ -1,8 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Grid, Typography, Button } from "@material-ui/core";
+import {
+  Container,
+  Grid,
+  Typography,
+  Button,
+  Modal,
+  Fade,
+  Backdrop,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import CloseIcon from "@material-ui/icons/Close";
 
 import SchoolImage from "../assets/images/SchoolImage.png";
 import DemoVideoP1 from "../assets/images/DemoVideoP1.png";
@@ -15,6 +24,9 @@ import User3 from "../assets/images/User3.png";
 import ParentsEngagement from "../assets/images/ParentsEngagement.png";
 import CenterManagementP1 from "../assets/images/CenterManagementP1.png";
 import ExcelParents2 from "../assets/images/ExcelParents2.png";
+import youtube_home from "../assets/images/youtube_home.png";
+import youtube_home_big from "../assets/images/youtube_home_big.png";
+import home_with_logo from "../assets/images/home_with_logo.png";
 
 import SuccessfulGreenIcon2x from "../assets/images/SuccessfulGreenIcon@2x.png";
 
@@ -250,10 +262,27 @@ const useStyles = makeStyles((theme) => ({
       padding: "0px 10px 20px 10px",
     },
   },
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  youtube_paper: {
+    border: "20px solid #000",
+  },
 }));
 
 const Home = () => {
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -321,7 +350,7 @@ const Home = () => {
                 </Link>
               </Grid>
               <Grid item lg={6} md={6}>
-                <img src={SchoolImage} alt="" className={classes.image} />
+                <img src={home_with_logo} alt="" className={classes.image} />
               </Grid>
             </Grid>
           </Grid>
@@ -386,15 +415,51 @@ const Home = () => {
             <Typography variant="h6" className={classes.demo_top}>
               SEE IN ACTION
             </Typography>
-            <img src={DemoVideoP1} className={classes.image} alt="" />
+            <img
+              src={youtube_home}
+              className={classes.image}
+              style={{ margin: "12px 0px" }}
+              alt=""
+            />
             <div className={classes.center}>
               <Button
                 variant="contained"
                 color="primary"
                 className={`${classes.banner_button} button`}
+                onClick={handleOpen}
               >
                 Watch The Demo
               </Button>
+
+              <Modal
+                className={classes.modal}
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                  timeout: 500,
+                }}
+              >
+                <Fade in={open}>
+                  <span style={{ position: "relative" }}>
+                    <CloseIcon
+                      style={{
+                        position: "absolute",
+                        right: -40,
+                        top: -5,
+                        fontSize: "2rem",
+                      }}
+                      onClick={handleClose}
+                    />
+                    <img
+                      src={youtube_home_big}
+                      alt=""
+                      className={classes.youtube_paper}
+                    />
+                  </span>
+                </Fade>
+              </Modal>
             </div>
           </Grid>
         </Grid>
@@ -507,7 +572,7 @@ const Home = () => {
               <Typography
                 className={`${classes.tab_headline3_M} ${classes.slider_text2_M}`}
               >
-         See All Features{" "}
+                See All Features{" "}
                 <span className={classes.icon_style}>
                   <ArrowForwardIcon />
                 </span>

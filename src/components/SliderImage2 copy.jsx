@@ -16,17 +16,16 @@ import ActivityFeed from "../assets/images/ActivityFeed.png";
 
 const useStyle = makeStyles((theme) => ({
   wrapper: {
-    padding: "0px 10px",
+    padding: "0px 30px",
     [theme.breakpoints.down("sm")]: {
       padding: 0,
     },
   },
   root: {
     display: "flex",
-    padding: "20px 40px",
+    padding: 20,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column-reverse",
-      padding: 0,
     },
   },
   text: {
@@ -85,11 +84,11 @@ const SliderImage = () => {
           <Carousel
             // autoplay={true}
             cellAlign="center"
-            slidesToShow={3}
+            slidesToShow={1}
             slidesToScroll={1}
-            cellSpacing={0}
-            // animation="zoom"
-            slideOffset={200}
+            cellSpacing={10}
+            animation="zoom"
+            slideOffset={350}
             renderCenterLeftControls={({ previousSlide }) => (
               <IconButton
                 onClick={previousSlide}
@@ -109,21 +108,6 @@ const SliderImage = () => {
               </IconButton>
             )}
           >
-            <div className={classes.root}>
-              <div className={classes.image}>
-                <img src={OnlinePaymentP1} className={classes.img} />
-              </div>
-            </div>
-            <div className={classes.root}>
-              <div className={classes.image}>
-                <img src={ContactlessCheckIn} className={classes.img} />
-              </div>
-            </div>
-            <div className={classes.root}>
-              <div className={classes.image}>
-                <img src={ActivityFeed} className={classes.img} />
-              </div>
-            </div>
             <div className={classes.root}>
               <div className={classes.image}>
                 <img src={OnlinePaymentP1} className={classes.img} />
