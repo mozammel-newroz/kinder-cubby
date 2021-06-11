@@ -1,4 +1,5 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   makeStyles,
   IconButton,
@@ -105,7 +106,9 @@ const RequestCall = () => {
       <Container maxWidth="lg" className={classes.root}>
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12} className={classes.logo_wrapper}>
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
           </Grid>
 
           <Grid item lg={7} md={7}>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
@@ -44,6 +44,15 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     color: "#999",
     boxShadow: "0 0 0 0",
+  },
+  appBar2: {
+    zIndex: theme.zIndex.drawer + 1,
+    background: "#fff",
+    height: 60,
+    marginTop: 0,
+    padding: 0,
+    color: "#999",
+    boxShadow: "1px 1px 1px 0px #eee",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -102,6 +111,8 @@ function TopBar() {
   const theme = useTheme();
   const [anchorEl, set_anchorEl] = useState(null);
   const [open, set_open] = useState(false);
+  const [scroll, setScroll] = useState(0);
+  const [pathName, setPathName] = useState("");
 
   const handleClick = (event) => {
     set_anchorEl(event.currentTarget);
@@ -112,13 +123,10 @@ function TopBar() {
     set_open(false);
   };
 
-  const dummyCategories = [
-    "Hokusai",
-    "Hiroshige",
-    "Utamaro",
-    "Kuniyoshi",
-    "Yoshitoshi",
-  ];
+  const changePath = () => {
+    set_open(false);
+    console.log("open", open);
+  };
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
   function handleDrawerToggle() {
@@ -129,7 +137,9 @@ function TopBar() {
       <List>
         <ListItem button>
           <ListItemText>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={handleDrawerToggle}>
+              Home
+            </Link>
           </ListItemText>
         </ListItem>
         {/* products  */}
@@ -138,17 +148,23 @@ function TopBar() {
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/for-owners-and-directors">For Owners & Directors</Link>
+            <Link to="/for-owners-and-directors" onClick={handleDrawerToggle}>
+              For Owners & Directors
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/for-teachers">For Teachers</Link>
+            <Link to="/for-teachers" onClick={handleDrawerToggle}>
+              For Teachers
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/for-parents">For Parents</Link>
+            <Link to="/for-parents" onClick={handleDrawerToggle}>
+              For Parents
+            </Link>
           </ListItemText>
         </ListItem>
 
@@ -159,46 +175,60 @@ function TopBar() {
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/feature-overviews">Feature Overviews</Link>
+            <Link to="/feature-overviews" onClick={handleDrawerToggle}>
+              Feature Overviews
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/attendance-and-check-ins">Attendance & check-ins</Link>
+            <Link to="/attendance-and-check-ins" onClick={handleDrawerToggle}>
+              Attendance & check-ins
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/activity-tracking">Activity Tracking</Link>
+            <Link to="/activity-tracking" onClick={handleDrawerToggle}>
+              Activity Tracking
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/center-management">Center Management</Link>
+            <Link to="/center-management" onClick={handleDrawerToggle}>
+              Center Management
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/billing">Billing</Link>
+            <Link to="/billing" onClick={handleDrawerToggle}>
+              Billing
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/managing-learning-path">Managing Learning Path</Link>
+            <Link to="/managing-learning-path" onClick={handleDrawerToggle}>
+              Managing Learning Path
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/parents-engagements">Parents Engagements</Link>
+            <Link to="/parents-engagements" onClick={handleDrawerToggle}>
+              Parents Engagements
+            </Link>
           </ListItemText>
         </ListItem>
 
         {/* pricing  */}
-        <ListItem button>
-          <ListItemText>
-            <Link to="/pricing">Pricing</Link>
-          </ListItemText>
-        </ListItem>
+        <Link to="/pricing">
+          <ListItem button onClick={handleDrawerToggle}>
+            <ListItemText>Pricing</ListItemText>
+          </ListItem>
+        </Link>
 
         {/* resources  */}
         <ListItem button>
@@ -206,37 +236,52 @@ function TopBar() {
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/documentation">Documentation</Link>
+            <Link to="/documentation" onClick={handleDrawerToggle}>
+              Documentation
+            </Link>
           </ListItemText>
         </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/e-books">eBooks</Link>
+            <Link to="/e-books" onClick={handleDrawerToggle}>
+              eBooks
+            </Link>
           </ListItemText>
         </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/case-studies">Case Studies</Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/blog">Blog</Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/find-nearby-child-care">Find Nearby Childcare</Link>
-          </ListItemText>
-        </ListItem>
+        <Link to="/case-studies" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>Case Studies</ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/blog" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>Blog</ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/find-nearby-child-care" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>
+              Find Nearby Childcare
+            </ListItemText>
+          </ListItem>
+        </Link>
       </List>
     </div>
   );
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY;
+      setScroll(scrollCheck);
+    });
+    console.log("ddd", open);
+  }, []);
+
   return (
     <Router>
       <div className={classes.root}>
         {/* <CssBaseline /> */}
-        <AppBar position="fixed" className={classes.appBar}>
+        <AppBar className={scroll < 100 ? classes.appBar : classes.appBar2}>
           <Toolbar>
             <Container maxWidth="lg">
               <div className={classes.menu_wrapper}>
@@ -270,6 +315,7 @@ function TopBar() {
                       className="button"
                     >
                       Try It Free
+                      {pathName}
                     </Button>
                   </Link>
                 </Box>

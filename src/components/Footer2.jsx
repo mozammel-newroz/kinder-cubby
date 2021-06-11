@@ -145,6 +145,9 @@ const useStyle = makeStyles((theme) => ({
   },
   wrapper_footer: {
     padding: "15px 150px",
+    [theme.breakpoints.down("xs")]: {
+      padding: "15px 20px",
+    },
   },
   footer: {
     display: "flex",

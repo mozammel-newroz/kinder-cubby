@@ -22,6 +22,7 @@ import ConnectedWorkflow from "../../assets/images/ConnectedWorkflow.png";
 import PurpleCircle from "../../assets/images/PurpleCircle.png";
 import FocusOnChildern from "../../assets/images/FocusOnChildern.png";
 import owner_youtube from "../../assets/images/owner_youtube.png";
+import PlayIcon from "../../assets/images/PlayIcon.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -105,6 +106,14 @@ const useStyles = makeStyles((theme) => ({
   },
   right: {
     padding: "20px 25px",
+  },
+  left: {
+    backgroundImage: `url(${DirectorDemoVideo})`,
+    backgroundSize: "cover",
+    width: 300,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   right_text: {
     fontSize: 20,
@@ -236,7 +245,7 @@ const OwnersAndDirectors = () => {
         <Grid container className={classes.wrapper2}>
           <Card className={classes.card}>
             <div className={classes.left}>
-              <img src={DirectorDemoVideo} alt="" />
+              <img src={PlayIcon} alt="" />
             </div>
             <div className={classes.right}>
               <Typography className={classes.right_text}>
@@ -469,7 +478,6 @@ const OwnersAndDirectors = () => {
           </Grid>
         </Grid>
       </Container>
-
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import {  Grid, Typography, Button } from "@material-ui/core";
+import { Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import TextField from "@material-ui/core/TextField";
@@ -10,7 +10,7 @@ import StaffManagement from "../assets/images/StaffManagement.png";
 import BillingAndInvoicing from "../assets/images/BillingAndInvoicing.png";
 import SearchingRobot from "../assets/images/SearchingRobot.png";
 import Divider from "@material-ui/core/Divider";
-import Footer2 from '../components/Footer2'
+import Footer2 from "../components/Footer2";
 
 const useStyles = makeStyles((theme) => ({
   divider: {
@@ -60,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
   background_style: {
     backgroundColor: "#E5EBFD",
   },
- 
 
   paper: {
     padding: theme.spacing(3),
@@ -90,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#fff",
     marginBottom: 40,
   },
- 
+
   banner_headline: {
     fontWeight: 600,
     marginBottom: 20,
@@ -98,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: 20,
     },
   },
-  
+
   align_start: {
     textAlign: "start",
   },
@@ -199,7 +198,7 @@ const SupportCenter = () => {
   return (
     <>
       <div className={classes.background_style}>
-        <div className={classes.wrapper}>
+        {/* <div className={classes.wrapper}>
           <div className={classes.inner_wrapper}>
             <div>
               <img src={logo} alt="" />
@@ -219,7 +218,8 @@ const SupportCenter = () => {
               Go to KinderCubby
             </Button>
           </div>
-        </div>
+        </div> */}
+
         <div className={classes.wrapper2}>
           <Typography variant="h3" className={classes.banner_headline}>
             What can we help with?
@@ -483,7 +483,7 @@ const SupportCenter = () => {
           </div>
         </div>
       </div>
-      <Footer2/>
+      <Footer2 />
     </>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
@@ -16,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     background: "#E5EBFD",
     height: "3px",
-   
   },
   image_style: {
     margin: "15px auto",
@@ -56,18 +56,18 @@ const useStyles = makeStyles((theme) => ({
   banner_button: {
     padding: "13px 35px  !important",
   },
-  text_field:{
-    width:300
-  }
+  text_field: {
+    width: 300,
+  },
 }));
 
 const SignUpParent = () => {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.image_style}>
+      {/* <div className={classes.image_style}>
         <img src={logo} alt="" />
-      </div>
+      </div> */}
       <Divider className={classes.divider} />
       <div>
         <Typography className={classes.header_title}>
@@ -88,13 +88,15 @@ const SignUpParent = () => {
                 </Typography>
 
                 <div>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    className={`${classes.banner_button} button`}
-                  >
-                    Click here to login
-                  </Button>
+                  <Link to="/login">
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      className={`${classes.banner_button} button`}
+                    >
+                      Click here to login
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Grid>
