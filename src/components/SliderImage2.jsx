@@ -10,7 +10,9 @@ import {
 import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
 
-import FatualModel from "../assets/images/OnlinePaymentP1.png";
+import OnlinePaymentP1 from "../assets/images/OnlinePaymentP1.png";
+import ContactlessCheckIn from "../assets/images/ContactlessCheckIn.png";
+import ActivityFeed from "../assets/images/ActivityFeed.png";
 
 const useStyle = makeStyles((theme) => ({
   wrapper: {
@@ -108,17 +110,17 @@ const SliderImage = () => {
           >
             <div className={classes.root}>
               <div className={classes.image}>
-                <img src={FatualModel} className={classes.img} />
+                <img src={OnlinePaymentP1} className={classes.img} />
               </div>
             </div>
             <div className={classes.root}>
               <div className={classes.image}>
-                <img src={FatualModel} className={classes.img} />
+                <img src={ContactlessCheckIn} className={classes.img} />
               </div>
             </div>
             <div className={classes.root}>
               <div className={classes.image}>
-                <img src={FatualModel} className={classes.img} />
+                <img src={ActivityFeed} className={classes.img} />
               </div>
             </div>
           </Carousel>
