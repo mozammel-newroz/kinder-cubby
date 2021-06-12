@@ -65,11 +65,11 @@ const SignUp = () => {
   return (
     <div className={classes.root}>
       <div className={classes.login_wrapper}>
-        <div className={classes.logoIcon}>
+        {/* <div className={classes.logoIcon}>
           <img width="35px" src={KinderCubbyLogoIcon} alt="" />
-        </div>
+        </div> */}
         <Typography variant="h4" className={classes.title}>
-          Log into KinderCubby
+        Join KinderCubby. Sign up
         </Typography>
         <div className={classes.login_box}>
           <TextField
