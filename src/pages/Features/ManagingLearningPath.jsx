@@ -436,13 +436,15 @@ const ManagingLearningPath = () => {
               </div>
             </div>
             <div className={classes.button_Style}>
-              <Button
-                variant="contained"
-                color="primary"
-                className={`${classes.banner_button} button`}
-              >
-                Try it Free
-              </Button>
+              <Link to="/try-it-free">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={`${classes.banner_button} button`}
+                >
+                  Try it Free
+                </Button>
+              </Link>
             </div>
           </Grid>
         </Grid>
