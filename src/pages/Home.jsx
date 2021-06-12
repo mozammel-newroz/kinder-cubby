@@ -64,12 +64,24 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapper5: {
     // padding: "45px 60px 60px 60px",
-    padding: "45px 60px 60px 60px",
+    padding: "45px 47px 60px 47px",
 
     position: "relative",
     // background: "#ddd",
     [theme.breakpoints.down("xs")]: {
       padding: 10,
+    },
+  },
+  wrapper5_outer: {
+    width: "83%",
+    [theme.breakpoints.down("md")]: {
+      width: "93%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "95%",
     },
   },
   box: {
@@ -618,7 +630,7 @@ const Home = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" className={classes.wrapper5_outer}>
         <Grid container spacing={4} className={classes.wrapper5}>
           <Grid lg={12} md={12}>
             <div className={classes.bg_color}></div>
@@ -628,7 +640,7 @@ const Home = () => {
               KinderCubby Users
             </Typography>
           </Grid>
-          <Grid item lg={4} md={4}>
+          <Grid item lg={4} md={4} xs={12}>
             <div className={classes.box3}>
               <img
                 src={User1}
@@ -640,8 +652,7 @@ const Home = () => {
                 Daycare Owners & Directors
               </Typography>
               <Typography variant="subtitle1" className={classes.subtitle1}>
-                Duis vestibulum elit vel neque pharetra vulputate. Quisque
-                scelerisque nisi urna. Duis rutrum
+                Duis vestibulum elit vel neque pharetra vulputate
               </Typography>
               <Link to="/for-owners-and-directors">
                 <Typography variant="body2" className={classes.link2}>

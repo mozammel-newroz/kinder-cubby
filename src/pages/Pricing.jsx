@@ -25,11 +25,19 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   wrapper2: {
+    width: "95%",
+    marginLeft: 30,
+    marginRight: 30,
     padding: "60px 70px",
     background: "#E3EBFC",
     borderRadius: 15,
+    [theme.breakpoints.down("md")]: {
+      padding: 20,
+      width: "93%",
+    },
     [theme.breakpoints.down("xs")]: {
       padding: 20,
+      width: "90%",
     },
   },
   wrapper: {

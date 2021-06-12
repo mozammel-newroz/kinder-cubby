@@ -9,15 +9,8 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
 
 import NeedHelp from "../assets/images/NeedHelp@2x.png";
-import logo from "../assets/images/KinderCubbyLogo@2x.png";
-import Rocket from "../assets/images/Rocket.png";
-import Model1 from "../assets/images/Model1.png";
-import Model2 from "../assets/images/Model2.png";
-import LikeIcon from "../assets/images/LikeIcon.png";
-import DislikeIcon from "../assets/images/DislikeIcon.png";
 import logo_small from "../assets/images/logo.png";
 
 const useStyle = makeStyles((theme) => ({
