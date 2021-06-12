@@ -4,7 +4,7 @@ import { Container, Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
-import automated from "../../assets/images/automated.png";
+import DediatedApp from "../../assets/images/DediatedApp.png";
 import ChasingActivityImage1 from "../../assets/images/ChasingActivityImage1.png";
 import activity_image from "../../assets/images/activity.png";
 import StartNow_image from "../../assets/images/StartNow.png";
@@ -234,6 +234,9 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 40,
     textAlign: "left",
   },
+  h6:{
+    marginTop:0
+  }
 }));
 
 const ParentEngagements = () => {
@@ -270,7 +273,7 @@ const ParentEngagements = () => {
                 </div>
               </div>
               <div className={classes.banner_image}>
-                <img src={automated} alt="" />
+                <img src={DediatedApp} alt="" />
               </div>
             </div>
           </Grid>
@@ -280,7 +283,7 @@ const ParentEngagements = () => {
         <Grid container spacing={3} className={classes.activity_wrapper}>
           <Grid item lg={12} md={12}>
             <Typography variant="h4">Make parents feel connected</Typography>
-            <Typography variant="h6">
+            <Typography variant="h6" className={classes.h6}>
               Duis rhoncus dui venenatis consequat porttitor. Etiam aliquet
               congue consequat. In posuere, nunc sit amet laoreet blandit, urna
               sapien imperdiet lectus, et molestie

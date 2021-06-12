@@ -533,9 +533,9 @@ const CaseStudiesDetails = () => {
                 </Paper>
               </Grid>
               <div className={`${classes.auto_margin}`}>
-                <Link to="/case-studies">
+                <Link to="/pricing">
                   <Typography className={classes.tab_headline2}>
-                    Learn More{" "}
+                   See Details{" "}
                     <span className={classes.icon_style}>
                       <ArrowForwardIcon />
                     </span>

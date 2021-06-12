@@ -442,7 +442,7 @@ const ManagingLearningPath = () => {
                   color="primary"
                   className={`${classes.banner_button} button`}
                 >
-                  Try it Free
+               Start Now
                 </Button>
               </Link>
             </div>
@@ -514,7 +514,7 @@ const ManagingLearningPath = () => {
                   color="primary"
                   className={`${classes.banner_button} button`}
                 >
-                  Start Now
+               Yes! Let's Try It
                 </Button>
               </Link>
             </div>
