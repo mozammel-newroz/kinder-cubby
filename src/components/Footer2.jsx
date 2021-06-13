@@ -179,7 +179,7 @@ const Footer2 = () => {
               </div>
               <div className={classes.footer_item}>
                 <Button color="primary">
-                  <Link to="#" className={classes.link}>
+                  <Link to="/request-call" className={classes.link}>
                     Contact Sales
                   </Link>
                 </Button>

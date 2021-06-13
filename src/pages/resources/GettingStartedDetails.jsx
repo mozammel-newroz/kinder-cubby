@@ -218,18 +218,18 @@ const GettingStartedDetails = () => {
                 separator={<NavigateNextIcon />}
                 aria-label="breadcrumb"
               >
-                <Link color="inherit" to="#" onClick={handleClick}>
+                <Link color="inherit" to="/documentation" onClick={handleClick}>
                   <Typography className={classes.breadcrumbs_title_style}>
                     All Topics
                   </Typography>
                 </Link>
 
-                <Link color="inherit" to="#" onClick={handleClick}>
+                <Link color="inherit" to="/getting-started">
                   <Typography className={`${classes.breadcrumbs_title_style}`}>
                     Getting Started
                   </Typography>
                 </Link>
-                <Link color="inherit" to="#" onClick={handleClick}>
+                <Link color="inherit" to="/getting-started">
                   <Typography className={`${classes.breadcrumbs_title_style}`}>
                     Getting Started
                   </Typography>
@@ -373,9 +373,10 @@ const GettingStartedDetails = () => {
                   Still need help?
                 </Typography>
                 <div className={classes.button_wrapper}>
+                <Link color="inherit" to="/support-center">
                   <Button variant="outlined" color="primary" className="button">
                     Contact Support
-                  </Button>
+                  </Button></Link>
                 </div>
               </div>
             </div>

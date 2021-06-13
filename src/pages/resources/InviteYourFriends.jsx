@@ -283,6 +283,7 @@ const InviteYourFriends = () => {
                   variant="outlined"
                   fullWidth
                   size="small"
+                  className={classes.input_font_color2}
                 />
               </Grid>
               <Grid item xs={12} lg={6}>

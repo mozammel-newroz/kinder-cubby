@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontWeight: 400,
     fontSize: "1.7rem",
+    marginBottom:15
   },
 
   button: {
@@ -39,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
   link: {
     margin: "30px 0px 0px 30px",
     textAlign: "center",
-   
   },
   link_text: {
     color: "#0B4295",
@@ -51,11 +51,11 @@ const SignUpOption = () => {
   return (
     <div className={classes.root}>
       <div className={classes.login_wrapper}>
-        <div className={classes.logoIcon}>
+        {/* <div className={classes.logoIcon}>
           <img width="35px" src={KinderCubbyLogoIcon} alt="" />
-        </div>
+        </div> */}
         <Typography variant="h4" className={classes.title}>
-          Log into KinderCubby
+          Which best describes you
         </Typography>
         <div className={classes.login_box}>
           <Link to="/sign-up">
@@ -93,7 +93,9 @@ const SignUpOption = () => {
 
           <div className={classes.link}>
             <Link to="/login">
-              <Typography variant="body2"  className={classes.link_text}>Already have an account</Typography>
+              <Typography variant="body2" className={classes.link_text}>
+                Already have an account
+              </Typography>
             </Link>
           </div>
         </div>

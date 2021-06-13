@@ -6,7 +6,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import HeaderCurveDesignP24 from "../../assets/images/HeaderCurveDesignP24.png";
+import ChildCareCenter1 from "../../assets/images/ChildCareCenter1.png";
 import ChildCareCenter2 from "../../assets/images/ChildCareCenter2.png";
+import ChildCareCenter3 from "../../assets/images/ChildCareCenter3.png";
+import ChildCareCenter4 from "../../assets/images/ChildCareCenter4.png";
+import ChildCareCenter5 from "../../assets/images/ChildCareCenter5.png";
+import ChildCareCenter6 from "../../assets/images/ChildCareCenter6.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -76,7 +81,7 @@ const CaseStudies = () => {
           <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
-                src={ChildCareCenter2}
+                src={ChildCareCenter1}
                 alt=""
                 className={classes.card_image}
               />
@@ -124,7 +129,7 @@ const CaseStudies = () => {
           <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
-                src={ChildCareCenter2}
+                src={ChildCareCenter3}
                 alt=""
                 className={classes.card_image}
               />
@@ -148,7 +153,7 @@ const CaseStudies = () => {
           <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
-                src={ChildCareCenter2}
+                src={ChildCareCenter4}
                 alt=""
                 className={classes.card_image}
               />
@@ -172,7 +177,7 @@ const CaseStudies = () => {
           <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
-                src={ChildCareCenter2}
+                src={ChildCareCenter5}
                 alt=""
                 className={classes.card_image}
               />
@@ -196,7 +201,7 @@ const CaseStudies = () => {
           <Grid item lg={4} md={4} sm={4}>
             <div className={classes.card}>
               <img
-                src={ChildCareCenter2}
+                src={ChildCareCenter6}
                 alt=""
                 className={classes.card_image}
               />
