@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
@@ -117,7 +117,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   flex_wrapper: {
-    padding: "15px 30px",
+    marginTop: -53,
+    padding: "15px 100px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -154,18 +155,21 @@ const ContactUs = () => {
   }, []);
   return (
     <>
-      {/* <div className={classes.flex_wrapper}>
-          <div className={classes.inner_wrapper}>
-            <div>
+      <div className={classes.flex_wrapper}>
+        <div className={classes.inner_wrapper}>
+          <div>
+            <Link to="/">
               <img src={logo} alt="" />
-            </div>
-            <div>
-              <Typography className={classes.header_nav_item}>
-                Support
-              </Typography>
-            </div>
+            </Link>
           </div>
           <div>
+            <Typography className={classes.header_nav_item}>
+              Contact Us
+            </Typography>
+          </div>
+        </div>
+        <div>
+          <Link to="/">
             <Button
               variant="outlined"
               color="secondary"
@@ -173,8 +177,9 @@ const ContactUs = () => {
             >
               Go to KinderCubby
             </Button>
-          </div>
-        </div> */}
+          </Link>
+        </div>
+      </div>
       <Container maxWidth="lg">
         <div className={classes.wrapper}>
           <div className={classes.banner_wrapper}>

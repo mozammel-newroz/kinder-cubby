@@ -110,7 +110,8 @@ const Footer = () => {
     location.pathname !== "/try-it-free" &&
     location.pathname !== "/request-call" &&
     location.pathname !== "/sign-up-parent" &&
-    location.pathname !== "/contact-us"
+    location.pathname !== "/contact-us" &&
+    location.pathname !== "/support-center"
   ) {
     return (
       <>
@@ -292,7 +293,8 @@ const Footer = () => {
     );
   } else if (
     location.pathname === "/documentation" ||
-    location.pathname === "/contact-us"
+    location.pathname === "/contact-us" ||
+    location.pathname === "/support-center"
   ) {
     return "";
   } else {
