@@ -13,18 +13,16 @@ import { makeStyles } from "@material-ui/core/styles";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
 import PerfectAssistant from "../../assets/images/PerfectAssistant.png";
-import DirectorDemoVideo from "../../assets/images/DirectorDemoVideo.png";
-import TeacherVideo from "../../assets/images/children-with-nurse-playroom.png";
-// import RealTimeUpdates from "../../assets/images/RealTimeUpdates.png";
-// import NoMoreChasingKids from "../../assets/images/NoMoreChasingKids.png";
-// import Messaging from "../../assets/images/Messaging.png";
+
+import TeacherVideo from "../../assets/images/children_with_nurse_playroom.png";
+
 import PurpleCircle from "../../assets/images/PurpleCircle.png";
 import LessPaperWorkFocusOnKids from "../../assets/images/LessPaperWorkFocusOnKids.png";
 import owner_youtube from "../../assets/images/owner_youtube.png";
 import PlayIcon from "../../assets/images/PlayIcon.png";
 import Messaging from "../../assets/images/messaging.svg";
-import NoMoreChasingKids from "../../assets/images/no more chasing kids.svg";
-import RealTimeUpdates from "../../assets/images/real time updates.svg";
+import NoMoreChasingKids from "../../assets/images/no_more_chasing_kids.svg";
+import RealTimeUpdates from "../../assets/images/real_time_updates.svg";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
