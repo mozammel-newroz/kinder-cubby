@@ -159,6 +159,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
   },
+  activity_image_none: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "70px",
+    width: "70px",
+    // padding: "15px",
+    margin: "20px auto",
+    borderRadius: "50%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  },
   activity_image_green: {
     backgroundColor: "#A2D399",
     display: "flex",
@@ -334,12 +346,9 @@ const FeatureOverviews = () => {
             className={`${classes.item3} ${classes.grid_padding_bottom_xs}`}
           >
             <Paper className={classes.paper}>
-              <img
-                src={green_checked_icon}
-                alt=""
-                width="70px"
-                
-              />
+              <div className={classes.activity_image_none}>
+                <img src={green_checked_icon} alt="" width="90px"  />
+              </div>
               <div>
                 <Typography className={classes.tab_headline}>
                   Contactless check-in
