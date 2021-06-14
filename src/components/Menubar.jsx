@@ -64,12 +64,12 @@ const Menubar = () => {
         </li>
 
         <li>
-          <a to="#">
+          <Link to="#">
             Resources{" "}
             <span>
               <ExpandMoreIcon />
             </span>
-          </a>
+          </Link>
           <ul>
             <li>
               <Link to="/documentation">Documentation</Link>

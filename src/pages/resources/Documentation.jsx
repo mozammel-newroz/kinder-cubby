@@ -22,11 +22,6 @@ import logo_small from "../../assets/images/logo.png";
 import Footer2 from "../../components/Footer2";
 
 const useStyle = makeStyles((theme) => ({
-  root: {
-    background: "#fff",
-    position: "relative",
-    zIndex: 99999,
-  },
   wrapper: {
     backgroundColor: "#E1EBFB",
     backgroundImage: `url(${NeedHelp})`,
@@ -35,8 +30,6 @@ const useStyle = makeStyles((theme) => ({
     backgroundPosition: "right",
     height: 300,
     marginTop: "-63px",
-    position: "relative",
-    zIndex: 9999,
   },
   find_banner: {
     padding: "60px 150px",
@@ -176,12 +169,12 @@ const Documentation = () => {
 
   return (
     <>
-      <Container maxWidth="lg" className={classes.root}>
+      <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12}>
             <div className={classes.find_banner}>
-              <Link to='/' >
-              <img src={logo} alt="" className={classes.banner_image} />
+              <Link to="/">
+                <img src={logo} alt="" className={classes.banner_image} />
               </Link>
               <Typography variant="h4" className={classes.title}>
                 Need Help?
@@ -201,7 +194,7 @@ const Documentation = () => {
         </Grid>
       </Container>
       <Container>
-        <Grid container maxWidth="lg" className={classes.root}>
+        <Grid container maxWidth="lg">
           <Grid item>
             <div className={classes.topics}>
               <Link to="/getting-started">
@@ -360,7 +353,7 @@ const Documentation = () => {
           </Grid>
         </Grid>
       </Container>
-      <Container maxWidth="lg" className={classes.root}>
+      <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper_bottom}`}>
           <Grid item lg={12}>
             <div className={classes.bottom_inner}>

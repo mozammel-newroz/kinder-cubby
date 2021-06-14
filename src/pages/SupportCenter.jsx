@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Grid, Typography, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   wrapper: {
-    padding: "15px 30px",
+    padding: "15px 100px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
   background_style: {
     backgroundColor: "#E5EBFD",
+    marginTop: -63,
   },
 
   paper: {
@@ -200,10 +201,12 @@ const SupportCenter = () => {
   return (
     <>
       <div className={classes.background_style}>
-        {/* <div className={classes.wrapper}>
+        <div className={classes.wrapper}>
           <div className={classes.inner_wrapper}>
             <div>
-              <img src={logo} alt="" />
+              <Link to="/">
+                <img src={logo} alt="" />
+              </Link>
             </div>
             <div>
               <Typography className={classes.header_nav_item}>
@@ -212,15 +215,17 @@ const SupportCenter = () => {
             </div>
           </div>
           <div>
-            <Button
-              variant="outlined"
-              color="secondary"
-              className={`${classes.banner_button2} button`}
-            >
-              Go to KinderCubby
-            </Button>
+            <Link to="/">
+              <Button
+                variant="outlined"
+                color="secondary"
+                className={`${classes.banner_button2} button`}
+              >
+                Go to KinderCubby
+              </Button>
+            </Link>
           </div>
-        </div> */}
+        </div>
 
         <div className={classes.wrapper2}>
           <Typography variant="h3" className={classes.banner_headline}>
@@ -272,7 +277,6 @@ const SupportCenter = () => {
           Popular topics
         </Typography>
         <Grid container justify="center" alignItems="center" spacing={5}>
-          
           <Grid item xs={12} lg={3}>
             <div className={classes.paper}>
               <div className={classes.paper_image_div}>
@@ -476,14 +480,15 @@ const SupportCenter = () => {
                 Do you want to check our help centre?
               </Typography>
               <div className={classes.center_maging}>
-              <Link to="/contact-us">
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={`${classes.banner_button} button`}
-                >
-                  Contact us
-                </Button></Link>
+                <Link to="/contact-us">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={`${classes.banner_button} button`}
+                  >
+                    Contact us
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className={classes.banner_image}>

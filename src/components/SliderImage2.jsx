@@ -116,12 +116,7 @@ const SliderImage = () => {
             </div>
             <div className={classes.root}>
               <div className={classes.image}>
-                <img src={ContactlessCheckIn} className={classes.img} />
-              </div>
-            </div>
-            <div className={classes.root}>
-              <div className={classes.image}>
-                <img src={ActivityFeed} className={classes.img} />
+                <img src={OnlinePaymentP1} className={classes.img} />
               </div>
             </div>
             <div className={classes.root}>
@@ -131,14 +126,15 @@ const SliderImage = () => {
             </div>
             <div className={classes.root}>
               <div className={classes.image}>
-                <img src={ContactlessCheckIn} className={classes.img} />
+                <img src={OnlinePaymentP1} className={classes.img} />
               </div>
             </div>
             <div className={classes.root}>
               <div className={classes.image}>
-                <img src={ActivityFeed} className={classes.img} />
+                <img src={OnlinePaymentP1} className={classes.img} />
               </div>
             </div>
+            
           </Carousel>
           {/* </Grid> */}
         </Grid>

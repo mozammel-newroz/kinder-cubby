@@ -8,7 +8,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo_grey.svg";
 import PlayStore from "../assets/images/PlayStore.png";
 import app_store from "../assets/images/app_store.png";
 
@@ -110,7 +110,8 @@ const Footer = () => {
     location.pathname !== "/try-it-free" &&
     location.pathname !== "/request-call" &&
     location.pathname !== "/sign-up-parent" &&
-    location.pathname !== "/contact-us"
+    location.pathname !== "/contact-us" &&
+    location.pathname !== "/support-center"
   ) {
     return (
       <>
@@ -292,7 +293,8 @@ const Footer = () => {
     );
   } else if (
     location.pathname === "/documentation" ||
-    location.pathname === "/contact-us"
+    location.pathname === "/contact-us" ||
+    location.pathname === "/support-center"
   ) {
     return "";
   } else {

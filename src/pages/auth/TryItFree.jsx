@@ -14,23 +14,19 @@ import CheckIcon from "@material-ui/icons/Check";
 import HeaderCurveDesignP31 from "../../assets/images/HeaderCurveDesignP31.png";
 import logo from "../../assets/images/logo.png";
 import Desktop from "../../assets/images/Desktop.png";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyle = makeStyles((theme) => ({
-  root: {
-    background: "#fff",
-    position: "relative",
-    zIndex: 9999,
-    minHeight: "calc(100vh - 83px)",
-  },
   wrapper: {
     backgroundImage: `url(${HeaderCurveDesignP31})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "contain",
     backgroundPosition: "top",
-    // height: 300,
     marginTop: "-63px",
-    position: "relative",
-    zIndex: 9999,
     justifyContent: "center",
   },
 
@@ -95,6 +91,11 @@ const useStyle = makeStyles((theme) => ({
 
 const TryItFree = () => {
   const classes = useStyle();
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -102,7 +103,7 @@ const TryItFree = () => {
 
   return (
     <div>
-      <Container maxWidth="lg" className={classes.root}>
+      <Container maxWidth="lg">
         <Grid container className={`${classes.wrapper}`}>
           <Grid item lg={12} sm={12} className={classes.logo_wrapper}>
             <Link to="/">
@@ -214,18 +215,29 @@ const TryItFree = () => {
                   />
                 </Grid>
                 <Grid item lg={12} md={12} sm={12}>
-                  <TextField
-                    fullWidth
-                    label="Number of Students enrolled"
-                    variant="outlined"
-                    className={classes.input}
-                    InputProps={{
-                      className: classes.inputField,
-                    }}
-                    InputLabelProps={{
-                      className: classes.inputLabel,
-                    }}
-                  />
+                  <FormControl variant="outlined" size="small" fullWidth>
+                    <InputLabel
+                      className={classes.input_font_color}
+                      id="demo-simple-select-outlined-label"
+                    >
+                      Number of students enrolled
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-outlined-label"
+                      id="demo-simple-select-outlined"
+                      value={age}
+                      onChange={handleChange}
+                      label="Number of students enrolled"
+                      IconComponent={ExpandMoreIcon}
+                    >
+                      <MenuItem value="">
+                        <em>None</em>
+                      </MenuItem>
+                      <MenuItem value={10}>Ten</MenuItem>
+                      <MenuItem value={20}>Twenty</MenuItem>
+                      <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Grid>
                 <Grid item lg={12} sm={12} sm={12}>
                   <Button
