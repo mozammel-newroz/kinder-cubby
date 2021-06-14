@@ -128,93 +128,87 @@ function NabBarOne() {
   const drawer = (
     <div>
       <List>
-        <ListItem button>
-          <ListItemText>
-            <Link to="/" onClick={handleDrawerToggle}>
-              Home
-            </Link>
-          </ListItemText>
-        </ListItem>
+        <Link to="/" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText>Home</ListItemText>
+          </ListItem>
+        </Link>
         {/* products  */}
         <ListItem button>
           <ListItemText>Product</ListItemText>
         </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/for-owners-and-directors" onClick={handleDrawerToggle}>
+        <Link to="/for-owners-and-directors" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>
               For Owners & Directors
-            </Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/for-teachers" onClick={handleDrawerToggle}>
-              For Teachers
-            </Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/for-parents" onClick={handleDrawerToggle}>
-              For Parents
-            </Link>
-          </ListItemText>
-        </ListItem>
+            </ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/for-teachers" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>For Teachers</ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/for-parents" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>For Parents</ListItemText>
+          </ListItem>
+        </Link>
 
         {/* features  */}
 
         <ListItem button>
           <ListItemText>Features</ListItemText>
         </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/feature-overviews" onClick={handleDrawerToggle}>
+        <Link to="/feature-overviews" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>
               Feature Overviews
-            </Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/attendance-and-check-ins" onClick={handleDrawerToggle}>
+            </ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/attendance-and-check-ins" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>
               Attendance & check-ins
-            </Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-            <Link to="/activity-tracking" onClick={handleDrawerToggle}>
+            </ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/activity-tracking" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>
               Activity Tracking
-            </Link>
-          </ListItemText>
-        </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
+            </ListItemText>
+          </ListItem>
+        </Link>
             <Link to="/center-management" onClick={handleDrawerToggle}>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
               Center Management
-            </Link>
           </ListItemText>
         </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
+            </Link>
             <Link to="/billing" onClick={handleDrawerToggle}>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
               Billing
-            </Link>
           </ListItemText>
         </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
+            </Link>
             <Link to="/managing-learning-path" onClick={handleDrawerToggle}>
-              Managing Learning Path
-            </Link>
-          </ListItemText>
-        </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/parents-engagements" onClick={handleDrawerToggle}>
-              Parents Engagements
-            </Link>
+              Managing Learning Path
           </ListItemText>
         </ListItem>
+            </Link>
+            <Link to="/parents-engagements" onClick={handleDrawerToggle}>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+              Parents Engagements
+          </ListItemText>
+        </ListItem>
+            </Link>
 
         {/* pricing  */}
         <Link to="/pricing">
@@ -227,20 +221,20 @@ function NabBarOne() {
         <ListItem button>
           <ListItemText>Resources</ListItemText>
         </ListItem>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
             <Link to="/documentation" onClick={handleDrawerToggle}>
-              Documentation
-            </Link>
-          </ListItemText>
-        </ListItem>
         <ListItem button>
           <ListItemText className={classes.sub}>
-            <Link to="/e-books" onClick={handleDrawerToggle}>
-              eBooks
-            </Link>
+              Documentation
           </ListItemText>
         </ListItem>
+            </Link>
+            <Link to="/e-books" onClick={handleDrawerToggle}>
+        <ListItem button>
+          <ListItemText className={classes.sub}>
+              eBooks
+          </ListItemText>
+        </ListItem>
+            </Link>
         <Link to="/case-studies" onClick={handleDrawerToggle}>
           <ListItem button>
             <ListItemText className={classes.sub}>Case Studies</ListItemText>
