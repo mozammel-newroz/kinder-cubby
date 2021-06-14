@@ -118,7 +118,6 @@ function NabBarOne() {
 
   const changePath = () => {
     set_open(false);
-    console.log("open", open);
   };
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -181,34 +180,32 @@ function NabBarOne() {
             </ListItemText>
           </ListItem>
         </Link>
-            <Link to="/center-management" onClick={handleDrawerToggle}>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
+        <Link to="/center-management" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>
               Center Management
-          </ListItemText>
-        </ListItem>
-            </Link>
-            <Link to="/billing" onClick={handleDrawerToggle}>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-              Billing
-          </ListItemText>
-        </ListItem>
-            </Link>
-            <Link to="/managing-learning-path" onClick={handleDrawerToggle}>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
+            </ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/billing" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>Billing</ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/managing-learning-path" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>
               Managing Learning Path
-          </ListItemText>
-        </ListItem>
-            </Link>
-            <Link to="/parents-engagements" onClick={handleDrawerToggle}>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
+            </ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/parents-engagements" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>
               Parents Engagements
-          </ListItemText>
-        </ListItem>
-            </Link>
+            </ListItemText>
+          </ListItem>
+        </Link>
 
         {/* pricing  */}
         <Link to="/pricing">
@@ -221,20 +218,16 @@ function NabBarOne() {
         <ListItem button>
           <ListItemText>Resources</ListItemText>
         </ListItem>
-            <Link to="/documentation" onClick={handleDrawerToggle}>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-              Documentation
-          </ListItemText>
-        </ListItem>
-            </Link>
-            <Link to="/e-books" onClick={handleDrawerToggle}>
-        <ListItem button>
-          <ListItemText className={classes.sub}>
-              eBooks
-          </ListItemText>
-        </ListItem>
-            </Link>
+        <Link to="/documentation" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>Documentation</ListItemText>
+          </ListItem>
+        </Link>
+        <Link to="/e-books" onClick={handleDrawerToggle}>
+          <ListItem button>
+            <ListItemText className={classes.sub}>eBooks</ListItemText>
+          </ListItem>
+        </Link>
         <Link to="/case-studies" onClick={handleDrawerToggle}>
           <ListItem button>
             <ListItemText className={classes.sub}>Case Studies</ListItemText>
@@ -261,7 +254,6 @@ function NabBarOne() {
       const scrollCheck = window.scrollY;
       setScroll(scrollCheck);
     });
-    console.log("ddd", open);
   }, []);
 
   return (
