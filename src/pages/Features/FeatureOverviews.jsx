@@ -26,12 +26,8 @@ import IconRevenueSummary from "../../assets/images/IconRevenueSummary.png";
 import IconShareEveryMoment from "../../assets/images/IconShareEveryMoment.png";
 import IconInstantMessaging from "../../assets/images/IconInstantMessaging.png";
 import IconStaffManagement from "../../assets/images/IconStaffManagement.png";
-<<<<<<< HEAD
-import SuccessfulGreenIcon2x from "../../assets/images/SuccessfulGreenIcon@2x.png";
-=======
 import green_checked_icon from "../../assets/images/green_checked_icon.svg";
 
->>>>>>> 1679b4b55714afc12e62aa9b4497dcdc20b7ca28
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import SliderImage from "../../components/SliderImage";
@@ -339,13 +335,7 @@ const FeatureOverviews = () => {
           >
             <Paper className={classes.paper}>
               <img
-<<<<<<< HEAD
-                className={classes.activity_image}
-                width='70px'
-                src={SuccessfulGreenIcon2x}
-=======
                 src={green_checked_icon}
->>>>>>> 1679b4b55714afc12e62aa9b4497dcdc20b7ca28
                 alt=""
                 width="70px"
               />
