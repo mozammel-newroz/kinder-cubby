@@ -338,6 +338,7 @@ const FeatureOverviews = () => {
                 src={green_checked_icon}
                 alt=""
                 width="70px"
+                
               />
               <div>
                 <Typography className={classes.tab_headline}>
