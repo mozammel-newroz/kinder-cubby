@@ -26,9 +26,9 @@ import CenterManagementP1 from "../assets/images/CenterManagementP1.png";
 import ExcelParents2 from "../assets/images/ExcelParents2.png";
 import youtube_home from "../assets/images/youtube_home.png";
 import youtube_home_big from "../assets/images/youtube_home_big.png";
-import home_with_logo from "../assets/images/home_with_logo.png";
+import image_with_logo from "../assets/images/image_with_logo.svg";
 
-import SuccessfulGreenIcon2x from "../assets/images/SuccessfulGreenIcon@2x.png";
+import green_checked_icon from "../assets/images/green_checked_icon.svg";
 
 import SliderImage from "../components/SliderImage";
 import SliderImage2 from "../components/SliderImage2";
@@ -362,7 +362,7 @@ const Home = () => {
                 </Link>
               </Grid>
               <Grid item lg={6} md={6}>
-                <img src={home_with_logo} alt="" className={classes.image} />
+                <img src={image_with_logo} alt="" className={classes.image} />
               </Grid>
             </Grid>
           </Grid>
@@ -507,7 +507,7 @@ const Home = () => {
             <Grid item lg={4} md={4}>
               <div className={classes.box2}>
                 <img
-                  src={SuccessfulGreenIcon2x}
+                  src={green_checked_icon}
                   alt=""
                   className={classes.box2_icon}
                 />

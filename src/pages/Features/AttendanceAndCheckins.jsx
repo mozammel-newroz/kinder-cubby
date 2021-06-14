@@ -12,6 +12,7 @@ import Goodbye from "../../assets/images/Goodbye.png";
 import YoutubeDemoPage18 from "../../assets/images/YoutubeDemoPage18.png";
 import OwnerAndDirectors from "../../assets/images/OwnerAndDirectors.png";
 import Parents from "../../assets/images/Parents.png";
+import Teachers from "../../assets/images/Teachers.png";
 import DoubleBlueColorCircle from "../../assets/images/DoubleBlueColorCircle.png";
 
 const useStyles = makeStyles((theme) => ({
@@ -411,10 +412,10 @@ const AttendanceAndCheckins = () => {
               <Grid container spacing={2} className={classes.card}>
                 <Grid item xs={5} className={classes.padding_margin0}>
                   <img
-                    src={OwnerAndDirectors}
+                    src={Teachers}
                     alt=""
-                    width="100%"
-                    style={{ position: "relative", left: -50, top: -20 }}
+                    width="90%"
+                    style={{ position: "relative", left: -30, top: -15 }}
                   />
                 </Grid>
                 <Grid item xs={7} className={classes.card_padding}>

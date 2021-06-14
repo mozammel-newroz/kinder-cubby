@@ -26,6 +26,8 @@ import IconRevenueSummary from "../../assets/images/IconRevenueSummary.png";
 import IconShareEveryMoment from "../../assets/images/IconShareEveryMoment.png";
 import IconInstantMessaging from "../../assets/images/IconInstantMessaging.png";
 import IconStaffManagement from "../../assets/images/IconStaffManagement.png";
+import green_checked_icon from "../../assets/images/green_checked_icon.svg";
+
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import SliderImage from "../../components/SliderImage";
@@ -322,9 +324,9 @@ const FeatureOverviews = () => {
           >
             <Paper className={classes.paper}>
               <img
-                className={classes.activity_image_green}
-                src={Success}
+                src={green_checked_icon}
                 alt=""
+                width="70px"
               />
               <div>
                 <Typography className={classes.tab_headline}>

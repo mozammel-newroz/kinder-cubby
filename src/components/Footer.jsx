@@ -8,7 +8,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo_grey.svg";
 import PlayStore from "../assets/images/PlayStore.png";
 import app_store from "../assets/images/app_store.png";
 
