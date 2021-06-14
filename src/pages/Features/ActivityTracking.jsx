@@ -8,10 +8,11 @@ import automated from "../../assets/images/automated.png";
 import ChasingActivityImage1 from "../../assets/images/ChasingActivityImage1.png";
 import ChasingActivityImage2 from "../../assets/images/ChasingActivityImage2.png";
 import ChasingActivityImage3 from "../../assets/images/ChasingActivityImage3.png";
-import activity_image from "../../assets/images/activity.png";
+
 import StartNow_image from "../../assets/images/StartNow.png";
 import DemoVideo_image from "../../assets/images/DemoVideo.png";
 import YoutubeIcon from "../../assets/images/YoutubeIcon.png";
+import activities from "../../assets/images/activities.png";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -109,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   image: {
-    maxWidth: "100%",
+    maxWidth: "80%",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -281,7 +282,7 @@ const ActivityTracking = () => {
             </Grid>
             <div className={classes.activity2}>
               <Grid item lg={6} md={6}>
-                <img className={classes.image} src={activity_image} alt="" />
+                <img className={classes.image} src={activities} alt="" />
               </Grid>
               <Grid item lg={6} md={6}>
                 <Typography variant="subtitle1" className={classes.margin10}>

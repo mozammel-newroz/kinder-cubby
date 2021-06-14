@@ -5,6 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
 import CenterManagementImage from "../../assets/images/CenterManagement.png";
+import CenterManagementImage2 from "../../assets/images/center management.svg";
+import connectedworkflow from "../../assets/images/connected workflow.svg";
 
 import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
 import ManagingChildcare from "../../assets/images/ManagingChildcare.png";
@@ -239,7 +241,7 @@ const CenterManagement = () => {
             <Paper className={classes.image_paper}>
               <img
                 className={classes.image_width}
-                src={CenterManagementImage}
+                src={CenterManagementImage2}
                 alt="Center Management"
               />
 
@@ -327,7 +329,7 @@ const CenterManagement = () => {
           <Grid item lg={12} md={12}>
             <div className={classes.banner}>
               <div className={classes.banner_image}>
-                <img width="100%" src={CenterManagementImage} alt="" />
+                <img width="100%" src={connectedworkflow} alt="" />
               </div>
               <div className={classes.banner_content}>
                 <Typography variant="h4" style={{ textAlign: "start" }}>

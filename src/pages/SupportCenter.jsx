@@ -6,8 +6,9 @@ import TextField from "@material-ui/core/TextField";
 import SearchIcon from "../assets/images/SearchIcon.png";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
-import StaffManagement from "../assets/images/StaffManagement.png";
+import StaffManagement from "../assets/images/staff managements.svg";
 import BillingAndInvoicing from "../assets/images/BillingAndInvoicing.png";
+import payments from "../assets/images/payments.svg";
 import SearchingRobot from "../assets/images/SearchingRobot.png";
 import Divider from "@material-ui/core/Divider";
 import Footer2 from "../components/Footer2";
@@ -111,9 +112,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "15px",
     paddingTop: "20px",
   },
-  paper_image: {
-    backgroundColor: "#ddd",
-  },
+
   font_color: {
     color: "#21409A",
   },
@@ -278,9 +277,9 @@ const SupportCenter = () => {
             <div className={classes.paper}>
               <div className={classes.paper_image_div}>
                 <img
-                  src={BillingAndInvoicing}
+                  src={payments}
                   alt=""
-                  className={classes.paper_image}
+            
                 />
               </div>
               <div>
@@ -296,7 +295,7 @@ const SupportCenter = () => {
                 <img
                   src={StaffManagement}
                   alt=""
-                  className={classes.paper_image}
+              
                 />
               </div>
               <div>
@@ -310,9 +309,9 @@ const SupportCenter = () => {
             <div className={classes.paper}>
               <div className={classes.paper_image_div}>
                 <img
-                  src={BillingAndInvoicing}
+                  src={payments}
                   alt=""
-                  className={classes.paper_image}
+             
                 />
               </div>
               <div>
@@ -328,7 +327,7 @@ const SupportCenter = () => {
                 <img
                   src={StaffManagement}
                   alt=""
-                  className={classes.paper_image}
+    
                 />
               </div>
               <div>
@@ -338,20 +337,7 @@ const SupportCenter = () => {
               </div>
             </div>
           </Grid>
-          {/* <Grid item xs={12} lg={3}>
-            <div className={classes.paper}>
-              <div className={classes.paper_image_div}>
-                <img
-                  src={StaffManagement}
-                  alt=""
-                  className={classes.paper_image}
-                />
-              </div>
-              <div>
-                <Typography variant="subtitle2" gutterBottom></Typography>
-              </div>
-            </div>
-          </Grid> */}
+         
         </Grid>
       </div>
       <Divider className={classes.divider} />

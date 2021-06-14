@@ -9,7 +9,7 @@ import OnlinePayment from "../../assets/images/OnlinePayment.png";
 import FinancialDataSorting from "../../assets/images/FinancialDataSorting.png";
 import SiplifiedAccounting from "../../assets/images/SiplifiedAccounting.png";
 import AutomateTuitionPlan from "../../assets/images/AutomateTuitionPlan.png";
-import SendOnlineInvoice from "../../assets/images/SendOnlineInvoice.png";
+import SendOnlineInvoice from "../../assets/images/online invoices.svg";
 import CollectPayment from "../../assets/images/CollectPayment.png";
 
 const useStyles = makeStyles((theme) => ({

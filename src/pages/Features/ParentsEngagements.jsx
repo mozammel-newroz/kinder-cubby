@@ -7,14 +7,14 @@ import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import DediatedApp from "../../assets/images/DediatedApp.png";
 import ChasingActivityImage1 from "../../assets/images/ChasingActivityImage1.png";
 import activity_image from "../../assets/images/activity.png";
-import StartNow_image from "../../assets/images/StartNow.png";
+import eventBroadcasting from "../../assets/images/event broadcasting.svg";
 import DemoVideo_image from "../../assets/images/DemoVideo.png";
 import YoutubeIcon from "../../assets/images/YoutubeIcon.png";
 import FriendsAndFamily from "../../assets/images/FriendsAndFamily.png";
 import SafeData from "../../assets/images/SafeData.png";
-import InstantMessaging from "../../assets/images/InstantMessaging.png";
-import ShareMoments from "../../assets/images/ShareMoments.png";
-import ChildsGrowth from "../../assets/images/Child'sGrowth.png";
+import InstantMessaging from "../../assets/images/instant messaging.svg";
+import ShareMoments from "../../assets/images/share moments.svg";
+import ChildsGrowth from "../../assets/images/child's growth.svg";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -229,6 +229,7 @@ const useStyles = makeStyles((theme) => ({
   card_image: {
     width: "100%",
     height: "170px",
+    marginBottom:20
   },
   h5: {
     paddingLeft: 40,
@@ -415,14 +416,10 @@ const ParentEngagements = () => {
               Save time with our
               <br /> Automated event broadcasting
             </Typography>
-            <Typography variant="h6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-              accusamus vitae? Quibusdam ad a nam nihil ea aperiam quod placeat
-              unde ducimus excepturi ratione porro dolore, rem provident.
-            </Typography>
+          
             <div className={classes.improve}>
               <img
-                src={StartNow_image}
+                src={eventBroadcasting}
                 className={classes.improve_image}
                 alt=""
               />

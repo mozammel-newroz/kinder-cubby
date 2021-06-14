@@ -26,6 +26,7 @@ import IconRevenueSummary from "../../assets/images/IconRevenueSummary.png";
 import IconShareEveryMoment from "../../assets/images/IconShareEveryMoment.png";
 import IconInstantMessaging from "../../assets/images/IconInstantMessaging.png";
 import IconStaffManagement from "../../assets/images/IconStaffManagement.png";
+import SuccessfulGreenIcon2x from "../../assets/images/SuccessfulGreenIcon@2x.png";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import SliderImage from "../../components/SliderImage";
@@ -133,6 +134,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 40,
   },
 
+  activity_image: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "70px",
+    width: "70px",
+    margin: "20px auto",
+    borderRadius: "50%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  },
   activity_image_blue: {
     display: "flex",
     justifyContent: "center",
@@ -322,8 +334,9 @@ const FeatureOverviews = () => {
           >
             <Paper className={classes.paper}>
               <img
-                className={classes.activity_image_green}
-                src={Success}
+                className={classes.activity_image}
+                width='70px'
+                src={SuccessfulGreenIcon2x}
                 alt=""
               />
               <div>

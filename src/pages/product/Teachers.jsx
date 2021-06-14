@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   Grid,
@@ -14,15 +14,17 @@ import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
 import PerfectAssistant from "../../assets/images/PerfectAssistant.png";
 import DirectorDemoVideo from "../../assets/images/DirectorDemoVideo.png";
-// import TeacherVideo from "../../assets/images/TeacherVideo.png";
-import RealTimeUpdates from "../../assets/images/RealTimeUpdates.png";
-import NoMoreChasingKids from "../../assets/images/NoMoreChasingKids.png";
-import Messaging from "../../assets/images/Messaging.png";
+import TeacherVideo from "../../assets/images/children-with-nurse-playroom.png";
+// import RealTimeUpdates from "../../assets/images/RealTimeUpdates.png";
+// import NoMoreChasingKids from "../../assets/images/NoMoreChasingKids.png";
+// import Messaging from "../../assets/images/Messaging.png";
 import PurpleCircle from "../../assets/images/PurpleCircle.png";
 import LessPaperWorkFocusOnKids from "../../assets/images/LessPaperWorkFocusOnKids.png";
 import owner_youtube from "../../assets/images/owner_youtube.png";
 import PlayIcon from "../../assets/images/PlayIcon.png";
-
+import Messaging from "../../assets/images/messaging.svg";
+import NoMoreChasingKids from "../../assets/images/no more chasing kids.svg";
+import RealTimeUpdates from "../../assets/images/real time updates.svg";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -105,12 +107,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   left: {
-    backgroundImage: `url(${DirectorDemoVideo})`,
+    backgroundImage: `url(${TeacherVideo})`,
     backgroundSize: "cover",
     width: 300,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   right: {
     padding: "20px 25px",
@@ -212,7 +214,7 @@ const Teachers = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <>
       <Container maxWidth="lg">

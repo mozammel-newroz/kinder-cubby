@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="96" viewBox="0 0 96 96">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.824" r="0.648" gradientTransform="translate(1.571 0.324) rotate(90) scale(1 1.299)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#6c9db4"/>
+      <stop offset="1" stop-color="#72a2f2"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_18640" data-name="Group 18640" transform="translate(-229 -898)">
+    <circle id="Ellipse_39" data-name="Ellipse 39" cx="48" cy="48" r="48" transform="translate(229 898)" fill="url(#radial-gradient)"/>
+    <path id="Icon_feather-message-square" data-name="Icon feather-message-square" d="M56.5,39.167a5.778,5.778,0,0,1-5.778,5.778H16.056L4.5,56.5V10.278A5.778,5.778,0,0,1,10.278,4.5H50.722A5.778,5.778,0,0,1,56.5,10.278Z" transform="translate(247 916)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>
