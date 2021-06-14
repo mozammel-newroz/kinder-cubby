@@ -12,12 +12,13 @@ import DemoVideo_image from "../../assets/images/DemoVideo.png";
 import YoutubeIcon from "../../assets/images/YoutubeIcon.png";
 import FriendsAndFamily from "../../assets/images/FriendsAndFamily.png";
 import SafeData from "../../assets/images/SafeData.png";
-import InstantMessaging from "../../assets/images/instant messaging.svg";
-import ShareMoments from "../../assets/images/share moments.svg";
-import ChildsGrowth from "../../assets/images/child's growth.svg";
+import InstantMessaging from "../../assets/images/instant_messaging.svg";
+import ShareMoments from "../../assets/images/share_moments.svg";
+import ChildsGrowth from "../../assets/images/child's_growth.svg";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
+    
     padding: "0px 30px",
     width: "100%",
     [theme.breakpoints.down("xs")]: {

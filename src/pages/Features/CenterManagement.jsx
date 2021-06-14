@@ -5,8 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
 import CenterManagementImage from "../../assets/images/CenterManagement.png";
-import CenterManagementImage2 from "../../assets/images/center management.svg";
-import connectedworkflow from "../../assets/images/connected workflow.svg";
+import CenterManagementImage2 from "../../assets/images/center_management.svg";
+import connectedworkflow from "../../assets/images/connected_workflow.svg";
 
 import SuccessfulGreenIcon from "../../assets/images/SuccessfulGreenIcon.png";
 import ManagingChildcare from "../../assets/images/ManagingChildcare.png";
